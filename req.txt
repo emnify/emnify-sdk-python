@@ -1,0 +1,16 @@
+certifi==2021.10.8
+charset-normalizer==2.0.9
+distlib==0.3.4
+filelock==3.4.2
+idna==3.3
+importlib-metadata==4.10.0
+pipenv==2022.1.8
+platformdirs==2.4.1
+pydantic==1.9.0
+requests==2.27.0
+six==1.16.0
+typing-extensions==4.0.1
+urllib3==1.26.7
+virtualenv==20.13.0
+virtualenv-clone==0.5.7
+zipp==3.7.0
