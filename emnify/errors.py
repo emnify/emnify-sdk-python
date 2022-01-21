@@ -2,7 +2,7 @@
 
 __all__ = ['UnauthorisedException', 'JsonDecodeException', 'UnexpectedArgumentException']
 
-
+# What if create general EMnifySDK error and inherit other errors from it. So that users can catch specific error if they need.
 class UnauthorisedException(Exception):
     """Custom error for unauthorised response"""
 

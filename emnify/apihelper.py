@@ -3,7 +3,7 @@ import settings
 
 from emnify.errors import UnauthorisedException, JsonDecodeException
 
-
+# file and class name don't match
 class BaseApiManager:
 
     response_handlers = {
@@ -15,7 +15,8 @@ class BaseApiManager:
 
     @staticmethod
     def _build_headers(token=''):
-        return {
+        return { # Headers object keys have different casing, can the be unified
+        # Are all these headers necessary?
             "accept": 'application/json',
             "Authorization": f"Bearer {token}",
             "accept-encoding": 'gzip, deflate, br',
@@ -24,7 +25,7 @@ class BaseApiManager:
     def build_method_url(self, url_params):
         if not isinstance(url_params, list):
             url_params = [url_params]
-        return self.request_url_prefix.format(*url_params)
+        return self.request_url_prefix.format(*url_params) # What do you think about using named parameters 'prefix/{device_id}/suffix'.format(device_id = '333') ? This will add automatic check
 
     def unauthorised(self, response):
         raise UnauthorisedException('Invalid Token')
@@ -42,6 +43,8 @@ class BaseApiManager:
             url = self.build_method_url(path_params)
         response = self.make_request(client, url, data, files)
         assert response.status_code in self.response_handlers.keys()
+         # Instead of having both success and failure at the same map you can process only failures and return everything else unwrapped. especially when no matching key found
+
         return getattr(self, self.response_handlers[response.status_code])(response)
 
     @staticmethod
@@ -50,10 +53,11 @@ class BaseApiManager:
 
     @staticmethod
     def make_post_request(main_url: str, method_name: str, headers: dict, data: dict = None):
+        # The line (f'{main_url}{method_name}' is duplicated, does it deserve to be extracted as a method?
         return requests.post(f'{main_url}{method_name}', headers=headers, data=data)
 
     def make_request(self, client, method_url: str, data=None, files=None):
-        if self.request_method_name not in ('put', 'post', 'get'):
+        if self.request_method_name not in ('put', 'post', 'get'): # for HTTP methods use enum or a constant
             raise ValueError(f'{self.request_method_name}: This method is not allowed')
         headers = self._build_headers(client.token)
 

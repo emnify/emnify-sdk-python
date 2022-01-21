@@ -5,7 +5,7 @@ import emnify.models.device.api_call_manager as device_call_managers
 from emnify.models.device.models import Device
 
 
-class DeviceManager:
+class DeviceManager: # Manager is too general term for a name, is there any better option
     def __init__(self, client):
         self.client = client
 
@@ -20,7 +20,7 @@ class DeviceManager:
         """
         devices_response = device_call_managers.GetAllDevicesApiCall().call_api(client=self.client)
         for device in devices_response:
-            yield Device(**device)
+            yield Device(**device) # Why isn't self.device_model ?
 
     def get_device_events(self, device: typing.Union[Device, int]):
         """
@@ -35,4 +35,4 @@ class DeviceManager:
             raise UnexpectedArgumentException('device must be Device instance or int')
         events_response = device_call_managers.GetEventsByDevice().call_api(client=self.client, path_params=device_id)
         for event in events_response:
-            yield Event(**event)
+            yield Event(**event) # For maintenance purposes it makes sense not to import it directly but to wrap events as well
