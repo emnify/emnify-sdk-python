@@ -1,7 +1,8 @@
 import typing
 import emnify.modules.device.api_call_manager as device_call_managers
 from emnify.errors import UnexpectedArgumentException
-from emnify.modules.device.models import Device, GetDeviceFilterSet, QFilterDeviceListQueryParam, DeviceEvent
+from emnify.modules.device.models import Device, GetDeviceFilterSet, QFilterDeviceListQueryParam, DeviceEvent, \
+    DeviceStatus, TariffProfile, ServiceProfile
 from emnify.const import DeviceSortEnum
 
 
@@ -12,6 +13,22 @@ class DeviceManager:
     @property
     def device_model(self):
         return Device
+
+    @property
+    def event_model(self):
+        return DeviceEvent
+
+    @property
+    def status_model(self):
+        return DeviceStatus
+
+    @property
+    def service_profile_model(self):
+        return ServiceProfile
+
+    @property
+    def tariff_profile_model(self):
+        return TariffProfile
 
     @property
     def get_sort_device_param_enum(self):
@@ -64,3 +81,8 @@ class DeviceManager:
         if filter_dict.get('sort'):
             query_filter['sort'] = ','.join([str(i) for i in filter_dict['sort']])
         return query_filter
+
+    def create_device(self, device: Device):
+        if not isinstance(device, self.device_model):
+            raise UnexpectedArgumentException('Argument must contain filled Device model')
+        return device_call_managers.CreateDevice().call_api(client=self.client, data=device.dict(exclude_none=True))

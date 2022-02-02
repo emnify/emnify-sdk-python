@@ -2,12 +2,24 @@ import datetime
 from pydantic import BaseModel
 from typing import Optional, List
 
-from emnify.modules.api.models import Endpoint, Event
+from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status
 
 from emnify.const import DeviceSortEnum
 
 
 class Device(Endpoint):
+    pass
+
+
+class TariffProfile(TariffProfile1):
+    pass
+
+
+class ServiceProfile(ServiceProfile1):
+    pass
+
+
+class DeviceStatus(Status):
     pass
 
 
