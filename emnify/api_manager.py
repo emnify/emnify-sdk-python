@@ -10,7 +10,7 @@ class BaseApiManager:
 
     response_handlers = {
         200: 'return_unwrapped',
-        201: 'return_unwrapped',
+        201: 'return_success',
         401: 'unauthorised'
     }
     request_url_prefix = ''
@@ -36,6 +36,10 @@ class BaseApiManager:
         ).auth_token
 
         return self.call_api(client, data, *args, **kwargs)
+
+    @staticmethod
+    def return_success(*_, **__) -> True:
+        return True
 
     @staticmethod
     def return_unwrapped(response: requests.Response, *args, **kwargs) -> requests.Response.json:
