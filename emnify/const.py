@@ -1,7 +1,5 @@
 from enum import Enum
 
-from enum import Enum
-
 
 class ExtendedEnum(Enum):
     @classmethod
@@ -25,6 +23,7 @@ class RequestsTypeEnum(ExtendedEnum):
     POST = 'post'
     PUT = 'put'
     DELETE = 'delete'
+    PATCH = 'patch'
 
 
 class RequestsUrlEnum(ExtendedEnum):

@@ -1,7 +1,7 @@
 import requests
 import settings
 
-from emnify.errors import UnauthorisedException, JsonDecodeException
+from emnify.errors import UnauthorisedException, JsonDecodeException, UnknownStatusCodeException
 from emnify.modules.api.models import AuthenticationResponse
 from emnify.const import RequestsTypeEnum, RequestsUrlEnum, RequestDefaultHeadersKeys, RequestDefaultHeadersValues
 
@@ -26,7 +26,7 @@ class BaseApiManager:
     def build_method_url(self, url_params):
         return self.request_url_prefix.format(**url_params)
 
-    def unauthorised(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
+    def unauthorised(self, response: requests.Response, client, data: dict = None, path_params=None, *args, **kwargs):
         """
         method for 1 cycle retry - re authentication
         """
@@ -35,7 +35,7 @@ class BaseApiManager:
             **auth.call_api(client, {"application_token": client.app_token})
         ).auth_token
 
-        return self.call_api(client, data, *args, **kwargs)
+        return self.call_api(client, data, path_params=path_params, *args, **kwargs)
 
     @staticmethod
     def return_success(*_, **__) -> True:
@@ -53,17 +53,24 @@ class BaseApiManager:
         if path_params:
             url = self.build_method_url(path_params)
         response = self.make_request(client, url, data, files, query_params=query_params)
-        assert response.status_code in self.response_handlers.keys()
+        if response.status_code not in self.response_handlers.keys():
+            raise UnknownStatusCodeException(
+                "Unknown status code {status_code}".format(status_code=response.status_code)
+            )
         return getattr(self, self.response_handlers[response.status_code])\
-            (response, client, data=data, files=files, query_params=query_params)
+            (response, client, data=data, files=files, query_params=query_params, path_params=path_params)
 
     @staticmethod
     def make_get_request(main_url: str, method_name: str, headers: dict, params: str = None):
         return requests.get(f'{main_url}{method_name}', headers=headers, params=params)
 
     @staticmethod
-    def make_post_request(main_url: str, method_name: str, headers: dict, data: dict = None):
-        return requests.post(f'{main_url}{method_name}', headers=headers, json=data)
+    def make_post_request(main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
+        return requests.post(f'{main_url}{method_name}', headers=headers, json=data, params=params)
+
+    @staticmethod
+    def make_patch_request(main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
+        return requests.patch(r'{main_url}{method_name}'.format(main_url=main_url, method_name=method_name), headers=headers, json=data, params=params)
 
     def make_request(self, client, method_url: str, data=None, files=None, query_params=None):
         if self.request_method_name not in RequestsTypeEnum.list():
@@ -71,11 +78,20 @@ class BaseApiManager:
         headers = self._build_headers(client.token)
 
         if self.request_method_name == RequestsTypeEnum.GET.value:
-            response = self.make_get_request(settings.MAIN_URL, method_url, headers=headers, params=query_params)
-            return response
-        if self.request_method_name == RequestsTypeEnum.POST.value:
-            response = self.make_post_request(settings.MAIN_URL, method_url, headers=headers, data=data)
-            return response
+            response = self.make_get_request(
+                settings.MAIN_URL, method_url, headers=headers, params=query_params
+            )
+        elif self.request_method_name == RequestsTypeEnum.POST.value:
+            response = self.make_post_request(
+                settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
+            )
+        elif self.request_method_name == RequestsTypeEnum.PATCH.value:
+            response = self.make_patch_request(
+                settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
+            )
+        else:
+            raise UnknownStatusCodeException('Unknown request type')
+        return response
 
 
 class Authenticate(BaseApiManager):
@@ -89,7 +105,7 @@ class Authenticate(BaseApiManager):
     }
 
     def unauthorised(
-            self, response: requests.Response, client, data: dict = None, files=None, path_params: list = None
+            self, response: requests.Response, client, data: dict = None, files=None, path_params: list = None, **kwargs
     ):
         raise UnauthorisedException('Invalid Application Token')
 
