@@ -74,17 +74,7 @@ class EMnifyTest(TestCase):
             self.assertIsInstance(sims[0], emnify.sim.SimListModel)
 
     def test_activate_sim_by_bic(self):
-        bics = [
-            '36J84M4Y4H73XB4I',
-            '9EBTW3PW9LKFVFQY',
-            '9E5CTDG1CL0OG43W',
-            'H2BTBSZULVI2KUER',
-            'TE1OL8PE0JCFBCEX',
-            'V5H8NPCLHJM50EV1',
-            'CNEX8LXA5GNU5RWH',
-            '942A342X85XEYMO4',
-            'E2D6OJ09JACCJ295',
-            '1MZ0MXF597GPAYUN']
+        bics = []
         emnify = emnify_client(app_token=self.token)
         bic = bics[5]
         response = emnify.sim.activate_sim_by_bic(bic=bic)
