@@ -60,23 +60,20 @@ class BaseApiManager:
         return getattr(self, self.response_handlers[response.status_code])\
             (response, client, data=data, files=files, query_params=query_params, path_params=path_params)
 
-    @staticmethod
-    def make_get_request(main_url: str, method_name: str, headers: dict, params: str = None):
-        return requests.get(f'{main_url}{method_name}', headers=headers, params=params)
+    def make_get_request(self, main_url: str, method_name: str, headers: dict, params: str = None):
+        return requests.get(self.resource_path(main_url, method_name), headers=headers, params=params)
 
-    @staticmethod
-    def make_post_request(main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
-        return requests.post(f'{main_url}{method_name}', headers=headers, json=data, params=params)
+    def make_post_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
+        return requests.post(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
-    @staticmethod
-    def make_patch_request(main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
-        return requests.patch(r'{main_url}{method_name}'.format(main_url=main_url, method_name=method_name), headers=headers, json=data, params=params)
+    def make_patch_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
+        return requests.patch(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
     def make_request(self, client, method_url: str, data=None, files=None, query_params=None):
         if self.request_method_name not in RequestsTypeEnum.list():
             raise ValueError(f'{self.request_method_name}: This method is not allowed')
         headers = self._build_headers(client.token)
-
+        response = None
         if self.request_method_name == RequestsTypeEnum.GET.value:
             response = self.make_get_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params
@@ -89,9 +86,22 @@ class BaseApiManager:
             response = self.make_patch_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
-        else:
-            raise UnknownStatusCodeException('Unknown request type')
         return response
+
+    @staticmethod
+    def return_success(*_, **__) -> True:
+        return True
+
+    @staticmethod
+    def return_unwrapped(response: requests.Response, *args, **kwargs) -> requests.Response.json:
+        try:
+            return response.json()
+        except requests.exceptions.JSONDecodeError:
+            raise JsonDecodeException('error while parsing json for')
+
+    @staticmethod
+    def resource_path(main_url: str, method_name: str):
+        return f'{main_url}{method_name}'
 
 
 class Authenticate(BaseApiManager):
