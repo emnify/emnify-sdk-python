@@ -27,3 +27,7 @@ class UnexpectedArgumentException(EMnifyBaseException):
 
 class ValidationErrorException(EMnifyBaseException):
     """Custom error for validation errors"""
+
+
+class UnknownStatusCodeException(EMnifyBaseException):
+    """Custom error for unknown response errors"""

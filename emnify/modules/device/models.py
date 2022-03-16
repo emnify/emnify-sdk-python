@@ -1,26 +1,52 @@
 import datetime
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 
-from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status
+from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, ListofSMSresponse,\
+    SubmitMTSMSrequest, RetrieveSingleEndpointresponse, UpdateEndpointrequest
 
 from emnify.const import DeviceSortEnum
 
 
 class Device(Endpoint):
-    pass
+    """
+    Renamed generated model
+    """
+
+
+class SmsCreateModel(SubmitMTSMSrequest):
+    """
+    Renamed generated model
+    """
+    source_address: Optional[str] = None
+    source_address_type: Optional[Dict[str, Any]] = None
+    expiry_date: Optional[str] = None
+    udh: Optional[str] = None
+    dcs: Optional[int] = None
+
+
+class ListSms(ListofSMSresponse):
+    """
+    Renamed generated model
+    """
 
 
 class TariffProfile(TariffProfile1):
-    pass
+    """
+    Renamed generated model
+    """
 
 
 class ServiceProfile(ServiceProfile1):
-    pass
+    """
+    Renamed generated model
+    """
 
 
 class DeviceStatus(Status):
-    pass
+    """
+    Renamed generated model
+    """
 
 
 class DeviceIdRequired(Device):
@@ -53,4 +79,16 @@ class GetDeviceFilterSet(BaseModel):
 class DeviceEvent(Event):
     """
     class inherited from generated Event
+    """
+
+
+class RetrieveDevice(RetrieveSingleEndpointresponse):
+    """
+    class inherited from generated model for retrieve device response
+    """
+
+
+class UpdateDevice(UpdateEndpointrequest):
+    """
+    class inherited from generated model for update device request
     """
