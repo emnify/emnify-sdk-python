@@ -11,8 +11,9 @@ class BaseApiManager:
     response_handlers = {
         200: 'return_unwrapped',
         201: 'return_success',
-        401: 'unauthorised'
+        401: 'unauthorised',
     }
+
     request_url_prefix = ''
     request_method_name = ''
 
@@ -36,17 +37,6 @@ class BaseApiManager:
         ).auth_token
 
         return self.call_api(client, data, path_params=path_params, *args, **kwargs)
-
-    @staticmethod
-    def return_success(*_, **__) -> True:
-        return True
-
-    @staticmethod
-    def return_unwrapped(response: requests.Response, *args, **kwargs) -> requests.Response.json:
-        try:
-            return response.json()
-        except requests.exceptions.JSONDecodeError:
-            raise JsonDecodeException('error while parsing json for')
 
     def call_api(self, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None):
         url = self.request_url_prefix

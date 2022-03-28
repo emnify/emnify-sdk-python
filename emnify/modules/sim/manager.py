@@ -22,5 +22,7 @@ class SimManager:
                   }
                 }
         sim_response = SimActivateApi().call_api(client=self.client, data=data, path_params={'bic': bic})
-        for sim in sim_response:
-            yield self.SimListModel(**sim)
+        if isinstance(sim_response, dict):
+            return self.SimListModel(**sim_response)
+        return [self.SimListModel(**sim) for sim in sim_response]
+

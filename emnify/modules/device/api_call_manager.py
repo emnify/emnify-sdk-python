@@ -19,6 +19,7 @@ class CreateDevice(BaseApiManager):
     request_method_name = RequestsTypeEnum.POST.value
     response_handlers = {
         200: 'return_unwrapped',
+        201: 'return_success',
         401: 'unauthorised',
         422: 'process_exception'
     }

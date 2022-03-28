@@ -2,7 +2,7 @@ import datetime
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 
-from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, ListofSMSresponse,\
+from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, RetrieveEventsresponse5,\
     SubmitMTSMSrequest, RetrieveSingleEndpointresponse, UpdateEndpointrequest
 
 from emnify.const import DeviceSortEnum
@@ -25,7 +25,7 @@ class SmsCreateModel(SubmitMTSMSrequest):
     dcs: Optional[int] = None
 
 
-class ListSms(ListofSMSresponse):
+class ListSms(RetrieveEventsresponse5):
     """
     Renamed generated model
     """
