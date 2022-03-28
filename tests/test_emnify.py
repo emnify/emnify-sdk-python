@@ -1,10 +1,12 @@
 import pytest
-import os
 import random
 import string
+import vcr
+import os
+
 from unittest import TestCase
 from emnify.emnify import EMnify as emnify_client
-
+from emnify import errors as emnify_errors
 
 should_skip = 'TOKEN' not in os.environ
 if not should_skip:
@@ -16,19 +18,22 @@ class EMnifyTest(TestCase):
     def setUp(self) -> None:
         self.token = TOKEN
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/get_all_devices.yaml')
     def test_get_all_devices(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_all_devices()]
         self.assertGreater(len(devices), 0)
         self.assertIsInstance(devices[0], emnify.devices.device_model)
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/device_events.yaml')
     def test_get_device_events(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_all_devices()]
-        device_events = [i for i in emnify.devices.get_device_events(devices[0])]
+        device_events = [i for i in emnify.devices.get_device_events(devices[3])]
         self.assertGreater(len(device_events), 0)
         self.assertIsInstance(device_events[0], emnify.devices.event_model)
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/create_device.yaml')
     def test_create_device(self):
         emnify = emnify_client(app_token=self.token)
         for _ in range(0, 13):
@@ -53,33 +58,54 @@ class EMnifyTest(TestCase):
         self.assertNotEqual(prev_devices_count, current_devices_count)
         self.assertGreater(current_devices_count, prev_devices_count)
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/send_sms_to_device.yaml')
     def test_send_sms_to_device(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_all_devices()]
         sms = emnify.devices.sms_create_model(payload='sample_test_payload')
         emnify.devices.send_sms_to_device(device=devices[0], sms=sms)
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/get_all_device_sms.yaml')
     def test_get_all_device_sms(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_all_devices()]
         self.assertGreater(len(devices), 0)
-        sms_instances = [i for i in emnify.devices.get_all_device_sms(device=devices[0])]
+        sms_instances = [i for i in emnify.devices.get_all_device_sms(device=devices[3])]
         self.assertGreater(len(sms_instances), 0)
-        self.assertIsInstance(sms_instances, emnify.devices.list_sms_model)
+        self.assertIsInstance(sms_instances[0], emnify.devices.list_sms_model)
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/get_sim_list.yaml')
     def test_get_sim_list(self):
         emnify = emnify_client(app_token=self.token)
         sims = [i for i in emnify.sim.get_sim_list()]
         if sims:
             self.assertIsInstance(sims[0], emnify.sim.SimListModel)
 
-    def test_activate_sim_by_bic(self):
-        bics = []
+    @vcr.use_cassette('fixtures/vcr_cassettes/activate_sim_by_bic_200.yaml')
+    def test_activate_sim_by_one_size_batch_bic_200(self):
+        bics = [  # BIC CODES
+            'valid_bic_code',
+            'invalid_bic_code'
+            ]
         emnify = emnify_client(app_token=self.token)
-        bic = bics[5]
+        bic = bics[0]
         response = emnify.sim.activate_sim_by_bic(bic=bic)
         self.assertIsInstance(response, emnify.sim.SimListModel)
 
+    @vcr.use_cassette('fixtures/vcr_cassettes/activate_sim_by_bic_422.yaml')
+    def test_activate_sim_by_one_size_batch_bic_422(self):
+        bics = [  # BIC CODES
+            'valid_bic_code',
+            'invalid_bic_code'
+        ]
+        emnify = emnify_client(app_token=self.token)
+        bic = bics[1]
+        try:
+            emnify.sim.activate_sim_by_bic(bic=bic)
+        except emnify_errors.ValidationErrorException as e:
+            self.assertEqual(str(e), 'Invalid bic number')
+
+    @vcr.use_cassette('fixtures/vcr_cassettes/create_device_with_sim.yaml')
     def test_create_device_with_sim(self):
         emnify = emnify_client(app_token=self.token)
         sims = [i for i in emnify.sim.get_sim_list()]
@@ -91,12 +117,13 @@ class EMnifyTest(TestCase):
             random.SystemRandom().choice(string.ascii_lowercase + string.digits) for _ in range(20)
         )
 
-        status = emnify.devices.status_model(id=devices[-1].status.id)
-        tariff_profile = emnify.devices.tariff_profile_model(id=devices[-1].tariff_profile.id)
-        service_profile = emnify.devices.service_profile_model(id=devices[-1].service_profile.id)
-        sim = emnify.sim.SimListModel(id=sims[-1].id)
+        status = emnify.devices.status_model(id=devices[0].status.id)
+        tariff_profile = emnify.devices.tariff_profile_model(id=devices[0].tariff_profile.id)
+        service_profile = emnify.devices.service_profile_model(id=devices[0].service_profile.id)
+        sim = emnify.sim.SimListModel(id=sims[0].id, is_active=False)
         device = emnify.devices.device_model(
             name=name, tariff_profile=tariff_profile, status=status, service_profile=service_profile, sim=sim
         )
 
-        emnify.devices.create_device(device=device)
+        response = emnify.devices.create_device(device=device)
+        self.assertIs(response, True)
