@@ -30,3 +30,9 @@ Python > 3.6 is required.
   
         emnify = EMnify(TOKEN)
         devices = emnify.devices.get_all_devices()  # Note: in 'devices' object-generator
+
+- Getting Help
+    - “If you need help installing or using the library, please [file a support ticket](https://support.emnify.com/hc/en-us/requests/new).
+        
+    -    If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo.”
+    
