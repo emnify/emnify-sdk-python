@@ -1,0 +1,9 @@
+FROM python:alpine
+
+WORKDIR /docs
+
+RUN pip install pycco
+
+COPY . .
+
+CMD sh ./docs/build.sh
