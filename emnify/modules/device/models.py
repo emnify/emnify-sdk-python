@@ -1,5 +1,5 @@
 import datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 from typing import Optional, List, Dict, Any
 
 from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, RetrieveEventsresponse5,\
@@ -12,6 +12,23 @@ class Device(Endpoint):
     """
     Renamed generated model
     """
+
+
+class CreateDevice(Device):
+    """
+    Custom class for validation of Device on creation
+    """
+
+    @validator("status")
+    @classmethod
+    def validate_status(cls, field_value, values, field, config):
+        if values.get("sim") and getattr(values["sim"], "status") and values["sim"].status['id'] == 1:
+            return field_value
+        if field_value.id == 0:
+            # If user will try activate device without sim card
+            field_value.id = 1
+            field_value.description = "Disabled"
+        return field_value
 
 
 class SmsCreateModel(SubmitMTSMSrequest):

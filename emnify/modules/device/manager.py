@@ -2,7 +2,7 @@ import typing
 import emnify.modules.device.api_call_manager as device_call_managers
 from emnify.errors import UnexpectedArgumentException
 from emnify.modules.device.models import Device, GetDeviceFilterSet, QFilterDeviceListQueryParam, DeviceEvent, \
-    DeviceStatus, TariffProfile, ServiceProfile, ListSms, SmsCreateModel, RetrieveDevice, UpdateDevice
+    DeviceStatus, TariffProfile, ServiceProfile, ListSms, SmsCreateModel, RetrieveDevice, UpdateDevice, CreateDevice
 from emnify.const import DeviceSortEnum
 
 
@@ -19,7 +19,7 @@ class DeviceManager:
         return ListSms
 
     @property
-    def device_detailed(self):
+    def device_detailed_model(self):
         return RetrieveDevice
 
     @property
@@ -35,6 +35,10 @@ class DeviceManager:
         return DeviceStatus
 
     @property
+    def device_create_model(self):
+        return CreateDevice
+
+    @property
     def service_profile_model(self):
         return ServiceProfile
 
@@ -43,18 +47,18 @@ class DeviceManager:
         return TariffProfile
 
     @property
-    def get_sort_device_param_enum(self):
+    def sort_device_param_enum(self):
         return DeviceSortEnum
 
     @property
-    def get_device_list_filterset(self):
+    def device_list_filterset_model(self):
         return GetDeviceFilterSet
 
     @property
     def get_device_q_filterset(self) -> typing.Type[QFilterDeviceListQueryParam]:
         return QFilterDeviceListQueryParam
 
-    def get_all_device_sms(self, *args, device: typing.Union[Device, int]) -> ListSms:
+    def get_device_sms_list(self, *args, device: typing.Union[Device, int]) -> ListSms:
         device_id = self.validate_device(device)
         sms_response = device_call_managers.GetEventsByDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
@@ -62,7 +66,7 @@ class DeviceManager:
         for sms in sms_response:
             yield ListSms(**sms)
 
-    def send_sms_to_device(self, *args, device: typing.Union[Device, int], sms: SmsCreateModel) -> bool:
+    def send_sms(self, *args, device: typing.Union[Device, int], sms: SmsCreateModel) -> bool:
         device_id = self.validate_device(device)
         if not isinstance(sms, SmsCreateModel):
             raise UnexpectedArgumentException('sms argument must be SmsCreateModel instance')
@@ -75,7 +79,7 @@ class DeviceManager:
             client=self.client, data=device.dict(exclude_none=True), path_params={'endpoint_id': device_id}
         )
 
-    def get_all_devices(self, *args, query_params: GetDeviceFilterSet = None, **kwargs):
+    def get_devices_list(self, *args, query_params: GetDeviceFilterSet = None, **kwargs):
 
         if query_params:
             query_params = self.transform_all_devices_filter_params(query_params)
@@ -84,7 +88,7 @@ class DeviceManager:
         for device in devices_response:
             yield Device(**device)
 
-    def get_device_events(self, device: typing.Union[Device, int]):
+    def get_device_events_list(self, device: typing.Union[Device, int]):
         """
         :param device: Device pydantic model or int
         :return: Generator with Device objects

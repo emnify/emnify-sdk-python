@@ -7,6 +7,9 @@ from emnify.const import RequestsTypeEnum, RequestsUrlEnum, RequestDefaultHeader
 
 
 class BaseApiManager:
+    """
+    Base manager for api calls handling
+    """
 
     response_handlers = {
         200: 'return_unwrapped',

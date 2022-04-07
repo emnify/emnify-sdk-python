@@ -7,15 +7,15 @@ class SimManager:
         self.client = client
 
     @property
-    def SimListModel(self):
+    def sim_list_model(self):
         return SimList
 
     def get_sim_list(self):
         sim_response = SimListApi().call_api(client=self.client)
         for sim in sim_response:
-            yield self.SimListModel(**sim)
+            yield self.sim_list_model(**sim)
 
-    def activate_sim_by_bic(self, bic: str):
+    def register_sim(self, bic: str):
         data = {
                   "sim_status": {
                     "id": 1
@@ -23,6 +23,6 @@ class SimManager:
                 }
         sim_response = SimActivateApi().call_api(client=self.client, data=data, path_params={'bic': bic})
         if isinstance(sim_response, dict):
-            return self.SimListModel(**sim_response)
-        return [self.SimListModel(**sim) for sim in sim_response]
+            return self.sim_list_model(**sim_response)
+        return [self.sim_list_model(**sim) for sim in sim_response]
 
