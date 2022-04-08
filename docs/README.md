@@ -4,4 +4,7 @@ Build a container
 
 Run docgen
 
-`docker run -it -v $(pwd):/docs emnify/python-sdk-docs`
+`docker run -it -v %cd%:/docs emnify/python-sdk-docs`
+
+Run docgen (for windows)
+`docker run -it -v %cd%:/docs emnify/python-sdk-docs`
