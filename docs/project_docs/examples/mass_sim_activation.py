@@ -3,35 +3,43 @@ from emnify.errors import EMnifyBaseException
 
 
 """
-## Mass sim activation example
-## Contains:
-* [Classes Documentation](../../index.html)
-* [Exceptions Documentation](../examples/exceptions_documentation.html)
-* [Models Documentation](../examples/models.html)
+# Massive SIM Activation Example
+
+[^ Documentation Index ^](../../../index.html)
 """
 
+# Define Application token and BIC2 for the SIM batch we want to activate.
 token = input('token: ')
 sim_batch_BIC2 = input('BIC2: ')
 
-
+# Initiate EMnify client instance with application token
 emnify_client = EMnify(token)
-# Use EMnifyBaseException for general exceptions or inherited classes for specific one`s
 try:
     issued_sims = emnify_client.sim.register_sim(bic=sim_batch_BIC2)
-#  After Sim batch is sended - all sim`s are registred with "issued" status
+# After Sim batch is sended - all sim`s are registred with "issued" status
 except EMnifyBaseException as e:
+# Use EMnifyBaseException for general exceptions or inherited classes for specific one`s
     raise AssertionError(f"error during sim batch BIC2 activation{e}")
+
+# In order to create devices for SIMs afterwards we need service and coverage profiles.
+# [Device Policies Configuration](https://portal.emnify.com/device-policies), you can find IDs there.
 service_profile = emnify_client.devices.service_profile_model(id=1)
 tariff_profile = emnify_client.devices.tariff_profile_model(id=1)
+
+# We define status of device to be applied during creation.
 device_status = emnify_client.devices.status_model(id=0)
+
 for sim in issued_sims:
     device_name = f"Device({sim.iccid})"
-# Sim status 1 - means sim is active
     sim.status = {"id": 1}
+# Here we create a new device with the SIM assigned. It will be activated after device creation.
     device = emnify_client.devices.device_create_model(
         tariff_profile=tariff_profile, status=device_status, service_profile=service_profile, sim=sim
     )
+# After creation we may retrieve device information.
     device_model = emnify_client.devices.retrieve_device(device_id=emnify_client.devices.create_device(device))
+
+# After making sure device is created we send there configuration SMS. It may vary on device manufacturer. You can learn more about SMS configuration in [this article](https://support.emnify.com/hc/en-us/articles/4401906757906-How-to-configure-the-APN-on-different-devices).
     activation_code = 'AT+CGDCONT=1,"IP","em",,'
     sender = "city_scooters_admin"
     activation_sms = emnify_client.devices.sms_create_model(payload=activation_code, source_adress=sender)
