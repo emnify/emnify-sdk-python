@@ -7,7 +7,7 @@ from emnify.errors import EMnifyBaseException
 ## Contains:
 * [Classes Documentation](../../index.html)
 * [Exceptions Documentation](../examples/exceptions_documentation.html)
-* [Models Documentation](../examples/index.html)
+* [Models Documentation](../examples/models.html)
 """
 
 token = input('token: ')
@@ -26,6 +26,7 @@ tariff_profile = emnify_client.devices.tariff_profile_model(id=1)
 device_status = emnify_client.devices.status_model(id=0)
 for sim in issued_sims:
     device_name = f"Device({sim.iccid})"
+# Sim status 1 - means sim is active
     sim.status = {"id": 1}
     device = emnify_client.devices.device_create_model(
         tariff_profile=tariff_profile, status=device_status, service_profile=service_profile, sim=sim
