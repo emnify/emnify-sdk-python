@@ -23,6 +23,7 @@ Create your application token on: [https://portal.emnify.com/integrations/](http
 """
 
 # ## Use
+TOKEN = 'test'
 
 # 1) import package
 from emnify import EMnify
@@ -32,7 +33,7 @@ from emnify import EMnify
 emnify = EMnify(TOKEN)
 
 # 3) Execute a command against desired API
-devices = emnify.devices.get_all_devices()
+devices = emnify.devices.get_devices_list()
 
 """
 ## Explore more

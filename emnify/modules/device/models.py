@@ -5,7 +5,7 @@ from typing import Optional, List, Dict, Any
 from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, RetrieveEventsresponse5,\
     SubmitMTSMSrequest, RetrieveSingleEndpointresponse, UpdateEndpointrequest
 
-from emnify.const import DeviceSortEnum
+from emnify.constants import DeviceSortEnum
 
 
 class Device(Endpoint):

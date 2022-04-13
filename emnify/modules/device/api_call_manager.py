@@ -1,7 +1,7 @@
 import requests
 from emnify.api_manager import BaseApiManager
-from emnify.const import RequestsTypeEnum
-from emnify.errors import ValidationErrorException
+from emnify.constants import RequestsTypeEnum
+from emnify.errors import ValidationErrorException, EMnifyBaseException
 
 
 class GetAllDevicesApiCall(BaseApiManager):

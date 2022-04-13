@@ -3,7 +3,7 @@ import emnify.modules.device.api_call_manager as device_call_managers
 from emnify.errors import UnexpectedArgumentException
 from emnify.modules.device.models import Device, GetDeviceFilterSet, QFilterDeviceListQueryParam, DeviceEvent, \
     DeviceStatus, TariffProfile, ServiceProfile, ListSms, SmsCreateModel, RetrieveDevice, UpdateDevice, CreateDevice
-from emnify.const import DeviceSortEnum
+from emnify.constants import DeviceSortEnum
 
 
 class DeviceManager:
@@ -66,7 +66,7 @@ class DeviceManager:
         for sms in sms_response:
             yield ListSms(**sms)
 
-    def send_sms(self, *args, device: typing.Union[Device, int], sms: SmsCreateModel) -> bool:
+    def send_sms(self, *args, device: typing.Union[Device, int, RetrieveDevice], sms: SmsCreateModel) -> bool:
         device_id = self.validate_device(device)
         if not isinstance(sms, SmsCreateModel):
             raise UnexpectedArgumentException('sms argument must be SmsCreateModel instance')
@@ -115,7 +115,7 @@ class DeviceManager:
 
     @staticmethod
     def validate_device(device: Device) -> int:
-        if isinstance(device, Device):
+        if isinstance(device, Device) or isinstance(device, RetrieveDevice):
             return device.id
         elif isinstance(device, int):
             return device

@@ -22,14 +22,14 @@ Python > 3.6 is required.
         from emnify import EMnify
   
         emnify = EMnify(TOKEN)
-        devices = emnify.devices.get_all_devices()  # Note: in 'devices' object-generator
+        devices = emnify.devices.get_devices_list()  # Note: in 'devices' object-generator
         
 - recieve events by device/device_id
 
         from emnify import EMnify
   
         emnify = EMnify(TOKEN)
-        devices = emnify.devices.get_all_devices()  # Note: in 'devices' object-generator
+        devices = emnify.devices.get_devices_list()  # Note: in 'devices' object-generator
 
 - Getting Help
     - “If you need help installing or using the library, please [file a support ticket](https://support.emnify.com/hc/en-us/requests/new).

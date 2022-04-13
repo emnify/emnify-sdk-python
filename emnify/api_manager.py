@@ -3,7 +3,7 @@ import settings
 
 from emnify.errors import UnauthorisedException, JsonDecodeException, UnknownStatusCodeException
 from emnify.modules.api.models import AuthenticationResponse
-from emnify.const import RequestsTypeEnum, RequestsUrlEnum, RequestDefaultHeadersKeys, RequestDefaultHeadersValues
+from emnify.constants import RequestsTypeEnum, RequestsUrlEnum, RequestDefaultHeadersKeys, RequestDefaultHeadersValues
 
 
 class BaseApiManager:
