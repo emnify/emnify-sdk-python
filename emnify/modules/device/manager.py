@@ -7,6 +7,9 @@ from emnify.constants import DeviceSortEnum
 
 
 class DeviceManager:
+    """
+    Manager that allows to get/retrieve/create/update/send_sms to device
+    """
     def __init__(self, client):
         self.client = client
 
@@ -37,6 +40,10 @@ class DeviceManager:
     @property
     def device_create_model(self):
         return CreateDevice
+
+    @property
+    def device_update_model(self):
+        return UpdateDevice
 
     @property
     def service_profile_model(self):

@@ -33,7 +33,7 @@ class CreateDevice(Device):
 
 class SmsCreateModel(SubmitMTSMSrequest):
     """
-    Renamed generated model
+    Inherited generated model of SubmitMTSMSrequest for extra fields
     """
     source_address: Optional[str] = None
     source_address_type: Optional[Dict[str, Any]] = None
@@ -67,10 +67,16 @@ class DeviceStatus(Status):
 
 
 class DeviceIdRequired(Device):
+    """
+    Changed renamed model of Device for id validation
+    """
     id: int
 
 
 class QFilterDeviceListQueryParam(BaseModel):
+    """
+    Model for validation of filter query params
+    """
     status: Optional[int] = None
     last_updated: Optional[datetime.datetime] = None
     created: Optional[datetime.datetime] = None
@@ -86,6 +92,9 @@ class ListQFilterDeviceListQueryParam(BaseModel):
 
 
 class GetDeviceFilterSet(BaseModel):
+    """
+    Model for device list query params
+    """
     sort: Optional[List[DeviceSortEnum]] = None
     q: Optional[ListQFilterDeviceListQueryParam] = None
 
