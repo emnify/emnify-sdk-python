@@ -1,1 +1,1 @@
-pycco ./docs/project_docs/** ./emnify/** -p -d ./docs/build -i
+sphinx-build -b html docs/sphinx docs/build_sphinx

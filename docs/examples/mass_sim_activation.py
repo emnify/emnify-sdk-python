@@ -5,15 +5,12 @@ from emnify.errors import EMnifyBaseException
 
 """
 # Massive SIM Activation Example
-
-[^ Documentation Index ^](../../../index.html)
 """
 
 # Define Application token and BIC2 for the SIM batch we want to activate.
 token = input('token: ')
 sim_batch_BIC2 = input('BIC2: ')
 
-# Initiate EMnify client instance with application token
 emnify_client = EMnify(token)
 try:
     issued_sims = emnify_client.sim.register_sim(bic=sim_batch_BIC2)

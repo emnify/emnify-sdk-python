@@ -20,6 +20,3 @@ device_model = emnify_client.devices.device_create_model(
 # All required models can be retrieved through manager`s properties
 
 device_id = emnify_client.devices.create_device(device_model)
-
-# more about sdk models in [manager docs](../../../emnify/models/device/manager.html)
-# more about devices in [manager docs](../../../emnify/models/device/manager.html)

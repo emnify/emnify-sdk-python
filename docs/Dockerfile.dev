@@ -2,7 +2,9 @@ FROM python:alpine
 
 WORKDIR /docs
 
-RUN pip install pycco
+COPY docs/req.txt req.txt
+
+RUN pip install -r req.txt
 
 COPY . .
 
