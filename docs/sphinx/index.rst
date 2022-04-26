@@ -8,8 +8,3 @@ Getting Started
 .. toctree::
     getting_started
     examples
-
-.. autosummary::
-   :recursive:
-
-    emnify
