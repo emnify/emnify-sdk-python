@@ -1,7 +1,7 @@
 import datetime
 from pydantic import BaseModel, validator
 from typing import Optional, List, Dict, Any
-
+from emnify.modules.sim.models import SimList
 from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, RetrieveEventsresponse5,\
     SubmitMTSMSrequest, RetrieveSingleEndpointresponse, UpdateEndpointrequest
 
@@ -12,6 +12,7 @@ class Device(Endpoint):
     """
     Renamed generated model
     """
+    status: Status
 
 
 class CreateDevice(Device):
@@ -108,13 +109,25 @@ class DeviceEvent(Event):
     """
 
 
-class RetrieveDevice(RetrieveSingleEndpointresponse):
+class RetrieveDevice(Device):
     """
     class inherited from generated model for retrieve device response
     """
+    runtime_data: Optional[Dict[str, Any]] = None
+    sim: SimList = None
 
 
 class UpdateDevice(UpdateEndpointrequest):
     """
     class inherited from generated model for update device request
     """
+    name: str = None
+    tags: str = None
+    status: Status = None
+    service_profile: Dict[str, Any] = None
+    tariff_profile: Dict[str, Any] = None
+    ip_address: str = None
+    ip_address_space: Dict[str, Any] = None
+    sim: Dict[str, Any] = None
+    imei: str = None
+    imei_lock: bool = None

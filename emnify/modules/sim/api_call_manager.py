@@ -21,3 +21,23 @@ class SimActivateApi(BaseApiManager):
 
     def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
         raise ValidationErrorException('Invalid bic number')
+
+
+class SimUpdateApi(BaseApiManager):
+    request_url_prefix = '/v1/sim/{sim}'
+    request_method_name = RequestsTypeEnum.PATCH.value
+
+    response_handlers = {
+        204: 'return_success',
+        401: 'unauthorised',
+        400: 'process_exception',
+        422: 'unauthorised'
+    }
+
+    def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
+        raise ValidationErrorException(response.json())
+
+
+class SimRetrieveApi(BaseApiManager):
+    request_url_prefix = '/v1/sim/{sim}'
+    request_method_name = RequestsTypeEnum.GET.value

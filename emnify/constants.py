@@ -21,6 +21,7 @@ class DeviceSortEnum(ExtendedEnum):
 class Values(ExtendedEnum):
     ID = 'id'
 
+
 class RequestsTypeEnum(ExtendedEnum):
     GET = 'get'
     POST = 'post'
@@ -74,7 +75,7 @@ class SimStatuses(ExtendedEnum):
     ACTIVATED_DICT = {
             "id": 1,
             "description": "Activated"
-        },
+        }
     SUSPENDED_DICT = {
             "id": 2,
             "description": "Suspended"

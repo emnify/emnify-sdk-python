@@ -29,7 +29,7 @@ class CreateDevice(BaseApiManager):
 
 
 class GetAllSmsFromDevice(BaseApiManager):
-    request_url_prefix = '/api/v1/endpoint/{endpoint_id}/sms'
+    request_url_prefix = '/v1/endpoint/{endpoint_id}/sms'
     request_method_name = RequestsTypeEnum.GET.value
 
 
@@ -43,12 +43,12 @@ class SendSmsToDevice(BaseApiManager):
 
 
 class RetrieveDevice(BaseApiManager):
-    request_url_prefix = '/api/v1/endpoint/{endpoint_id}'
+    request_url_prefix = '/v1/endpoint/{endpoint_id}'
     request_method_name = RequestsTypeEnum.GET.value
 
 
 class UpdateDevice(BaseApiManager):
-    request_url_prefix = '/api/v1/endpoint/{endpoint_id}'
+    request_url_prefix = '/v1/endpoint/{endpoint_id}'
     request_method_name = RequestsTypeEnum.PATCH.value
     response_handlers = {
         204: 'return_success',

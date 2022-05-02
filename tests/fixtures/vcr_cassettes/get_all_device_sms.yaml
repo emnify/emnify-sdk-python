@@ -13,7 +13,7 @@ interactions:
       authorization:
       - Bearer None
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: '{"message":"token contains an invalid number of segments"}'
@@ -81,7 +81,7 @@ interactions:
       authorization:
       - Bearer None
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/authenticate
+    uri: https://cdn.emnify.net/api/v1/authenticate
   response:
     body:
       string: !!binary |
@@ -158,7 +158,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyMDgwLCJpYXQiOjE2NDg0MjcyODB9.rQ97MUoKbx3XGWBU6eYCawnPwRw58oeDArtJUaeBOOZLdHYJIL8bC5kNrbI83HPZ
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -248,7 +248,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyMDgwLCJpYXQiOjE2NDg0MjcyODB9.rQ97MUoKbx3XGWBU6eYCawnPwRw58oeDArtJUaeBOOZLdHYJIL8bC5kNrbI83HPZ
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380016/event
+    uri: https://cdn.emnify.net/api/v1/endpoint/11380016/event
   response:
     body:
       string: !!binary |

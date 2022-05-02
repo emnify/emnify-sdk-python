@@ -13,7 +13,7 @@ interactions:
       authorization:
       - Bearer None
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: '{"message":"token contains an invalid number of segments"}'
@@ -81,7 +81,7 @@ interactions:
       authorization:
       - Bearer None
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/authenticate
+    uri: https://cdn.emnify.net/api/v1/authenticate
   response:
     body:
       string: !!binary |
@@ -158,7 +158,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -248,7 +248,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -343,7 +343,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -369,7 +369,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:49 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380017
+      - https://cdn.emnify.net/api/v1/endpoint/11380017
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -411,7 +411,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -501,7 +501,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -591,7 +591,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -686,7 +686,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -712,7 +712,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:51 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380018
+      - https://cdn.emnify.net/api/v1/endpoint/11380018
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -754,7 +754,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -845,7 +845,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -936,7 +936,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1032,7 +1032,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -1058,7 +1058,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:52 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380019
+      - https://cdn.emnify.net/api/v1/endpoint/11380019
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -1100,7 +1100,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1191,7 +1191,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1282,7 +1282,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1378,7 +1378,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -1404,7 +1404,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:54 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380020
+      - https://cdn.emnify.net/api/v1/endpoint/11380020
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -1446,7 +1446,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1538,7 +1538,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1630,7 +1630,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1727,7 +1727,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -1753,7 +1753,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:55 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380021
+      - https://cdn.emnify.net/api/v1/endpoint/11380021
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -1795,7 +1795,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1888,7 +1888,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -1981,7 +1981,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2079,7 +2079,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -2105,7 +2105,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:57 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380022
+      - https://cdn.emnify.net/api/v1/endpoint/11380022
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -2147,7 +2147,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2240,7 +2240,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2333,7 +2333,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2431,7 +2431,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -2457,7 +2457,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:37:58 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380023
+      - https://cdn.emnify.net/api/v1/endpoint/11380023
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -2499,7 +2499,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2593,7 +2593,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2687,7 +2687,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2786,7 +2786,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -2812,7 +2812,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:38:00 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380024
+      - https://cdn.emnify.net/api/v1/endpoint/11380024
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -2854,7 +2854,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -2948,7 +2948,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3042,7 +3042,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3141,7 +3141,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -3167,7 +3167,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:38:01 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380025
+      - https://cdn.emnify.net/api/v1/endpoint/11380025
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -3209,7 +3209,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3304,7 +3304,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3399,7 +3399,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3499,7 +3499,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: ''
@@ -3525,7 +3525,7 @@ interactions:
       Date:
       - Mon, 28 Mar 2022 00:38:03 GMT
       Location:
-      - https://api-staging.dev.emnify.io/api/v1/endpoint/11380026
+      - https://cdn.emnify.net/api/v1/endpoint/11380026
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -3567,7 +3567,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3662,7 +3662,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3757,7 +3757,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |
@@ -3857,7 +3857,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint
+    uri: https://cdn.emnify.net/api/v1/endpoint
   response:
     body:
       string: !!binary |

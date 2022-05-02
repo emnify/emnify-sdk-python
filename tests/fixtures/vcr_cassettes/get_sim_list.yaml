@@ -13,7 +13,7 @@ interactions:
       authorization:
       - Bearer None
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/sim
+    uri: https://cdn.emnify.net/api/v1/sim
   response:
     body:
       string: '{"message":"token contains an invalid number of segments"}'
@@ -81,7 +81,7 @@ interactions:
       authorization:
       - Bearer None
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/authenticate
+    uri: https://cdn.emnify.net/api/v1/authenticate
   response:
     body:
       string: !!binary |
@@ -158,7 +158,7 @@ interactions:
       authorization:
       - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMxOTg2LCJpYXQiOjE2NDg0MjcxODZ9.0ZyeIenO6gppyoAHtoP5p3CmX7owyQCxWNQEKUJv9eTbamrkeP0bqFcfpbzFVL2V
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/sim
+    uri: https://cdn.emnify.net/api/v1/sim
   response:
     body:
       string: !!binary |
