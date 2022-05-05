@@ -1,4 +1,4 @@
-***EMify python SDK***
+***EMnify Python SDK***
 
 How to install
 
