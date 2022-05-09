@@ -164,7 +164,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMwMzE5LCJpYXQiOjE2NDg0MjU1MTl9.YTXyqVkR0_1jWKZKhNfc9L2LbrNBmK34gO8C_wNb3dmk2wpUrhonRfZUiDI4kpSr
+      - Bearer None
     method: PATCH
     uri: https://cdn.emnify.net/api/v1/sim_batch/bic/invalid_bic_code
   response:

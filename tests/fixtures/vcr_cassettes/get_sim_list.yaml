@@ -156,7 +156,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMxOTg2LCJpYXQiOjE2NDg0MjcxODZ9.0ZyeIenO6gppyoAHtoP5p3CmX7owyQCxWNQEKUJv9eTbamrkeP0bqFcfpbzFVL2V
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/sim
   response:

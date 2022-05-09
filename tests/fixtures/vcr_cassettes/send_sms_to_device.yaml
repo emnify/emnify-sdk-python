@@ -156,7 +156,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjQ4LCJpYXQiOjE2NDg0Mjc4NDh9.hcQ0ALEkr4kwLha46a_8XX2oC7x3C8vQublkzLRDFfsJagAmxGKu-f0PIMP8NwhZ
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -250,7 +250,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjQ4LCJpYXQiOjE2NDg0Mjc4NDh9.hcQ0ALEkr4kwLha46a_8XX2oC7x3C8vQublkzLRDFfsJagAmxGKu-f0PIMP8NwhZ
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint/11379224/sms
   response:

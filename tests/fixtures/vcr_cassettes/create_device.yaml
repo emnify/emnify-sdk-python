@@ -156,7 +156,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -246,7 +246,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -341,7 +341,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -409,7 +409,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -499,7 +499,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -589,7 +589,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -684,7 +684,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -752,7 +752,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -843,7 +843,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -934,7 +934,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1030,7 +1030,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1098,7 +1098,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1189,7 +1189,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1280,7 +1280,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1376,7 +1376,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1444,7 +1444,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1536,7 +1536,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1628,7 +1628,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1725,7 +1725,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1793,7 +1793,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1886,7 +1886,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -1979,7 +1979,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2077,7 +2077,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2145,7 +2145,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2238,7 +2238,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2331,7 +2331,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2429,7 +2429,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2497,7 +2497,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2591,7 +2591,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2685,7 +2685,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2784,7 +2784,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2852,7 +2852,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -2946,7 +2946,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3040,7 +3040,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3139,7 +3139,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3207,7 +3207,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3302,7 +3302,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3397,7 +3397,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3497,7 +3497,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3565,7 +3565,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3660,7 +3660,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3755,7 +3755,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
@@ -3855,7 +3855,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2F1dGhlbnRpY2F0aW9uIiwiZXNjLmFwcCI6ODc4MywiYXBpX2tleSI6ImttUTM3a0JMYWQ5emN2TzFMeDVIYW9rcTVXdmRiRlU3SXlNUUpSSmkiLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiZXhwIjoxNjQ5MDMyNjY4LCJpYXQiOjE2NDg0Mjc4Njh9.aDIF0hwZTkVo5aQ-V0uEqC7GnP418BSMwkOslMrUOT00UorH14QqbWEpOEJDqKfd
+      - Bearer None
     method: POST
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
