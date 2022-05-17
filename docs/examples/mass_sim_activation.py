@@ -29,7 +29,7 @@ device_status = emnify_client.devices.status_model(id=0)
 
 for sim in issued_sims:
     device_name = f"Device({sim.iccid})"
-    sim.status = {constants.SimStatuses.ACTIVATED_DICT.value}
+    sim.status = {constants.SimStatusesDict.ACTIVATED_DICT.value}
 # Here we create a new device with the SIM assigned. It will be activated after device creation.
     device = emnify_client.devices.device_create_model(
         tariff_profile=tariff_profile, status=device_status, service_profile=service_profile, sim=sim

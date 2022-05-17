@@ -18,7 +18,7 @@ class DeviceSortEnum(ExtendedEnum):
     IMEI = 'imei'
 
 
-class Values(ExtendedEnum):
+class IdValues(ExtendedEnum):
     ID = 'id'
 
 
@@ -30,7 +30,7 @@ class RequestsTypeEnum(ExtendedEnum):
     PATCH = 'patch'
 
 
-class RequestsUrlEnum(ExtendedEnum):
+class AuthenticateRequestsUrl(ExtendedEnum):
     V1_AUTHENTICATE = '/v1/authenticate'
 
 
@@ -62,12 +62,15 @@ class DeviceStatuses(ExtendedEnum):
         }
 
 
-class SimStatuses(ExtendedEnum):
+class SimStatusesID(ExtendedEnum):
     ISSUED_ID = 0
     ACTIVATED_ID = 1
     SUSPENDED_ID = 2
     DELETED_ID = 3
     FACTORY_TEST_ID = 4
+
+
+class SimStatusesDict(ExtendedEnum):
     ISSUED_DICT = {
             "id": 0,
             "description": "Issued"

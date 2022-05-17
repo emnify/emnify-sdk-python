@@ -9,10 +9,6 @@ from emnify.emnify import EMnify as emnify_client
 from emnify import constants as emnify_const
 from emnify import errors as emnify_errors
 
-should_skip = 'TOKEN' not in os.environ
-if not should_skip:
-    TOKEN = os.environ['TOKEN']
-TOKEN = 'test'
 
 @pytest.fixture(scope='module')
 def vcr_cassette_dir(request):

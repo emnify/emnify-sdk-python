@@ -27,7 +27,7 @@ class SimManager:
         return SimList(**SimRetrieveApi().call_api(client=self.client, path_params={'sim': sim_id}))
 
     def register_sim(self, bic: str):
-        data = emnify_const.SimStatuses.ACTIVATED_DICT.value
+        data = emnify_const.SimStatusesDict.ACTIVATED_DICT.value
         sim_response = SimActivateApi().call_api(client=self.client, data=data, path_params={'bic': bic})
         if isinstance(sim_response, dict):
             return self.sim_list_model(**sim_response)
@@ -49,7 +49,7 @@ class SimManager:
         """
         return SimUpdateApi() \
             .call_api(
-            client=self.client, data={'status': emnify_const.SimStatuses.ACTIVATED_DICT.value},
+            client=self.client, data={'status': emnify_const.SimStatusesDict.ACTIVATED_DICT.value},
             path_params={'sim': sim_id}
         )
 
@@ -60,7 +60,7 @@ class SimManager:
         """
         return SimUpdateApi() \
             .call_api(
-            client=self.client, data={'status': emnify_const.SimStatuses.SUSPENDED_DICT.value},
+            client=self.client, data={'status': emnify_const.SimStatusesDict.SUSPENDED_DICT.value},
             path_params={'sim': sim_id}
         )
 
@@ -71,6 +71,6 @@ class SimManager:
         """
         return SimUpdateApi() \
             .call_api(
-            client=self.client, data={'status': emnify_const.SimStatuses.ISSUED_DICT.value},
+            client=self.client, data={'status': emnify_const.SimStatusesDict.ISSUED_DICT.value},
             path_params={'sim': sim_id}
         )

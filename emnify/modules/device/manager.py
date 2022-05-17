@@ -1,8 +1,7 @@
 import typing
 import emnify.modules.device.api_call_manager as device_call_managers
 from emnify.errors import UnexpectedArgumentException
-from emnify.modules.device.models import Device, GetDeviceFilterSet, QFilterDeviceListQueryParam, DeviceEvent, \
-    DeviceStatus, TariffProfile, ServiceProfile, ListSms, SmsCreateModel, RetrieveDevice, UpdateDevice, CreateDevice
+from emnify.modules.device import models as device_models
 from emnify import constants as emnify_constants
 from emnify import errors as emnify_errors
 
@@ -16,43 +15,43 @@ class DeviceManager:
 
     @property
     def device_model(self):
-        return Device
+        return device_models.Device
 
     @property
     def list_sms_model(self):
-        return ListSms
+        return device_models.ListSms
 
     @property
     def device_detailed_model(self):
-        return RetrieveDevice
+        return device_models.RetrieveDevice
 
     @property
     def sms_create_model(self):
-        return SmsCreateModel
+        return device_models.SmsCreateModel
 
     @property
     def event_model(self):
-        return DeviceEvent
+        return device_models.DeviceEvent
 
     @property
     def status_model(self):
-        return DeviceStatus
+        return device_models.DeviceStatus
 
     @property
     def device_create_model(self):
-        return CreateDevice
+        return device_models.CreateDevice
 
     @property
     def device_update_model(self):
-        return UpdateDevice
+        return device_models.UpdateDevice
 
     @property
     def service_profile_model(self):
-        return ServiceProfile
+        return device_models.ServiceProfile
 
     @property
     def tariff_profile_model(self):
-        return TariffProfile
+        return device_models.TariffProfile
 
     @property
     def sort_device_param_enum(self):
@@ -60,43 +59,47 @@ class DeviceManager:
 
     @property
     def device_list_filterset_model(self):
-        return GetDeviceFilterSet
+        return device_models.GetDeviceFilterSet
 
     @property
-    def get_device_q_filterset(self) -> typing.Type[QFilterDeviceListQueryParam]:
-        return QFilterDeviceListQueryParam
+    def get_device_q_filterset(self) -> typing.Type[device_models.QFilterDeviceListQueryParam]:
+        return device_models.QFilterDeviceListQueryParam
 
-    def get_device_sms_list(self, *args, device: typing.Union[Device, int]) -> ListSms:
+    def get_device_sms_list(self, *args, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         device_id = self.validate_device(device)
         sms_response = device_call_managers.GetEventsByDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
         for sms in sms_response:
-            yield ListSms(**sms)
+            yield device_models.ListSms(**sms)
 
-    def send_sms(self, *args, device: typing.Union[Device, int, RetrieveDevice], sms: SmsCreateModel) -> bool:
+    def send_sms(
+            self, *args,
+            device: typing.Union[device_models.Device, int, device_models.RetrieveDevice],
+            sms: device_models.SmsCreateModel
+    ) -> bool:
         device_id = self.validate_device(device)
-        if not isinstance(sms, SmsCreateModel):
+        if not isinstance(sms, device_models.SmsCreateModel):
             raise UnexpectedArgumentException('sms argument must be SmsCreateModel instance')
         return device_call_managers.SendSmsToDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}, data=sms.dict(exclude_none=True)
         )
 
-    def update_device(self, *args, device_id: int, device: UpdateDevice):
+    def update_device(self, *args, device_id: int, device: device_models.UpdateDevice):
         return device_call_managers.UpdateDevice().call_api(
             client=self.client, data=device.dict(exclude_none=True), path_params={'endpoint_id': device_id}
         )
 
-    def get_devices_list(self, *args, query_params: GetDeviceFilterSet = None, **kwargs):
+    def get_devices_list(self, *args, query_params: device_models.GetDeviceFilterSet = None, **kwargs):
 
         if query_params:
             query_params = self.transform_all_devices_filter_params(query_params)
         devices_response = device_call_managers.GetAllDevicesApiCall()\
             .call_api(client=self.client, query_params=query_params, *args, **kwargs)
         for device in devices_response:
-            yield Device(**device)
+            yield device_models.Device(**device)
 
-    def get_device_events_list(self, device: typing.Union[Device, int]):
+    def get_device_events_list(self, device: typing.Union[device_models.Device, int]):
         """
         :param device: Device pydantic model or int
         :return: Generator with Device objects
@@ -106,10 +109,10 @@ class DeviceManager:
             client=self.client, path_params={'endpoint_id': device_id}
         )
         for event in events_response:
-            yield DeviceEvent(**event)
+            yield device_models.DeviceEvent(**event)
 
     def change_status(
-            self, device: typing.Union[UpdateDevice, Device, int],
+            self, device: typing.Union[device_models.UpdateDevice, device_models.Device, int],
             enable: bool = None, disable: bool = None
     ) -> None:
         """
@@ -161,29 +164,29 @@ class DeviceManager:
             self.client.sim.activate_sim(sim_id=sim_id)
             self.change_status(device.id, enable=True)
         else:
-            if sim.status.id == emnify_constants.SimStatuses.SUSPENDED_ID.value:
+            if sim.status.id == emnify_constants.SimStatusesID.SUSPENDED_ID.value:
                 self.change_status(device.id, disable=True)
-            elif sim.status.id == emnify_constants.SimStatuses.ACTIVATED_ID.value:
+            elif sim.status.id == emnify_constants.SimStatusesID.ACTIVATED_ID.value:
                 self.change_status(device.id, enable=True)
 
         self.update_device(device=self.device_update_model(sim={"id": sim.id}), device_id=device.id)
 
-    def create_device(self, device: Device) -> bool:
+    def create_device(self, device: device_models.Device) -> bool:
         if not isinstance(device, self.device_model):
             raise UnexpectedArgumentException('Argument must contain filled Device model')
         return device_call_managers.CreateDevice().call_api(client=self.client, data=device.dict(exclude_none=True))
 
-    def retrieve_device(self, device_id: int) -> RetrieveDevice:
+    def retrieve_device(self, device_id: int) -> device_models.RetrieveDevice:
         if not isinstance(device_id, int) or device_id <= 0:
             raise UnexpectedArgumentException('Device id must be positive integer')
         response = device_call_managers.RetrieveDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
-        return RetrieveDevice(**response)
+        return device_models.RetrieveDevice(**response)
 
     @staticmethod
-    def validate_device(device: Device) -> int:
-        if isinstance(device, Device) or isinstance(device, RetrieveDevice):
+    def validate_device(device: device_models.Device) -> int:
+        if isinstance(device, device_models.Device) or isinstance(device, device_models.RetrieveDevice):
             return device.id
         elif isinstance(device, int):
             return device
@@ -196,7 +199,7 @@ class DeviceManager:
         Hidden method for checking device for status update
         devices to activate must have activated sim
         """
-        if status == emnify_constants.SimStatuses.ACTIVATED_DICT:
+        if status == emnify_constants.SimStatusesDict.ACTIVATED_DICT:
             if not device.sim:
                 raise emnify_errors.ValidationErrorException('Devices for activation must have sim`s')
 
@@ -212,11 +215,11 @@ class DeviceManager:
         """
         status_dict = {
             'enable': {
-                'sim_status': emnify_constants.SimStatuses.ACTIVATED_DICT.value,
+                'sim_status': emnify_constants.SimStatusesDict.ACTIVATED_DICT.value,
                 'device_status': emnify_constants.DeviceStatuses.ENABLED_DICT.value
             },
             'disable': {
-                'sim_status': emnify_constants.SimStatuses.SUSPENDED_DICT.value,
+                'sim_status': emnify_constants.SimStatusesDict.SUSPENDED_DICT.value,
                 'device_status': emnify_constants.DeviceStatuses.DISABLED_DICT.value
             }
         }
@@ -229,7 +232,7 @@ class DeviceManager:
         return True
 
     @staticmethod
-    def transform_all_devices_filter_params(query_params: GetDeviceFilterSet) -> dict:
+    def transform_all_devices_filter_params(query_params: device_models.GetDeviceFilterSet) -> dict:
         query_filter = {}
         filter_dict = query_params.dict(exclude_none=True)
 

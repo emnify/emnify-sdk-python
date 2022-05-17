@@ -2636,9 +2636,6 @@ class Sim1(BaseModel):
     iccid: Optional[str] = None
     msisdn: Optional[str] = None
     imsi: Optional[str] = None
-    status: Optional[Dict[str, Any]] = Field(
-        None, example={'id': 1, 'description': 'Active'}
-    )
 
 
 class Endpoint(BaseModel):

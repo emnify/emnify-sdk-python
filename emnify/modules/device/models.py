@@ -2,17 +2,21 @@ import datetime
 from pydantic import BaseModel, validator
 from typing import Optional, List, Dict, Any
 from emnify.modules.sim.models import SimList
-from emnify.modules.api.models import Endpoint, Event, TariffProfile1, ServiceProfile1, Status, RetrieveEventsresponse5,\
-    SubmitMTSMSrequest, RetrieveSingleEndpointresponse, UpdateEndpointrequest
+from emnify.modules.api import models as generated_models
 
 from emnify.constants import DeviceSortEnum
 
 
-class Device(Endpoint):
+class SimDevice(generated_models.Sim1):
+    status: Optional[generated_models.Status] = None
+
+
+class Device(generated_models.Endpoint):
     """
     Renamed generated model
     """
-    status: Status
+    status: generated_models.Status
+    sim: Optional[SimDevice] = None
 
 
 class CreateDevice(Device):
@@ -23,7 +27,7 @@ class CreateDevice(Device):
     @validator("status")
     @classmethod
     def validate_status(cls, field_value, values, field, config):
-        if values.get("sim") and getattr(values["sim"], "status") and values["sim"].status['id'] == 1:
+        if values.get("sim") and getattr(values["sim"], "status") and values["sim"].status.id == 1:
             return field_value
         if field_value.id == 0:
             # If user will try activate device without sim card
@@ -32,7 +36,7 @@ class CreateDevice(Device):
         return field_value
 
 
-class SmsCreateModel(SubmitMTSMSrequest):
+class SmsCreateModel(generated_models.SubmitMTSMSrequest):
     """
     Inherited generated model of SubmitMTSMSrequest for extra fields
     """
@@ -43,25 +47,25 @@ class SmsCreateModel(SubmitMTSMSrequest):
     dcs: Optional[int] = None
 
 
-class ListSms(RetrieveEventsresponse5):
+class ListSms(generated_models.RetrieveEventsresponse5):
     """
     Renamed generated model
     """
 
 
-class TariffProfile(TariffProfile1):
+class TariffProfile(generated_models.TariffProfile1):
     """
     Renamed generated model
     """
 
 
-class ServiceProfile(ServiceProfile1):
+class ServiceProfile(generated_models.ServiceProfile1):
     """
     Renamed generated model
     """
 
 
-class DeviceStatus(Status):
+class DeviceStatus(generated_models.Status):
     """
     Renamed generated model
     """
@@ -103,7 +107,7 @@ class GetDeviceFilterSet(BaseModel):
         use_enum_values = True
 
 
-class DeviceEvent(Event):
+class DeviceEvent(generated_models.Event):
     """
     class inherited from generated Event
     """
@@ -117,13 +121,13 @@ class RetrieveDevice(Device):
     sim: SimList = None
 
 
-class UpdateDevice(UpdateEndpointrequest):
+class UpdateDevice(generated_models.UpdateEndpointrequest):
     """
     class inherited from generated model for update device request
     """
     name: str = None
     tags: str = None
-    status: Status = None
+    status: generated_models.Status = None
     service_profile: Dict[str, Any] = None
     tariff_profile: Dict[str, Any] = None
     ip_address: str = None
