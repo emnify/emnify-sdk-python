@@ -3,24 +3,31 @@ import settings
 
 from emnify.errors import UnauthorisedException, JsonDecodeException, UnknownStatusCodeException
 from emnify.modules.api.models import AuthenticationResponse
-from emnify.const import RequestsTypeEnum, RequestsUrlEnum, RequestDefaultHeadersKeys, RequestDefaultHeadersValues
+from emnify import constants as emnify_constants
 
 
 class BaseApiManager:
+    """
+    Base manager for api calls handling
+    """
 
     response_handlers = {
         200: 'return_unwrapped',
         201: 'return_success',
-        401: 'unauthorised'
+        401: 'unauthorised',
     }
+
     request_url_prefix = ''
     request_method_name = ''
 
     @staticmethod
     def _build_headers(token=''):
         return {
-            RequestDefaultHeadersKeys.ACCEPT.value: RequestDefaultHeadersValues.APPLICATION_JSON.value,
-            RequestDefaultHeadersKeys.AUTHORIZATION.value: RequestDefaultHeadersValues.BEARER_TOKEN.value.format(token)
+            emnify_constants.RequestDefaultHeadersKeys.ACCEPT.value:
+                emnify_constants.RequestDefaultHeadersValues.APPLICATION_JSON.value,
+
+            emnify_constants.RequestDefaultHeadersKeys.AUTHORIZATION.value:
+                emnify_constants.RequestDefaultHeadersValues.BEARER_TOKEN.value.format(token)
         }
 
     def build_method_url(self, url_params):
@@ -36,17 +43,6 @@ class BaseApiManager:
         ).auth_token
 
         return self.call_api(client, data, path_params=path_params, *args, **kwargs)
-
-    @staticmethod
-    def return_success(*_, **__) -> True:
-        return True
-
-    @staticmethod
-    def return_unwrapped(response: requests.Response, *args, **kwargs) -> requests.Response.json:
-        try:
-            return response.json()
-        except requests.exceptions.JSONDecodeError:
-            raise JsonDecodeException('error while parsing json for')
 
     def call_api(self, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None):
         url = self.request_url_prefix
@@ -70,19 +66,19 @@ class BaseApiManager:
         return requests.patch(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
     def make_request(self, client, method_url: str, data=None, files=None, query_params=None):
-        if self.request_method_name not in RequestsTypeEnum.list():
+        if self.request_method_name not in emnify_constants.RequestsType.list():
             raise ValueError(f'{self.request_method_name}: This method is not allowed')
         headers = self._build_headers(client.token)
         response = None
-        if self.request_method_name == RequestsTypeEnum.GET.value:
+        if self.request_method_name == emnify_constants.RequestsType.GET.value:
             response = self.make_get_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params
             )
-        elif self.request_method_name == RequestsTypeEnum.POST.value:
+        elif self.request_method_name == emnify_constants.RequestsType.POST.value:
             response = self.make_post_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
-        elif self.request_method_name == RequestsTypeEnum.PATCH.value:
+        elif self.request_method_name == emnify_constants.RequestsType.PATCH.value:
             response = self.make_patch_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
@@ -105,8 +101,8 @@ class BaseApiManager:
 
 
 class Authenticate(BaseApiManager):
-    request_url_prefix = RequestsUrlEnum.V1_AUTHENTICATE.value
-    request_method_name = RequestsTypeEnum.POST.value
+    request_url_prefix = emnify_constants.AuthenticateRequestsUrl.V1_AUTHENTICATE.value
+    request_method_name = emnify_constants.RequestsType.POST.value
 
     response_handlers = {
         200: 'return_unwrapped',

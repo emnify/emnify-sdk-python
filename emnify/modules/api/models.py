@@ -2642,7 +2642,6 @@ class Endpoint(BaseModel):
     id: Optional[int] = None
     name: str
     tags: Optional[str] = None
-    status: Status5 = Field(..., title='EndpointStatus')
     service_profile: ServiceProfile1 = Field(..., title='ServiceProfile')
     tariff_profile: TariffProfile1 = Field(..., title='TariffProfile')
     ip_address: Optional[str] = None
@@ -2652,6 +2651,7 @@ class Endpoint(BaseModel):
     imei_lock: Optional[bool] = None
     created: Optional[datetime] = None
     last_updated: Optional[datetime] = None
+    status: Status5 = Field(..., title='EndpointStatus')
 
 
 class RetrieveSingleEndpointresponse(BaseModel):

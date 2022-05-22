@@ -1,24 +1,25 @@
 import requests
 from emnify.api_manager import BaseApiManager
-from emnify.const import RequestsTypeEnum
+from emnify.constants import RequestsType
 from emnify.errors import ValidationErrorException
 
 
 class GetAllDevicesApiCall(BaseApiManager):
     request_url_prefix = '/v1/endpoint'
-    request_method_name = RequestsTypeEnum.GET.value
+    request_method_name = RequestsType.GET.value
 
 
 class GetEventsByDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/event'
-    request_method_name = RequestsTypeEnum.GET.value
+    request_method_name = RequestsType.GET.value
 
 
 class CreateDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint'
-    request_method_name = RequestsTypeEnum.POST.value
+    request_method_name = RequestsType.POST.value
     response_handlers = {
         200: 'return_unwrapped',
+        201: 'return_success',
         401: 'unauthorised',
         422: 'process_exception'
     }
@@ -28,13 +29,13 @@ class CreateDevice(BaseApiManager):
 
 
 class GetAllSmsFromDevice(BaseApiManager):
-    request_url_prefix = '/api/v1/endpoint/{endpoint_id}/sms'
-    request_method_name = RequestsTypeEnum.GET.value
+    request_url_prefix = '/v1/endpoint/{endpoint_id}/sms'
+    request_method_name = RequestsType.GET.value
 
 
 class SendSmsToDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/sms'
-    request_method_name = RequestsTypeEnum.POST.value
+    request_method_name = RequestsType.POST.value
     response_handlers = {
         201: 'return_success',
         401: 'unauthorised',
@@ -42,13 +43,13 @@ class SendSmsToDevice(BaseApiManager):
 
 
 class RetrieveDevice(BaseApiManager):
-    request_url_prefix = '/api/v1/endpoint/{endpoint_id}'
-    request_method_name = RequestsTypeEnum.GET.value
+    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_method_name = RequestsType.GET.value
 
 
 class UpdateDevice(BaseApiManager):
-    request_url_prefix = '/api/v1/endpoint/{endpoint_id}'
-    request_method_name = RequestsTypeEnum.PATCH.value
+    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_method_name = RequestsType.PATCH.value
     response_handlers = {
         204: 'return_success',
         401: 'unauthorised',
