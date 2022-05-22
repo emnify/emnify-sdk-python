@@ -7,7 +7,7 @@ class ExtendedEnum(Enum):
         return list(map(lambda c: c.value, cls))
 
 
-class DeviceSortEnum(ExtendedEnum):
+class DeviceSort(ExtendedEnum):
     ID = 'id'
     STATUS = 'status'
     LAST_UPDATED = 'last_updated'
@@ -22,7 +22,7 @@ class IdValues(ExtendedEnum):
     ID = 'id'
 
 
-class RequestsTypeEnum(ExtendedEnum):
+class RequestsType(ExtendedEnum):
     GET = 'get'
     POST = 'post'
     PUT = 'put'

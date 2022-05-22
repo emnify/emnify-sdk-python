@@ -66,19 +66,19 @@ class BaseApiManager:
         return requests.patch(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
     def make_request(self, client, method_url: str, data=None, files=None, query_params=None):
-        if self.request_method_name not in emnify_constants.RequestsTypeEnum.list():
+        if self.request_method_name not in emnify_constants.RequestsType.list():
             raise ValueError(f'{self.request_method_name}: This method is not allowed')
         headers = self._build_headers(client.token)
         response = None
-        if self.request_method_name == emnify_constants.RequestsTypeEnum.GET.value:
+        if self.request_method_name == emnify_constants.RequestsType.GET.value:
             response = self.make_get_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params
             )
-        elif self.request_method_name == emnify_constants.RequestsTypeEnum.POST.value:
+        elif self.request_method_name == emnify_constants.RequestsType.POST.value:
             response = self.make_post_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
-        elif self.request_method_name == emnify_constants.RequestsTypeEnum.PATCH.value:
+        elif self.request_method_name == emnify_constants.RequestsType.PATCH.value:
             response = self.make_patch_request(
                 settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
@@ -102,7 +102,7 @@ class BaseApiManager:
 
 class Authenticate(BaseApiManager):
     request_url_prefix = emnify_constants.AuthenticateRequestsUrl.V1_AUTHENTICATE.value
-    request_method_name = emnify_constants.RequestsTypeEnum.POST.value
+    request_method_name = emnify_constants.RequestsType.POST.value
 
     response_handlers = {
         200: 'return_unwrapped',

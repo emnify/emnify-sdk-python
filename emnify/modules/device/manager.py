@@ -55,7 +55,7 @@ class DeviceManager:
 
     @property
     def sort_device_param_enum(self):
-        return emnify_constants.DeviceSortEnum
+        return emnify_constants.DeviceSort
 
     @property
     def device_list_filterset_model(self):

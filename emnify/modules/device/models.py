@@ -4,7 +4,7 @@ from typing import Optional, List, Dict, Any
 from emnify.modules.sim.models import SimList
 from emnify.modules.api import models as generated_models
 
-from emnify.constants import DeviceSortEnum
+from emnify.constants import DeviceSort
 
 
 class SimDevice(generated_models.Sim1):
@@ -100,7 +100,7 @@ class GetDeviceFilterSet(BaseModel):
     """
     Model for device list query params
     """
-    sort: Optional[List[DeviceSortEnum]] = None
+    sort: Optional[List[DeviceSort]] = None
     q: Optional[ListQFilterDeviceListQueryParam] = None
 
     class Config:
