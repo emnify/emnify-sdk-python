@@ -70,7 +70,7 @@ class ActivateMFAKeyRequest(BaseModel):
 class Country(BaseModel):
     name: Optional[str] = None
     country_code: Optional[int] = None
-    mcc: Optional[float] = None
+    mcc: Optional[str] = None
     iso_code: Optional[str] = None
     latitude: Optional[float] = None
     longitude: Optional[float] = None

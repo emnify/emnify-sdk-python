@@ -2,6 +2,7 @@ import typing
 import emnify.modules.device.api_call_manager as device_call_managers
 from emnify.errors import UnexpectedArgumentException
 from emnify.modules.device import models as device_models
+from emnify.modules.operator import models as operator_models
 from emnify import constants as emnify_constants
 from emnify import errors as emnify_errors
 
@@ -96,8 +97,30 @@ class DeviceManager:
             query_params = self.transform_all_devices_filter_params(query_params)
         devices_response = device_call_managers.GetAllDevicesApiCall()\
             .call_api(client=self.client, query_params=query_params, *args, **kwargs)
-        for device in devices_response:
-            yield device_models.Device(**device)
+        return [device_models.Device(**i) for i in devices_response]
+
+    def delete_device(self, device_id: int):
+        device = self.retrieve_device(device_id)
+        if device.sim:
+            self.release_sim(device_id)
+        return device_call_managers.DeleteDevice().call_api(client=self.client, path_params={'endpoint_id': device_id})
+
+    def add_device_blacklist_operator(self, device_id: int, operator_id: int):
+        return device_call_managers.AddOperatorBlacklist().call_api(
+            client=self.client, path_params={'endpoint_id': device_id, 'operator_id': operator_id}
+        )
+
+    def delete_device_blacklist_operator(self, device_id: int, operator_id: int):
+        return device_call_managers.DeleteOperatorBlacklist().call_api(
+            client=self.client, path_params={'endpoint_id': device_id, 'operator_id': operator_id}
+        )
+
+    def get_device_operator_blacklist(self, device_id: int):
+        operators_json = device_call_managers.GetOperatorBlacklist().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}
+        )
+        for operator in operators_json:
+            yield operator_models.Operator(**operator)
 
     def get_device_events_list(self, device: typing.Union[device_models.Device, int]):
         """

@@ -100,7 +100,7 @@ class GetDeviceFilterSet(BaseModel):
     """
     Model for device list query params
     """
-    sort: Optional[List[DeviceSort]] = None
+    sort: Optional[DeviceSort] = None
     q: Optional[ListQFilterDeviceListQueryParam] = None
 
     class Config:
