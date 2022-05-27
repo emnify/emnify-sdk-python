@@ -1,33 +1,15 @@
 # Custom Exceptions
 
-__all__ = [
-    'EMnifyBaseException',
-    'UnauthorisedException',
-    'JsonDecodeException',
-    'UnexpectedArgumentException',
-    'ValidationErrorException'
-]
+__all__ = ['UnauthorisedException', 'JsonDecodeException', 'UnexpectedArgumentException']
 
 
-class EMnifyBaseException(Exception):
-    """Cumstom base error class"""
-
-
-class UnauthorisedException(EMnifyBaseException):
+class UnauthorisedException(Exception):
     """Custom error for unauthorised response"""
 
 
-class JsonDecodeException(EMnifyBaseException):
+class JsonDecodeException(Exception):
     """Custom error for json parse exception"""
 
 
-class UnexpectedArgumentException(EMnifyBaseException):
+class UnexpectedArgumentException(Exception):
     """Custom error for unexpected arguments"""
-
-
-class ValidationErrorException(EMnifyBaseException):
-    """Custom error for validation errors"""
-
-
-class UnknownStatusCodeException(EMnifyBaseException):
-    """Custom error for unknown response errors"""
