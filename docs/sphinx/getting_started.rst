@@ -32,25 +32,29 @@ Configure
 Create Application Token
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create your application token on: [https://portal.emnify.com/integrations/](https://portal.emnify.com/integrations/), and copy it.
+In order to use SDK you gonna need to create your Application Token via: `Enterprise Portal(Simplest Way) or API <https://www.emnify.com/developer-blog/how-to-use-an-application-token-for-api-authentication>`_ or , and apply it to initiate SDK.
 
 Use in Code
 ~~~~~~~~~~~
 .. code-block:: python
    :caption: Example of usage
 
-   TOKEN = 'test'
+   TOKEN = '<PASTE YOUR APPLICATION TOKEN HERE>'
 
-   # 1) import package
+   # Import package
    from emnify import EMnify
 
-   # 2) initiate SDK instance using application token
+   # Initiate SDK instance using application token
 
    emnify = EMnify(TOKEN)
 
-   # 3) Execute a command against desired API
+   # Execute a command against desired API
    devices = emnify.devices.get_devices_list()
 
-
 Explore More
-~~~~~~~~~~~
+------------
+Now when you have SDK configured it's time to learn what you can do further.
+
+To explore use-cases SDK is capable to, see :doc:`examples`.
+
+Visit our `Developers Documentation <https://www.emnify.com/developers/documentation>`_ to learn more about IoT Connectivity.

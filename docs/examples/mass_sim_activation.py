@@ -2,7 +2,6 @@ from emnify import EMnify
 from emnify import constants
 from emnify.errors import EMnifyBaseException
 
-
 """
 # Massive SIM Activation Example
 """
