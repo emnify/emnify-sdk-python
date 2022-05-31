@@ -17,8 +17,6 @@ Install From Source Code
    cd emnify-python-sdk
    python setup.py install
 
-```
-
 Install via PyPi
 ~~~~~~~~~~~~~~~~
 .. code-block:: bash
@@ -36,20 +34,9 @@ In order to use SDK you gonna need to create your Application Token via: `Enterp
 
 Use in Code
 ~~~~~~~~~~~
-.. code-block:: python
-   :caption: Example of usage
-
-   TOKEN = '<PASTE YOUR APPLICATION TOKEN HERE>'
-
-   # Import package
-   from emnify import EMnify
-
-   # Initiate SDK instance using application token
-
-   emnify = EMnify(TOKEN)
-
-   # Execute a command against desired API
-   devices = emnify.devices.get_devices_list()
+.. literalinclude:: ../examples/first_operation.py
+   :language: python
+   :caption: Example of Usage
 
 Explore More
 ------------

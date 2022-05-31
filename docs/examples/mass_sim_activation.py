@@ -36,7 +36,7 @@ for sim in issued_sims:
 # After creation we may retrieve device information.
     device_model = emnify_client.devices.retrieve_device(device_id=emnify_client.devices.create_device(device))
 
-# After making sure device is created we send there configuration SMS. It may vary on device manufacturer. You can learn more about SMS configuration in [this article](https://support.emnify.com/hc/en-us/articles/4401906757906-How-to-configure-the-APN-on-different-devices).
+# After making sure device is created we send there configuration SMS. It may vary on device manufacturer.
     activation_code = constants.Example.ACTIVATION_CODE.value
     sender = constants.Example.SENDER.value
     activation_sms = emnify_client.devices.sms_create_model(payload=activation_code, source_adress=sender)
