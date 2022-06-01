@@ -1,12 +1,8 @@
 Welcome to EMnify python SDK Documentation
 ==========================================
 
-
-Getting Started
----------------
-
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
     getting_started
     examples

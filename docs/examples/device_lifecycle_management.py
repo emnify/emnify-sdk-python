@@ -3,9 +3,8 @@ from emnify import constants as emnify_constants
 
 emnify = EMnify(app_token='your token')
 
-"""
-=== Create and activate a device ===
-"""
+#  Create and activate a device 
+
 
 all_sims = emnify.sim.get_sim_list()
 unassigned_sims = []
@@ -34,10 +33,9 @@ emnify.devices.change_status(device=device, enable=True)  # Activate device
 device = emnify.devices.retrieve_device(device_id=device_id)
 device_status = device.status.description  # Will be 'Enabled'
 sim_status = device.sim.status.description  # Will be 'Activated'
+# [endblock]
 
-"""
-=== Configure a device ===
-"""
+#  Configure a device 
 
 device = emnify.devices.retrieve_device(device_id=device_id)
 #  Getting details of device
@@ -52,10 +50,9 @@ updated_device = emnify.devices.retrieve_device(device_id=device_id)
 #  Getting details of updated device
 device_ip_address = updated_device.ip_address  # Will be '192.0.0.0'
 deivce_name = updated_device.name  # Will be 'new name'
+# [endblock]
 
-"""
-=== Configure operator blacklist for device ===
-"""
+#  Configure operator blacklist for device 
 
 all_operators = [i for i in emnify.operator.get_operators()]
 # List of all operators
@@ -78,10 +75,10 @@ for operator in device_blacklist:
 
 emnify.devices.delete_device_blacklist_operator(device_id=device_id, operator_id=operator_id)
 # Removing the last operator from blacklist
+# [endblock]
 
-"""
-=== Disable device ===
-"""
+#  Disable device 
+
 
 all_devices_with_sim = [
     device for device in emnify.devices.get_devices_list() if device.sim
@@ -97,10 +94,9 @@ emnify.devices.change_status(disable=True, device=device.id)
 disabled_device = emnify.devices.retrieve_device(device_id=device.id)
 device_status = disabled_device.status.description  # Will be 'Disabled'
 sim_status = disabled_device.sim.status.description # Will be 'Suspended'
+# [endblock]
 
-"""
-=== Delete device ===
-"""
+#  Delete device 
 
 old_devices_list = [device for device in emnify.devices.get_devices_list()]
 # Getting list of all devices
@@ -128,3 +124,4 @@ assert len(old_devices_list) > len(new_device_list)
 sim = emnify.sim.retrieve_sim(sim_id=sim_id_of_deleted_device)
 sim_status = sim.status.description  # Will be 'Suspended'
 
+# [endblock]
