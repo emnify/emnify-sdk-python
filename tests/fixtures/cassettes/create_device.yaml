@@ -156,7 +156,7 @@ interactions:
       accept:
       - application/json
       authorization:
-      - Bearer None
+      - Bearer real_token
     method: GET
     uri: https://cdn.emnify.net/api/v1/endpoint
   response:
