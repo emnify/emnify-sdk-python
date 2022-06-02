@@ -3,18 +3,29 @@ Examples
 
 Massive SIM Activation
 ~~~~~~~~~~~~~~~~~~~~~~
+.. |tag_device_creation| replace:: Device Creation
+.. |tag_device_retrieve| replace:: Retrieve Device Details
+.. |tag_device_activation| replace:: Device Activation/Deactivation
+.. |tag_sim_register| replace:: SIM Registration
+.. |tag_sim_assign| replace:: SIM Assignment
+.. |tag_error_handling| replace:: Error Handling
+.. |tag_sim_list| replace:: List SIMs
 
 This example demonstrates complex operation across multiple SDK Concepts.
 
 * `Device Policies <https://portal.emnify.com/device-policies>`_ that configure which services and where are gonna be available.
 * You can learn more about APN configuration via SMS in `this article <https://support.emnify.com/hc/en-us/articles/4401906757906-How-to-configure-the-APN-on-different-devices>`_.
-* SIM Registration and assignment.
-* Device Creation
-* Error Handling
+* |tag_sim_register|
+* |tag_device_creation|
+* |tag_sim_assign|
+* |tag_error_handling|
+* |tag_device_retrieve|
+* |tag_device_activation|
 
 .. literalinclude:: ../examples/mass_sim_activation.py
    :language: python
    :caption: mass_sim_activation.py
+   :linenos:
 
 
 Devices Management
@@ -23,6 +34,7 @@ Devices Management
 .. literalinclude:: ../examples/devices.py
    :language: python
    :caption: devices.py
+   :linenos:
 
 
 Device Lifecycle Management
@@ -31,12 +43,18 @@ Device Lifecycle Management
 Create and activate a device
 **************************
 
+* |tag_device_creation|
+* |tag_sim_register|
+* |tag_sim_list|
+* |tag_device_retrieve|
+* |tag_device_activation|
 
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python
    :caption: device_lifecycle_management.py
    :start-at: Create and activate a device
    :end-before: [endblock]
+   :linenos:
 
 
 Configure a device
@@ -46,8 +64,9 @@ Configure a device
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python
    :caption: device_lifecycle_management.py
-   :start-at:  Configure a device 
+   :start-at:  Configure a device
    :end-before: [endblock]
+   :linenos:
 
 
 Configure operator blacklist for device
@@ -57,8 +76,9 @@ Configure operator blacklist for device
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python
    :caption: device_lifecycle_management.py
-   :start-at:  Configure operator blacklist for device 
+   :start-at:  Configure operator blacklist for device
    :end-before: [endblock]
+   :linenos:
 
 
 Disable device
@@ -68,8 +88,9 @@ Disable device
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python
    :caption: device_lifecycle_management.py
-   :start-at:  Disable device 
+   :start-at:  Disable device
    :end-before: [endblock]
+   :linenos:
 
 
 Delete device
@@ -79,7 +100,8 @@ Delete device
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python
    :caption: device_lifecycle_management.py
-   :start-at:  Delete device 
+   :start-at:  Delete device
    :end-before: [endblock]
+   :linenos:
 
 
