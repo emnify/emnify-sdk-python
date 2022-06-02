@@ -1,4 +1,4 @@
- TOKEN = '<PASTE YOUR APPLICATION TOKEN HERE>'
+TOKEN = '<PASTE YOUR APPLICATION TOKEN HERE>'
 
 # Import package
 from emnify import EMnify

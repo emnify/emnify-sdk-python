@@ -28,17 +28,16 @@ This example demonstrates complex operation across multiple SDK Concepts.
    :linenos:
 
 
-Devices Management
-~~~~~~
-
-.. literalinclude:: ../examples/devices.py
-   :language: python
-   :caption: devices.py
-   :linenos:
-
-
 Device Lifecycle Management
 ~~~~~~
+
+Initialization of SDK client
+****************************
+.. literalinclude:: ../examples/device_lifecycle_management.py
+   :language: python
+   :caption: device_lifecycle_management.py
+   :end-before: [endblock]
+   :linenos:
 
 Create and activate a device
 **************************
