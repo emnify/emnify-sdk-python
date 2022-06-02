@@ -813,7 +813,7 @@ stopwords= [
     "open",
     "stack",
     "irc_",
-    "bearer",
+    "bearer None",
     "irc-",
     "sublime",
     "kohana",
