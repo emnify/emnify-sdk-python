@@ -1,6 +1,9 @@
-***EMnify Python SDK***
+# EMnify Python SDK
 
-**Installation**
+Supply your swarm of IoT Devices with cloud connectivity by [EMnify](https://emnify.com).
+Automate your routines with this SDK for Python.  
+
+## Installation
 
 `Python > 3.6` is **required**.
 
@@ -14,7 +17,10 @@
 >        pip install emnify-python-sdk
 
 
-**Documentation**
+## Documentation
 
 Documentation is available on the [EMnify Python SDK docs site](https://emnify.github.io/emnify-sdk-python/).
 
+## Getting Help and Contribute
+
+Visit [Help Section](https://emnify.github.io/emnify-sdk-python/help.html).

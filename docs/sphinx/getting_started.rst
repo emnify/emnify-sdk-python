@@ -9,7 +9,7 @@ Requirements
 Python > 3.6 is required.
 
 Install From Source Code
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: bash
    :caption: Installation commands
 
@@ -43,8 +43,8 @@ Explore More
 ------------
 Now when you have SDK configured it's time to learn what you can do further.
 
-To explore use-cases SDK is capable to, see :doc:`examples`.
+If you're new to IoT Connectivity and EMnify it makes sense to start with learning :doc:`concepts`. Visit our `Developers Hub <https://www.emnify.com/developers/documentation>`_ to learn more.
 
-Visit our `Developers Documentation <https://www.emnify.com/developers/documentation>`_ to learn more about IoT Connectivity.
+Once you're comfortable with :doc:`concepts` you may explore use-cases SDK is capable for, see :doc:`examples`.
 
 The EMnify System Documentation can be found `here <https://cdn.emnify.net/api/doc/index.html>`_, the OpenAPI Documentation can be found `here <https://cdn.emnify.net/api/doc/swagger.html>`_.

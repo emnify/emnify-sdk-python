@@ -5,14 +5,16 @@ Welcome to EMnify SDK Documentation for Python
     :align: center
     :height: 200px
 
-Index
+Explore
 -----
 
 .. toctree::
     :maxdepth: 3
 
     getting_started
+    concepts
     examples
     help
-    Developers Center<https://www.emnify.com/developers/documentation>
+    Developers Hub<https://www.emnify.com/developers/documentation>
+    Enterprise Portal<https://portal.emnify.com>
     Github<https://github.com/EMnify/emnify-sdk-python>

@@ -1,8 +1,6 @@
 Examples
 ========
 
-Get Devices Connected
-~~~~~~~~~~~~~~~~~~~~~~
 .. |tag_device_creation| replace:: Device Creation
 .. |tag_device_retrieve| replace:: Retrieve Device Details
 .. |tag_device_activation| replace:: Device Activation/Deactivation
@@ -11,7 +9,11 @@ Get Devices Connected
 .. |tag_error_handling| replace:: Error Handling
 .. |tag_sim_list| replace:: List SIMs
 
-This example demonstrates complex operation across multiple SDK Concepts.
+Get First Devices Online
+~~~~~~~~~~~~~~~~~~~~~~
+
+In order to get your devices online, you gonna need to perform a set of steps below.
+This example demonstrates complex operation across multiple SDK :doc:`concepts`.
 
 * `Device Policies <https://portal.emnify.com/device-policies>`_ that configure which services and where are gonna be available.
 * You can learn more about APN configuration via SMS in `this article <https://support.emnify.com/hc/en-us/articles/4401906757906-How-to-configure-the-APN-on-different-devices>`_.
