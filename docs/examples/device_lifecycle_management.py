@@ -51,8 +51,7 @@ sim_status = device.sim.status.description  # Will be 'Activated'
 #  Getting details of device
 device = emnify.devices.retrieve_device(device_id=device_id)
 
-# TODO: remove ip address and add tags instead
-ip_adress = '192.0.0.0'  # Sample ip_adress
+tags = 'arduino, meter, temp'  # Sample tags
 name = 'new name'  # Sample name
 
 # Adjust device config
@@ -70,7 +69,6 @@ deivce_name = updated_device.name  # Will be 'new name'
 # List of all operators
 all_operators = [i for i in emnify.operator.get_operators()]
 
-# TODO: Add explanation what is blacklist for.
 device_id = 0  # Your device id
 emnify.devices.add_device_blacklist_operator(operator_id=all_operators[0].id, device_id=device_id)
 emnify.devices.add_device_blacklist_operator(operator_id=all_operators[1].id, device_id=device_id)
