@@ -1,7 +1,7 @@
 Examples
 ========
 
-Massive SIM Activation
+Get Devices Connected
 ~~~~~~~~~~~~~~~~~~~~~~
 .. |tag_device_creation| replace:: Device Creation
 .. |tag_device_retrieve| replace:: Retrieve Device Details

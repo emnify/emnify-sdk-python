@@ -37,6 +37,7 @@ Use in Code
 .. literalinclude:: ../examples/first_operation.py
    :language: python
    :caption: Example of Usage
+   :linenos:
 
 Explore More
 ------------

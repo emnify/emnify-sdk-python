@@ -6,6 +6,7 @@ emnify = EMnify(app_token='your token')
 #  === Create and activate a device ===
 
 
+# TODO: Explain filtering
 all_sims = emnify.sim.get_sim_list()
 unassigned_sims = []
 for sim in all_sims:
@@ -50,6 +51,7 @@ sim_status = device.sim.status.description  # Will be 'Activated'
 #  Getting details of device
 device = emnify.devices.retrieve_device(device_id=device_id)
 
+# TODO: remove ip address and add tags instead
 ip_adress = '192.0.0.0'  # Sample ip_adress
 name = 'new name'  # Sample name
 
@@ -68,6 +70,7 @@ deivce_name = updated_device.name  # Will be 'new name'
 # List of all operators
 all_operators = [i for i in emnify.operator.get_operators()]
 
+# TODO: Add explanation what is blacklist for.
 device_id = 0  # Your device id
 emnify.devices.add_device_blacklist_operator(operator_id=all_operators[0].id, device_id=device_id)
 emnify.devices.add_device_blacklist_operator(operator_id=all_operators[1].id, device_id=device_id)
@@ -90,7 +93,7 @@ emnify.devices.delete_device_blacklist_operator(device_id=device_id, operator_id
 
 #  === Disable device ===
 
-
+# TODO: replace with filtering
 all_devices_with_sim = [
     device for device in emnify.devices.get_devices_list() if device.sim
     and device.status.id == emnify_constants.DeviceStatuses.ENABLED_ID.value

@@ -1,4 +1,4 @@
-Welcome to EMnify SDK Documentation for python
+Welcome to EMnify SDK Documentation for Python
 ==============================================
 
 .. image:: ../logo.svg
