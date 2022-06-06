@@ -23,6 +23,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Rest API resources of the EMnify System. 
+    Rest API resources of the EMnify System.
     """
 )

@@ -14,6 +14,7 @@ importlib-metadata==4.10.0
 iniconfig==1.1.1
 Jinja2==3.1.1
 lazy-object-proxy==1.7.1
+bumpversion==0.6.0
 MarkupSafe==2.1.1
 multidict==6.0.2
 packaging==21.3
@@ -32,14 +33,6 @@ PyYAML==6.0
 requests==2.27.0
 six==1.16.0
 snowballstemmer==2.2.0
-Sphinx==4.5.0
-sphinx-autoapi==1.8.4
-sphinxcontrib-applehelp==1.0.2
-sphinxcontrib-devhelp==1.0.2
-sphinxcontrib-htmlhelp==2.0.0
-sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.3
-sphinxcontrib-serializinghtml==1.1.5
 tomli==2.0.1
 typing_extensions==4.0.1
 Unidecode==1.3.4

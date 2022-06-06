@@ -1,0 +1,33 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - feature/automated-release
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Define Version Change
+        uses: actions/github-script@v6
+        id: define-bump-type
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          result-encoding: string
+          script: |
+            console.log(JSON.stringify(context));
+            return 'minor'
+
+      - uses: actions/checkout@v3
+
+      - name: Apply Bump
+        run: |
+          echo "${{steps.define-bump-type.outputs.result}}"
+          docker build . -f Dockerfile.dev -t emnify/python-sdk
+          echo "type ${{steps.define-bump-type.outputs.result}}"
