@@ -47,7 +47,7 @@ jobs:
       - name: Apply Bump
         id: bump
         run: |
-          bump2version ${{steps.define-bump-type.outputs.result}} --commit
+          bump2version ${{steps.define-bump-type.outputs.result}}
             
           echo "${BUMPVERSION_CURRENT_VERSION}"
           echo $BUMPVERSION_NEW_VERSION
