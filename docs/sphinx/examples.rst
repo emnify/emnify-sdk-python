@@ -61,7 +61,7 @@ Create and activate a device
 Configure a device
 **************************
 If you want to avoid using a specific operator to avoid unintentional spending on the device,
-you can add it to the blacklist of the device
+you can add it to the blacklist of the device.
 
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python

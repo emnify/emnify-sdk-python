@@ -1,0 +1,360 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.0
+      accept:
+      - application/json
+      authorization:
+      - Bearer None
+    method: GET
+    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380018/operator_blacklist
+  response:
+    body:
+      string: '{"message":"token contains an invalid number of segments"}'
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '58'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 26 May 2022 01:00:54 GMT
+      Server:
+      - CloudFront
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 64d18a7c557f9140c04169b7191025f8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - _-GdEoFfPYzfrGvPMNACFdojAw3Oyk11ubg4SMg6wLkPyekt9K95Hw==
+      X-Amz-Cf-Pop:
+      - TXL50-P4
+      X-Cache:
+      - Error from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      x-amz-apigw-id:
+      - StWjBHLxjoEFnIw=
+      x-amzn-ErrorType:
+      - AccessDeniedException
+      x-amzn-RequestId:
+      - 895e7b4e-0065-468d-9eeb-531e4fde8fdb
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: '{"application_token": "eyJhbGciOiJIUzM4NCJ9.eyJhdWQiOiJcL2FwaVwvdjFcL2FwcGxpY2F0aW9uX3Rva2VuIiwic3ViIjoiYXJ0dXIubGF6YXJlbmtvK3N0YWdpbmdfc2ltX3Rlc3RAaXRlcm5hbC5ncm91cCIsImVzYy5hcHBzZWNyZXQiOiJjMjYxYjhhNi04NzczLTQ5MTUtYjgzNy01Y2FiNjRhODA1M2MiLCJlc2MuYXBwIjo4NzgzLCJlc2MudXNlciI6MjE3NDIxLCJlc2Mub3JnIjoxMzg4NiwiZXNjLm9yZ05hbWUiOiJNaWtoYWlsIFJhZGVtYWRlIFN0YWdpbmcgU2ltIFRlc3QiLCJpc3MiOiJzcGMtZnJvbnRlbmQwMDFAc3BjLWZyb250ZW5kIiwiaWF0IjoxNjQ1MDUxNDgzfQ.7BT0dy1LR8y19zs3BO4TP9BIFheVqWcqedawyiK3_QRWY876yW-O5YtQVus_r6l9"}'
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '513'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.27.0
+      accept:
+      - application/json
+      authorization:
+      - Bearer None
+    method: POST
+    uri: https://api-staging.dev.emnify.io/api/v1/authenticate
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAD1QTXOCMBT8L951EMQZelM0NtEE+YghXDokMAIGpDZKodP/Xmlnenr7dmb37b6v
+        SXrXxZu+XvJm8jLJe1SInSy9EkE64AVxkTMbyYz5IykPJujSU/fIKjDiebYrlGiClpvASJlzh2VX
+        JjGpDjXopAuX3kYucN+VPF63salVHsIlrLWmEbZSA2HOfDuviRkNAOebE+TMucnoFGd1UAaKWmGs
+        CKVtGNaX8uAiJU18FxZqYHX9xMN5Qf7vOX1i2IVgdMxJUqavnKkPCFCR7E6as0BBQAzOslbU8kxN
+        pSEIlLT80beVFh51g9xhnTTo8eykRO13eANW0lpXB5b0wrSNhNmXv45FN2YgFTVwhH/n6MPj55+q
+        rUkiPMcVX5AocGZU7j3PcvX7qvPqTPjanl4iF2r8am+lgsfzvnJ7f2Pc9kkZhvOife7WdNsPCTqK
+        26qZfP8AJZLdSKcBAAA=
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '356'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 26 May 2022 01:00:54 GMT
+      Server:
+      - CloudFront
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 f1c3d16033a0215071d66d8a8c247af4.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ullMTj6ziOb_eshzW3mBWlKWwNU0sAw02v8WTaW3_RThwUrWwHJhrw==
+      X-Amz-Cf-Pop:
+      - TXL50-P4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      x-amz-apigw-id:
+      - StWjEFGBjoEFRYw=
+      x-amzn-Remapped-Content-Length:
+      - '356'
+      x-amzn-Remapped-Date:
+      - Thu, 26 May 2022 01:00:54 GMT
+      x-amzn-RequestId:
+      - 9a260e5f-eee3-40b5-b5c0-cfb2e4a7a2cf
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.0
+      accept:
+      - application/json
+      authorization:
+      - Bearer None
+    method: GET
+    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380018/operator_blacklist
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAG3OsQ6CMBAG4He5uQOUUoQNB1zUwRgWQsxZREmgNYKDMby7JRWq4nZ3/5/Llz2h
+        KiCijIDE5gQRpKrAUskTEBDqLrvbAyJTsp24PqKs0FYOQhVD4Pm+PjZC6JkGXM9Vq8YQa+gJdHg1
+        e2a+uvzjBvF6mSbQ5/qJFLYTvHdwqA57Ys4hoxNps9/OxZ4Vl+eLJrcdyrk69CY0c+kPuvyH5o7/
+        pU5W8W6m5nQxspkzsPMX9pO/424BAAA=
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '194'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 26 May 2022 01:00:55 GMT
+      Server:
+      - CloudFront
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 4786bcd6a5ee692459814ef0ab252684.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - TeY5vJOR71BXMTHRTprnF-LuNuBtrt0K8tYQzGcwWwwNB3XVVoUUHQ==
+      X-Amz-Cf-Pop:
+      - TXL50-P4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      x-amz-apigw-id:
+      - StWjIE8zjoEFgOg=
+      x-amzn-Remapped-Content-Length:
+      - '194'
+      x-amzn-Remapped-Date:
+      - Thu, 26 May 2022 01:00:55 GMT
+      x-amzn-RequestId:
+      - d7bdffe1-1ce9-4a9d-98de-662bee20b804
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.27.0
+      accept:
+      - application/json
+      authorization:
+      - Bearer None
+    method: DELETE
+    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380018/operator_blacklist/24
+  response:
+    body:
+      string: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 26 May 2022 01:00:55 GMT
+      Server:
+      - CloudFront
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 e1dafdc346c45e381eadf0a96d4694c6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - xcxxP0c723H6XYNFv9burKbbMvJtXaM8J1ERnyecseSG-dxIhdy1RA==
+      X-Amz-Cf-Pop:
+      - TXL50-P4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      x-amz-apigw-id:
+      - StWjMHdBDoEFidg=
+      x-amzn-Remapped-Date:
+      - Thu, 26 May 2022 01:00:55 GMT
+      x-amzn-RequestId:
+      - 7b4c1bd1-1afd-4811-8121-0da1f7ea0bf5
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: null
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.0
+      accept:
+      - application/json
+      authorization:
+      - Bearer None
+    method: GET
+    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380018/operator_blacklist
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAIuuVspMUbKyNDHSUcpLzE1VslLyDfFT0lFKzi/NKymqVLKCKDCGSzumpWck5mUW
+        lyTmIZTFJ+engCQtjYFiucnJQKaJoRGQnVmcD5NLTFOq1VEqSSyA8KMhBpsZmCIJKjm6uTsGKdXG
+        Ak3JS0YoMrKACiiZGABla2MBXQZET7gAAAA=
+    headers:
+      Access-Control-Allow-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '140'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 26 May 2022 01:00:55 GMT
+      Server:
+      - CloudFront
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 bc66fd12bea603144bf0b6c1578cb3e0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - kz4Vywkp3-9wrkd3BsAye0nqtdNZzw_c9ftplPKom0in1DAF9zNjwQ==
+      X-Amz-Cf-Pop:
+      - TXL50-P4
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      x-amz-apigw-id:
+      - StWjQEflDoEFznA=
+      x-amzn-Remapped-Content-Length:
+      - '140'
+      x-amzn-Remapped-Date:
+      - Thu, 26 May 2022 01:00:55 GMT
+      x-amzn-RequestId:
+      - f6d1bebd-adb9-4075-aeac-942085e4b983
+    status:
+      code: 200
+      message: OK
+version: 1

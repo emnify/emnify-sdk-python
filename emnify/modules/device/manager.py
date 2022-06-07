@@ -55,16 +55,12 @@ class DeviceManager:
         return device_models.TariffProfile
 
     @property
-    def sort_device_param_enum(self):
+    def get_device_sort_enum(self):
         return emnify_constants.DeviceSort
 
     @property
-    def device_list_filterset_model(self):
-        return device_models.GetDeviceFilterSet
-
-    @property
-    def get_device_q_filterset(self) -> typing.Type[device_models.QFilterDeviceListQueryParam]:
-        return device_models.QFilterDeviceListQueryParam
+    def get_device_filter_model(self) -> typing.Type[device_models.FilterDeviceModel]:
+        return device_models.FilterDeviceModel
 
     def get_device_sms_list(self, *args, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         device_id = self.validate_device(device)
@@ -91,10 +87,16 @@ class DeviceManager:
             client=self.client, data=device.dict(exclude_none=True), path_params={'endpoint_id': device_id}
         )
 
-    def get_devices_list(self, *args, query_params: device_models.GetDeviceFilterSet = None, **kwargs):
-
-        if query_params:
-            query_params = self.transform_all_devices_filter_params(query_params)
+    def get_devices_list(
+            self,
+            *args,
+            filter_model: device_models.FilterDeviceModel = None,
+            sort_enum: device_models.DeviceSortModel = None,
+            **kwargs
+    ):
+        query_params = None
+        if filter_model or sort_enum:
+            query_params = self.__transform_all_devices_filter_params(filter_model, sort_enum)
         devices_response = device_call_managers.GetAllDevicesApiCall()\
             .call_api(client=self.client, query_params=query_params, *args, **kwargs)
         return [device_models.Device(**i) for i in devices_response]
@@ -124,7 +126,7 @@ class DeviceManager:
 
     def get_device_events_list(self, device: typing.Union[device_models.Device, int]):
         """
-        :param device: Device pydantic model or int
+        :param device: Device pydantic-model or int
         :return: Generator with Device objects
         """
         device_id = self.validate_device(device)
@@ -135,13 +137,15 @@ class DeviceManager:
             yield device_models.DeviceEvent(**event)
 
     def change_status(
-            self, device: typing.Union[device_models.UpdateDevice, device_models.Device, int],
+            self, device: typing.Union[
+                device_models.UpdateDevice, device_models.Device, device_models.RetrieveDevice, int
+            ],
             enable: bool = None, disable: bool = None
     ) -> None:
         """
         :param device: id or device model for update
         :param enable: boolean parameter for enable a Device
-        :param disable: boolean parameter for enable a Device
+        :param disable: boolean parameter for disable a Device
         """
         if not (enable or disable) or (enable and disable):
             raise emnify_errors.ValidationErrorException('"enable" or "disable" arguments must be provided ')
@@ -162,11 +166,7 @@ class DeviceManager:
 
     def release_sim(self, device_id: int):
         """
-        this method allow to release the assigned SIM from device
-        releasing sim sdk take 3 actions:
-            - suspend the sim
-            - disable the endpoint
-            - release the sim
+        This method allows to release the assigned SIM from device by device_id
         """
         device = self.retrieve_device(device_id=device_id)
         if not device.sim:
@@ -229,12 +229,6 @@ class DeviceManager:
     def __change_device_status(self, action: str, device):
         """
         Hidden method for changing status of the device
-        Enabling a device have a two actions:
-            - enable the endpoint
-            - activate the assigned SIM
-        Disabling a device have a two actions:
-            - disable the device
-            - suspend the assigned SIM
         """
         status_dict = {
             'enable': {
@@ -255,15 +249,14 @@ class DeviceManager:
         return True
 
     @staticmethod
-    def transform_all_devices_filter_params(query_params: device_models.GetDeviceFilterSet) -> dict:
+    def __transform_all_devices_filter_params(
+            filter_model: device_models.FilterDeviceModel = None,
+            sort_enum: device_models.DeviceSortModel = None
+    ) -> dict:
         query_filter = {}
-        filter_dict = query_params.dict(exclude_none=True)
-
-        if filter_dict.get('q'):
-            query_filter['q'] = ','.join(
-                [f'{j}:{n}' for filter_values in filter_dict['q'] for j, n in filter_values.items()]
-            )
-
-        if filter_dict.get('sort'):
-            query_filter['sort'] = ','.join([str(i) for i in filter_dict['sort']])
+        if filter_model:
+            filter_dict = filter_model.dict(exclude_none=True)
+            query_filter['q'] = ','.join([f'{key}:{filter_dict[key]}' for key in filter_dict])
+        if sort_enum:
+            query_filter['sort'] = sort_enum
         return query_filter

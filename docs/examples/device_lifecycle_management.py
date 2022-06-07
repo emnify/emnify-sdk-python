@@ -6,12 +6,7 @@ emnify = EMnify(app_token='your token')
 #  === Create and activate a device ===
 
 
-# TODO: Explain filtering
-all_sims = emnify.sim.get_sim_list()
-unassigned_sims = []
-for sim in all_sims:
-    if not sim.endpoint:
-        unassigned_sims.append(sim)
+unassigned_sims = [i for i in emnify.sim.get_sim_list(without_device=True)]
 #  If no unassigned_sims - register new one by batch code
 if not unassigned_sims:
     registered_sim = emnify.sim.register_sim(bic='sample_bic_code')  # Returns as list
@@ -91,10 +86,9 @@ emnify.devices.delete_device_blacklist_operator(device_id=device_id, operator_id
 
 #  === Disable device ===
 
-# TODO: replace with filtering
+device_filter = emnify.devices.get_device_filter_model(status=emnify_constants.DeviceStatuses.ENABLED_ID.value)
 all_devices_with_sim = [
-    device for device in emnify.devices.get_devices_list() if device.sim
-    and device.status.id == emnify_constants.DeviceStatuses.ENABLED_ID.value
+    device for device in emnify.devices.get_devices_list(filter_model=device_filter) if device.sim
 ]
 # Getting list of all devices with sim cards and enabled status
 

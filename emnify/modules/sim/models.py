@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, types
 from emnify.modules.api.models import RetrieveSIMlistresponse
 
 
@@ -29,3 +29,16 @@ class SimUpdate(BaseModel):
     issuer_organisation: IdModel = None
     reseller_organisation: IdModel = None
     customer_organisation: IdModel = None
+
+
+class SimFilter(BaseModel):
+    id: int = None
+    issuer_org: int = None
+    reseller_org: int = None
+    customer_org: int = None
+    iccid: str = None
+    status: id = None
+    production_date: types.date = None
+    imsi: str = None
+    msisdn: str = None
+    model: int = None
