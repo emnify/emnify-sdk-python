@@ -1,4 +1,4 @@
-name: Documentation
+name: Release
 on:
   push:
     branches:
@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "${{steps.define-bump-type.outputs.result}}"
           docker build . -f Dockerfile.dev -t emnify/python-sdk
-          docker run -t -v $(pwd):/sdk emnify/python-sdk sh .github/actions/version-bump.sh ${{steps.define-bump-type.outputs.result}}
+          docker run -v $(pwd):/sdk emnify/python-sdk sh .github/actions/version-bump.sh ${{steps.define-bump-type.outputs.result}}
 
       - name: Commit New Version
         run: |
