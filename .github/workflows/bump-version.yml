@@ -6,8 +6,7 @@ on:
 
 jobs:
   bump:
-    name: Bump Source Code
-    if: "!contains(github.event.head_commit.message, 'bump')"
+    name: Bump and Release
     runs-on: ubuntu-latest
 
     steps:
@@ -16,27 +15,20 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      - name: Define Version Change
-        uses: actions/github-script@v6
-        id: define-bump-type
+
+      - uses: actions/checkout@v2
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          result-encoding: string
-          script: |
-            const BUMP_TYPE = {
-              Patch: 'patch',
-              Minor: 'minor',
-              Major: 'major'
-            };
-            
-            try {
-              const isMinor = context.payload.head_commit.message.toLowerCase().includes('feature');
-            
-              return isMinor ? BUMP_TYPE.Minor : BUMP_TYPE.Patch
-            } catch (e) {
-              console.error(e);
-              return BUMP_TYPE.Patch;
-            }
+          release_branches: master,main,feature/automated-release
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
 
       - uses: actions/checkout@v3
 
@@ -44,17 +36,9 @@ jobs:
         id: bump
         run: |
           docker build . -f Dockerfile.dev -t emnify/python-sdk
-          docker run -v $(pwd):/sdk emnify/python-sdk bump2version patch --list >> $GITHUB_ENV
-
-      - name: Commit New Version
-        run: |
-          echo "previous  ${{ env.current_version }}
-          echo "current ${{ env.new_version }}
-          echo ${{steps.build_changelog.outputs.changelog}}
+          docker run -v $(pwd):/sdk emnify/python-sdk bump2version patch --new-version=${{ steps.tag_version.outputs.new_version }} --list >> $GITHUB_ENV
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          # Optional. Commit message for the created commit.
-          # Defaults to "Apply automatic changes"
           commit_message: Automated version bump from ${{ env.current_version }} to ${{ env.new_version }}.
 
