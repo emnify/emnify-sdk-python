@@ -7,6 +7,5 @@ COPY req.txt req.txt
 RUN pip install -r req.txt
 
 COPY . .
-# docker build . -f Dockerfile.dev -t emnify/python-sdk
-# docker run -t -v $(pwd):/docs emnify/python-sdk pytest
-CMD echo "Enter Command"
+
+CMD echo "Enter Command(Read DEVELOPMENT.md)"

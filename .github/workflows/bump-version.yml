@@ -6,6 +6,7 @@ on:
 
 jobs:
   bump:
+    if: "!contains(github.event.head_commit.message, 'bump')"
     runs-on: ubuntu-latest
 
     steps:
@@ -21,13 +22,33 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           result-encoding: string
           script: |
-            console.log(JSON.stringify(context));
-            return 'minor'
+            const BUMP_TYPE = {
+              Patch: 'patch',
+              Minor: 'minor',
+              Major: 'major'
+            };
+            
+            try {
+              const isMinor = context.payload.head_commit.message.toLowerCase().includes('feature');
+            
+              return isMinor ? BUMP_TYPE.Minor : BUMP_TYPE.Patch
+            } catch (e) {
+              console.error(e);
+              return BUMP_TYPE.Patch;
+            }
+            
 
       - uses: actions/checkout@v3
 
       - name: Apply Bump
+        id: bump
         run: |
           echo "${{steps.define-bump-type.outputs.result}}"
           docker build . -f Dockerfile.dev -t emnify/python-sdk
-          echo "type ${{steps.define-bump-type.outputs.result}}"
+          docker run -t -v $(pwd):/sdk emnify/python-sdk sh .github/actions/version-bump.sh ${{steps.define-bump-type.outputs.result}}
+
+      - name: Commit New Version
+        run: |
+          echo "previous ${{ steps.random-color-generator.outputs.previous_version }}"
+          echo "current ${{ steps.random-color-generator.outputs.current_version }}"
+

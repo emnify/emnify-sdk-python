@@ -19,5 +19,5 @@ docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-un
 ## Version Bump
 
 ```shell
-bumpversion minor
+bump2version minor
 ```
