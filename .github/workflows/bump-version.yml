@@ -47,16 +47,12 @@ jobs:
       - name: Apply Bump
         id: bump
         run: |
-          bump2version ${{steps.define-bump-type.outputs.result}}
-            
-          echo "${BUMPVERSION_CURRENT_VERSION}"
-          echo $BUMPVERSION_NEW_VERSION
-          
-          echo "::set-output name=previous_version::$BUMPVERSION_CURRENT_VERSION"
-          echo "::set-output name=current_version::$BUMPVERSION_NEW_VERSION"
+          docker build . -f Dockerfile.dev -t emnify/python-sdk
+          docker run -v $(pwd):/sdk emnify/python-sdk bump2version patch --list >> $GITHUB_ENV
 
       - name: Commit New Version
         run: |
           echo "previous ${{ steps.random-color-generator.outputs.previous_version }}"
+          echo "previous  ${{ env.current_version }}
           echo "current ${{ steps.random-color-generator.outputs.current_version }}"
 
