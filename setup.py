@@ -15,11 +15,16 @@ REQUIRES = []
 setup(
     name=NAME,
     version=VERSION,
-    description="emnify-python-sdk",
+    description="Supply your swarm of IoT Devices with cloud connectivity by EMnify. Automate your routines with this SDK for Python.",
+    author="EMnify",
     author_email="",
-    url="",
-    keywords=["Swagger", "EMnify Python SDK"],
+    url="https://github.com/EMnify/emnify-sdk-python",
+    keywords=["Swagger", "EMnify Python SDK", "IoT"],
+    project_urls={
+        "Bug Tracker": "https://github.com/EMnify/emnify-sdk-python",
+    },
     install_requires=REQUIRES,
+    python_requires=">=3.6",
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
