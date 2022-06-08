@@ -27,10 +27,15 @@ class SimManager:
             self,
             without_device: bool = None,
             filter_model: sim_models.SimFilter = None,
-            sort: emnify_const.SimSort = None
+            sort_enum: emnify_const.SimSort = None
     ):
+        """
+        :param without_device: Allows to add a filter for request to find all SIM`s without device
+        :param filter_model: Model for request`s filtering
+        :param sort_enum: Model for request`s sorting
+        """
         query_params = self.__transform_sim_filter_params(
-            without_device=without_device, filter_model=filter_model, sort_enum=sort
+            without_device=without_device, filter_model=filter_model, sort_enum=sort_enum
         )
 
         sim_response = SimListApi().call_api(client=self.client, query_params=query_params)

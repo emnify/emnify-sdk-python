@@ -80,7 +80,7 @@ class EMnifyTest(TestCase):
         emnify = emnify_client(app_token=self.token)
         sims = [i for i in emnify.sim.get_sim_list()]
         if sims:
-            self.assertIsInstance(sims[0], emnify.sim.sim_list_model)
+            self.assertIsInstance(sims[0], emnify.sim.get_sim_list_model)
 
     @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_200.yaml')
     def test_activate_sim_by_one_size_batch_bic_200(self):
