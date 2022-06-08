@@ -12,6 +12,9 @@ VERSION = "0.0.2"
 
 REQUIRES = []
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name=NAME,
     version=VERSION,
@@ -27,7 +30,5 @@ setup(
     python_requires=">=3.6",
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    Rest API resources of the EMnify System.
-    """
+    long_description=long_description
 )
