@@ -10,7 +10,7 @@ Examples
 .. |tag_sim_list| replace:: List SIMs
 
 Get First Devices Online
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to get your devices online, you gonna need to perform a set of steps below.
 This example demonstrates complex operation across multiple SDK :doc:`concepts`.
@@ -31,10 +31,11 @@ This example demonstrates complex operation across multiple SDK :doc:`concepts`.
 
 
 Device Lifecycle Management
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Initialization of SDK client
 ****************************
+
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python
    :caption: device_lifecycle_management.py
@@ -42,7 +43,7 @@ Initialization of SDK client
    :linenos:
 
 Create and activate a device
-**************************
+****************************
 
 * |tag_device_creation|
 * |tag_sim_register|
@@ -59,7 +60,8 @@ Create and activate a device
 
 
 Configure a device
-**************************
+******************
+
 If you want to avoid using a specific operator to avoid unintentional spending on the device,
 you can add it to the blacklist of the device.
 
@@ -72,7 +74,7 @@ you can add it to the blacklist of the device.
 
 
 Configure operator blacklist for device
-**************************
+***************************************
 
 
 .. literalinclude:: ../examples/device_lifecycle_management.py
@@ -84,7 +86,7 @@ Configure operator blacklist for device
 
 
 Disable device
-**************************
+**************
 
 
 .. literalinclude:: ../examples/device_lifecycle_management.py
@@ -96,7 +98,7 @@ Disable device
 
 
 Delete device
-**************************
+*************
 
 
 .. literalinclude:: ../examples/device_lifecycle_management.py
@@ -107,3 +109,10 @@ Delete device
    :linenos:
 
 
+Filtering and Sorting
+~~~~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: ../examples/filtering_and_sorting.py
+   :language: python
+   :caption: filtering_and_sorting.py
+   :linenos:

@@ -1,5 +1,9 @@
 
 # === Using a Filtering for List calls  ===
+from emnify import EMnify
+from emnify import constants as emnify_constants
+
+emnify_client = EMnify(app_token='your_application_token')
 
 # Some methods that return multiple objects allow sorting and filtering.
 # This allows us to optimize processing time, since using filtering we can immediately get the necessary objects with
@@ -26,7 +30,7 @@ sim_filter = emnify_client.sim.get_sim_filter_model(
 # The request to get a list of SIM cards also has a separate filter,
 # which is passed as an argument to the filtering function - without a device.
 
-sims_witout_assigned_device = emnify_client.sim.get_sim_list(without_device=True)
+sims_without_assigned_device = emnify_client.sim.get_sim_list(without_device=True)
 
 
 # === Using a Sorting for List calls  ===
