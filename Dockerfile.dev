@@ -1,10 +1,12 @@
-FROM python:alpine
+FROM python:latest
 
 WORKDIR /sdk
 
 COPY req.txt req.txt
+COPY req.dev.txt req.dev.txt
 
 RUN pip install -r req.txt
+RUN pip install -r req.dev.txt
 
 COPY . .
 

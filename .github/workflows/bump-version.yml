@@ -6,6 +6,10 @@ on:
 
 jobs:
   bump:
+    env:
+      RELEASE_REPOSITORY: testpypi
+      RELEASE_PACKAGE_NAME: emnify-sdk-test-beta
+      RELEASE_PYPI_TOKEN: ${{secret.PYPI_RELEASE_TOKEN}}
     name: Bump and Release
     runs-on: ubuntu-latest
 
@@ -41,4 +45,16 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automated version bump from ${{ env.current_version }} to ${{ env.new_version }}.
+
+      - name: Release and Publish Package
+        run: |
+          cat <<EOT >> greetings.txt
+          TWINE_REPOSITORY=${{env.RELEASE_REPOSITORY}}
+          TWINE_USERNAME=__token__
+          TWINE_PASSWORD=${{env.RELEASE_PYPI_TOKEN}}
+          PYPI_PACKAGE_NAME=${{env.RELEASE_PACKAGE_NAME}}
+          EOT
+
+          docker run --env-file=.env -v $(pwd):/sdk emnify/python-sdk python3 -m build
+          docker run --env-file=.env -v $(pwd):/sdk emnify/python-sdk python3 -m twine upload dist/* 
 

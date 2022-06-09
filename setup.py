@@ -1,7 +1,8 @@
 # coding: utf-8
 from setuptools import setup, find_packages
+import os
 
-NAME = "emnify-python-sdk"
+NAME = os.getenv('PYPI_PACKAGE_NAME') or "emnify-python-sdk"
 VERSION = "0.0.4"
 # To install the library, run the following
 #
