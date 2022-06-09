@@ -13,7 +13,7 @@ interactions:
       authorization:
       - Bearer None
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380018/operator_blacklist
+    uri: https://cdn.emnify.net/api/v1/endpoint/11380018/operator_blacklist
   response:
     body:
       string: '{"message":"token contains an invalid number of segments"}'
@@ -81,7 +81,7 @@ interactions:
       authorization:
       - Bearer None
     method: POST
-    uri: https://api-staging.dev.emnify.io/api/v1/authenticate
+    uri: https://cdn.emnify.net/api/v1/authenticate
   response:
     body:
       string: !!binary |
@@ -158,7 +158,7 @@ interactions:
       authorization:
       - Bearer None
     method: GET
-    uri: https://api-staging.dev.emnify.io/api/v1/endpoint/11380018/operator_blacklist
+    uri: https://cdn.emnify.net/api/v1/endpoint/11380018/operator_blacklist
   response:
     body:
       string: !!binary |
