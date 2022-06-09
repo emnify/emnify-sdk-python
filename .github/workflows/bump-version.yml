@@ -48,7 +48,7 @@ jobs:
 
       - name: Release and Publish Package
         run: |
-          cat <<EOT >> greetings.txt
+          cat <<EOT >> .env
           TWINE_REPOSITORY=${{env.RELEASE_REPOSITORY}}
           TWINE_USERNAME=__token__
           TWINE_PASSWORD=${{env.RELEASE_PYPI_TOKEN}}
