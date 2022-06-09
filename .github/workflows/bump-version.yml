@@ -9,7 +9,7 @@ jobs:
     env:
       RELEASE_REPOSITORY: testpypi
       RELEASE_PACKAGE_NAME: emnify-sdk-test-beta
-      RELEASE_PYPI_TOKEN: ${{secret.PYPI_RELEASE_TOKEN}}
+      RELEASE_PYPI_TOKEN: ${{secrets.PYPI_RELEASE_TOKEN}}
     name: Bump and Release
     runs-on: ubuntu-latest
 
