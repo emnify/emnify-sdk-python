@@ -13,7 +13,7 @@ Install From Source Code
 .. code-block:: bash
    :caption: Installation commands
 
-   git clone https://github.com//emnify-python-sdk.git
+   git clone https://github.com/emnify-python-sdk.git
    cd emnify-python-sdk
    python setup.py install
 
