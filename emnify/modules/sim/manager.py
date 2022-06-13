@@ -1,3 +1,5 @@
+import typing
+
 from emnify.modules.sim import models as sim_models
 from emnify.modules.sim.api_call_manager import SimListApi, SimActivateApi, SimUpdateApi, SimRetrieveApi
 from emnify import constants as emnify_const
@@ -48,10 +50,15 @@ class SimManager:
         """
         return sim_models.SimList(**SimRetrieveApi().call_api(client=self.client, path_params={'sim': sim_id}))
 
-    def register_sim(self, bic: str):
+    def register_sim(self, bic: str) -> typing.Union[typing.List[sim_models.SimList], sim_models.SimList]:
+        """
+         :param bic: BIC number of sim/batch sims for registration
+        """
         data = emnify_const.SimStatusesDict.ACTIVATED_DICT.value
         sim_response = SimActivateApi().call_api(client=self.client, data=data, path_params={'bic': bic})
         if isinstance(sim_response, dict):
+            if sim_response.get('sim'):
+                return [self.get_sim_list_model(**data) for data in sim_response['sim']]
             return self.get_sim_list_model(**sim_response)
         return [self.get_sim_list_model(**sim) for sim in sim_response]
 

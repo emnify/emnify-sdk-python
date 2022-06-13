@@ -91,7 +91,8 @@ class EMnifyTest(TestCase):
         emnify = emnify_client(app_token=self.token)
         bic = bics[0]
         response = emnify.sim.register_sim(bic=bic)
-        self.assertIsInstance(response, emnify.sim.get_sim_list_model)
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], emnify.sim.get_sim_list_model)
 
     @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_422.yaml')
     def test_activate_sim_by_one_size_batch_bic_422(self):
