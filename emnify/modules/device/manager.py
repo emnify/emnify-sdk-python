@@ -244,7 +244,7 @@ class DeviceManager:
         device_for_update = self.device_update_model(status=status_dict[action]['device_status'])
         self.update_device(device_id=device.id, device=device_for_update)
         if device.sim:
-            sim_update_model = self.client.sim.sim_update_model(status=status_dict[action]['sim_status'])
+            sim_update_model = self.client.sim.get_sim_update_model(status=status_dict[action]['sim_status'])
             self.client.sim.update_sim(sim_id=device.sim.id, sim=sim_update_model)
         return True
 

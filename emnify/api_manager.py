@@ -1,10 +1,11 @@
 import typing
 import requests
-import settings
 
 from emnify import errors as emnify_errors
 from emnify.modules.api.models import AuthenticationResponse
 from emnify import constants as emnify_constants
+
+MAIN_URL = 'https://cdn.emnify.net/api'
 
 
 class BaseApiManager:
@@ -101,23 +102,23 @@ class BaseApiManager:
         response = None
         if self.request_method_name == emnify_constants.RequestsType.GET.value:
             response = self.make_get_request(
-                settings.MAIN_URL, method_url, headers=headers, params=query_params
+                MAIN_URL, method_url, headers=headers, params=query_params
             )
         elif self.request_method_name == emnify_constants.RequestsType.POST.value:
             response = self.make_post_request(
-                settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
+                MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
         elif self.request_method_name == emnify_constants.RequestsType.PATCH.value:
             response = self.make_patch_request(
-                settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
+                MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
         elif self.request_method_name == emnify_constants.RequestsType.DELETE.value:
             response = self.make_delete_request(
-                settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
+                MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
         elif self.request_method_name == emnify_constants.RequestsType.PUT.value:
             response = self.make_put_request(
-                settings.MAIN_URL, method_url, headers=headers, params=query_params, data=data
+                MAIN_URL, method_url, headers=headers, params=query_params, data=data
             )
 
         return response
