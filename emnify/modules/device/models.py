@@ -4,7 +4,7 @@ from typing import Optional, List, Dict, Any
 from emnify.modules.sim.models import SimList
 from emnify.modules.api import models as generated_models
 
-from emnify.constants import DeviceSort
+from emnify.constants import DeviceSort as DeviceSortModel
 
 
 class SimDevice(generated_models.Sim1):
@@ -78,7 +78,7 @@ class DeviceIdRequired(Device):
     id: int
 
 
-class QFilterDeviceListQueryParam(BaseModel):
+class FilterDeviceModel(BaseModel):
     """
     Model for validation of filter query params
     """
@@ -92,16 +92,16 @@ class QFilterDeviceListQueryParam(BaseModel):
     sim_status: Optional[int] = None
 
 
-class ListQFilterDeviceListQueryParam(BaseModel):
-    __root__: List[QFilterDeviceListQueryParam]
+class ListQFilterDeviceListModel(BaseModel):
+    __root__: List[FilterDeviceModel]
 
 
 class GetDeviceFilterSet(BaseModel):
     """
     Model for device list query params
     """
-    sort: Optional[List[DeviceSort]] = None
-    q: Optional[ListQFilterDeviceListQueryParam] = None
+    sort: Optional[DeviceSortModel] = None
+    q: Optional[ListQFilterDeviceListModel] = None
 
     class Config:
         use_enum_values = True
@@ -123,7 +123,7 @@ class RetrieveDevice(Device):
 
 class UpdateDevice(generated_models.UpdateEndpointrequest):
     """
-    class inherited from generated model for update device request
+    Model for update Device request with field-type validation
     """
     name: str = None
     tags: str = None
