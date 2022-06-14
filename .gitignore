@@ -136,6 +136,3 @@ cython_debug/
 
 # Built documentation
 /docs/build_*
-
-# Environment Variables
-.env

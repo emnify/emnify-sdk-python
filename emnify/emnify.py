@@ -1,6 +1,7 @@
 import logging
 from .modules.device.manager import DeviceManager
 from .modules.sim.manager import SimManager
+from .modules.operator.manager import OperatorManager
 logger = logging.getLogger('EmnifySDK')
 
 
@@ -14,4 +15,5 @@ class EMnify(object):
         self.app_token = app_token
         self.devices: DeviceManager = DeviceManager(self)
         self.sim: SimManager = SimManager(self)
+        self.operator: OperatorManager = OperatorManager(self)
         self.token = None

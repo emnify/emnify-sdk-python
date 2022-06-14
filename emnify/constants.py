@@ -93,6 +93,20 @@ class SimStatusesDict(ExtendedEnum):
         }
 
 
-class Example(ExtendedEnum):
-    ACTIVATION_CODE = 'AT+CGDCONT=1,"IP","em",,'
-    SENDER = "city_scooters_admin"
+class ResponseHeaders(ExtendedEnum):
+    COUNT_PER_PAGE = 'X-Count-Per-Page'
+    CURRENT_PAGE = 'X-Current-Page'
+    TOTAL_PAGES = 'X-Total-Pages'
+    TOTAL_COUNT = 'X-Total-Count'
+
+
+class SimSort(ExtendedEnum):
+    id = 'ID'
+    issuer_org = 'ISSUER_ORG'
+    reseller_org = 'RESELLER_ORG'
+    customer_org = 'CUSTOMER_PRG'
+    iccid = 'ICCID'
+    status = 'STATUS'
+    production_date = 'PRODUCTION_DATE'
+    endpoint = 'ENDPOINT'
+    model = 'MODEL'
