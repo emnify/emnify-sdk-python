@@ -8,6 +8,9 @@ regexes = [
     '''(9[0-9]{2}|666)-\d{2}-\d{4}''',
     ]
 paths = [
+    '''.*\.html$''',
+    '''^_sources\/.*''',
+    '''^_static\/.*''',
     '''gitleaks.toml''',
     '''(.*?)(jpg|gif|doc|pdf|bin|svg|socket)$''',
     '''(go.mod|go.sum)$'''
