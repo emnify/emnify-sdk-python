@@ -1,38 +1,26 @@
-***EMnify Python SDK***
+# EMnify Python SDK
 
-How to install
+Supply your swarm of IoT Devices with cloud connectivity by [EMnify](https://emnify.com).
+Automate your routines with this SDK for Python.  
 
-Python > 3.6 is required.
+## Installation
+
+`Python > 3.6` is **required**.
 
 
 
 - Install from source
->       git clone https://github.com//emnify-python-sdk.git
+>       git clone https://github.com/emnify-python-sdk.git
 >       cd emnify-python-sdk
 >       python setup.py install
 - or install with pip
 >        pip install emnify-python-sdk
-  
-> Create your application token on: https://portal.emnify.com/integrations/
 
-**Example**
 
-- recieve all devices
+## Documentation
 
-        from emnify import EMnify
-  
-        emnify = EMnify(TOKEN)
-        devices = emnify.devices.get_devices_list()  # Note: in 'devices' object-generator
-        
-- recieve events by device/device_id
+Documentation is available on the [EMnify Python SDK docs site](https://emnify.github.io/emnify-sdk-python/).
 
-        from emnify import EMnify
-  
-        emnify = EMnify(TOKEN)
-        devices = emnify.devices.get_devices_list()  # Note: in 'devices' object-generator
+## Getting Help and Contribute
 
-- Getting Help
-    - “If you need help installing or using the library, please [file a support ticket](https://support.emnify.com/hc/en-us/requests/new).
-        
-    -    If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo.”
-    
+Visit [Help Section](https://emnify.github.io/emnify-sdk-python/help.html).
