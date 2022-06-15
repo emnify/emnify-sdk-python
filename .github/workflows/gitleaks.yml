@@ -1,6 +1,6 @@
 name: gitleaks
 
-on: [push,pull_request]
+on: [push]
 
 jobs:
   gitleaks:
@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: '0'
       - name: gitleaks
         uses: zricethezav/gitleaks-action@master
         with:
