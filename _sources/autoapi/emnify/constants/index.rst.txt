@@ -1,0 +1,382 @@
+:py:mod:`emnify.constants`
+==========================
+
+.. py:module:: emnify.constants
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.constants.ExtendedEnum
+   emnify.constants.DeviceSort
+   emnify.constants.IdValues
+   emnify.constants.RequestsType
+   emnify.constants.AuthenticateRequestsUrl
+   emnify.constants.RequestDefaultHeadersKeys
+   emnify.constants.RequestDefaultHeadersValues
+   emnify.constants.DeviceStatuses
+   emnify.constants.SimStatusesID
+   emnify.constants.SimStatusesDict
+   emnify.constants.ResponseHeaders
+   emnify.constants.SimSort
+
+
+
+
+.. py:class:: ExtendedEnum
+
+   Bases: :py:obj:`enum.Enum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:method:: list(cls)
+      :classmethod:
+
+
+
+.. py:class:: DeviceSort
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ID
+      :annotation: = id
+
+      
+
+   .. py:attribute:: STATUS
+      :annotation: = status
+
+      
+
+   .. py:attribute:: LAST_UPDATED
+      :annotation: = last_updated
+
+      
+
+   .. py:attribute:: CREATED
+      :annotation: = created
+
+      
+
+   .. py:attribute:: NAME
+      :annotation: = name
+
+      
+
+   .. py:attribute:: TAGS
+      :annotation: = tags
+
+      
+
+   .. py:attribute:: IP_ADDRESS
+      :annotation: = ip_address
+
+      
+
+   .. py:attribute:: IMEI
+      :annotation: = imei
+
+      
+
+
+.. py:class:: IdValues
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ID
+      :annotation: = id
+
+      
+
+
+.. py:class:: RequestsType
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: GET
+      :annotation: = get
+
+      
+
+   .. py:attribute:: POST
+      :annotation: = post
+
+      
+
+   .. py:attribute:: PUT
+      :annotation: = put
+
+      
+
+   .. py:attribute:: DELETE
+      :annotation: = delete
+
+      
+
+   .. py:attribute:: PATCH
+      :annotation: = patch
+
+      
+
+
+.. py:class:: AuthenticateRequestsUrl
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: V1_AUTHENTICATE
+      :annotation: = /v1/authenticate
+
+      
+
+
+.. py:class:: RequestDefaultHeadersKeys
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ACCEPT
+      :annotation: = accept
+
+      
+
+   .. py:attribute:: AUTHORIZATION
+      :annotation: = authorization
+
+      
+
+
+.. py:class:: RequestDefaultHeadersValues
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: APPLICATION_JSON
+      :annotation: = application/json
+
+      
+
+   .. py:attribute:: BEARER_TOKEN
+      :annotation: = Bearer {}
+
+      
+
+
+.. py:class:: DeviceStatuses
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ENABLED_ID
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: DISABLED_ID
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: DELETED_ID
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: ENABLED_DICT
+      
+
+      
+
+   .. py:attribute:: DISABLED_DICT
+      
+
+      
+
+   .. py:attribute:: DELETED_DICT
+      
+
+      
+
+
+.. py:class:: SimStatusesID
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ISSUED_ID
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ACTIVATED_ID
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: SUSPENDED_ID
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: DELETED_ID
+      :annotation: = 3
+
+      
+
+   .. py:attribute:: FACTORY_TEST_ID
+      :annotation: = 4
+
+      
+
+
+.. py:class:: SimStatusesDict
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ISSUED_DICT
+      
+
+      
+
+   .. py:attribute:: ACTIVATED_DICT
+      
+
+      
+
+   .. py:attribute:: SUSPENDED_DICT
+      
+
+      
+
+   .. py:attribute:: DELETED_DICT
+      
+
+      
+
+   .. py:attribute:: FACTORY_TEST_DICT
+      
+
+      
+
+
+.. py:class:: ResponseHeaders
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: COUNT_PER_PAGE
+      :annotation: = X-Count-Per-Page
+
+      
+
+   .. py:attribute:: CURRENT_PAGE
+      :annotation: = X-Current-Page
+
+      
+
+   .. py:attribute:: TOTAL_PAGES
+      :annotation: = X-Total-Pages
+
+      
+
+   .. py:attribute:: TOTAL_COUNT
+      :annotation: = X-Total-Count
+
+      
+
+
+.. py:class:: SimSort
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: id
+      :annotation: = ID
+
+      
+
+   .. py:attribute:: issuer_org
+      :annotation: = ISSUER_ORG
+
+      
+
+   .. py:attribute:: reseller_org
+      :annotation: = RESELLER_ORG
+
+      
+
+   .. py:attribute:: customer_org
+      :annotation: = CUSTOMER_PRG
+
+      
+
+   .. py:attribute:: iccid
+      :annotation: = ICCID
+
+      
+
+   .. py:attribute:: status
+      :annotation: = STATUS
+
+      
+
+   .. py:attribute:: production_date
+      :annotation: = PRODUCTION_DATE
+
+      
+
+   .. py:attribute:: endpoint
+      :annotation: = ENDPOINT
+
+      
+
+   .. py:attribute:: model
+      :annotation: = MODEL
+
+      
+
+

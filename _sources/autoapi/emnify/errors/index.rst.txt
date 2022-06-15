@@ -1,0 +1,44 @@
+:py:mod:`emnify.errors`
+=======================
+
+.. py:module:: emnify.errors
+
+
+Module Contents
+---------------
+
+.. py:exception:: EMnifyBaseException
+
+   Bases: :py:obj:`Exception`
+
+   Cumstom base error class
+
+
+.. py:exception:: UnauthorisedException
+
+   Bases: :py:obj:`EMnifyBaseException`
+
+   Custom error for unauthorised response
+
+
+.. py:exception:: JsonDecodeException
+
+   Bases: :py:obj:`EMnifyBaseException`
+
+   Custom error for json parse exception
+
+
+.. py:exception:: UnexpectedArgumentException
+
+   Bases: :py:obj:`EMnifyBaseException`
+
+   Custom error for unexpected arguments
+
+
+.. py:exception:: ValidationErrorException
+
+   Bases: :py:obj:`EMnifyBaseException`
+
+   Custom error for validation errors
+
+

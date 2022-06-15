@@ -1,0 +1,134 @@
+:py:mod:`emnify.api_manager`
+============================
+
+.. py:module:: emnify.api_manager
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.api_manager.BaseApiManager
+   emnify.api_manager.Authenticate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   emnify.api_manager.MAIN_URL
+
+
+.. py:data:: MAIN_URL
+   :annotation: = https://cdn.emnify.net/api
+
+   
+
+.. py:class:: BaseApiManager
+
+   Base manager for api calls handling
+
+   .. py:attribute:: response_handlers
+      
+
+      
+
+   .. py:attribute:: request_url_prefix
+      :annotation: = 
+
+      
+
+   .. py:attribute:: request_method_name
+      :annotation: = 
+
+      
+
+   .. py:method:: _build_headers(token='')
+      :staticmethod:
+
+
+   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+
+
+   .. py:method:: return_paginator(self, response: requests.Response, client, data, files, query_params, path_params) -> Generator
+
+
+   .. py:method:: build_method_url(self, url_params)
+
+
+   .. py:method:: unauthorised(self, response: requests.Response, client, data: dict = None, path_params=None, *args, **kwargs)
+
+      method for 1 cycle retry - re authentication
+
+
+   .. py:method:: call_api(self, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None)
+
+
+   .. py:method:: make_get_request(self, main_url: str, method_name: str, headers: dict, params: str = None)
+
+
+   .. py:method:: make_post_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None)
+
+
+   .. py:method:: make_patch_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None)
+
+
+   .. py:method:: make_delete_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None)
+
+
+   .. py:method:: make_put_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None)
+
+
+   .. py:method:: make_request(self, client, method_url: str, data=None, files=None, query_params=None)
+
+
+   .. py:method:: return_success(*_, **__) -> True
+      :staticmethod:
+
+
+   .. py:method:: return_unwrapped(response: requests.Response, *args, **kwargs) -> requests.Response.json
+      :staticmethod:
+
+
+   .. py:method:: resource_path(main_url: str, method_name: str)
+      :staticmethod:
+
+
+
+.. py:class:: Authenticate
+
+   Bases: :py:obj:`BaseApiManager`
+
+   Base manager for api calls handling
+
+   .. py:attribute:: request_url_prefix
+      
+
+      
+
+   .. py:attribute:: request_method_name
+      
+
+      
+
+   .. py:attribute:: response_handlers
+      
+
+      
+
+   .. py:method:: unauthorised(self, response: requests.Response, client, data: dict = None, files=None, path_params: list = None, **kwargs)
+
+      method for 1 cycle retry - re authentication
+
+
+   .. py:method:: unexpected_error(self, response: requests.Response, client, data: dict = None, files=None, path_params: list = None)
+
+
+

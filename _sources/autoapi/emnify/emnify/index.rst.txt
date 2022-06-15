@@ -1,0 +1,40 @@
+:py:mod:`emnify.emnify`
+=======================
+
+.. py:module:: emnify.emnify
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.emnify.EMnify
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   emnify.emnify.logger
+
+
+.. py:data:: logger
+   
+
+   
+
+.. py:class:: EMnify(app_token=None)
+
+   Bases: :py:obj:`object`
+
+   base SDK class
+   token: Emnify api token
+
+

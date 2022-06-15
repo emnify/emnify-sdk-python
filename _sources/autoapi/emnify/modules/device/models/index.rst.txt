@@ -1,0 +1,306 @@
+:py:mod:`emnify.modules.device.models`
+======================================
+
+.. py:module:: emnify.modules.device.models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.modules.device.models.SimDevice
+   emnify.modules.device.models.Device
+   emnify.modules.device.models.CreateDevice
+   emnify.modules.device.models.SmsCreateModel
+   emnify.modules.device.models.ListSms
+   emnify.modules.device.models.TariffProfile
+   emnify.modules.device.models.ServiceProfile
+   emnify.modules.device.models.DeviceStatus
+   emnify.modules.device.models.DeviceIdRequired
+   emnify.modules.device.models.FilterDeviceModel
+   emnify.modules.device.models.ListQFilterDeviceListModel
+   emnify.modules.device.models.GetDeviceFilterSet
+   emnify.modules.device.models.DeviceEvent
+   emnify.modules.device.models.RetrieveDevice
+   emnify.modules.device.models.UpdateDevice
+
+
+
+
+.. py:class:: SimDevice
+
+   Bases: :py:obj:`emnify.modules.api.models.Sim1`
+
+   .. py:attribute:: status
+      :annotation: :Optional[emnify.modules.api.models.Status]
+
+      
+
+
+.. py:class:: Device
+
+   Bases: :py:obj:`emnify.modules.api.models.Endpoint`
+
+   Renamed generated model
+
+   .. py:attribute:: status
+      :annotation: :emnify.modules.api.models.Status
+
+      
+
+   .. py:attribute:: sim
+      :annotation: :Optional[SimDevice]
+
+      
+
+
+.. py:class:: CreateDevice
+
+   Bases: :py:obj:`Device`
+
+   Custom class for validation of Device on creation
+
+   .. py:method:: validate_status(cls, field_value, values, field, config)
+      :classmethod:
+
+
+
+.. py:class:: SmsCreateModel
+
+   Bases: :py:obj:`emnify.modules.api.models.SubmitMTSMSrequest`
+
+   Inherited generated model of SubmitMTSMSrequest for extra fields
+
+   .. py:attribute:: source_address
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: source_address_type
+      :annotation: :Optional[Dict[str, Any]]
+
+      
+
+   .. py:attribute:: expiry_date
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: udh
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: dcs
+      :annotation: :Optional[int]
+
+      
+
+
+.. py:class:: ListSms
+
+   Bases: :py:obj:`emnify.modules.api.models.RetrieveEventsresponse5`
+
+   Renamed generated model
+
+
+.. py:class:: TariffProfile
+
+   Bases: :py:obj:`emnify.modules.api.models.TariffProfile1`
+
+   Renamed generated model
+
+
+.. py:class:: ServiceProfile
+
+   Bases: :py:obj:`emnify.modules.api.models.ServiceProfile1`
+
+   Renamed generated model
+
+
+.. py:class:: DeviceStatus
+
+   Bases: :py:obj:`emnify.modules.api.models.Status`
+
+   Renamed generated model
+
+
+.. py:class:: DeviceIdRequired
+
+   Bases: :py:obj:`Device`
+
+   Changed renamed model of Device for id validation
+
+   .. py:attribute:: id
+      :annotation: :int
+
+      
+
+
+.. py:class:: FilterDeviceModel
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   Model for validation of filter query params
+
+   .. py:attribute:: status
+      :annotation: :Optional[int]
+
+      
+
+   .. py:attribute:: last_updated
+      :annotation: :Optional[datetime.datetime]
+
+      
+
+   .. py:attribute:: created
+      :annotation: :Optional[datetime.datetime]
+
+      
+
+   .. py:attribute:: name
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: tags
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: ip_address
+      :annotation: :Optional[str]
+
+      
+
+   .. py:attribute:: imei
+      :annotation: :Optional[int]
+
+      
+
+   .. py:attribute:: sim_status
+      :annotation: :Optional[int]
+
+      
+
+
+.. py:class:: ListQFilterDeviceListModel
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   .. py:attribute:: __root__
+      :annotation: :List[FilterDeviceModel]
+
+      
+
+
+.. py:class:: GetDeviceFilterSet
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   Model for device list query params
+
+   .. py:class:: Config
+
+      .. py:attribute:: use_enum_values
+         :annotation: = True
+
+         
+
+
+   .. py:attribute:: sort
+      :annotation: :Optional[emnify.constants.DeviceSort]
+
+      
+
+   .. py:attribute:: q
+      :annotation: :Optional[ListQFilterDeviceListModel]
+
+      
+
+
+.. py:class:: DeviceEvent
+
+   Bases: :py:obj:`emnify.modules.api.models.Event`
+
+   class inherited from generated Event
+
+
+.. py:class:: RetrieveDevice
+
+   Bases: :py:obj:`Device`
+
+   class inherited from generated model for retrieve device response
+
+   .. py:attribute:: runtime_data
+      :annotation: :Optional[Dict[str, Any]]
+
+      
+
+   .. py:attribute:: sim
+      :annotation: :emnify.modules.sim.models.SimList
+
+      
+
+
+.. py:class:: UpdateDevice
+
+   Bases: :py:obj:`emnify.modules.api.models.UpdateEndpointrequest`
+
+   Model for update Device request with field-type validation
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: tags
+      :annotation: :str
+
+      
+
+   .. py:attribute:: status
+      :annotation: :emnify.modules.api.models.Status
+
+      
+
+   .. py:attribute:: service_profile
+      :annotation: :Dict[str, Any]
+
+      
+
+   .. py:attribute:: tariff_profile
+      :annotation: :Dict[str, Any]
+
+      
+
+   .. py:attribute:: ip_address
+      :annotation: :str
+
+      
+
+   .. py:attribute:: ip_address_space
+      :annotation: :Dict[str, Any]
+
+      
+
+   .. py:attribute:: sim
+      :annotation: :Dict[str, Any]
+
+      
+
+   .. py:attribute:: imei
+      :annotation: :str
+
+      
+
+   .. py:attribute:: imei_lock
+      :annotation: :bool
+
+      
+
+

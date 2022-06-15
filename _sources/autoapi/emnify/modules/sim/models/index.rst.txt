@@ -1,0 +1,182 @@
+:py:mod:`emnify.modules.sim.models`
+===================================
+
+.. py:module:: emnify.modules.sim.models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.modules.sim.models.SimDevice
+   emnify.modules.sim.models.IdModel
+   emnify.modules.sim.models.SimStatus
+   emnify.modules.sim.models.SimList
+   emnify.modules.sim.models.SimUpdate
+   emnify.modules.sim.models.SimFilter
+
+
+
+
+.. py:class:: SimDevice
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   Sim list response Device  model
+
+   .. py:attribute:: id
+      :annotation: :int
+
+      
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: ip_address
+      :annotation: :str
+
+      
+
+   .. py:attribute:: created
+      :annotation: :datetime.datetime
+
+      
+
+   .. py:attribute:: last_updated
+      :annotation: :datetime.datetime
+
+      
+
+
+.. py:class:: IdModel
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   BaseModel for objects with single id field
+
+   .. py:attribute:: id
+      :annotation: :int
+
+      
+
+
+.. py:class:: SimStatus
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   .. py:attribute:: id
+      :annotation: :int
+
+      
+
+   .. py:attribute:: description
+      :annotation: :str
+
+      
+
+
+.. py:class:: SimList
+
+   Bases: :py:obj:`emnify.modules.api.models.RetrieveSIMlistresponse`
+
+   Inherited generated model for sim list
+
+   .. py:attribute:: status
+      :annotation: :SimStatus
+
+      
+
+   .. py:attribute:: device
+      :annotation: :Optional[SimDevice]
+
+      
+
+
+.. py:class:: SimUpdate
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   Model for sim partial update
+
+   .. py:attribute:: status
+      :annotation: :SimStatus
+
+      
+
+   .. py:attribute:: issuer_organisation
+      :annotation: :IdModel
+
+      
+
+   .. py:attribute:: reseller_organisation
+      :annotation: :IdModel
+
+      
+
+   .. py:attribute:: customer_organisation
+      :annotation: :IdModel
+
+      
+
+
+.. py:class:: SimFilter
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   .. py:attribute:: id
+      :annotation: :int
+
+      
+
+   .. py:attribute:: issuer_org
+      :annotation: :int
+
+      
+
+   .. py:attribute:: reseller_org
+      :annotation: :int
+
+      
+
+   .. py:attribute:: customer_org
+      :annotation: :int
+
+      
+
+   .. py:attribute:: iccid
+      :annotation: :str
+
+      
+
+   .. py:attribute:: status
+      :annotation: :SimFilter.id
+
+      
+
+   .. py:attribute:: production_date
+      :annotation: :pydantic.types.date
+
+      
+
+   .. py:attribute:: imsi
+      :annotation: :str
+
+      
+
+   .. py:attribute:: msisdn
+      :annotation: :str
+
+      
+
+   .. py:attribute:: model
+      :annotation: :int
+
+      
+
+

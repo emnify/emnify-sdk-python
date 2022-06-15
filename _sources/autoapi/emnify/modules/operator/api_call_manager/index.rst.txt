@@ -1,0 +1,36 @@
+:py:mod:`emnify.modules.operator.api_call_manager`
+==================================================
+
+.. py:module:: emnify.modules.operator.api_call_manager
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.modules.operator.api_call_manager.GetOperatorList
+
+
+
+
+.. py:class:: GetOperatorList
+
+   Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
+   Base manager for api calls handling
+
+   .. py:attribute:: request_url_prefix
+      :annotation: = /v1/operator
+
+      
+
+   .. py:attribute:: request_method_name
+      
+
+      
+
+

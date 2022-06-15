@@ -1,0 +1,106 @@
+:py:mod:`emnify.modules.sim.api_call_manager`
+=============================================
+
+.. py:module:: emnify.modules.sim.api_call_manager
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   emnify.modules.sim.api_call_manager.SimListApi
+   emnify.modules.sim.api_call_manager.SimActivateApi
+   emnify.modules.sim.api_call_manager.SimUpdateApi
+   emnify.modules.sim.api_call_manager.SimRetrieveApi
+
+
+
+
+.. py:class:: SimListApi
+
+   Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
+   Base manager for api calls handling
+
+   .. py:attribute:: request_url_prefix
+      :annotation: = /v1/sim
+
+      
+
+   .. py:attribute:: request_method_name
+      
+
+      
+
+
+.. py:class:: SimActivateApi
+
+   Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
+   Base manager for api calls handling
+
+   .. py:attribute:: request_url_prefix
+      :annotation: = /v1/sim_batch/bic/{bic}
+
+      
+
+   .. py:attribute:: request_method_name
+      
+
+      
+
+   .. py:attribute:: response_handlers
+      
+
+      
+
+   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+
+
+
+.. py:class:: SimUpdateApi
+
+   Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
+   Base manager for api calls handling
+
+   .. py:attribute:: request_url_prefix
+      :annotation: = /v1/sim/{sim}
+
+      
+
+   .. py:attribute:: request_method_name
+      
+
+      
+
+   .. py:attribute:: response_handlers
+      
+
+      
+
+   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+
+
+
+.. py:class:: SimRetrieveApi
+
+   Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
+   Base manager for api calls handling
+
+   .. py:attribute:: request_url_prefix
+      :annotation: = /v1/sim/{sim}
+
+      
+
+   .. py:attribute:: request_method_name
+      
+
+      
+
+

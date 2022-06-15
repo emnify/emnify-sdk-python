@@ -1,0 +1,17 @@
+:py:mod:`emnify.modules.sim`
+============================
+
+.. py:module:: emnify.modules.sim
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   api_call_manager/index.rst
+   manager/index.rst
+   models/index.rst
+
+
