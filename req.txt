@@ -4,7 +4,7 @@ attrs==21.4.0
 Babel==2.9.1
 certifi==2021.10.8
 charset-normalizer==2.0.9
-coverage==6.3.2
+coverage==6.4.1
 distlib==0.3.4
 docutils==0.17.1
 filelock==3.4.2
@@ -39,6 +39,6 @@ urllib3==1.26.7
 vcrpy==4.1.1
 virtualenv==20.13.0
 virtualenv-clone==0.5.7
-wrapt==1.14.0
+wrapt==1.14.1
 yarl==1.7.2
 zipp==3.7.0
