@@ -24,7 +24,7 @@ py==1.11.0
 pydantic==1.9.0
 Pygments==2.12.0
 pyparsing==3.0.9
-pytest==7.1.1
+pytest==7.1.2
 pytest-cov==3.0.0
 pytest-vcr==1.0.2
 pytz==2022.1
