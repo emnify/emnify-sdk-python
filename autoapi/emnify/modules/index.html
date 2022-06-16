@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.1, furo 2022.06.04.1"/>
         <title>emnify.modules - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -219,7 +219,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -234,9 +235,9 @@
         </div>
         <article role="main">
           <section id="module-emnify.modules">
-<span id="emnify-modules"></span><h1><a class="reference internal" href="#module-emnify.modules" title="emnify.modules"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules</span></code></a><a class="headerlink" href="#module-emnify.modules" title="Permalink to this headline">#</a></h1>
+<span id="emnify-modules"></span><h1><a class="reference internal" href="#module-emnify.modules" title="emnify.modules"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules</span></code></a><a class="headerlink" href="#module-emnify.modules" title="Permalink to this heading">#</a></h1>
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">#</a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.api</span></code></a><ul>
@@ -265,20 +266,18 @@
 </div>
 </section>
 <section id="package-contents">
-<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline">#</a></h2>
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this heading">#</a></h2>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h3>
-<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#emnify.modules.DeviceManager" title="emnify.modules.DeviceManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeviceManager</span></code></a></p></td>
 <td><p>Manager that allows to get/retrieve/create/update/send_sms to device</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.</span></span><span class="sig-name descname"><span class="pre">DeviceManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager" title="Permalink to this definition">#</a></dt>
@@ -287,99 +286,120 @@
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.device_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.device_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.list_sms_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_sms_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.list_sms_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.device_detailed_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_detailed_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.device_detailed_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.sms_create_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sms_create_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.sms_create_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.event_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">event_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.event_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.status_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.status_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.device_create_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_create_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.device_create_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.device_update_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device_update_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.device_update_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.service_profile_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">service_profile_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.service_profile_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.tariff_profile_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tariff_profile_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.tariff_profile_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.get_device_sort_enum">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_device_sort_enum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_sort_enum" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.get_device_filter_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_device_filter_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="api/models/index.html#emnify.modules.api.models.Type" title="emnify.modules.api.models.Type"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">emnify.modules.device.models.FilterDeviceModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_filter_model" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_device_filter_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="api/models/index.html#emnify.modules.api.models.Type" title="emnify.modules.api.models.Type"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">emnify.modules.device.models.FilterDeviceModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_filter_model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.get_device_sms_list">
-<span class="sig-name descname"><span class="pre">get_device_sms_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.ListSms" title="emnify.modules.device.models.ListSms"><span class="pre">emnify.modules.device.models.ListSms</span></a></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_sms_list" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_device_sms_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.ListSms" title="emnify.modules.device.models.ListSms"><span class="pre">emnify.modules.device.models.ListSms</span></a></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_sms_list" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.send_sms">
-<span class="sig-name descname"><span class="pre">send_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.SmsCreateModel" title="emnify.modules.device.models.SmsCreateModel"><span class="pre">emnify.modules.device.models.SmsCreateModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.send_sms" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">send_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.SmsCreateModel" title="emnify.modules.device.models.SmsCreateModel"><span class="pre">emnify.modules.device.models.SmsCreateModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.send_sms" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.update_device">
 <span class="sig-name descname"><span class="pre">update_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.UpdateDevice" title="emnify.modules.device.models.UpdateDevice"><span class="pre">emnify.modules.device.models.UpdateDevice</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.update_device" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.get_devices_list">
 <span class="sig-name descname"><span class="pre">get_devices_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">emnify.modules.device.models.FilterDeviceModel</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_enum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">emnify.modules.device.models.DeviceSortModel</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.get_devices_list" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.delete_device">
 <span class="sig-name descname"><span class="pre">delete_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.delete_device" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.add_device_blacklist_operator">
 <span class="sig-name descname"><span class="pre">add_device_blacklist_operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.add_device_blacklist_operator" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.delete_device_blacklist_operator">
 <span class="sig-name descname"><span class="pre">delete_device_blacklist_operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.delete_device_blacklist_operator" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.get_device_operator_blacklist">
 <span class="sig-name descname"><span class="pre">get_device_operator_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_operator_blacklist" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.get_device_events_list">
 <span class="sig-name descname"><span class="pre">get_device_events_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.get_device_events_list" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>device</strong> – Device pydantic-model or int</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Generator with Device objects</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.change_status">
-<span class="sig-name descname"><span class="pre">change_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.UpdateDevice" title="emnify.modules.device.models.UpdateDevice"><span class="pre">emnify.modules.device.models.UpdateDevice</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.change_status" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">change_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.UpdateDevice" title="emnify.modules.device.models.UpdateDevice"><span class="pre">emnify.modules.device.models.UpdateDevice</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.change_status" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>device</strong> – id or device model for update</p></li>
 <li><p><strong>enable</strong> – boolean parameter for enable a Device</p></li>
@@ -388,49 +408,60 @@
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.disable_device">
 <span class="sig-name descname"><span class="pre">disable_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.disable_device" title="Permalink to this definition">#</a></dt>
 <dd><p>Method for changing a device status to ‘disabled’</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.release_sim">
 <span class="sig-name descname"><span class="pre">release_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.release_sim" title="Permalink to this definition">#</a></dt>
 <dd><p>This method allows to release the assigned SIM from device by device_id</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.assign_sim">
-<span class="sig-name descname"><span class="pre">assign_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.assign_sim" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">assign_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.assign_sim" title="Permalink to this definition">#</a></dt>
 <dd><p>this method allow to assign a SIM to the device</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.create_device">
-<span class="sig-name descname"><span class="pre">create_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.create_device" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">create_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.create_device" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.retrieve_device">
-<span class="sig-name descname"><span class="pre">retrieve_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.retrieve_device" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">retrieve_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.retrieve_device" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.validate_device">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.validate_device" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.validate_device" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.__check_device_status">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__check_device_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.__check_device_status" title="Permalink to this definition">#</a></dt>
 <dd><p>Hidden method for checking device for status update
 devices to activate must have activated sim</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.__change_device_status">
 <span class="sig-name descname"><span class="pre">__change_device_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.DeviceManager.__change_device_status" title="Permalink to this definition">#</a></dt>
 <dd><p>Hidden method for changing status of the device</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.DeviceManager.__transform_all_devices_filter_params">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__transform_all_devices_filter_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">emnify.modules.device.models.FilterDeviceModel</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_enum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">emnify.modules.device.models.DeviceSortModel</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.__transform_all_devices_filter_params" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__transform_all_devices_filter_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="device/models/index.html#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">emnify.modules.device.models.FilterDeviceModel</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_enum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">emnify.modules.device.models.DeviceSortModel</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#emnify.modules.DeviceManager.__transform_all_devices_filter_params" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
 </dd></dl>
+
 </section>
 </section>
 </section>
@@ -530,6 +561,7 @@ devices to activate must have activated sim</p>
 </div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/scripts/furo.js"></script>
     </body>

@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.1, furo 2022.06.04.1"/>
         <title>emnify.errors - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -219,7 +219,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -234,39 +235,44 @@
         </div>
         <article role="main">
           <section id="module-emnify.errors">
-<span id="emnify-errors"></span><h1><a class="reference internal" href="#module-emnify.errors" title="emnify.errors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.errors</span></code></a><a class="headerlink" href="#module-emnify.errors" title="Permalink to this headline">#</a></h1>
+<span id="emnify-errors"></span><h1><a class="reference internal" href="#module-emnify.errors" title="emnify.errors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.errors</span></code></a><a class="headerlink" href="#module-emnify.errors" title="Permalink to this heading">#</a></h1>
 <section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="emnify.errors.EMnifyBaseException">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.errors.</span></span><span class="sig-name descname"><span class="pre">EMnifyBaseException</span></span><a class="headerlink" href="#emnify.errors.EMnifyBaseException" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
 <p>Cumstom base error class</p>
 </dd></dl>
+
 <dl class="py exception">
 <dt class="sig sig-object py" id="emnify.errors.UnauthorisedException">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.errors.</span></span><span class="sig-name descname"><span class="pre">UnauthorisedException</span></span><a class="headerlink" href="#emnify.errors.UnauthorisedException" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.errors.EMnifyBaseException" title="emnify.errors.EMnifyBaseException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EMnifyBaseException</span></code></a></p>
 <p>Custom error for unauthorised response</p>
 </dd></dl>
+
 <dl class="py exception">
 <dt class="sig sig-object py" id="emnify.errors.JsonDecodeException">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.errors.</span></span><span class="sig-name descname"><span class="pre">JsonDecodeException</span></span><a class="headerlink" href="#emnify.errors.JsonDecodeException" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.errors.EMnifyBaseException" title="emnify.errors.EMnifyBaseException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EMnifyBaseException</span></code></a></p>
 <p>Custom error for json parse exception</p>
 </dd></dl>
+
 <dl class="py exception">
 <dt class="sig sig-object py" id="emnify.errors.UnexpectedArgumentException">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.errors.</span></span><span class="sig-name descname"><span class="pre">UnexpectedArgumentException</span></span><a class="headerlink" href="#emnify.errors.UnexpectedArgumentException" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.errors.EMnifyBaseException" title="emnify.errors.EMnifyBaseException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EMnifyBaseException</span></code></a></p>
 <p>Custom error for unexpected arguments</p>
 </dd></dl>
+
 <dl class="py exception">
 <dt class="sig sig-object py" id="emnify.errors.ValidationErrorException">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.errors.</span></span><span class="sig-name descname"><span class="pre">ValidationErrorException</span></span><a class="headerlink" href="#emnify.errors.ValidationErrorException" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.errors.EMnifyBaseException" title="emnify.errors.EMnifyBaseException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EMnifyBaseException</span></code></a></p>
 <p>Custom error for validation errors</p>
 </dd></dl>
+
 </section>
 </section>
 
@@ -332,6 +338,7 @@
 </div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/scripts/furo.js"></script>
     </body>

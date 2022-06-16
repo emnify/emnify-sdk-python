@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Help and Contribute" href="help.html" /><link rel="prev" title="Concepts" href="concepts.html" />
 
-    <link rel="shortcut icon" href="_static/favicon-32x32.png"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.1, furo 2022.06.04.1"/>
         <title>Examples - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -219,7 +219,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -234,9 +235,9 @@
         </div>
         <article role="main">
           <section id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h1>
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
 <section id="get-first-devices-online">
-<h2>Get First Devices Online<a class="headerlink" href="#get-first-devices-online" title="Permalink to this headline">#</a></h2>
+<h2>Get First Devices Online<a class="headerlink" href="#get-first-devices-online" title="Permalink to this heading">#</a></h2>
 <p>In order to get your devices online, you gonna need to perform a set of steps below.
 This example demonstrates complex operation across multiple SDK <a class="reference internal" href="concepts.html"><span class="doc">Concepts</span></a>.</p>
 <ul class="simple">
@@ -259,7 +260,7 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos"> 6</span>
 <span class="linenos"> 7</span><span class="c1"># To operate EMnify SDK you need to generate application token.</span>
 <span class="linenos"> 8</span><span class="c1"># That is how: https://www.emnify.com/developer-blog/how-to-use-an-application-token-for-api-authentication</span>
-<span class="linenos"> 9</span><span class="n">token</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'token: '</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">token</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;token: &#39;</span><span class="p">)</span>
 <span class="linenos">10</span><span class="c1"># The client is authorized to perform operations by your name;</span>
 <span class="linenos">11</span><span class="n">emnify_client</span> <span class="o">=</span> <span class="n">EMnify</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
 <span class="linenos">12</span>
@@ -267,13 +268,13 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">14</span><span class="c1"># one is a device and other is a SIM card.</span>
 <span class="linenos">15</span><span class="c1"># For this example we assume you have a batch of SIM cards you willing to</span>
 <span class="linenos">16</span><span class="c1"># use in your devices.</span>
-<span class="linenos">17</span><span class="n">sim_batch_BIC2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'BIC2: '</span><span class="p">)</span>
+<span class="linenos">17</span><span class="n">sim_batch_BIC2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;BIC2: &#39;</span><span class="p">)</span>
 <span class="linenos">18</span>
 <span class="linenos">19</span><span class="c1"># EMnify allows you to control coverage and services you need.</span>
 <span class="linenos">20</span><span class="c1"># Lookup Concepts to learn more.</span>
 <span class="linenos">21</span><span class="c1"># https://portal.emnify.com/device-policies you can find IDs there.</span>
-<span class="linenos">22</span><span class="n">service_profile_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Service Profile ID: '</span><span class="p">)</span>
-<span class="linenos">23</span><span class="n">tariff_profile_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Tariff Profile ID: '</span><span class="p">)</span>
+<span class="linenos">22</span><span class="n">service_profile_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Service Profile ID: &#39;</span><span class="p">)</span>
+<span class="linenos">23</span><span class="n">tariff_profile_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Tariff Profile ID: &#39;</span><span class="p">)</span>
 <span class="linenos">24</span><span class="c1"># In order to create devices for SIMs afterwards we need service and coverage profiles.</span>
 <span class="linenos">25</span><span class="n">service_profile</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">service_profile_model</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">service_profile_id</span><span class="p">))</span>
 <span class="linenos">26</span><span class="n">tariff_profile</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">tariff_profile_model</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tariff_profile_id</span><span class="p">))</span>
@@ -283,11 +284,11 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">30</span>    <span class="c1"># This method also supports single sim registration via BIC1,</span>
 <span class="linenos">31</span>    <span class="c1"># so you can use your FREE Evaluation SIM cards either;</span>
 <span class="linenos">32</span>    <span class="n">issued_sims</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">register_sim</span><span class="p">(</span><span class="n">bic</span><span class="o">=</span><span class="n">sim_batch_BIC2</span><span class="p">)</span>
-<span class="linenos">33</span>    <span class="c1"># After it's added - all sim`s are registred with "issued" status;</span>
+<span class="linenos">33</span>    <span class="c1"># After it&#39;s added - all sim`s are registred with &quot;issued&quot; status;</span>
 <span class="linenos">34</span><span class="k">except</span> <span class="n">EMnifyBaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <span class="linenos">35</span>    <span class="c1"># It can happen that there is some error appear during SIM registration;</span>
 <span class="linenos">36</span>    <span class="c1"># Use EMnifyBaseException for general exceptions or inherited classes for specific one`s;</span>
-<span class="linenos">37</span>    <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"error during sim batch BIC2 activation</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="linenos">37</span>    <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;error during sim batch BIC2 activation</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos">38</span>
 <span class="linenos">39</span><span class="c1"># We define status of device to be applied during creation.</span>
 <span class="linenos">40</span><span class="n">device_status</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">status_model</span><span class="p">(</span>
@@ -301,7 +302,7 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">48</span>    <span class="c1"># create a new device with the SIM assigned.</span>
 <span class="linenos">49</span>
 <span class="linenos">50</span>    <span class="c1"># For device creation we need to specify parameters of the device:</span>
-<span class="linenos">51</span>    <span class="n">device_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Device(</span><span class="si">{</span><span class="n">sim</span><span class="o">.</span><span class="n">iccid</span><span class="si">}</span><span class="s2">)"</span>
+<span class="linenos">51</span>    <span class="n">device_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Device(</span><span class="si">{</span><span class="n">sim</span><span class="o">.</span><span class="n">iccid</span><span class="si">}</span><span class="s2">)&quot;</span>
 <span class="linenos">52</span>    <span class="n">device_model</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">device_create_model</span><span class="p">(</span>
 <span class="linenos">53</span>        <span class="n">tariff_profile</span><span class="o">=</span><span class="n">tariff_profile</span><span class="p">,</span>
 <span class="linenos">54</span>        <span class="n">status</span><span class="o">=</span><span class="n">device_status</span><span class="p">,</span>
@@ -318,7 +319,7 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">65</span>    <span class="c1"># Which you can store in your local inventory for future needs.</span>
 <span class="linenos">66</span>    <span class="n">device</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">retrieve_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
 <span class="linenos">67</span>
-<span class="linenos">68</span>    <span class="c1"># As it mentioned above by default connectivity is disabled so you're not getting billed.</span>
+<span class="linenos">68</span>    <span class="c1"># As it mentioned above by default connectivity is disabled so you&#39;re not getting billed.</span>
 <span class="linenos">69</span>    <span class="c1"># The following command will enable connectivity for your device with a SIM card installed.</span>
 <span class="linenos">70</span>    <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">change_status</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
 <span class="linenos">71</span>    <span class="c1"># At this point EMnify is ready to provide you connectivity services.</span>
@@ -332,8 +333,8 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">79</span>    <span class="c1"># For example purposes we will send a special configuration SMS command.</span>
 <span class="linenos">80</span>    <span class="c1"># It may vary by the device manufacturer, see our documentation to learn</span>
 <span class="linenos">81</span>    <span class="c1"># if this method suites your devices.</span>
-<span class="linenos">82</span>    <span class="n">ACTIVATION_CODE</span> <span class="o">=</span> <span class="s1">'AT+CGDCONT=1,"IP","em",,'</span>
-<span class="linenos">83</span>    <span class="n">SENDER</span> <span class="o">=</span> <span class="s2">"city_scooters_admin"</span>
+<span class="linenos">82</span>    <span class="n">ACTIVATION_CODE</span> <span class="o">=</span> <span class="s1">&#39;AT+CGDCONT=1,&quot;IP&quot;,&quot;em&quot;,,&#39;</span>
+<span class="linenos">83</span>    <span class="n">SENDER</span> <span class="o">=</span> <span class="s2">&quot;city_scooters_admin&quot;</span>
 <span class="linenos">84</span>
 <span class="linenos">85</span>    <span class="n">activation_sms</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">sms_create_model</span><span class="p">(</span>
 <span class="linenos">86</span>        <span class="n">payload</span><span class="o">=</span><span class="n">ACTIVATION_CODE</span><span class="p">,</span>
@@ -350,21 +351,21 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 </div>
 </section>
 <section id="device-lifecycle-management">
-<h2>Device Lifecycle Management<a class="headerlink" href="#device-lifecycle-management" title="Permalink to this headline">#</a></h2>
+<h2>Device Lifecycle Management<a class="headerlink" href="#device-lifecycle-management" title="Permalink to this heading">#</a></h2>
 <section id="initialization-of-sdk-client">
-<h3>Initialization of SDK client<a class="headerlink" href="#initialization-of-sdk-client" title="Permalink to this headline">#</a></h3>
+<h3>Initialization of SDK client<a class="headerlink" href="#initialization-of-sdk-client" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">device_lifecycle_management.py</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">emnify</span> <span class="kn">import</span> <span class="n">EMnify</span>
 <span class="linenos">2</span><span class="kn">from</span> <span class="nn">emnify</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">emnify_constants</span>
 <span class="linenos">3</span>
-<span class="linenos">4</span><span class="n">emnify</span> <span class="o">=</span> <span class="n">EMnify</span><span class="p">(</span><span class="n">app_token</span><span class="o">=</span><span class="s1">'your token'</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">emnify</span> <span class="o">=</span> <span class="n">EMnify</span><span class="p">(</span><span class="n">app_token</span><span class="o">=</span><span class="s1">&#39;your token&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="create-and-activate-a-device">
-<h3>Create and activate a device<a class="headerlink" href="#create-and-activate-a-device" title="Permalink to this headline">#</a></h3>
+<h3>Create and activate a device<a class="headerlink" href="#create-and-activate-a-device" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Device Creation</p></li>
 <li><p>SIM Registration</p></li>
@@ -380,7 +381,7 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos"> 4</span><span class="n">unassigned_sims</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">emnify</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">get_sim_list</span><span class="p">(</span><span class="n">without_device</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
 <span class="linenos"> 5</span><span class="c1">#  If no unassigned_sims - register new one by batch code</span>
 <span class="linenos"> 6</span><span class="k">if</span> <span class="ow">not</span> <span class="n">unassigned_sims</span><span class="p">:</span>
-<span class="linenos"> 7</span>    <span class="n">registered_sim</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">register_sim</span><span class="p">(</span><span class="n">bic</span><span class="o">=</span><span class="s1">'sample_bic_code'</span><span class="p">)</span>  <span class="c1"># Returns as list</span>
+<span class="linenos"> 7</span>    <span class="n">registered_sim</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">register_sim</span><span class="p">(</span><span class="n">bic</span><span class="o">=</span><span class="s1">&#39;sample_bic_code&#39;</span><span class="p">)</span>  <span class="c1"># Returns as list</span>
 <span class="linenos"> 8</span>    <span class="n">sim</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">retrieve_sim</span><span class="p">(</span><span class="n">registered_sim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="linenos"> 9</span><span class="k">else</span><span class="p">:</span>
 <span class="linenos">10</span>    <span class="n">sim</span> <span class="o">=</span> <span class="n">unassigned_sims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Taking the first one unassigned sim</span>
@@ -390,7 +391,7 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">14</span><span class="n">service_profile</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">service_profile_model</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="linenos">15</span><span class="n">tariff_profile</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">tariff_profile_model</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="linenos">16</span><span class="n">device_status</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">status_model</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="linenos">17</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'new_device'</span>
+<span class="linenos">17</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new_device&#39;</span>
 <span class="linenos">18</span><span class="n">device_model</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">device_create_model</span><span class="p">(</span>
 <span class="linenos">19</span>    <span class="n">tariff_profile</span><span class="o">=</span><span class="n">tariff_profile</span><span class="p">,</span>
 <span class="linenos">20</span>    <span class="n">status</span><span class="o">=</span><span class="n">device_status</span><span class="p">,</span>
@@ -408,14 +409,14 @@ This example demonstrates complex operation across multiple SDK <a class="refere
 <span class="linenos">32</span>
 <span class="linenos">33</span><span class="c1"># Retrieving updated device details</span>
 <span class="linenos">34</span><span class="n">device</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">retrieve_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
-<span class="linenos">35</span><span class="n">device_status</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be 'Enabled'</span>
-<span class="linenos">36</span><span class="n">sim_status</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be 'Activated'</span>
+<span class="linenos">35</span><span class="n">device_status</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be &#39;Enabled&#39;</span>
+<span class="linenos">36</span><span class="n">sim_status</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be &#39;Activated&#39;</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="configure-a-device">
-<h3>Configure a device<a class="headerlink" href="#configure-a-device" title="Permalink to this headline">#</a></h3>
+<h3>Configure a device<a class="headerlink" href="#configure-a-device" title="Permalink to this heading">#</a></h3>
 <p>If you want to avoid using a specific operator to avoid unintentional spending on the device,
 you can add it to the blacklist of the device.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
@@ -425,23 +426,23 @@ you can add it to the blacklist of the device.</p>
 <span class="linenos"> 3</span><span class="c1">#  Getting details of device</span>
 <span class="linenos"> 4</span><span class="n">device</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">retrieve_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="n">tags</span> <span class="o">=</span> <span class="s1">'arduino, meter, temp'</span>  <span class="c1"># Sample tags</span>
-<span class="linenos"> 7</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'new name'</span>  <span class="c1"># Sample name</span>
+<span class="linenos"> 6</span><span class="n">tags</span> <span class="o">=</span> <span class="s1">&#39;arduino, meter, temp&#39;</span>  <span class="c1"># Sample tags</span>
+<span class="linenos"> 7</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new name&#39;</span>  <span class="c1"># Sample name</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span><span class="c1"># Adjust device config</span>
-<span class="linenos">10</span><span class="n">update_device_fields</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">device_update_model</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'new name'</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s1">'192.0.0.0'</span><span class="p">)</span>
+<span class="linenos">10</span><span class="n">update_device_fields</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">device_update_model</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;new name&#39;</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s1">&#39;192.0.0.0&#39;</span><span class="p">)</span>
 <span class="linenos">11</span><span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">update_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">update_device_fields</span><span class="p">)</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="c1">#  Getting details of updated device</span>
 <span class="linenos">14</span><span class="n">updated_device</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">retrieve_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
-<span class="linenos">15</span><span class="n">device_ip_address</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">ip_address</span>  <span class="c1"># Will be '192.0.0.0'</span>
-<span class="linenos">16</span><span class="n">deivce_name</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">name</span>  <span class="c1"># Will be 'new name'</span>
+<span class="linenos">15</span><span class="n">device_ip_address</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">ip_address</span>  <span class="c1"># Will be &#39;192.0.0.0&#39;</span>
+<span class="linenos">16</span><span class="n">deivce_name</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">name</span>  <span class="c1"># Will be &#39;new name&#39;</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="configure-operator-blacklist-for-device">
-<h3>Configure operator blacklist for device<a class="headerlink" href="#configure-operator-blacklist-for-device" title="Permalink to this headline">#</a></h3>
+<h3>Configure operator blacklist for device<a class="headerlink" href="#configure-operator-blacklist-for-device" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">device_lifecycle_management.py</span><a class="headerlink" href="#id5" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#  === Configure operator blacklist for device ===</span>
@@ -472,7 +473,7 @@ you can add it to the blacklist of the device.</p>
 </div>
 </section>
 <section id="disable-device">
-<h3>Disable device<a class="headerlink" href="#disable-device" title="Permalink to this headline">#</a></h3>
+<h3>Disable device<a class="headerlink" href="#disable-device" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">device_lifecycle_management.py</span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#  === Disable device ===</span>
@@ -489,14 +490,14 @@ you can add it to the blacklist of the device.</p>
 <span class="linenos">12</span><span class="c1"># Disable a device</span>
 <span class="linenos">13</span>
 <span class="linenos">14</span><span class="n">disabled_device</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">retrieve_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-<span class="linenos">15</span><span class="n">device_status</span> <span class="o">=</span> <span class="n">disabled_device</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be 'Disabled'</span>
-<span class="linenos">16</span><span class="n">sim_status</span> <span class="o">=</span> <span class="n">disabled_device</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span> <span class="c1"># Will be 'Suspended'</span>
+<span class="linenos">15</span><span class="n">device_status</span> <span class="o">=</span> <span class="n">disabled_device</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be &#39;Disabled&#39;</span>
+<span class="linenos">16</span><span class="n">sim_status</span> <span class="o">=</span> <span class="n">disabled_device</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span> <span class="c1"># Will be &#39;Suspended&#39;</span>
 </pre></div>
 </div>
 </div>
 </section>
 <section id="delete-device">
-<h3>Delete device<a class="headerlink" href="#delete-device" title="Permalink to this headline">#</a></h3>
+<h3>Delete device<a class="headerlink" href="#delete-device" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text">device_lifecycle_management.py</span><a class="headerlink" href="#id7" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#  === Delete device ===</span>
@@ -525,7 +526,7 @@ you can add it to the blacklist of the device.</p>
 <span class="linenos">24</span><span class="c1"># After deleting count of all devices will be lowered</span>
 <span class="linenos">25</span>
 <span class="linenos">26</span><span class="n">sim</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">retrieve_sim</span><span class="p">(</span><span class="n">sim_id</span><span class="o">=</span><span class="n">sim_id_of_deleted_device</span><span class="p">)</span>
-<span class="linenos">27</span><span class="n">sim_status</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be 'Suspended'</span>
+<span class="linenos">27</span><span class="n">sim_status</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span>  <span class="c1"># Will be &#39;Suspended&#39;</span>
 <span class="linenos">28</span>
 </pre></div>
 </div>
@@ -533,7 +534,7 @@ you can add it to the blacklist of the device.</p>
 </section>
 </section>
 <section id="filtering-and-sorting">
-<h2>Filtering and Sorting<a class="headerlink" href="#filtering-and-sorting" title="Permalink to this headline">#</a></h2>
+<h2>Filtering and Sorting<a class="headerlink" href="#filtering-and-sorting" title="Permalink to this heading">#</a></h2>
 <div class="literal-block-wrapper docutils container" id="id8">
 <div class="code-block-caption"><span class="caption-text">filtering_and_sorting.py</span><a class="headerlink" href="#id8" title="Permalink to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>
@@ -541,7 +542,7 @@ you can add it to the blacklist of the device.</p>
 <span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">emnify</span> <span class="kn">import</span> <span class="n">EMnify</span>
 <span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">emnify</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">emnify_constants</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="n">emnify_client</span> <span class="o">=</span> <span class="n">EMnify</span><span class="p">(</span><span class="n">app_token</span><span class="o">=</span><span class="s1">'your_application_token'</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="n">emnify_client</span> <span class="o">=</span> <span class="n">EMnify</span><span class="p">(</span><span class="n">app_token</span><span class="o">=</span><span class="s1">&#39;your_application_token&#39;</span><span class="p">)</span>
 <span class="linenos"> 7</span>
 <span class="linenos"> 8</span><span class="c1"># Some methods that return multiple objects allow sorting and filtering.</span>
 <span class="linenos"> 9</span><span class="c1"># This allows us to optimize processing time, since using filtering we can immediately get the necessary objects with</span>
@@ -562,7 +563,7 @@ you can add it to the blacklist of the device.</p>
 <span class="linenos">24</span><span class="n">sim_filter</span> <span class="o">=</span> <span class="n">emnify_client</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">get_sim_filter_model</span><span class="p">(</span>
 <span class="linenos">25</span>    <span class="n">customer_org</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="linenos">26</span>    <span class="n">status</span><span class="o">=</span><span class="n">emnify_constants</span><span class="o">.</span><span class="n">SimStatusesID</span><span class="o">.</span><span class="n">ACTIVATED_ID</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
-<span class="linenos">27</span>    <span class="n">production_date</span><span class="o">=</span><span class="s1">'2019-01-25'</span>
+<span class="linenos">27</span>    <span class="n">production_date</span><span class="o">=</span><span class="s1">&#39;2019-01-25&#39;</span>
 <span class="linenos">28</span><span class="p">)</span>
 <span class="linenos">29</span>
 <span class="linenos">30</span><span class="c1"># The request to get a list of SIM cards also has a separate filter,</span>
@@ -676,6 +677,7 @@ you can add it to the blacklist of the device.</p>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>

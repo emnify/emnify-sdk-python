@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Concepts" href="concepts.html" /><link rel="prev" title="Welcome to EMnify SDK Documentation for Python" href="index.html" />
 
-    <link rel="shortcut icon" href="_static/favicon-32x32.png"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.1, furo 2022.06.04.1"/>
         <title>Getting Started - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -219,7 +219,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -234,15 +235,15 @@
         </div>
         <article role="main">
           <section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
 <section id="install">
-<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">#</a></h2>
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this heading">#</a></h2>
 <section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h3>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h3>
 <p>Python &gt; 3.6 is required.</p>
 </section>
 <section id="install-from-source-code">
-<h3>Install From Source Code<a class="headerlink" href="#install-from-source-code" title="Permalink to this headline">#</a></h3>
+<h3>Install From Source Code<a class="headerlink" href="#install-from-source-code" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">Installation commands</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/emnify-python-sdk.git
@@ -253,7 +254,7 @@ python setup.py install
 </div>
 </section>
 <section id="install-via-pypi">
-<h3>Install via PyPi<a class="headerlink" href="#install-via-pypi" title="Permalink to this headline">#</a></h3>
+<h3>Install via PyPi<a class="headerlink" href="#install-via-pypi" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">Installation commands</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install emnify-python-sdk
@@ -263,16 +264,16 @@ python setup.py install
 </section>
 </section>
 <section id="configure">
-<h2>Configure<a class="headerlink" href="#configure" title="Permalink to this headline">#</a></h2>
+<h2>Configure<a class="headerlink" href="#configure" title="Permalink to this heading">#</a></h2>
 <section id="create-application-token">
-<h3>Create Application Token<a class="headerlink" href="#create-application-token" title="Permalink to this headline">#</a></h3>
+<h3>Create Application Token<a class="headerlink" href="#create-application-token" title="Permalink to this heading">#</a></h3>
 <p>In order to use SDK you gonna need to create your Application Token via: <a class="reference external" href="https://www.emnify.com/developer-blog/how-to-use-an-application-token-for-api-authentication">Enterprise Portal(Simplest Way) or API</a> or , and apply it to initiate SDK.</p>
 </section>
 <section id="use-in-code">
-<h3>Use in Code<a class="headerlink" href="#use-in-code" title="Permalink to this headline">#</a></h3>
+<h3>Use in Code<a class="headerlink" href="#use-in-code" title="Permalink to this heading">#</a></h3>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">Example of Usage</span><a class="headerlink" href="#id4" title="Permalink to this code">#</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">TOKEN</span> <span class="o">=</span> <span class="s1">'&lt;PASTE YOUR APPLICATION TOKEN HERE&gt;'</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">TOKEN</span> <span class="o">=</span> <span class="s1">&#39;&lt;PASTE YOUR APPLICATION TOKEN HERE&gt;&#39;</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># Import package</span>
 <span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">emnify</span> <span class="kn">import</span> <span class="n">EMnify</span>
@@ -289,7 +290,7 @@ python setup.py install
 </section>
 </section>
 <section id="explore-more">
-<h2>Explore More<a class="headerlink" href="#explore-more" title="Permalink to this headline">#</a></h2>
+<h2>Explore More<a class="headerlink" href="#explore-more" title="Permalink to this heading">#</a></h2>
 <p>Now when you have SDK configured it’s time to learn what you can do further.</p>
 <p>If you’re new to IoT Connectivity and EMnify it makes sense to start with learning <a class="reference internal" href="concepts.html"><span class="doc">Concepts</span></a>. Visit our <a class="reference external" href="https://www.emnify.com/developers/documentation">Developers Hub</a> to learn more.</p>
 <p>Once you’re comfortable with <a class="reference internal" href="concepts.html"><span class="doc">Concepts</span></a> you may explore use-cases SDK is capable for, see <a class="reference internal" href="examples.html"><span class="doc">Examples</span></a>.</p>
@@ -381,6 +382,7 @@ python setup.py install
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
