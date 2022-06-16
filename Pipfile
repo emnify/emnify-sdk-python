@@ -19,7 +19,7 @@ typing-extensions = "==4.2.0"
 urllib3 = "==1.26.7"
 virtualenv = "==20.13.1"
 virtualenv-clone = "==0.5.7"
-zipp = "==3.7.0"
+zipp = "==3.8.0"
 
 [dev-packages]
 
