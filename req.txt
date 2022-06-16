@@ -39,6 +39,6 @@ urllib3==1.26.7
 vcrpy==4.1.1
 virtualenv==20.13.0
 virtualenv-clone==0.5.7
-wrapt==1.14.0
+wrapt==1.14.1
 yarl==1.7.2
 zipp==3.7.0
