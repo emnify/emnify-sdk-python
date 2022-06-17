@@ -1,5 +1,5 @@
 Jinja2==3.1.2
-Sphinx==5.0.1
+Sphinx==5.0.2
 sphinx-autoapi==1.8.4
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-devhelp==1.0.2
