@@ -18,5 +18,7 @@ class EMnify(object):
         self.operator: OperatorManager = OperatorManager(self)
         self.token = None
 
-    def not_tested
+    def not_tested(self, input=False):
+        if(input):
+            print('input')
         print('not_tested')
