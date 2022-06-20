@@ -1,0 +1,6 @@
+[run]
+branch=True
+source = .
+
+[report]
+omit = docs/*, tests/*

@@ -24,8 +24,8 @@ jobs:
         run: pip install -r req.txt
 
       - name: Run tests
-        run: pytest --cov=emnify --cov-report=xml --cov-branch
-      - name: SonarCloud Scan
+        run: pytest --cov-report=xml
+      - name: Export SonarCloud Result
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
