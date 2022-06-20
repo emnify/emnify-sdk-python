@@ -75,24 +75,24 @@ class EMnifyTest(TestCase):
         self.assertGreater(len(sms_instances), 0)
         self.assertIsInstance(sms_instances[0], emnify.devices.list_sms_model)
 
-#     @vcr.use_cassette('tests/fixtures/cassettes/get_sim_list.yaml')
-#     def test_get_sim_list(self):
-#         emnify = emnify_client(app_token=self.token)
-#         sims = [i for i in emnify.sim.get_sim_list()]
-#         if sims:
-#             self.assertIsInstance(sims[0], emnify.sim.get_sim_list_model)
-#
-#     @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_200.yaml')
-#     def test_activate_sim_by_one_size_batch_bic_200(self):
-#         bics = [  # BIC CODES
-#             'valid_bic_code',
-#             'invalid_bic_code'
-#             ]
-#         emnify = emnify_client(app_token=self.token)
-#         bic = bics[0]
-#         response = emnify.sim.register_sim(bic=bic)
-#         self.assertIsInstance(response, list)
-#         self.assertIsInstance(response[0], emnify.sim.get_sim_list_model)
+    @vcr.use_cassette('tests/fixtures/cassettes/get_sim_list.yaml')
+    def test_get_sim_list(self):
+        emnify = emnify_client(app_token=self.token)
+        sims = [i for i in emnify.sim.get_sim_list()]
+        if sims:
+            self.assertIsInstance(sims[0], emnify.sim.get_sim_list_model)
+
+    @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_200.yaml')
+    def test_activate_sim_by_one_size_batch_bic_200(self):
+        bics = [  # BIC CODES
+            'valid_bic_code',
+            'invalid_bic_code'
+            ]
+        emnify = emnify_client(app_token=self.token)
+        bic = bics[0]
+        response = emnify.sim.register_sim(bic=bic)
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], emnify.sim.get_sim_list_model)
 
     @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_422.yaml')
     def test_activate_sim_by_one_size_batch_bic_422(self):
