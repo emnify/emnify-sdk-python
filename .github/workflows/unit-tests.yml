@@ -1,16 +1,18 @@
-name: Unit-tests
+name: Unit-Tests
 on:
   push:
     branches:
       - main
+      # TODO: remove temporary credential
+      - feature/sonarcloud-action
   pull_request:
       branches:
         - '*'
 
 jobs:
   build:
+    name: Run Unit-Tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -28,3 +30,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: coverage.xml
