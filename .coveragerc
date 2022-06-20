@@ -2,5 +2,10 @@
 branch=True
 source = .
 
+[paths]
+source = .
+
 [report]
 omit = docs/*, tests/*
+
+[xml]

@@ -24,7 +24,7 @@ jobs:
         run: pip install -r req.txt
 
       - name: Run tests
-        run: pytest --cov-report=xml
+        run: pytest --cov=. --cov-report=xml
       - name: Export SonarCloud Result
         uses: sonarsource/sonarcloud-github-action@master
         env:
