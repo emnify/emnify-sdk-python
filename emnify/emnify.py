@@ -17,3 +17,6 @@ class EMnify(object):
         self.sim: SimManager = SimManager(self)
         self.operator: OperatorManager = OperatorManager(self)
         self.token = None
+
+    def not_tested
+        print('not_tested')
