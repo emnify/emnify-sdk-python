@@ -2,7 +2,10 @@ name: Unit-tests
 on:
   push:
     branches:
-      - '*'
+      - main
+  pull_request:
+      branches:
+        - '*'
 
 jobs:
   build:
@@ -19,4 +22,9 @@ jobs:
         run: pip install -r req.txt
 
       - name: Run tests
-        run: pytest --cov=emnify --cov-fail-under=90
+        run: pytest --cov=emnify --cov-report=xml --cov-branch
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
