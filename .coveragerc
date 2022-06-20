@@ -8,4 +8,3 @@ source = .
 [report]
 omit = docs/*, tests/*
 
-[xml]
