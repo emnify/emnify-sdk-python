@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-      # TODO: remove temporary credential
-      - feature/sonarcloud-action
   pull_request:
       branches:
         - '*'
