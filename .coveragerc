@@ -1,0 +1,11 @@
+[run]
+branch=True
+source = .
+relative_files=True
+
+[paths]
+source = .
+
+[report]
+omit = docs/*, tests/*
+

@@ -1,4 +1,4 @@
-name: Unit-tests
+name: Unit-Tests
 on:
   push:
     branches:
@@ -11,8 +11,8 @@ jobs:
   test:
     # Skip circular workflow run
     if: "!contains(github.event.head_commit.message, '[Automated]')"
+    name: Run Unit-Tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -24,9 +24,15 @@ jobs:
         run: pip install -r req.txt
 
       - name: Run tests
-        run: pytest --cov=emnify --cov-report=xml --cov-branch
-      - name: SonarCloud Scan
+        run: pytest --cov=. --cov-report=xml
+      - name: Export SonarCloud Result
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: sdk-coverage-result
+          path: coverage.xml
