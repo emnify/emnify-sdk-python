@@ -246,6 +246,9 @@ class DeviceManager:
         if device.sim:
             sim_update_model = self.client.sim.get_sim_update_model(status=status_dict[action]['sim_status'])
             self.client.sim.update_sim(sim_id=device.sim.id, sim=sim_update_model)
+        else:
+            raise emnify_errors.ValidationErrorException('Can`t enable device without sim card')
+
         return True
 
     @staticmethod

@@ -7,7 +7,8 @@ from emnify.modules.api import models as generated_models
 from emnify.constants import DeviceSort as DeviceSortModel
 
 
-class SimDevice(generated_models.Sim1):
+class SimDevice(BaseModel):
+    id: int
     status: Optional[generated_models.Status] = None
 
 
