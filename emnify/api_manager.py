@@ -73,8 +73,6 @@ class BaseApiManager:
         if path_params:
             url = self.build_method_url(path_params)
         response = self.make_request(client, url, data, files, query_params=query_params)
-        if response.status_code == 403:
-            import pdb; pdb.set_trace()
         if response.status_code not in self.response_handlers.keys():
             raise emnify_errors.UnknownStatusCodeException(
                 "Unknown status code {status_code}".format(status_code=response.status_code)
