@@ -1,1 +1,1 @@
-{{ github.event.head_commit.timestamp }}
+2022-06-29T17:02:33+03:00
