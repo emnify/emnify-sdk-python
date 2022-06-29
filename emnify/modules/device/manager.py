@@ -87,6 +87,30 @@ class DeviceManager:
             client=self.client, data=device.dict(exclude_none=True), path_params={'endpoint_id': device_id}
         )
 
+    def reset_connectivity_network(self, device_id: int) -> True:
+        """
+        Method for resetting device connectivity network
+        """
+        return device_call_managers.ResetConnectivityPatch().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}, data={"location": None}
+        )
+
+    def reset_connectivity_data(self, device_id: int) -> True:
+        """
+        Method for resetting device connectivity data
+        """
+        return device_call_managers.ResetConnectivityPatch().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}, data={"pdp_context": None}
+        )
+
+    def get_device_connectivity_status(self, device_id: int) -> device_models.DeviceConnectivityStatus:
+        """
+        Method for getting device connectivity status
+        """
+        return device_models.DeviceConnectivityStatus(**device_call_managers.GetDeviceConnectivity().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}
+        ))
+
     def get_devices_list(
             self,
             *args,

@@ -91,3 +91,24 @@ class DeleteOperatorBlacklist(BaseApiManager):
         raise ValidationErrorException(
             response.json().get('message', 'This operator is not in blacklist')
         )
+
+
+class ResetConnectivityPatch(BaseApiManager):
+    request_url_prefix = '/v1/endpoint/{endpoint_id}/connectivity'
+    request_method_name = RequestsType.PATCH.value
+
+
+class GetDeviceConnectivity(BaseApiManager):
+    request_url_prefix = '/v1/endpoint/{endpoint_id}/connectivity'
+    request_method_name = RequestsType.GET.value
+
+    response_handlers = {
+        200: 'return_unwrapped',
+        401: 'unauthorised',
+        422: 'process_exception',
+    }
+
+    def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
+        raise ValidationErrorException(
+            'device_id is not valid'
+        )

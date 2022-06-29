@@ -136,3 +136,12 @@ class UpdateDevice(generated_models.UpdateEndpointrequest):
     sim: Dict[str, Any] = None
     imei: str = None
     imei_lock: bool = None
+
+
+class DeviceConnectivityStatus(BaseModel):
+    """
+    Model for device connectivity status
+    """
+    status: generated_models.Status = None
+    location: Dict[str, Any] = None
+    services: Any = None

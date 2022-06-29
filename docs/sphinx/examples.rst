@@ -116,3 +116,14 @@ Filtering and Sorting
    :language: python
    :caption: filtering_and_sorting.py
    :linenos:
+
+
+Manage device connectivity
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: ../examples/device_lifecycle_management.py
+   :language: python
+   :caption: device_lifecycle_management.py
+   :start-at:  Manage device connectivity
+   :end-before: [endblock]
+   :linenos:
