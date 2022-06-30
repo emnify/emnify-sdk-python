@@ -110,3 +110,7 @@ class SimSort(ExtendedEnum):
     production_date = 'PRODUCTION_DATE'
     endpoint = 'ENDPOINT'
     model = 'MODEL'
+
+
+class RequestUrls(ExtendedEnum):
+    ENDPOINT_IN_URL = '/v1/endpoint/{endpoint_id}'

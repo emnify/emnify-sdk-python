@@ -1,6 +1,6 @@
 import requests
 from emnify.api_manager import BaseApiManager
-from emnify.constants import RequestsType
+from emnify.constants import RequestsType, RequestUrls
 from emnify.errors import ValidationErrorException
 
 
@@ -50,12 +50,12 @@ class SendSmsToDevice(BaseApiManager):
 
 
 class RetrieveDevice(BaseApiManager):
-    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.GET.value
 
 
 class UpdateDevice(BaseApiManager):
-    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.PATCH.value
     response_handlers = {
         204: 'return_success',
@@ -64,7 +64,7 @@ class UpdateDevice(BaseApiManager):
 
 
 class DeleteDevice(BaseApiManager):
-    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.DELETE.value
 
 

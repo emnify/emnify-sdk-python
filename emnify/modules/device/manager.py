@@ -62,7 +62,7 @@ class DeviceManager:
     def get_device_filter_model(self) -> typing.Type[device_models.FilterDeviceModel]:
         return device_models.FilterDeviceModel
 
-    def get_device_sms_list(self, *args, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
+    def get_device_sms_list(self, *, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         device_id = self.validate_device(device)
         sms_response = device_call_managers.GetEventsByDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
@@ -71,7 +71,7 @@ class DeviceManager:
             yield device_models.ListSms(**sms)
 
     def send_sms(
-            self, *args,
+            self, *,
             device: typing.Union[device_models.Device, int, device_models.RetrieveDevice],
             sms: device_models.SmsCreateModel
     ) -> bool:
@@ -82,7 +82,7 @@ class DeviceManager:
             client=self.client, path_params={'endpoint_id': device_id}, data=sms.dict(exclude_none=True)
         )
 
-    def update_device(self, *args, device_id: int, device: device_models.UpdateDevice):
+    def update_device(self, *, device_id: int, device: device_models.UpdateDevice):
         return device_call_managers.UpdateDevice().call_api(
             client=self.client, data=device.dict(exclude_none=True), path_params={'endpoint_id': device_id}
         )
