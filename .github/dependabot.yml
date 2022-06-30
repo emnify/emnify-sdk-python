@@ -4,9 +4,17 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     target-branch: development
+    commit-message:
+      prefix: 'build'
+      include_scope: true
     schedule:
       interval: "daily"
   - package-ecosystem: "github-actions"
     directory: "/"
+    commit-message:
+      prefix: 'ci'
+      include_scope: true
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "zricethezav/gitleaks-action"
