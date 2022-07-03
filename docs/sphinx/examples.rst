@@ -119,7 +119,9 @@ Filtering and Sorting
 
 
 Manage device connectivity
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+**************************
+
+`Connectivity troubleshooting <https://www.emnify.com/developer-blog/5-ways-to-detect-and-solve-connectivity-issues#network-events>`_
 
 .. literalinclude:: ../examples/device_lifecycle_management.py
    :language: python

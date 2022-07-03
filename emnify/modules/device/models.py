@@ -140,7 +140,7 @@ class UpdateDevice(generated_models.UpdateEndpointrequest):
 
 class DeviceConnectivityStatus(BaseModel):
     """
-    Model for device connectivity status
+    Device connectivity status can be 'ATTACHED'/'ONLINE'/'OFFLINE'/'BLOCKED'
     """
     status: generated_models.Status = None
     location: Dict[str, Any] = None
