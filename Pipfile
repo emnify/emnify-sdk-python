@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 certifi = "==2022.6.15"
-charset-normalizer = "==2.0.12"
+charset-normalizer = "==2.1.0"
 distlib = "==0.3.4"
 filelock = "==3.7.1"
 idna = "==3.3"
