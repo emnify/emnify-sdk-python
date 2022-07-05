@@ -1,6 +1,6 @@
 import requests
 from emnify.api_manager import BaseApiManager
-from emnify.constants import RequestsType
+from emnify.constants import RequestsType, RequestUrls
 from emnify.errors import ValidationErrorException
 
 
@@ -31,6 +31,9 @@ class CreateDevice(BaseApiManager):
     def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
         raise ValidationErrorException(f'{response.json()}')
 
+    def return_success(self, response: requests.Response, client, data: dict = None, *args, **kwargs) -> True:
+        return int(response.headers.get('Location').split('/')[-1])
+
 
 class GetAllSmsFromDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/sms'
@@ -47,12 +50,12 @@ class SendSmsToDevice(BaseApiManager):
 
 
 class RetrieveDevice(BaseApiManager):
-    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.GET.value
 
 
 class UpdateDevice(BaseApiManager):
-    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.PATCH.value
     response_handlers = {
         204: 'return_success',
@@ -61,7 +64,7 @@ class UpdateDevice(BaseApiManager):
 
 
 class DeleteDevice(BaseApiManager):
-    request_url_prefix = '/v1/endpoint/{endpoint_id}'
+    request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.DELETE.value
 
 
@@ -87,4 +90,25 @@ class DeleteOperatorBlacklist(BaseApiManager):
     def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
         raise ValidationErrorException(
             response.json().get('message', 'This operator is not in blacklist')
+        )
+
+
+class ResetConnectivityPatch(BaseApiManager):
+    request_url_prefix = '/v1/endpoint/{endpoint_id}/connectivity'
+    request_method_name = RequestsType.PATCH.value
+
+
+class GetDeviceConnectivity(BaseApiManager):
+    request_url_prefix = '/v1/endpoint/{endpoint_id}/connectivity'
+    request_method_name = RequestsType.GET.value
+
+    response_handlers = {
+        200: 'return_unwrapped',
+        401: 'unauthorised',
+        422: 'process_exception',
+    }
+
+    def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
+        raise ValidationErrorException(
+            'device_id is not valid'
         )

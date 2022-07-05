@@ -50,12 +50,12 @@ tags = 'arduino, meter, temp'  # Sample tags
 name = 'new name'  # Sample name
 
 # Adjust device config
-update_device_fields = emnify.devices.device_update_model(name='new name', ip_address='192.0.0.0')
+update_device_fields = emnify.devices.device_update_model(name='new name', tags='arduino')
 emnify.devices.update_device(device_id=device.id, device=update_device_fields)
 
 #  Getting details of updated device
 updated_device = emnify.devices.retrieve_device(device_id=device_id)
-device_ip_address = updated_device.ip_address  # Will be '192.0.0.0'
+device_tags = updated_device.tags  # Will be arduino
 deivce_name = updated_device.name  # Will be 'new name'
 # [endblock]
 
@@ -129,5 +129,29 @@ assert len(old_devices_list) > len(new_device_list)
 
 sim = emnify.sim.retrieve_sim(sim_id=sim_id_of_deleted_device)
 sim_status = sim.status.description  # Will be 'Suspended'
+
+# [endblock]
+
+
+#  === Manage device connectivity ===
+
+# Lookup for documentation for learn more
+# https://www.emnify.com/developer-blog/5-ways-to-detect-and-solve-connectivity-issues#network-events
+
+# There are many reasons why connection issues arise. For example:
+# * The device executes the wrong procedures due to a bad firmware update.
+# * The device executes network registration too frequently that the network no longer allows it to register.
+# * You have simply changed a policy due to a blocked device.
+
+# For resetting a device connectivity you can use the following methods:
+# * Resetting the connectivity of device
+device_id = 0
+emnify.devices.reset_connectivity_data(device_id=device_id)
+# * Resetting the connectivity
+emnify.devices.reset_connectivity_network(device_id=device_id)
+
+# For checking connectivity you can use the method:
+connectivity = emnify.devices.get_device_connectivity_status(device_id=device_id)
+print(connectivity.status.description)  # Will be 'ATTACHED'/'ONLINE'/'OFFLINE'/'BLOCKED'
 
 # [endblock]

@@ -50,7 +50,7 @@ class BaseApiManager:
         for object in data:
             yield object
 
-        if not int(response.headers.get(emnify_constants.ResponseHeaders.TOTAL_PAGES.value)) <= page:
+        if int(response.headers.get(emnify_constants.ResponseHeaders.TOTAL_PAGES.value)) > page:
             query_params['page'] = page + 1
             self.call_api(client, data=data, files=files, query_params=query_params, path_params=path_params)
 
