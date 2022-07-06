@@ -1,4 +1,5 @@
 from enum import Enum
+from setup import VERSION
 
 
 class ExtendedEnum(Enum):
@@ -37,11 +38,15 @@ class AuthenticateRequestsUrl(ExtendedEnum):
 class RequestDefaultHeadersKeys(ExtendedEnum):
     ACCEPT = 'accept'
     AUTHORIZATION = 'authorization'
+    XEmnOriginApp = 'x-emn-origin-app'
+    XEmnOriginAppVersion = 'x-emn-origin-app-version'
 
 
 class RequestDefaultHeadersValues(ExtendedEnum):
     APPLICATION_JSON = 'application/json'
     BEARER_TOKEN = 'Bearer {}'
+    PYTHONSDK_VERSION = VERSION
+    PYTHONSDK = 'PythonSDK'
 
 
 class DeviceStatuses(ExtendedEnum):

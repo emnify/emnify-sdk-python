@@ -263,6 +263,11 @@ class DeviceManager:
         self.update_device(device=self.device_update_model(sim={"id": sim.id}), device_id=device.id)
 
     def create_device(self, device: device_models.Device) -> bool:
+        """
+        Method for creating a device
+        :param device: device model
+        :return: True if device was created
+        """
         if not isinstance(device, self.device_model):
             raise UnexpectedArgumentException('Argument must contain filled Device model')
         return device_call_managers.CreateDevice().call_api(client=self.client, data=device.dict(exclude_none=True))
