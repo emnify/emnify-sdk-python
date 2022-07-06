@@ -31,7 +31,13 @@ class BaseApiManager:
                 emnify_constants.RequestDefaultHeadersValues.APPLICATION_JSON.value,
 
             emnify_constants.RequestDefaultHeadersKeys.AUTHORIZATION.value:
-                emnify_constants.RequestDefaultHeadersValues.BEARER_TOKEN.value.format(token)
+                emnify_constants.RequestDefaultHeadersValues.BEARER_TOKEN.value.format(token),
+
+            emnify_constants.RequestDefaultHeadersKeys.XEmnOriginApp.value:
+                emnify_constants.RequestDefaultHeadersValues.PYTHONSDK.value,
+
+            emnify_constants.RequestDefaultHeadersKeys.XEmnOriginAppVersion.value:
+                emnify_constants.RequestDefaultHeadersValues.PYTHONSDK_VERSION.value,
         }
 
     def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
