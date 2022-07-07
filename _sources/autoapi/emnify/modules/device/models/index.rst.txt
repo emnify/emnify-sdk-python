@@ -27,13 +27,19 @@ Classes
    emnify.modules.device.models.DeviceEvent
    emnify.modules.device.models.RetrieveDevice
    emnify.modules.device.models.UpdateDevice
+   emnify.modules.device.models.DeviceConnectivityStatus
 
 
 
 
 .. py:class:: SimDevice
 
-   Bases: :py:obj:`emnify.modules.api.models.Sim1`
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   .. py:attribute:: id
+      :annotation: :int
+
+      
 
    .. py:attribute:: status
       :annotation: :Optional[emnify.modules.api.models.Status]
@@ -300,6 +306,28 @@ Classes
 
    .. py:attribute:: imei_lock
       :annotation: :bool
+
+      
+
+
+.. py:class:: DeviceConnectivityStatus
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+   Device connectivity status can be 'ATTACHED'/'ONLINE'/'OFFLINE'/'BLOCKED'
+
+   .. py:attribute:: status
+      :annotation: :emnify.modules.api.models.Status
+
+      
+
+   .. py:attribute:: location
+      :annotation: :Dict[str, Any]
+
+      
+
+   .. py:attribute:: services
+      :annotation: :Any
 
       
 

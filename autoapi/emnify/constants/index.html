@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.04.1"/>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>emnify.constants - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -279,6 +279,9 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#emnify.constants.SimSort" title="emnify.constants.SimSort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimSort</span></code></a></p></td>
 <td><p>Generic enumeration.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#emnify.constants.RequestUrls" title="emnify.constants.RequestUrls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RequestUrls</span></code></a></p></td>
+<td><p>Generic enumeration.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -418,6 +421,16 @@
 <span class="sig-name descname"><span class="pre">AUTHORIZATION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">authorization</span></em><a class="headerlink" href="#emnify.constants.RequestDefaultHeadersKeys.AUTHORIZATION" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.constants.RequestDefaultHeadersKeys.XEmnOriginApp">
+<span class="sig-name descname"><span class="pre">XEmnOriginApp</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">x-emn-origin-app</span></em><a class="headerlink" href="#emnify.constants.RequestDefaultHeadersKeys.XEmnOriginApp" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.constants.RequestDefaultHeadersKeys.XEmnOriginAppVersion">
+<span class="sig-name descname"><span class="pre">XEmnOriginAppVersion</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">x-emn-origin-app-version</span></em><a class="headerlink" href="#emnify.constants.RequestDefaultHeadersKeys.XEmnOriginAppVersion" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -434,6 +447,16 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.constants.RequestDefaultHeadersValues.BEARER_TOKEN">
 <span class="sig-name descname"><span class="pre">BEARER_TOKEN</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Bearer</span> <span class="pre">{}</span></em><a class="headerlink" href="#emnify.constants.RequestDefaultHeadersValues.BEARER_TOKEN" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.constants.RequestDefaultHeadersValues.PYTHONSDK_VERSION">
+<span class="sig-name descname"><span class="pre">PYTHONSDK_VERSION</span></span><a class="headerlink" href="#emnify.constants.RequestDefaultHeadersValues.PYTHONSDK_VERSION" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.constants.RequestDefaultHeadersValues.PYTHONSDK">
+<span class="sig-name descname"><span class="pre">PYTHONSDK</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">PythonSDK</span></em><a class="headerlink" href="#emnify.constants.RequestDefaultHeadersValues.PYTHONSDK" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -623,6 +646,19 @@
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="emnify.constants.RequestUrls">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.constants.</span></span><span class="sig-name descname"><span class="pre">RequestUrls</span></span><a class="headerlink" href="#emnify.constants.RequestUrls" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#emnify.constants.ExtendedEnum" title="emnify.constants.ExtendedEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExtendedEnum</span></code></a></p>
+<p>Generic enumeration.</p>
+<p>Derive from this class to define new enumerations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.constants.RequestUrls.ENDPOINT_IN_URL">
+<span class="sig-name descname"><span class="pre">ENDPOINT_IN_URL</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/v1/endpoint/{endpoint_id}</span></em><a class="headerlink" href="#emnify.constants.RequestUrls.ENDPOINT_IN_URL" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -703,11 +739,15 @@
 <li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys">RequestDefaultHeadersKeys</a><ul>
 <li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.ACCEPT">ACCEPT</a></li>
 <li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.AUTHORIZATION">AUTHORIZATION</a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.XEmnOriginApp">XEmnOriginApp</a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.XEmnOriginAppVersion">XEmnOriginAppVersion</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues">RequestDefaultHeadersValues</a><ul>
 <li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.APPLICATION_JSON">APPLICATION_JSON</a></li>
 <li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.BEARER_TOKEN">BEARER_TOKEN</a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.PYTHONSDK_VERSION">PYTHONSDK_VERSION</a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.PYTHONSDK">PYTHONSDK</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#emnify.constants.DeviceStatuses">DeviceStatuses</a><ul>
@@ -752,6 +792,10 @@
 <li><a class="reference internal" href="#emnify.constants.SimSort.production_date">production_date</a></li>
 <li><a class="reference internal" href="#emnify.constants.SimSort.endpoint">endpoint</a></li>
 <li><a class="reference internal" href="#emnify.constants.SimSort.model">model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.RequestUrls">RequestUrls</a><ul>
+<li><a class="reference internal" href="#emnify.constants.RequestUrls.ENDPOINT_IN_URL">ENDPOINT_IN_URL</a></li>
 </ul>
 </li>
 </ul>

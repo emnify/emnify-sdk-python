@@ -24,6 +24,7 @@ Classes
    emnify.constants.SimStatusesDict
    emnify.constants.ResponseHeaders
    emnify.constants.SimSort
+   emnify.constants.RequestUrls
 
 
 
@@ -170,6 +171,16 @@ Classes
 
       
 
+   .. py:attribute:: XEmnOriginApp
+      :annotation: = x-emn-origin-app
+
+      
+
+   .. py:attribute:: XEmnOriginAppVersion
+      :annotation: = x-emn-origin-app-version
+
+      
+
 
 .. py:class:: RequestDefaultHeadersValues
 
@@ -186,6 +197,16 @@ Classes
 
    .. py:attribute:: BEARER_TOKEN
       :annotation: = Bearer {}
+
+      
+
+   .. py:attribute:: PYTHONSDK_VERSION
+      
+
+      
+
+   .. py:attribute:: PYTHONSDK
+      :annotation: = PythonSDK
 
       
 
@@ -376,6 +397,20 @@ Classes
 
    .. py:attribute:: model
       :annotation: = MODEL
+
+      
+
+
+.. py:class:: RequestUrls
+
+   Bases: :py:obj:`ExtendedEnum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: ENDPOINT_IN_URL
+      :annotation: = /v1/endpoint/{endpoint_id}
 
       
 

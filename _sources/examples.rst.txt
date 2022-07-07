@@ -116,3 +116,16 @@ Filtering and Sorting
    :language: python
    :caption: filtering_and_sorting.py
    :linenos:
+
+
+Manage device connectivity
+**************************
+
+`Connectivity troubleshooting <https://www.emnify.com/developer-blog/5-ways-to-detect-and-solve-connectivity-issues#network-events>`_
+
+.. literalinclude:: ../examples/device_lifecycle_management.py
+   :language: python
+   :caption: device_lifecycle_management.py
+   :start-at:  Manage device connectivity
+   :end-before: [endblock]
+   :linenos:

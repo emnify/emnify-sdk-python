@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Help and Contribute" href="help.html" /><link rel="prev" title="Concepts" href="concepts.html" />
 
-    <link rel="shortcut icon" href="_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.04.1"/>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>Examples - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -430,12 +430,12 @@ you can add it to the blacklist of the device.</p>
 <span class="linenos"> 7</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;new name&#39;</span>  <span class="c1"># Sample name</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span><span class="c1"># Adjust device config</span>
-<span class="linenos">10</span><span class="n">update_device_fields</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">device_update_model</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;new name&#39;</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s1">&#39;192.0.0.0&#39;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="n">update_device_fields</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">device_update_model</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;new name&#39;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="s1">&#39;arduino&#39;</span><span class="p">)</span>
 <span class="linenos">11</span><span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">update_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">update_device_fields</span><span class="p">)</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="c1">#  Getting details of updated device</span>
 <span class="linenos">14</span><span class="n">updated_device</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">retrieve_device</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
-<span class="linenos">15</span><span class="n">device_ip_address</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">ip_address</span>  <span class="c1"># Will be &#39;192.0.0.0&#39;</span>
+<span class="linenos">15</span><span class="n">device_tags</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">tags</span>  <span class="c1"># Will be arduino</span>
 <span class="linenos">16</span><span class="n">deivce_name</span> <span class="o">=</span> <span class="n">updated_device</span><span class="o">.</span><span class="n">name</span>  <span class="c1"># Will be &#39;new name&#39;</span>
 </pre></div>
 </div>
@@ -591,6 +591,36 @@ you can add it to the blacklist of the device.</p>
 </pre></div>
 </div>
 </div>
+<section id="manage-device-connectivity">
+<h3>Manage device connectivity<a class="headerlink" href="#manage-device-connectivity" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.emnify.com/developer-blog/5-ways-to-detect-and-solve-connectivity-issues#network-events">Connectivity troubleshooting</a></p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">device_lifecycle_management.py</span><a class="headerlink" href="#id9" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#  === Manage device connectivity ===</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Lookup for documentation for learn more</span>
+<span class="linenos"> 4</span><span class="c1"># https://www.emnify.com/developer-blog/5-ways-to-detect-and-solve-connectivity-issues#network-events</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># There are many reasons why connection issues arise. For example:</span>
+<span class="linenos"> 7</span><span class="c1"># * The device executes the wrong procedures due to a bad firmware update.</span>
+<span class="linenos"> 8</span><span class="c1"># * The device executes network registration too frequently that the network no longer allows it to register.</span>
+<span class="linenos"> 9</span><span class="c1"># * You have simply changed a policy due to a blocked device.</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># For resetting a device connectivity you can use the following methods:</span>
+<span class="linenos">12</span><span class="c1"># * Resetting the connectivity of device</span>
+<span class="linenos">13</span><span class="n">device_id</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">14</span><span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">reset_connectivity_data</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
+<span class="linenos">15</span><span class="c1"># * Resetting the connectivity</span>
+<span class="linenos">16</span><span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">reset_connectivity_network</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># For checking connectivity you can use the method:</span>
+<span class="linenos">19</span><span class="n">connectivity</span> <span class="o">=</span> <span class="n">emnify</span><span class="o">.</span><span class="n">devices</span><span class="o">.</span><span class="n">get_device_connectivity_status</span><span class="p">(</span><span class="n">device_id</span><span class="o">=</span><span class="n">device_id</span><span class="p">)</span>
+<span class="linenos">20</span><span class="nb">print</span><span class="p">(</span><span class="n">connectivity</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>  <span class="c1"># Will be &#39;ATTACHED&#39;/&#39;ONLINE&#39;/&#39;OFFLINE&#39;/&#39;BLOCKED&#39;</span>
+<span class="linenos">21</span>
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -662,7 +692,10 @@ you can add it to the blacklist of the device.</p>
 <li><a class="reference internal" href="#delete-device">Delete device</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#filtering-and-sorting">Filtering and Sorting</a></li>
+<li><a class="reference internal" href="#filtering-and-sorting">Filtering and Sorting</a><ul>
+<li><a class="reference internal" href="#manage-device-connectivity">Manage device connectivity</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

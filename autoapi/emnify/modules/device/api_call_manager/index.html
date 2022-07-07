@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.04.1"/>
+    <link rel="shortcut icon" href="../../../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>emnify.modules.device.api_call_manager - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -276,6 +276,12 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#emnify.modules.device.api_call_manager.DeleteOperatorBlacklist" title="emnify.modules.device.api_call_manager.DeleteOperatorBlacklist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeleteOperatorBlacklist</span></code></a></p></td>
 <td><p>Base manager for api calls handling</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch" title="emnify.modules.device.api_call_manager.ResetConnectivityPatch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResetConnectivityPatch</span></code></a></p></td>
+<td><p>Base manager for api calls handling</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity" title="emnify.modules.device.api_call_manager.GetDeviceConnectivity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDeviceConnectivity</span></code></a></p></td>
+<td><p>Base manager for api calls handling</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -343,6 +349,11 @@
 <span class="sig-name descname"><span class="pre">process_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">requests.Response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.device.api_call_manager.CreateDevice.process_exception" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.CreateDevice.return_success">
+<span class="sig-name descname"><span class="pre">return_success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">requests.Response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="k"><span class="pre">True</span></span></span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.CreateDevice.return_success" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -391,7 +402,7 @@
 <p>Base manager for api calls handling</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.RetrieveDevice.request_url_prefix">
-<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/v1/endpoint/{endpoint_id}</span></em><a class="headerlink" href="#emnify.modules.device.api_call_manager.RetrieveDevice.request_url_prefix" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.RetrieveDevice.request_url_prefix" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -408,7 +419,7 @@
 <p>Base manager for api calls handling</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.UpdateDevice.request_url_prefix">
-<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/v1/endpoint/{endpoint_id}</span></em><a class="headerlink" href="#emnify.modules.device.api_call_manager.UpdateDevice.request_url_prefix" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.UpdateDevice.request_url_prefix" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -430,7 +441,7 @@
 <p>Base manager for api calls handling</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.DeleteDevice.request_url_prefix">
-<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/v1/endpoint/{endpoint_id}</span></em><a class="headerlink" href="#emnify.modules.device.api_call_manager.DeleteDevice.request_url_prefix" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.DeleteDevice.request_url_prefix" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -501,6 +512,50 @@
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.ResetConnectivityPatch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.api_call_manager.</span></span><span class="sig-name descname"><span class="pre">ResetConnectivityPatch</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../api_manager/index.html#emnify.api_manager.BaseApiManager" title="emnify.api_manager.BaseApiManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.api_manager.BaseApiManager</span></code></a></p>
+<p>Base manager for api calls handling</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.ResetConnectivityPatch.request_url_prefix">
+<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/v1/endpoint/{endpoint_id}/connectivity</span></em><a class="headerlink" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch.request_url_prefix" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.ResetConnectivityPatch.request_method_name">
+<span class="sig-name descname"><span class="pre">request_method_name</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch.request_method_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.GetDeviceConnectivity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.api_call_manager.</span></span><span class="sig-name descname"><span class="pre">GetDeviceConnectivity</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../api_manager/index.html#emnify.api_manager.BaseApiManager" title="emnify.api_manager.BaseApiManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.api_manager.BaseApiManager</span></code></a></p>
+<p>Base manager for api calls handling</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.GetDeviceConnectivity.request_url_prefix">
+<span class="sig-name descname"><span class="pre">request_url_prefix</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/v1/endpoint/{endpoint_id}/connectivity</span></em><a class="headerlink" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.request_url_prefix" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.GetDeviceConnectivity.request_method_name">
+<span class="sig-name descname"><span class="pre">request_method_name</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.request_method_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.GetDeviceConnectivity.response_handlers">
+<span class="sig-name descname"><span class="pre">response_handlers</span></span><a class="headerlink" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.response_handlers" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="emnify.modules.device.api_call_manager.GetDeviceConnectivity.process_exception">
+<span class="sig-name descname"><span class="pre">process_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">requests.Response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.process_exception" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -563,6 +618,7 @@
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.CreateDevice.request_method_name">request_method_name</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.CreateDevice.response_handlers">response_handlers</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.CreateDevice.process_exception">process_exception</a></li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.CreateDevice.return_success">return_success</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetAllSmsFromDevice">GetAllSmsFromDevice</a><ul>
@@ -607,6 +663,18 @@
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.DeleteOperatorBlacklist.request_url_prefix">request_url_prefix</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.DeleteOperatorBlacklist.request_method_name">request_method_name</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.api_call_manager.DeleteOperatorBlacklist.process_exception">process_exception</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch">ResetConnectivityPatch</a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch.request_url_prefix">request_url_prefix</a></li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.ResetConnectivityPatch.request_method_name">request_method_name</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity">GetDeviceConnectivity</a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.request_url_prefix">request_url_prefix</a></li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.request_method_name">request_method_name</a></li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.response_handlers">response_handlers</a></li>
+<li><a class="reference internal" href="#emnify.modules.device.api_call_manager.GetDeviceConnectivity.process_exception">process_exception</a></li>
 </ul>
 </li>
 </ul>
