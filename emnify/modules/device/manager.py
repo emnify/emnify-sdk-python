@@ -62,7 +62,7 @@ class DeviceManager:
     def get_device_filter_model(self) -> typing.Type[device_models.FilterDeviceModel]:
         return device_models.FilterDeviceModel
 
-    def get_device_sms_list(self, *args, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
+    def get_device_sms_list(self, *, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         device_id = self.validate_device(device)
         sms_response = device_call_managers.GetEventsByDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
@@ -71,10 +71,16 @@ class DeviceManager:
             yield device_models.ListSms(**sms)
 
     def send_sms(
-            self, *args,
+            self, *,
             device: typing.Union[device_models.Device, int, device_models.RetrieveDevice],
             sms: device_models.SmsCreateModel
     ) -> bool:
+        """
+        Method sends sms to device
+        :param device: device model or id of device
+        :param sms: SmsCreateModel
+        :return: True if sms was sent
+        """
         device_id = self.validate_device(device)
         if not isinstance(sms, device_models.SmsCreateModel):
             raise UnexpectedArgumentException('sms argument must be SmsCreateModel instance')
@@ -82,10 +88,46 @@ class DeviceManager:
             client=self.client, path_params={'endpoint_id': device_id}, data=sms.dict(exclude_none=True)
         )
 
-    def update_device(self, *args, device_id: int, device: device_models.UpdateDevice):
+    def update_device(self, *, device_id: int, device: device_models.UpdateDevice) -> device_models.Device:
+        """
+        Method updates device
+        :param device_id: id of device
+        :param device: device update model
+        :return: True if device was updated
+        """
         return device_call_managers.UpdateDevice().call_api(
             client=self.client, data=device.dict(exclude_none=True), path_params={'endpoint_id': device_id}
         )
+
+    def reset_connectivity_network(self, device_id: int) -> True:
+        """
+        Method resets device connectivity network
+        :param device_id: id of device
+        :return: True if reset of network was successful
+        """
+        return device_call_managers.ResetConnectivityPatch().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}, data={"location": None}
+        )
+
+    def reset_connectivity_data(self, device_id: int) -> True:
+        """
+        Method resets device connectivity data
+        :param device_id: id of device
+        :return: True if reset of data was successful
+        """
+        return device_call_managers.ResetConnectivityPatch().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}, data={"pdp_context": None}
+        )
+
+    def get_device_connectivity_status(self, device_id: int) -> device_models.DeviceConnectivityStatus:
+        """
+        Method returns device connectivity status
+        :param device_id: id of device
+        :return: DeviceConnectivityStatus model
+        """
+        return device_models.DeviceConnectivityStatus(**device_call_managers.GetDeviceConnectivity().call_api(
+            client=self.client, path_params={'endpoint_id': device_id}
+        ))
 
     def get_devices_list(
             self,
@@ -93,7 +135,13 @@ class DeviceManager:
             filter_model: device_models.FilterDeviceModel = None,
             sort_enum: device_models.DeviceSortModel = None,
             **kwargs
-    ):
+    ) -> typing.Generator[device_models.RetrieveDevice, None, None]:
+        """
+        Method returns list of devices
+        :param filter_model: device filter model
+        :param sort_enum: device sort enum
+        :return: list of devices
+        """
         query_params = None
         if filter_model or sort_enum:
             query_params = self.__transform_all_devices_filter_params(filter_model, sort_enum)
@@ -101,23 +149,41 @@ class DeviceManager:
             .call_api(client=self.client, query_params=query_params, *args, **kwargs)
         return [device_models.Device(**i) for i in devices_response]
 
-    def delete_device(self, device_id: int):
+    def delete_device(self, device_id: int) -> True:
+        """
+        :param device_id: id of device
+        :return: True if device was deleted
+        """
         device = self.retrieve_device(device_id)
         if device.sim:
             self.release_sim(device_id)
         return device_call_managers.DeleteDevice().call_api(client=self.client, path_params={'endpoint_id': device_id})
 
-    def add_device_blacklist_operator(self, device_id: int, operator_id: int):
+    def add_device_blacklist_operator(self, device_id: int, operator_id: int) -> True:
+        """
+        :param device_id: id of device
+        :param operator_id: id of operator
+        :return: True if operator was added to blacklist
+        """
         return device_call_managers.AddOperatorBlacklist().call_api(
             client=self.client, path_params={'endpoint_id': device_id, 'operator_id': operator_id}
         )
 
     def delete_device_blacklist_operator(self, device_id: int, operator_id: int):
+        """
+        :param device_id: id of device
+        :param operator_id: id of operator
+        :return: True if operator was deleted from blacklist
+        """
         return device_call_managers.DeleteOperatorBlacklist().call_api(
             client=self.client, path_params={'endpoint_id': device_id, 'operator_id': operator_id}
         )
 
     def get_device_operator_blacklist(self, device_id: int):
+        """
+        :param device_id: id of device
+        :return: list of operators
+        """
         operators_json = device_call_managers.GetOperatorBlacklist().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
@@ -160,6 +226,8 @@ class DeviceManager:
     def disable_device(self, device_id: int):
         """
         Method for changing a device status to 'disabled'
+        :param device_id: id of device
+        :return: True if device was disabled
         """
         device_update = self.device_update_model(status=emnify_constants.DeviceStatuses.DISABLED_DICT.value)
         self.update_device(device=device_update, device_id=device_id)
@@ -195,6 +263,11 @@ class DeviceManager:
         self.update_device(device=self.device_update_model(sim={"id": sim.id}), device_id=device.id)
 
     def create_device(self, device: device_models.Device) -> bool:
+        """
+        Method for creating a device
+        :param device: device model
+        :return: True if device was created
+        """
         if not isinstance(device, self.device_model):
             raise UnexpectedArgumentException('Argument must contain filled Device model')
         return device_call_managers.CreateDevice().call_api(client=self.client, data=device.dict(exclude_none=True))
@@ -246,6 +319,9 @@ class DeviceManager:
         if device.sim:
             sim_update_model = self.client.sim.get_sim_update_model(status=status_dict[action]['sim_status'])
             self.client.sim.update_sim(sim_id=device.sim.id, sim=sim_update_model)
+        else:
+            raise emnify_errors.ValidationErrorException('Can`t enable device without sim card')
+
         return True
 
     @staticmethod

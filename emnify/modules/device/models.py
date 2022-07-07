@@ -7,7 +7,8 @@ from emnify.modules.api import models as generated_models
 from emnify.constants import DeviceSort as DeviceSortModel
 
 
-class SimDevice(generated_models.Sim1):
+class SimDevice(BaseModel):
+    id: int
     status: Optional[generated_models.Status] = None
 
 
@@ -135,3 +136,12 @@ class UpdateDevice(generated_models.UpdateEndpointrequest):
     sim: Dict[str, Any] = None
     imei: str = None
     imei_lock: bool = None
+
+
+class DeviceConnectivityStatus(BaseModel):
+    """
+    Device connectivity status can be 'ATTACHED'/'ONLINE'/'OFFLINE'/'BLOCKED'
+    """
+    status: generated_models.Status = None
+    location: Dict[str, Any] = None
+    services: Any = None
