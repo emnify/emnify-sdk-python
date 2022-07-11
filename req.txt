@@ -1,5 +1,5 @@
 alabaster==0.7.12
-astroid==2.11.6
+astroid==2.11.7
 attrs==21.4.0
 Babel==2.10.3
 certifi==2021.10.8
