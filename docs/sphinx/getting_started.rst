@@ -22,7 +22,7 @@ Install via PyPi
 .. code-block:: bash
    :caption: Installation commands
 
-   pip install emnify-python-sdk
+   pip install emnify-sdk
 
 Configure
 ---------
