@@ -17,10 +17,10 @@ Automate your routines with this SDK for Python.
 
 - Install from source
 >       git clone https://github.com/emnify-python-sdk.git
->       cd emnify-python-sdk
+>       cd emnify-sdk
 >       python setup.py install
 - or install with pip
->        pip install emnify-python-sdk
+>        pip install emnify-sdk
 
 
 ## Documentation

@@ -7,8 +7,8 @@ on:
 jobs:
   bump:
     env:
-      RELEASE_REPOSITORY: testpypi
-      RELEASE_PACKAGE_NAME: emnify-sdk-test-beta
+      RELEASE_REPOSITORY: pypi
+      RELEASE_PACKAGE_NAME: emnify-sdk
       RELEASE_PYPI_TOKEN: ${{secrets.PYPI_RELEASE_TOKEN}}
     name: Bump and Release
     # Prevent circular workflow run
