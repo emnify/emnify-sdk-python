@@ -21,3 +21,9 @@ docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-un
 ```shell
 bump2version minor
 ```
+
+## Branching and PR
+
+PR names must follow [angular convention](https://github.com/angular/angular/blob/main/CONTRIBUTING.md).
+
+Squash changes while merging to `development` and do regular merge to `main`.
