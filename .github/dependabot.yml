@@ -6,14 +6,15 @@ updates:
     target-branch: development
     commit-message:
       prefix: 'build'
-      include_scope: true
+      prefix-development: 'build'
+      include: "scope"
     schedule:
       interval: "daily"
   - package-ecosystem: "github-actions"
     directory: "/"
     commit-message:
       prefix: 'ci'
-      include_scope: true
+      include: "scope"
     schedule:
       interval: "daily"
     ignore:

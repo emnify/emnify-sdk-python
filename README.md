@@ -13,15 +13,16 @@ Automate your routines with this SDK for Python.
 
 `Python > 3.6` is **required**.
 
-
-
 - Install from source
->       git clone https://github.com/emnify-python-sdk.git
->       cd emnify-python-sdk
->       python setup.py install
+```shell
+git clone https://github.com/emnify-python-sdk.git emnify-sdk
+cd emnify-sdk
+python setup.py install
+```
 - or install with pip
->        pip install emnify-python-sdk
-
+```shell
+pip install emnify-sdk
+```
 
 ## Documentation
 
