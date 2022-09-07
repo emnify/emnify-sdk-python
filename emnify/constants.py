@@ -1,6 +1,5 @@
 from enum import Enum
-from setup import VERSION
-
+from emnify.version import EMNIFY_PACKAGE_VERSION
 
 class ExtendedEnum(Enum):
     @classmethod
@@ -45,7 +44,7 @@ class RequestDefaultHeadersKeys(ExtendedEnum):
 class RequestDefaultHeadersValues(ExtendedEnum):
     APPLICATION_JSON = 'application/json'
     BEARER_TOKEN = 'Bearer {}'
-    PYTHONSDK_VERSION = VERSION
+    PYTHONSDK_VERSION = EMNIFY_PACKAGE_VERSION
     PYTHONSDK = 'PythonSDK'
 
 
