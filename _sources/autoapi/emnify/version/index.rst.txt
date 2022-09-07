@@ -1,0 +1,14 @@
+:py:mod:`emnify.version`
+========================
+
+.. py:module:: emnify.version
+
+
+Module Contents
+---------------
+
+.. py:data:: EMNIFY_PACKAGE_VERSION
+   :annotation: = 0.1.0
+
+   
+

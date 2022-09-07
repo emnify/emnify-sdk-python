@@ -23,6 +23,7 @@ Submodules
    constants/index.rst
    emnify/index.rst
    errors/index.rst
+   version/index.rst
 
 
 Package Contents
