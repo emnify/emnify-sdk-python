@@ -44,6 +44,11 @@ jobs:
         run: |
           docker build . -f Dockerfile.dev -t emnify/python-sdk
           docker run -v $(pwd):/sdk emnify/python-sdk bump2version patch --new-version=${{ steps.tag_version.outputs.new_version }} --list >> $GITHUB_ENV
+          
+          cat > emnify/version.py << EOT
+          # THIS FILE IS GENERATED AUTOMATICALLY, DON'T CHANGE ITS CONTENT!!
+          EMNIFY_PACKAGE_VERSION='${{ steps.tag_version.outputs.new_version }}'
+          EOT
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
