@@ -26,7 +26,8 @@ jobs:
       - name: Run tests
         run: pytest --cov=. --cov-report=xml
       - name: Export SonarCloud Result
-        if: secrets && secrets.SONAR_TOKEN
+        # Skip dependabot runs because they don't have access to secrets
+        if: !contains(github.ref, 'dependabot')
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
