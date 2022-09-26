@@ -21,7 +21,7 @@ Classes
 
    Manager that allows to get a list of operators
 
-   .. py:method:: get_operators(self)
+   .. py:method:: get_operators()
 
 
 

@@ -89,10 +89,10 @@ Classes
 
       
 
-   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
-   .. py:method:: return_success(self, response: requests.Response, client, data: dict = None, *args, **kwargs) -> True
+   .. py:method:: return_success(response: requests.Response, client, data: dict = None, *args, **kwargs) -> True
 
 
 
@@ -224,7 +224,7 @@ Classes
 
       
 
-   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
 
@@ -244,7 +244,7 @@ Classes
 
       
 
-   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
 
@@ -286,7 +286,7 @@ Classes
 
       
 
-   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
 

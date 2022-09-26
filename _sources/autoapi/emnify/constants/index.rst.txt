@@ -37,7 +37,7 @@ Classes
 
    Derive from this class to define new enumerations.
 
-   .. py:method:: list(cls)
+   .. py:method:: list()
       :classmethod:
 
 

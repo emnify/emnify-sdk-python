@@ -70,7 +70,7 @@ Classes
 
    Custom class for validation of Device on creation
 
-   .. py:method:: validate_status(cls, field_value, values, field, config)
+   .. py:method:: validate_status(field_value, values, field, config)
       :classmethod:
 
 

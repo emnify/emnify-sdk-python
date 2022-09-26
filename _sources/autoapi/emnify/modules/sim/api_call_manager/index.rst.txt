@@ -58,7 +58,7 @@ Classes
 
       
 
-   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
 
@@ -83,7 +83,7 @@ Classes
 
       
 
-   .. py:method:: process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs)
+   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
 
