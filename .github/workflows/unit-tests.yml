@@ -26,7 +26,7 @@ jobs:
       - name: Run tests
         run: pytest --cov=. --cov-report=xml
       - name: Export SonarCloud Result
-        if: ${{ secrets && secrets.SONAR_TOKEN }}
+        if: secrets && secrets.SONAR_TOKEN
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
