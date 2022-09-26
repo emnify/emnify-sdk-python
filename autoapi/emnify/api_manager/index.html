@@ -2,13 +2,13 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.2.1, furo 2022.09.15"/>
         <title>emnify.api_manager - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -437,7 +437,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -447,6 +447,36 @@
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#emnify.api_manager.MAIN_URL"><code class="docutils literal notranslate"><span class="pre">MAIN_URL</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager"><code class="docutils literal notranslate"><span class="pre">BaseApiManager</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.response_handlers"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.response_handlers</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.request_url_prefix"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.request_url_prefix</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.request_method_name"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.request_method_name</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager._build_headers"><code class="docutils literal notranslate"><span class="pre">BaseApiManager._build_headers()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.process_exception"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.process_exception()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.return_paginator"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.return_paginator()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.build_method_url"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.build_method_url()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.unauthorised"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.unauthorised()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.call_api"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.call_api()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.make_get_request"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.make_get_request()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.make_post_request"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.make_post_request()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.make_patch_request"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.make_patch_request()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.make_delete_request"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.make_delete_request()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.make_put_request"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.make_put_request()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.make_request"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.make_request()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.return_success"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.return_success()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.return_unwrapped"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.return_unwrapped()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.resource_path"><code class="docutils literal notranslate"><span class="pre">BaseApiManager.resource_path()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.api_manager.Authenticate"><code class="docutils literal notranslate"><span class="pre">Authenticate</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.api_manager.Authenticate.request_url_prefix"><code class="docutils literal notranslate"><span class="pre">Authenticate.request_url_prefix</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.Authenticate.request_method_name"><code class="docutils literal notranslate"><span class="pre">Authenticate.request_method_name</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.Authenticate.response_handlers"><code class="docutils literal notranslate"><span class="pre">Authenticate.response_handlers</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.Authenticate.unauthorised"><code class="docutils literal notranslate"><span class="pre">Authenticate.unauthorised()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.api_manager.Authenticate.unexpected_error"><code class="docutils literal notranslate"><span class="pre">Authenticate.unexpected_error()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#emnify.api_manager.MAIN_URL">MAIN_URL</a></li>
 <li><a class="reference internal" href="#emnify.api_manager.BaseApiManager">BaseApiManager</a><ul>
 <li><a class="reference internal" href="#emnify.api_manager.BaseApiManager.response_handlers">response_handlers</a></li>
@@ -497,6 +527,7 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/scripts/furo.js"></script>
     </body>
 </html>

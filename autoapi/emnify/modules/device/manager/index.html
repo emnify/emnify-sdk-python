@@ -2,13 +2,13 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../../../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.2.1, furo 2022.09.15"/>
         <title>emnify.modules.device.manager - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -550,7 +550,7 @@ devices to activate must have activated sim</p>
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -559,6 +559,43 @@ devices to activate must have activated sim</p>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.manager</span></code></a><ul>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager"><code class="docutils literal notranslate"><span class="pre">DeviceManager</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.device_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.device_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.list_sms_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.list_sms_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.device_detailed_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.device_detailed_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.sms_create_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.sms_create_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.event_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.event_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.status_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.status_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.device_create_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.device_create_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.device_update_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.device_update_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.service_profile_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.service_profile_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.tariff_profile_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.tariff_profile_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_device_sort_enum"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_device_sort_enum()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_device_filter_model"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_device_filter_model()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_device_sms_list"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_device_sms_list()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.send_sms"><code class="docutils literal notranslate"><span class="pre">DeviceManager.send_sms()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.update_device"><code class="docutils literal notranslate"><span class="pre">DeviceManager.update_device()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.reset_connectivity_network"><code class="docutils literal notranslate"><span class="pre">DeviceManager.reset_connectivity_network()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.reset_connectivity_data"><code class="docutils literal notranslate"><span class="pre">DeviceManager.reset_connectivity_data()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_device_connectivity_status"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_device_connectivity_status()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_devices_list"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_devices_list()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.delete_device"><code class="docutils literal notranslate"><span class="pre">DeviceManager.delete_device()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.add_device_blacklist_operator"><code class="docutils literal notranslate"><span class="pre">DeviceManager.add_device_blacklist_operator()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.delete_device_blacklist_operator"><code class="docutils literal notranslate"><span class="pre">DeviceManager.delete_device_blacklist_operator()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_device_operator_blacklist"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_device_operator_blacklist()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.get_device_events_list"><code class="docutils literal notranslate"><span class="pre">DeviceManager.get_device_events_list()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.change_status"><code class="docutils literal notranslate"><span class="pre">DeviceManager.change_status()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.disable_device"><code class="docutils literal notranslate"><span class="pre">DeviceManager.disable_device()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.release_sim"><code class="docutils literal notranslate"><span class="pre">DeviceManager.release_sim()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.assign_sim"><code class="docutils literal notranslate"><span class="pre">DeviceManager.assign_sim()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.create_device"><code class="docutils literal notranslate"><span class="pre">DeviceManager.create_device()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.retrieve_device"><code class="docutils literal notranslate"><span class="pre">DeviceManager.retrieve_device()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.validate_device"><code class="docutils literal notranslate"><span class="pre">DeviceManager.validate_device()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.__check_device_status"><code class="docutils literal notranslate"><span class="pre">DeviceManager.__check_device_status()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.__change_device_status"><code class="docutils literal notranslate"><span class="pre">DeviceManager.__change_device_status()</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.__transform_all_devices_filter_params"><code class="docutils literal notranslate"><span class="pre">DeviceManager.__transform_all_devices_filter_params()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager">DeviceManager</a><ul>
 <li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.device_model">device_model</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.manager.DeviceManager.list_sms_model">list_sms_model</a></li>
@@ -616,6 +653,7 @@ devices to activate must have activated sim</p>
     <script src="../../../../../_static/underscore.js"></script>
     <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../../_static/scripts/furo.js"></script>
     </body>
 </html>

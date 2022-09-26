@@ -2,13 +2,13 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.2.1, furo 2022.09.15"/>
         <title>emnify.constants - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -697,7 +697,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -706,6 +706,99 @@
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.constants</span></code></a><ul>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#emnify.constants.ExtendedEnum"><code class="docutils literal notranslate"><span class="pre">ExtendedEnum</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.ExtendedEnum.list"><code class="docutils literal notranslate"><span class="pre">ExtendedEnum.list()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort"><code class="docutils literal notranslate"><span class="pre">DeviceSort</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.ID"><code class="docutils literal notranslate"><span class="pre">DeviceSort.ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.STATUS"><code class="docutils literal notranslate"><span class="pre">DeviceSort.STATUS</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.LAST_UPDATED"><code class="docutils literal notranslate"><span class="pre">DeviceSort.LAST_UPDATED</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.CREATED"><code class="docutils literal notranslate"><span class="pre">DeviceSort.CREATED</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.NAME"><code class="docutils literal notranslate"><span class="pre">DeviceSort.NAME</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.TAGS"><code class="docutils literal notranslate"><span class="pre">DeviceSort.TAGS</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.IP_ADDRESS"><code class="docutils literal notranslate"><span class="pre">DeviceSort.IP_ADDRESS</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceSort.IMEI"><code class="docutils literal notranslate"><span class="pre">DeviceSort.IMEI</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.IdValues"><code class="docutils literal notranslate"><span class="pre">IdValues</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.IdValues.ID"><code class="docutils literal notranslate"><span class="pre">IdValues.ID</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.RequestsType"><code class="docutils literal notranslate"><span class="pre">RequestsType</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.RequestsType.GET"><code class="docutils literal notranslate"><span class="pre">RequestsType.GET</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestsType.POST"><code class="docutils literal notranslate"><span class="pre">RequestsType.POST</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestsType.PUT"><code class="docutils literal notranslate"><span class="pre">RequestsType.PUT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestsType.DELETE"><code class="docutils literal notranslate"><span class="pre">RequestsType.DELETE</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestsType.PATCH"><code class="docutils literal notranslate"><span class="pre">RequestsType.PATCH</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.AuthenticateRequestsUrl"><code class="docutils literal notranslate"><span class="pre">AuthenticateRequestsUrl</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.AuthenticateRequestsUrl.V1_AUTHENTICATE"><code class="docutils literal notranslate"><span class="pre">AuthenticateRequestsUrl.V1_AUTHENTICATE</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersKeys</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.ACCEPT"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersKeys.ACCEPT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.AUTHORIZATION"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersKeys.AUTHORIZATION</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.XEmnOriginApp"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersKeys.XEmnOriginApp</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersKeys.XEmnOriginAppVersion"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersKeys.XEmnOriginAppVersion</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersValues</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.APPLICATION_JSON"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersValues.APPLICATION_JSON</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.BEARER_TOKEN"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersValues.BEARER_TOKEN</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.PYTHONSDK_VERSION"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersValues.PYTHONSDK_VERSION</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.RequestDefaultHeadersValues.PYTHONSDK"><code class="docutils literal notranslate"><span class="pre">RequestDefaultHeadersValues.PYTHONSDK</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses.ENABLED_ID"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses.ENABLED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses.DISABLED_ID"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses.DISABLED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses.DELETED_ID"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses.DELETED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses.ENABLED_DICT"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses.ENABLED_DICT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses.DISABLED_DICT"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses.DISABLED_DICT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.DeviceStatuses.DELETED_DICT"><code class="docutils literal notranslate"><span class="pre">DeviceStatuses.DELETED_DICT</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesID"><code class="docutils literal notranslate"><span class="pre">SimStatusesID</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesID.ISSUED_ID"><code class="docutils literal notranslate"><span class="pre">SimStatusesID.ISSUED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesID.ACTIVATED_ID"><code class="docutils literal notranslate"><span class="pre">SimStatusesID.ACTIVATED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesID.SUSPENDED_ID"><code class="docutils literal notranslate"><span class="pre">SimStatusesID.SUSPENDED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesID.DELETED_ID"><code class="docutils literal notranslate"><span class="pre">SimStatusesID.DELETED_ID</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesID.FACTORY_TEST_ID"><code class="docutils literal notranslate"><span class="pre">SimStatusesID.FACTORY_TEST_ID</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesDict"><code class="docutils literal notranslate"><span class="pre">SimStatusesDict</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesDict.ISSUED_DICT"><code class="docutils literal notranslate"><span class="pre">SimStatusesDict.ISSUED_DICT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesDict.ACTIVATED_DICT"><code class="docutils literal notranslate"><span class="pre">SimStatusesDict.ACTIVATED_DICT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesDict.SUSPENDED_DICT"><code class="docutils literal notranslate"><span class="pre">SimStatusesDict.SUSPENDED_DICT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesDict.DELETED_DICT"><code class="docutils literal notranslate"><span class="pre">SimStatusesDict.DELETED_DICT</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimStatusesDict.FACTORY_TEST_DICT"><code class="docutils literal notranslate"><span class="pre">SimStatusesDict.FACTORY_TEST_DICT</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.ResponseHeaders"><code class="docutils literal notranslate"><span class="pre">ResponseHeaders</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.ResponseHeaders.COUNT_PER_PAGE"><code class="docutils literal notranslate"><span class="pre">ResponseHeaders.COUNT_PER_PAGE</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.ResponseHeaders.CURRENT_PAGE"><code class="docutils literal notranslate"><span class="pre">ResponseHeaders.CURRENT_PAGE</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.ResponseHeaders.TOTAL_PAGES"><code class="docutils literal notranslate"><span class="pre">ResponseHeaders.TOTAL_PAGES</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.ResponseHeaders.TOTAL_COUNT"><code class="docutils literal notranslate"><span class="pre">ResponseHeaders.TOTAL_COUNT</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.SimSort"><code class="docutils literal notranslate"><span class="pre">SimSort</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.SimSort.id"><code class="docutils literal notranslate"><span class="pre">SimSort.id</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.issuer_org"><code class="docutils literal notranslate"><span class="pre">SimSort.issuer_org</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.reseller_org"><code class="docutils literal notranslate"><span class="pre">SimSort.reseller_org</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.customer_org"><code class="docutils literal notranslate"><span class="pre">SimSort.customer_org</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.iccid"><code class="docutils literal notranslate"><span class="pre">SimSort.iccid</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.status"><code class="docutils literal notranslate"><span class="pre">SimSort.status</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.production_date"><code class="docutils literal notranslate"><span class="pre">SimSort.production_date</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.endpoint"><code class="docutils literal notranslate"><span class="pre">SimSort.endpoint</span></code></a></li>
+<li><a class="reference internal" href="#emnify.constants.SimSort.model"><code class="docutils literal notranslate"><span class="pre">SimSort.model</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.constants.RequestUrls"><code class="docutils literal notranslate"><span class="pre">RequestUrls</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.constants.RequestUrls.ENDPOINT_IN_URL"><code class="docutils literal notranslate"><span class="pre">RequestUrls.ENDPOINT_IN_URL</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#emnify.constants.ExtendedEnum">ExtendedEnum</a><ul>
 <li><a class="reference internal" href="#emnify.constants.ExtendedEnum.list">list</a></li>
 </ul>
@@ -819,6 +912,7 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/scripts/furo.js"></script>
     </body>
 </html>

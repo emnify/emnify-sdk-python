@@ -2,13 +2,13 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" />
 
-    <link rel="shortcut icon" href="../../../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../../../../../_static/favicon-32x32.png"/><meta name="generator" content="sphinx-5.2.1, furo 2022.09.15"/>
         <title>emnify.modules.device.models - EMnify SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -637,7 +637,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -646,6 +646,88 @@
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.models</span></code></a><ul>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.SimDevice"><code class="docutils literal notranslate"><span class="pre">SimDevice</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.SimDevice.id"><code class="docutils literal notranslate"><span class="pre">SimDevice.id</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.SimDevice.status"><code class="docutils literal notranslate"><span class="pre">SimDevice.status</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.Device"><code class="docutils literal notranslate"><span class="pre">Device</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.Device.status"><code class="docutils literal notranslate"><span class="pre">Device.status</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.Device.sim"><code class="docutils literal notranslate"><span class="pre">Device.sim</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.CreateDevice"><code class="docutils literal notranslate"><span class="pre">CreateDevice</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.CreateDevice.validate_status"><code class="docutils literal notranslate"><span class="pre">CreateDevice.validate_status()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.SmsCreateModel"><code class="docutils literal notranslate"><span class="pre">SmsCreateModel</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.SmsCreateModel.source_address"><code class="docutils literal notranslate"><span class="pre">SmsCreateModel.source_address</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.SmsCreateModel.source_address_type"><code class="docutils literal notranslate"><span class="pre">SmsCreateModel.source_address_type</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.SmsCreateModel.expiry_date"><code class="docutils literal notranslate"><span class="pre">SmsCreateModel.expiry_date</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.SmsCreateModel.udh"><code class="docutils literal notranslate"><span class="pre">SmsCreateModel.udh</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.SmsCreateModel.dcs"><code class="docutils literal notranslate"><span class="pre">SmsCreateModel.dcs</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.ListSms"><code class="docutils literal notranslate"><span class="pre">ListSms</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.TariffProfile"><code class="docutils literal notranslate"><span class="pre">TariffProfile</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.ServiceProfile"><code class="docutils literal notranslate"><span class="pre">ServiceProfile</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceStatus"><code class="docutils literal notranslate"><span class="pre">DeviceStatus</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceIdRequired"><code class="docutils literal notranslate"><span class="pre">DeviceIdRequired</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceIdRequired.id"><code class="docutils literal notranslate"><span class="pre">DeviceIdRequired.id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.status"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.status</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.last_updated"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.last_updated</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.created"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.created</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.name"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.name</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.tags"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.tags</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.ip_address"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.ip_address</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.imei"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.imei</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel.sim_status"><code class="docutils literal notranslate"><span class="pre">FilterDeviceModel.sim_status</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.ListQFilterDeviceListModel"><code class="docutils literal notranslate"><span class="pre">ListQFilterDeviceListModel</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.ListQFilterDeviceListModel.__root__"><code class="docutils literal notranslate"><span class="pre">ListQFilterDeviceListModel.__root__</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.Config</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.Config.use_enum_values</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.sort"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.sort</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.q"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.q</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values">use_enum_values</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceEvent"><code class="docutils literal notranslate"><span class="pre">DeviceEvent</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.RetrieveDevice"><code class="docutils literal notranslate"><span class="pre">RetrieveDevice</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.RetrieveDevice.runtime_data"><code class="docutils literal notranslate"><span class="pre">RetrieveDevice.runtime_data</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.RetrieveDevice.sim"><code class="docutils literal notranslate"><span class="pre">RetrieveDevice.sim</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice"><code class="docutils literal notranslate"><span class="pre">UpdateDevice</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.name"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.name</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.tags"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.tags</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.status"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.status</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.service_profile"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.service_profile</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.tariff_profile"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.tariff_profile</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.ip_address"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.ip_address</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.ip_address_space"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.ip_address_space</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.sim"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.sim</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.imei"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.imei</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.UpdateDevice.imei_lock"><code class="docutils literal notranslate"><span class="pre">UpdateDevice.imei_lock</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceConnectivityStatus"><code class="docutils literal notranslate"><span class="pre">DeviceConnectivityStatus</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceConnectivityStatus.status"><code class="docutils literal notranslate"><span class="pre">DeviceConnectivityStatus.status</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceConnectivityStatus.location"><code class="docutils literal notranslate"><span class="pre">DeviceConnectivityStatus.location</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.DeviceConnectivityStatus.services"><code class="docutils literal notranslate"><span class="pre">DeviceConnectivityStatus.services</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#emnify.modules.device.models.SimDevice">SimDevice</a><ul>
 <li><a class="reference internal" href="#emnify.modules.device.models.SimDevice.id">id</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.models.SimDevice.status">status</a></li>
@@ -692,10 +774,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet">GetDeviceFilterSet</a><ul>
-<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config">Config</a><ul>
-<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values">use_enum_values</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config">Config</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.sort">sort</a></li>
 <li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.q">q</a></li>
 </ul>
@@ -745,6 +824,7 @@
     <script src="../../../../../_static/underscore.js"></script>
     <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../../_static/scripts/furo.js"></script>
     </body>
 </html>
