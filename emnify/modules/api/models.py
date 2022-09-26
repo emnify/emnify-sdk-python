@@ -724,7 +724,7 @@ class RetrieveEventsresponse(BaseModel):
         example={
             'name': 'Monitoring201',
             'tags': 'Monitoring',
-            'ip_address': '10.199.6.39',
+            'ip_address': '0.0.0.0',
             'imei': None,
             'id': 1,
         },
@@ -732,15 +732,15 @@ class RetrieveEventsresponse(BaseModel):
     sim: Optional[Dict[str, Any]] = Field(
         None,
         example={
-            'iccid': 8988317000000000000,
+            'iccid': 10000000000,
             'production_date': '2019-12-17T13:26:13.000Z',
-            'id': 110,
+            'id': 1,
         },
     )
     imsi: Optional[Dict[str, Any]] = Field(
         None,
         example={
-            'imsi': 901430000000114,
+            'imsi': 100000000000000,
             'import_date': '2019-12-17T13:26:08.000Z',
             'id': 110,
         },

@@ -5,21 +5,21 @@ name = "pypi"
 
 [packages]
 certifi = "==2022.6.15"
-charset-normalizer = "==2.1.0"
-distlib = "==0.3.4"
-filelock = "==3.7.1"
+charset-normalizer = "==2.1.1"
+distlib = "==0.3.6"
+filelock = "==3.8.0"
 idna = "==3.3"
 importlib-metadata = "==4.12.0"
-pipenv = "==2022.7.4"
+pipenv = "==2022.9.24"
 platformdirs = "==2.5.2"
 pydantic = "==1.9.1"
 requests = "==2.28.1"
 six = "==1.16.0"
 typing-extensions = "==4.3.0"
-urllib3 = "==1.26.9"
+urllib3 = "==1.26.12"
 virtualenv = "==20.15.1"
 virtualenv-clone = "==0.5.7"
-zipp = "==3.8.0"
+zipp = "==3.8.1"
 
 [dev-packages]
 
