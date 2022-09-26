@@ -49,12 +49,12 @@ class BaseApiManager:
         page = query_params.get('page', 1) if query_params else 1
 
         try:
-            data = response.json()
+            response_data = response.json()
         except requests.exceptions.JSONDecodeError:
             raise emnify_errors.JsonDecodeException('error while parsing json for')
 
-        for object in data:
-            yield object
+        for item in response_data:
+            yield item
 
         if int(response.headers.get(emnify_constants.ResponseHeaders.TOTAL_PAGES.value)) > page:
             query_params['page'] = page + 1
