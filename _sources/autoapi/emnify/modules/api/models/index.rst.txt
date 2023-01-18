@@ -304,22 +304,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: application_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: username
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: password
-      :annotation: :Optional[pydantic.SecretStr]
+      :type: Optional[pydantic.SecretStr]
 
       
 
    .. py:attribute:: refresh_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -329,12 +329,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: auth_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: refresh_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -344,17 +344,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: error_code
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: error_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: message
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -364,17 +364,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: error_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: error_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: message
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -384,7 +384,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: message
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -394,12 +394,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -409,12 +409,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -424,32 +424,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Status]
+      :type: Optional[Status]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Type]
+      :type: Optional[Type]
 
       
 
    .. py:attribute:: secret_key
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: otpauth
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: creation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -459,12 +459,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: code
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -474,7 +474,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
-      :annotation: :Optional[Status1]
+      :type: Optional[Status1]
 
       
 
@@ -484,37 +484,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: latitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: longitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -524,12 +524,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: message
-      :annotation: :str
+      :type: str
 
       
 
@@ -539,7 +539,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: message
-      :annotation: :str
+      :type: str
 
       
 
@@ -549,27 +549,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: organisation_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: url
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: purpose
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -579,17 +579,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: organisation_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: purpose
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -599,12 +599,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -614,12 +614,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -629,52 +629,52 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: last_traffic_log_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: last_event_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: last_dispatched_timestamp
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: last_result_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: active
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: running
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: api_callback
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: api_type
-      :annotation: :Optional[ApiType]
+      :type: Optional[ApiType]
 
       
 
    .. py:attribute:: data_stream_type
-      :annotation: :Optional[DataStreamType]
+      :type: Optional[DataStreamType]
 
       
 
@@ -684,12 +684,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -699,37 +699,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: route
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: reqParams
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: fromServer
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: parentResource
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: restangularCollection
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
@@ -739,52 +739,52 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: organisation_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: url
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: purpose
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: route
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: reqParams
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: fromServer
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: parentResource
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: restangularCollection
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
@@ -794,42 +794,42 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: stream_historic_data
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: data_stream_type
-      :annotation: :Optional[DataStreamType1]
+      :type: Optional[DataStreamType1]
 
       
 
    .. py:attribute:: api_type
-      :annotation: :Optional[ApiType1]
+      :type: Optional[ApiType1]
 
       
 
    .. py:attribute:: api_callback
-      :annotation: :Optional[ApiCallback]
+      :type: Optional[ApiCallback]
 
       
 
    .. py:attribute:: event_stream
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: api_username
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: api_password
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: api_parameter
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -839,17 +839,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -859,17 +859,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -879,62 +879,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: month
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType]
+      :type: Optional[TrafficType]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency]
+      :type: Optional[Currency]
 
       
 
@@ -944,17 +944,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -964,17 +964,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -984,62 +984,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: month
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType1]
+      :type: Optional[TrafficType1]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency1]
+      :type: Optional[Currency1]
 
       
 
@@ -1049,12 +1049,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: data
-      :annotation: :Optional[Data]
+      :type: Optional[Data]
 
       
 
    .. py:attribute:: sms
-      :annotation: :Optional[Sms]
+      :type: Optional[Sms]
 
       
 
@@ -1064,17 +1064,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: last_month
-      :annotation: :LastMonth
+      :type: LastMonth
 
       
 
    .. py:attribute:: current_month
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: last_hour
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -1084,17 +1084,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1104,17 +1104,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1124,62 +1124,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: month
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType2]
+      :type: Optional[TrafficType2]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency2]
+      :type: Optional[Currency2]
 
       
 
@@ -1189,17 +1189,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: data
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sms
-      :annotation: :Optional[Sms1]
+      :type: Optional[Sms1]
 
       
 
@@ -1209,17 +1209,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1229,17 +1229,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1249,62 +1249,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: month
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType3]
+      :type: Optional[TrafficType3]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency3]
+      :type: Optional[Currency3]
 
       
 
@@ -1314,17 +1314,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1334,17 +1334,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1354,62 +1354,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: month
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType4]
+      :type: Optional[TrafficType4]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency4]
+      :type: Optional[Currency4]
 
       
 
@@ -1419,12 +1419,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: data
-      :annotation: :Optional[Data1]
+      :type: Optional[Data1]
 
       
 
    .. py:attribute:: sms
-      :annotation: :Optional[Sms2]
+      :type: Optional[Sms2]
 
       
 
@@ -1434,17 +1434,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1454,17 +1454,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1474,62 +1474,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: month
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType5]
+      :type: Optional[TrafficType5]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency5]
+      :type: Optional[Currency5]
 
       
 
@@ -1539,17 +1539,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1559,17 +1559,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1579,17 +1579,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1599,32 +1599,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType6]
+      :type: Optional[TrafficType6]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -1634,17 +1634,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1654,32 +1654,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType7]
+      :type: Optional[TrafficType7]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -1689,17 +1689,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: date
-      :annotation: :Optional[datetime.date]
+      :type: Optional[datetime.date]
 
       
 
    .. py:attribute:: data
-      :annotation: :Optional[Data2]
+      :type: Optional[Data2]
 
       
 
    .. py:attribute:: sms
-      :annotation: :Optional[Sms3]
+      :type: Optional[Sms3]
 
       
 
@@ -1709,7 +1709,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[StatsObjectItem]
+      :type: List[StatsObjectItem]
 
       
 
@@ -1719,17 +1719,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -1739,32 +1739,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_tx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume_rx
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: cost
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType8]
+      :type: Optional[TrafficType8]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -1774,37 +1774,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: latitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: longitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -1814,17 +1814,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: system_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: smpp_bind_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -1834,37 +1834,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: latitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: longitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -1874,37 +1874,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Country2]
+      :type: Optional[Country2]
 
       
 
    .. py:attribute:: tapcodes
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mncs
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -1914,17 +1914,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: resource_provider_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -1934,22 +1934,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: imsi_prefix
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: calling_party
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: called_party_tt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -1959,17 +1959,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: prefix
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: tt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -1979,42 +1979,42 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sms_routing_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Country1]
+      :type: Optional[Country1]
 
       
 
    .. py:attribute:: smpp_bind
-      :annotation: :Optional[SmppBind]
+      :type: Optional[SmppBind]
 
       
 
    .. py:attribute:: operator
-      :annotation: :Optional[Operator]
+      :type: Optional[Operator]
 
       
 
    .. py:attribute:: msisdn_pool
-      :annotation: :Optional[MsisdnPool]
+      :type: Optional[MsisdnPool]
 
       
 
    .. py:attribute:: gt_config
-      :annotation: :Optional[GtConfig]
+      :type: Optional[GtConfig]
 
       
 
    .. py:attribute:: sccp_called_party_prefix
-      :annotation: :Optional[SccpCalledPartyPrefix]
+      :type: Optional[SccpCalledPartyPrefix]
 
       
 
@@ -2024,12 +2024,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -2039,117 +2039,117 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: submit_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: delivery_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: final_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: retry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: last_delivery_attempt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: retry_count
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: gsm_map_error
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: dcs
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: pid
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: source_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: endpoint
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: iccid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msc
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: udh
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: payload
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sms_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: source_address_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -2159,12 +2159,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: source_address
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: payload
-      :annotation: :str
+      :type: str
 
       
 
@@ -2174,117 +2174,117 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: submit_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: delivery_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: final_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: retry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: last_delivery_attempt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: retry_count
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: gsm_map_error
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: dcs
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: pid
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: source_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: endpoint
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: iccid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msc
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: udh
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: payload
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sms_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: source_address_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -2294,22 +2294,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: ussd_info
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: subscriber_info
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: request_timestamp
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: reply_timestamp
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -2319,7 +2319,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Any
+      :type: Any
 
       
 
@@ -2329,7 +2329,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Any
+      :type: Any
 
       
 
@@ -2339,27 +2339,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: tapcode
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
    .. py:attribute:: mnc
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -2369,22 +2369,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: amount
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -2394,17 +2394,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: amount
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -2451,17 +2451,17 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: EXHAUSTED
-      :annotation: = EXHAUSTED
+      :value: 'EXHAUSTED'
 
       
 
    .. py:attribute:: ACTIVE
-      :annotation: = ACTIVE
+      :value: 'ACTIVE'
 
       
 
    .. py:attribute:: EXPIRED
-      :annotation: = EXPIRED
+      :value: 'EXPIRED'
 
       
 
@@ -2508,17 +2508,17 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_1
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: integer_2
-      :annotation: = 2
+      :value: 2
 
       
 
    .. py:attribute:: integer_3
-      :annotation: = 3
+      :value: 3
 
       
 
@@ -2528,12 +2528,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[Description]
+      :type: Optional[Description]
 
       
 
    .. py:attribute:: id
-      :annotation: :Id
+      :type: Id
 
       
 
@@ -2580,12 +2580,12 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_1
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: integer_2
-      :annotation: = 2
+      :value: 2
 
       
 
@@ -2632,12 +2632,12 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: Throttle
-      :annotation: = Throttle
+      :value: 'Throttle'
 
       
 
    .. py:attribute:: Block
-      :annotation: = Block
+      :value: 'Block'
 
       
 
@@ -2647,17 +2647,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Id1
+      :type: Id1
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[Description1]
+      :type: Optional[Description1]
 
       
 
    .. py:attribute:: peak_throughput
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -2667,52 +2667,52 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: last_volume_added
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_status_change_date
-      :annotation: :Optional[constr(regex='^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$')]
+      :type: Optional[constr(regex='^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$')]
 
       
 
    .. py:attribute:: auto_refill
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: threshold_volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: threshold_percentage
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: status
-      :annotation: :Status2
+      :type: Status2
 
       
 
    .. py:attribute:: volume
-      :annotation: :float
+      :type: float
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :constr(regex='^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$')
+      :type: constr(regex='^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$')
 
       
 
    .. py:attribute:: action_on_exhaustion
-      :annotation: :ActionOnExhaustion
+      :type: ActionOnExhaustion
 
       
 
    .. py:attribute:: peak_throughput
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -2722,12 +2722,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :float
+      :type: float
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -2774,12 +2774,12 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_1
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: integer_2
-      :annotation: = 2
+      :value: 2
 
       
 
@@ -2826,12 +2826,12 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: Throttle
-      :annotation: = Throttle
+      :value: 'Throttle'
 
       
 
    .. py:attribute:: Block
-      :annotation: = Block
+      :value: 'Block'
 
       
 
@@ -2841,17 +2841,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Id2
+      :type: Id2
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[Description2]
+      :type: Optional[Description2]
 
       
 
    .. py:attribute:: peak_throughput
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -2898,17 +2898,17 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: EXHAUSTED
-      :annotation: = EXHAUSTED
+      :value: 'EXHAUSTED'
 
       
 
    .. py:attribute:: ACTIVE
-      :annotation: = ACTIVE
+      :value: 'ACTIVE'
 
       
 
    .. py:attribute:: EXPIRED
-      :annotation: = EXPIRED
+      :value: 'EXPIRED'
 
       
 
@@ -2955,17 +2955,17 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_1
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: integer_2
-      :annotation: = 2
+      :value: 2
 
       
 
    .. py:attribute:: integer_3
-      :annotation: = 3
+      :value: 3
 
       
 
@@ -2975,12 +2975,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[Description3]
+      :type: Optional[Description3]
 
       
 
    .. py:attribute:: id
-      :annotation: :Id3
+      :type: Id3
 
       
 
@@ -2990,47 +2990,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: volume
-      :annotation: :float
+      :type: float
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :datetime.datetime
+      :type: datetime.datetime
 
       
 
    .. py:attribute:: last_volume_added
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: last_status_change_date
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: auto_refill
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: threshold_percentage
-      :annotation: :float
+      :type: float
 
       
 
    .. py:attribute:: threshold_volume
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: status
-      :annotation: :QuotaStatus
+      :type: QuotaStatus
 
       
 
    .. py:attribute:: action_on_exhaustion
-      :annotation: :Optional[ActionOnExhaustion1]
+      :type: Optional[ActionOnExhaustion1]
 
       
 
@@ -3040,57 +3040,57 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: timestamp
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: alert
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: event_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: event_source
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: event_severity
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: endpoint
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -3100,7 +3100,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: ussd_begin
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -3110,7 +3110,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: session_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3120,62 +3120,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: class_
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: country
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: relation
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: currency
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: created
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: verification_type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: verification
-      :annotation: :str
+      :type: str
 
       
 
@@ -3185,57 +3185,57 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: class_
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: country
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: relation
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: verification_type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: verification
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: ext_reference
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :int
+      :type: int
 
       
 
@@ -3245,62 +3245,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: class_
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: relation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: verification_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: verification
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3310,52 +3310,52 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: class_
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: country
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: ext_reference
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: currency
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: verification_type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: verification
-      :annotation: :str
+      :type: str
 
       
 
@@ -3365,12 +3365,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3380,12 +3380,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3395,12 +3395,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3410,12 +3410,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3425,77 +3425,77 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: title
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: department
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: street
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: zipcode
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: city
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: email
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: phone
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mobile
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: state
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: secondary_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3505,67 +3505,67 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: title
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: department
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: street
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: zipcode
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: city
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: country
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: email
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: phone
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: mobile
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: state
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: secondary_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3575,77 +3575,77 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: title
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: department
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: street
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: zipcode
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: city
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: email
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: phone
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mobile
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: state
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: secondary_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3655,57 +3655,57 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: title
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: department
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: street
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: zipcode
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: city
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: email
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: phone
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mobile
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3715,92 +3715,92 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_mt_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: default_sms_mo_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_issued_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activated_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspended_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_reactivation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspension_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_termination_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_blocksize
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_throttle
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: pdp_context_definition
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -3810,12 +3810,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -3825,7 +3825,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Any
+      :type: Any
 
       
 
@@ -3835,62 +3835,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: iccid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: production_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: activation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: customer_org
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: issuer_org
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: endpoint
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: model
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: reseller_org
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -3900,62 +3900,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: iccid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: production_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: activation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: customer_org
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: issuer_org
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: endpoint
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: model
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: reseller_org
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -3965,22 +3965,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: issuer_org
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: reseller_org
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: customer_org
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -3990,12 +3990,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -4005,37 +4005,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: import_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imsi_pool
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -4045,37 +4045,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: import_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imsi_pool
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -4085,7 +4085,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -4095,12 +4095,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -4110,102 +4110,102 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_mt_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: default_sms_mo_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_issued_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activated_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspended_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_reactivation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspension_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_termination_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: assigned_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_blocksize
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_throttle
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: pdp_context_definition
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -4215,72 +4215,72 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_mt_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: default_sms_mo_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_issued_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activated_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspended_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_reactivation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspension_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_termination_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_blocksize
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_throttle
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -4290,17 +4290,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: used_by
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -4310,112 +4310,112 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_mt_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: default_sms_mo_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_issued_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activated_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspended_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_reactivation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspension_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_termination_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: assigned_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_blocksize
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_throttle
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: pdp_context_definition
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
    .. py:attribute:: public
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: tariff_category
-      :annotation: :Optional[TariffCategory]
+      :type: Optional[TariffCategory]
 
       
 
@@ -4425,77 +4425,77 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_mt_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: default_sms_mo_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_issued_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activated_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspended_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_activation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_reactivation_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_suspension_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sim_termination_rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_blocksize
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: data_throttle
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -4505,12 +4505,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -4520,37 +4520,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: valid_from
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: valid_until
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: coverage
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
    .. py:attribute:: rate
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -4560,17 +4560,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: valid_from
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: valid_until
-      :annotation: :str
+      :type: str
 
       
 
@@ -4580,22 +4580,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: valid_from
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: valid_until
-      :annotation: :str
+      :type: str
 
       
 
@@ -4605,12 +4605,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -4620,32 +4620,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: rate
-      :annotation: :float
+      :type: float
 
       
 
    .. py:attribute:: volume
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: currency
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: service
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: valid_from
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: valid_until
-      :annotation: :str
+      :type: str
 
       
 
@@ -4655,12 +4655,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: valid_from
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: valid_until
-      :annotation: :str
+      :type: str
 
       
 
@@ -4670,27 +4670,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: tariff
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -4700,17 +4700,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: tariff
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -4720,32 +4720,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: tariff
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: ratezone
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -4755,17 +4755,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: tariff
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -4775,12 +4775,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: redundancy_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -4790,37 +4790,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: tariff_plan
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: start_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: selection_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: payment
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -4830,47 +4830,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: allowed_3g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_4g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_nb_iot
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_sms_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_data_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
@@ -4880,92 +4880,92 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: allowed_3g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_4g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_nb_iot
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_sms_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_data_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: retail
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: sms_p2p_int
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: sms_p2p_ext
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: prepaid
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: nipdp
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: api_callback
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: api_secret
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: moc_callback
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: esme_interface_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: breakout_region
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: dns
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -4975,102 +4975,102 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: allowed_3g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_4g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_nb_iot
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_sms_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_data_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: retail
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: sms_p2p_int
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: sms_p2p_ext
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: prepaid
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: nipdp
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: api_callback
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: api_secret
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: moc_callback
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: esme_interface_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: breakout_region
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: service
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -5080,92 +5080,92 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: allowed_3g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_4g
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: allowed_nb_iot
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_sms_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: apply_data_quota
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: retail
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: sms_p2p_int
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: sms_p2p_ext
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: prepaid
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: nipdp
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: api_callback
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: api_secret
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: moc_callback
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: esme_interface_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: breakout_region
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: dns
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -5175,32 +5175,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: teleservice_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: used_with_vlr
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: used_with_sgsn
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -5210,22 +5210,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: service
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: period
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -5235,17 +5235,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: service
-      :annotation: :List[Dict[str, Any]]
+      :type: List[Dict[str, Any]]
 
       
 
    .. py:attribute:: volume
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: period
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -5255,17 +5255,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: time_units
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: unit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5275,17 +5275,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: period
-      :annotation: :Optional[Period]
+      :type: Optional[Period]
 
       
 
@@ -5295,7 +5295,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[ServiceTrafficLimitsResponseItem]
+      :type: List[ServiceTrafficLimitsResponseItem]
 
       
 
@@ -5305,22 +5305,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: primary
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: secondary
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip_address_version
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -5330,7 +5330,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[RetrieveDNSlistresponseItem]
+      :type: List[RetrieveDNSlistresponseItem]
 
       
 
@@ -5340,17 +5340,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: primary
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: secondary
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: ip_address_version
-      :annotation: :int
+      :type: int
 
       
 
@@ -5360,12 +5360,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5375,12 +5375,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5390,32 +5390,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: username
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Status3]
+      :type: Optional[Status3]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Organisation]
+      :type: Optional[Organisation]
 
       
 
@@ -5425,22 +5425,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: username
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: roles
-      :annotation: :List[Dict[str, Any]]
+      :type: List[Dict[str, Any]]
 
       
 
@@ -5450,42 +5450,42 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: username
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: roles
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
    .. py:attribute:: mfa
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -5495,17 +5495,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: username
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -5515,32 +5515,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: username
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -5550,12 +5550,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5565,12 +5565,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5580,12 +5580,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5595,12 +5595,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5610,12 +5610,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5625,17 +5625,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: username
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -5645,47 +5645,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: alert
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: timestamp
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: event_type
-      :annotation: :Optional[EventType]
+      :type: Optional[EventType]
 
       
 
    .. py:attribute:: event_source
-      :annotation: :Optional[EventSource]
+      :type: Optional[EventSource]
 
       
 
    .. py:attribute:: event_severity
-      :annotation: :Optional[EventSeverity]
+      :type: Optional[EventSeverity]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Organisation1]
+      :type: Optional[Organisation1]
 
       
 
    .. py:attribute:: user
-      :annotation: :Optional[User1]
+      :type: Optional[User1]
 
       
 
@@ -5695,47 +5695,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: alert
-      :annotation: :bool
+      :type: bool
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: timestamp
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: event_type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: event_source
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: event_severity
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: user
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
@@ -5745,12 +5745,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: activationKey
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: password
-      :annotation: :str
+      :type: str
 
       
 
@@ -5760,12 +5760,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: username
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: g_recaptcha_response
-      :annotation: :str
+      :type: str
 
       
 
@@ -5812,12 +5812,12 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: number_0
-      :annotation: = 0
+      :value: 0
 
       
 
    .. py:attribute:: number_1
-      :annotation: = 1
+      :value: 1
 
       
 
@@ -5827,7 +5827,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[Id4]
+      :type: Optional[Id4]
 
       
 
@@ -5837,7 +5837,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
-      :annotation: :Optional[Status4]
+      :type: Optional[Status4]
 
       
 
@@ -5847,12 +5847,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: old_password
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: new_password
-      :annotation: :str
+      :type: str
 
       
 
@@ -5862,22 +5862,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: error_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: error_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: message
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: errors
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -5887,27 +5887,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: ip_address_space
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip_address_version
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: used_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: available_count
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -5917,17 +5917,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: ip_address_space
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip_address_version
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -5937,7 +5937,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Any
+      :type: Any
 
       
 
@@ -5947,67 +5947,67 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: alert
-      :annotation: :bool
+      :type: bool
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: timestamp
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: event_type
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: event_source
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: event_severity
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: user
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: endpoint
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: detail
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -6017,12 +6017,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6032,27 +6032,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6062,17 +6062,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6082,17 +6082,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: octets
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6102,17 +6102,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: octets
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6122,27 +6122,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: tapcode
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
    .. py:attribute:: mnc
-      :annotation: :Optional[List[Dict[str, Any]]]
+      :type: Optional[List[Dict[str, Any]]]
 
       
 
@@ -6152,17 +6152,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6172,7 +6172,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Any
+      :type: Any
 
       
 
@@ -6182,7 +6182,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Any
+      :type: Any
 
       
 
@@ -6192,12 +6192,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
@@ -6212,72 +6212,72 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext_reference
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: organisation_class_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: verification_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: verification
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: brand_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_routing_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6287,42 +6287,42 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: apn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Organisation2]
+      :type: Optional[Organisation2]
 
       
 
    .. py:attribute:: auto_assign
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: qos_subscribed
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext_qos_subscribed
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext2_qos_subscribed
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext3_qos_subscribed
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext4_qos_subscribed
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6332,7 +6332,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -6342,7 +6342,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6352,17 +6352,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: rat_type
-      :annotation: :Optional[RatType1]
+      :type: Optional[RatType1]
 
       
 
    .. py:attribute:: max_bandwidth_dl
-      :annotation: :Optional[conint(ge=0, le=4294967295)]
+      :type: Optional[conint(ge=0, le=4294967295)]
 
       
 
    .. py:attribute:: max_bandwidth_ul
-      :annotation: :Optional[conint(ge=0, le=4294967295)]
+      :type: Optional[conint(ge=0, le=4294967295)]
 
       
 
@@ -6372,12 +6372,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6387,17 +6387,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: rat_type
-      :annotation: :Optional[RatType2]
+      :type: Optional[RatType2]
 
       
 
    .. py:attribute:: max_bandwidth_dl
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: max_bandwidth_ul
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6407,12 +6407,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: max_bandwidth_dl
-      :annotation: :Optional[conint(ge=0, le=4294967295)]
+      :type: Optional[conint(ge=0, le=4294967295)]
 
       
 
    .. py:attribute:: max_bandwidth_ul
-      :annotation: :Optional[conint(ge=0, le=4294967295)]
+      :type: Optional[conint(ge=0, le=4294967295)]
 
       
 
@@ -6422,7 +6422,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6432,7 +6432,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6442,7 +6442,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6452,47 +6452,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: mnc
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: network_coverage
-      :annotation: :Optional[NetworkCoverage]
+      :type: Optional[NetworkCoverage]
 
       
 
    .. py:attribute:: traffic_type
-      :annotation: :Optional[TrafficType9]
+      :type: Optional[TrafficType9]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency6]
+      :type: Optional[Currency6]
 
       
 
    .. py:attribute:: rate
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: volume
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: blocksize
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: valid_from
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
@@ -6502,7 +6502,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6512,7 +6512,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :constr(regex='^\\d{4}-\\d{2}-\\d{2}$')
+      :type: constr(regex='^\\d{4}-\\d{2}-\\d{2}$')
 
       
 
@@ -6522,7 +6522,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :constr(regex='^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\{2}$')
+      :type: constr(regex='^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\{2}$')
 
       
 
@@ -6532,17 +6532,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: symbol
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6552,22 +6552,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: imsi_prefix
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: calling_party
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: called_party_tt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6577,17 +6577,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: resource_provider_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6597,37 +6597,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: latitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: longitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6637,37 +6637,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Country3]
+      :type: Optional[Country3]
 
       
 
    .. py:attribute:: tapcodes
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mncs
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -6677,72 +6677,72 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext_reference
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: organisation_class_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: verification_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: verification
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: brand_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_routing_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6752,7 +6752,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -6762,7 +6762,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -6772,22 +6772,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: amount
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: external_payment_identifier
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: payment_option
-      :annotation: :Optional[PaymentOption]
+      :type: Optional[PaymentOption]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Type1]
+      :type: Optional[Type1]
 
       
 
@@ -6797,17 +6797,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: system_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: smpp_bind_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6817,17 +6817,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -6837,72 +6837,72 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext_reference
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: organisation_class_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: verification_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: verification
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: brand_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_routing_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6912,7 +6912,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :Union[List[SmsRoutingListItem], SmsRoutingList1]
+      :type: Union[List[SmsRoutingListItem], SmsRoutingList1]
 
       
 
@@ -6922,72 +6922,72 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ext_reference
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: monthly_cost_limit
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: currency_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: organisation_class_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: verification_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: verification
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: brand_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: default_sms_routing_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -6997,17 +6997,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: organisation
-      :annotation: :Optional[Organisation4]
+      :type: Optional[Organisation4]
 
       
 
@@ -7017,17 +7017,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: prefix
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: tt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7037,37 +7037,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: latitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: longitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7077,17 +7077,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: system_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: smpp_bind_status_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7097,37 +7097,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_code
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: mcc
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: iso_code
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: latitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: longitude
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7137,37 +7137,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country_name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Country5]
+      :type: Optional[Country5]
 
       
 
    .. py:attribute:: tapcodes
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: mncs
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7177,17 +7177,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: resource_provider_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7197,22 +7197,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: imsi_prefix
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: calling_party
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: called_party_tt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7222,17 +7222,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: prefix
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: tt
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -7242,42 +7242,42 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: sms_routing_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Country4]
+      :type: Optional[Country4]
 
       
 
    .. py:attribute:: smpp_bind
-      :annotation: :Optional[SmppBind2]
+      :type: Optional[SmppBind2]
 
       
 
    .. py:attribute:: operator
-      :annotation: :Optional[Operator2]
+      :type: Optional[Operator2]
 
       
 
    .. py:attribute:: msisdn_pool
-      :annotation: :Optional[MsisdnPool2]
+      :type: Optional[MsisdnPool2]
 
       
 
    .. py:attribute:: gt_config
-      :annotation: :Optional[GtConfig2]
+      :type: Optional[GtConfig2]
 
       
 
    .. py:attribute:: sccp_called_party_prefix
-      :annotation: :Optional[SccpCalledPartyPrefix2]
+      :type: Optional[SccpCalledPartyPrefix2]
 
       
 
@@ -7287,17 +7287,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: method
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: uri
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
@@ -7307,17 +7307,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: country
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -7327,32 +7327,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: secret_key
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: otpauth
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: creation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7362,12 +7362,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: code
-      :annotation: :str
+      :type: str
 
       
 
@@ -7377,12 +7377,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7392,12 +7392,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7407,22 +7407,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: operating_system
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: browser
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: activation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7432,37 +7432,37 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: creator
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -7472,17 +7472,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7492,7 +7492,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: application_token
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7502,12 +7502,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -7517,12 +7517,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7532,12 +7532,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7547,12 +7547,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7562,22 +7562,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: iccid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7587,7 +7587,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
@@ -7597,12 +7597,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7612,12 +7612,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7627,12 +7627,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7642,7 +7642,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
@@ -7652,22 +7652,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: iccid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: imsi
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7677,67 +7677,67 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: tags
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: service_profile
-      :annotation: :ServiceProfile1
+      :type: ServiceProfile1
 
       
 
    .. py:attribute:: tariff_profile
-      :annotation: :TariffProfile1
+      :type: TariffProfile1
 
       
 
    .. py:attribute:: ip_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip_address_space
-      :annotation: :Optional[IpAddressSpace1]
+      :type: Optional[IpAddressSpace1]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Optional[Sim1]
+      :type: Optional[Sim1]
 
       
 
    .. py:attribute:: imei
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: imei_lock
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[datetime.datetime]
+      :type: Optional[datetime.datetime]
 
       
 
    .. py:attribute:: status
-      :annotation: :Status5
+      :type: Status5
 
       
 
@@ -7747,72 +7747,72 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: tags
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: created
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: service_profile
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: tariff_profile
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: imei
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: imei_lock
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: ip_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: ip_address_space
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: runtime_data
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -7822,47 +7822,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: tags
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: status
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: service_profile
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: tariff_profile
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: ip_address
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: ip_address_space
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: sim
-      :annotation: :Dict[str, Any]
+      :type: Dict[str, Any]
 
       
 
    .. py:attribute:: imei
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: imei_lock
-      :annotation: :bool
+      :type: bool
 
       
 
@@ -7872,22 +7872,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: location
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: pdp_context
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: services
-      :annotation: :Optional[List[str]]
+      :type: Optional[List[str]]
 
       
 
@@ -7897,32 +7897,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: gcid_cache_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: gcid
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: create_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: lat
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: lng
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: accuracy
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7932,17 +7932,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: last_month
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: current_month
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
    .. py:attribute:: last_hour
-      :annotation: :Optional[Dict[str, Any]]
+      :type: Optional[Dict[str, Any]]
 
       
 
@@ -7952,12 +7952,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7967,12 +7967,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -7982,62 +7982,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: user_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: creation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: accept_attachment_expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: termination_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_transit_gateway_attachment_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_vpn_connection_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Status6]
+      :type: Optional[Status6]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Type2]
+      :type: Optional[Type2]
 
       
 
    .. py:attribute:: region
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8047,12 +8047,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8062,12 +8062,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8077,62 +8077,62 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: user_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: creation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: accept_attachment_expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: termination_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_transit_gateway_attachment_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_vpn_connection_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Status7]
+      :type: Optional[Status7]
 
       
 
    .. py:attribute:: type
-      :annotation: :Optional[Type3]
+      :type: Optional[Type3]
 
       
 
    .. py:attribute:: region
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8142,7 +8142,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[GetCloudConnectAttachmentsResponseItem]
+      :type: List[GetCloudConnectAttachmentsResponseItem]
 
       
 
@@ -8152,12 +8152,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8167,12 +8167,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8182,7 +8182,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[GetCloudConnectBreakoutTypesResponseItem]
+      :type: List[GetCloudConnectBreakoutTypesResponseItem]
 
       
 
@@ -8192,12 +8192,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8207,17 +8207,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: tunnel_state
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: bytes_in
-      :annotation: :Optional[Dict[str, float]]
+      :type: Optional[Dict[str, float]]
 
       
 
    .. py:attribute:: bytes_out
-      :annotation: :Optional[Dict[str, float]]
+      :type: Optional[Dict[str, float]]
 
       
 
@@ -8227,27 +8227,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: outside_address
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: inside_cidr
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: metrics
-      :annotation: :Optional[Metrics]
+      :type: Optional[Metrics]
 
       
 
    .. py:attribute:: asn
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: public_ip
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8257,67 +8257,67 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: user_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: creation_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: accept_attachment_expiry_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: termination_date
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_transit_gateway_attachment_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_vpn_connection_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: status
-      :annotation: :Optional[Status8]
+      :type: Optional[Status8]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: tunnel_information
-      :annotation: :Optional[TunnelInformation]
+      :type: Optional[TunnelInformation]
 
       
 
@@ -8327,7 +8327,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[GetCloudConnectAttachmentByIdResponseItem]
+      :type: List[GetCloudConnectAttachmentByIdResponseItem]
 
       
 
@@ -8374,7 +8374,7 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_1
-      :annotation: = 1
+      :value: 1
 
       
 
@@ -8384,32 +8384,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
-      :annotation: :Type4
+      :type: Type4
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: vpc_cidr
-      :annotation: :List[str]
+      :type: List[str]
 
       
 
    .. py:attribute:: region
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: aws_account_id
-      :annotation: :constr(regex='^\\d{12}$')
+      :type: constr(regex='^\\d{12}$')
 
       
 
@@ -8456,12 +8456,12 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_2
-      :annotation: = 2
+      :value: 2
 
       
 
    .. py:attribute:: integer_3
-      :annotation: = 3
+      :value: 3
 
       
 
@@ -8471,47 +8471,47 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
-      :annotation: :Type5
+      :type: Type5
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: region
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: public_ip
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: psk
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: asn
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: premise_cidr
-      :annotation: :List[str]
+      :type: List[str]
 
       
 
    .. py:attribute:: inside_cidr
-      :annotation: :Optional[List[str]]
+      :type: Optional[List[str]]
 
       
 
@@ -8521,7 +8521,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -8531,22 +8531,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: breakout_type_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: amount
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency8]
+      :type: Optional[Currency8]
 
       
 
@@ -8556,7 +8556,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -8566,22 +8566,22 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: breakout_type_id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
    .. py:attribute:: amount
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency9]
+      :type: Optional[Currency9]
 
       
 
@@ -8591,7 +8591,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[ListCloudConnectPricesResponseItem]
+      :type: List[ListCloudConnectPricesResponseItem]
 
       
 
@@ -8638,32 +8638,32 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: integer_1
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: integer_2
-      :annotation: = 2
+      :value: 2
 
       
 
    .. py:attribute:: integer_3
-      :annotation: = 3
+      :value: 3
 
       
 
    .. py:attribute:: integer_4
-      :annotation: = 4
+      :value: 4
 
       
 
    .. py:attribute:: integer_5
-      :annotation: = 5
+      :value: 5
 
       
 
    .. py:attribute:: integer_6
-      :annotation: = 6
+      :value: 6
 
       
 
@@ -8673,7 +8673,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[int]
+      :type: Optional[int]
 
       
 
@@ -8683,17 +8683,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: breakout_type_id
-      :annotation: :BreakoutTypeId
+      :type: BreakoutTypeId
 
       
 
    .. py:attribute:: amount
-      :annotation: :float
+      :type: float
 
       
 
    .. py:attribute:: currency
-      :annotation: :Optional[Currency10]
+      :type: Optional[Currency10]
 
       
 
@@ -8703,17 +8703,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: Id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: Name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: Description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8723,32 +8723,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_transit_gateway_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: active
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: organisation_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: region
-      :annotation: :Optional[Region]
+      :type: Optional[Region]
 
       
 
@@ -8758,7 +8758,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[GetCloudConnectTransitGatewaysResponseItem]
+      :type: List[GetCloudConnectTransitGatewaysResponseItem]
 
       
 
@@ -8768,27 +8768,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: region
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: aws_transit_gateway_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: active
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
    .. py:attribute:: organisation_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -8798,7 +8798,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: active
-      :annotation: :Optional[bool]
+      :type: Optional[bool]
 
       
 
@@ -8808,17 +8808,17 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: organisation_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: breakout_type_id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
    .. py:attribute:: organisation_name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
@@ -8828,7 +8828,7 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
-      :annotation: :List[GetCloudConnectBreakoutTypeWhitelistResponseItem]
+      :type: List[GetCloudConnectBreakoutTypeWhitelistResponseItem]
 
       
 
@@ -8838,12 +8838,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: id
-      :annotation: :Optional[float]
+      :type: Optional[float]
 
       
 
@@ -8853,32 +8853,32 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: sim_type_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: description
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: sim_manufacturer_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: sim_formfactor_id
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: memory_size
-      :annotation: :Optional[str]
+      :type: Optional[str]
 
       
 
    .. py:attribute:: formfactor
-      :annotation: :Optional[Formfactor]
+      :type: Optional[Formfactor]
 
       
 

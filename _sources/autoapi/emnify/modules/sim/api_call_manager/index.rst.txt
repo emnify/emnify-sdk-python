@@ -27,12 +27,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/sim
+      :value: '/v1/sim'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -44,17 +43,15 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/sim_batch/bic/{bic}
+      :value: '/v1/sim_batch/bic/{bic}'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 
@@ -69,17 +66,15 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/sim/{sim}
+      :value: '/v1/sim/{sim}'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 
@@ -94,12 +89,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/sim/{sim}
+      :value: '/v1/sim/{sim}'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 

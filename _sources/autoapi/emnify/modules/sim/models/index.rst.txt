@@ -29,27 +29,27 @@ Classes
    Sim list response Device  model
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: ip_address
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: created
-      :annotation: :datetime.datetime
+      :type: datetime.datetime
 
       
 
    .. py:attribute:: last_updated
-      :annotation: :datetime.datetime
+      :type: datetime.datetime
 
       
 
@@ -61,7 +61,7 @@ Classes
    BaseModel for objects with single id field
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
@@ -71,12 +71,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: description
-      :annotation: :str
+      :type: str
 
       
 
@@ -88,12 +88,12 @@ Classes
    Inherited generated model for sim list
 
    .. py:attribute:: status
-      :annotation: :SimStatus
+      :type: SimStatus
 
       
 
    .. py:attribute:: device
-      :annotation: :Optional[SimDevice]
+      :type: Optional[SimDevice]
 
       
 
@@ -105,22 +105,22 @@ Classes
    Model for sim partial update
 
    .. py:attribute:: status
-      :annotation: :SimStatus
+      :type: SimStatus
 
       
 
    .. py:attribute:: issuer_organisation
-      :annotation: :IdModel
+      :type: IdModel
 
       
 
    .. py:attribute:: reseller_organisation
-      :annotation: :IdModel
+      :type: IdModel
 
       
 
    .. py:attribute:: customer_organisation
-      :annotation: :IdModel
+      :type: IdModel
 
       
 
@@ -130,52 +130,52 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: issuer_org
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: reseller_org
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: customer_org
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: iccid
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: status
-      :annotation: :SimFilter.id
+      :type: SimFilter.id
 
       
 
    .. py:attribute:: production_date
-      :annotation: :pydantic.types.date
+      :type: pydantic.types.date
 
       
 
    .. py:attribute:: imsi
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: msisdn
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: model
-      :annotation: :int
+      :type: int
 
       
 

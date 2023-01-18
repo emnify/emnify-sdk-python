@@ -27,7 +27,7 @@ Attributes
 
 
 .. py:data:: MAIN_URL
-   :annotation: = https://cdn.emnify.net/api
+   :value: 'https://cdn.emnify.net/api'
 
    
 
@@ -36,17 +36,16 @@ Attributes
    Base manager for api calls handling
 
    .. py:attribute:: response_handlers
-      
 
       
 
    .. py:attribute:: request_url_prefix
-      :annotation: = 
+      :value: ''
 
       
 
    .. py:attribute:: request_method_name
-      :annotation: = 
+      :value: ''
 
       
 
@@ -109,17 +108,14 @@ Attributes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 

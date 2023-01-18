@@ -24,12 +24,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: tapcode
-      :annotation: :str
+      :type: str
 
       
 
@@ -39,12 +39,12 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: mnc
-      :annotation: :str
+      :type: str
 
       
 
@@ -54,27 +54,27 @@ Classes
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
-      :annotation: :int
+      :type: int
 
       
 
    .. py:attribute:: name
-      :annotation: :str
+      :type: str
 
       
 
    .. py:attribute:: country
-      :annotation: :emnify.modules.api.models.Country
+      :type: emnify.modules.api.models.Country
 
       
 
    .. py:attribute:: tapcode
-      :annotation: :List[TapCode]
+      :type: List[TapCode]
 
       
 
    .. py:attribute:: mnc
-      :annotation: :List[Mnc]
+      :type: List[Mnc]
 
       
 

@@ -32,52 +32,41 @@ Classes
 
    Manager that allows to get/retrieve/create/update/send_sms to device
 
-   .. py:method:: device_model()
-      :property:
+   .. py:property:: device_model
 
 
-   .. py:method:: list_sms_model()
-      :property:
+   .. py:property:: list_sms_model
 
 
-   .. py:method:: device_detailed_model()
-      :property:
+   .. py:property:: device_detailed_model
 
 
-   .. py:method:: sms_create_model()
-      :property:
+   .. py:property:: sms_create_model
 
 
-   .. py:method:: event_model()
-      :property:
+   .. py:property:: event_model
 
 
-   .. py:method:: status_model()
-      :property:
+   .. py:property:: status_model
 
 
-   .. py:method:: device_create_model()
-      :property:
+   .. py:property:: device_create_model
 
 
-   .. py:method:: device_update_model()
-      :property:
+   .. py:property:: device_update_model
 
 
-   .. py:method:: service_profile_model()
-      :property:
+   .. py:property:: service_profile_model
 
 
-   .. py:method:: tariff_profile_model()
-      :property:
+   .. py:property:: tariff_profile_model
 
 
-   .. py:method:: get_device_sort_enum()
-      :property:
+   .. py:property:: get_device_sort_enum
 
 
-   .. py:method:: get_device_filter_model() -> Type[emnify.modules.device.models.FilterDeviceModel]
-      :property:
+   .. py:property:: get_device_filter_model
+      :type: Type[emnify.modules.device.models.FilterDeviceModel]
 
 
    .. py:method:: get_device_sms_list(*, device: Union[emnify.modules.device.models.Device, int]) -> emnify.modules.device.models.ListSms

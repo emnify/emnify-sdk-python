@@ -36,17 +36,15 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint
+      :value: '/v1/endpoint'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 
@@ -58,12 +56,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/event
+      :value: '/v1/endpoint/{endpoint_id}/event'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -75,17 +72,15 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint
+      :value: '/v1/endpoint'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 
@@ -103,12 +98,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/sms
+      :value: '/v1/endpoint/{endpoint_id}/sms'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -120,17 +114,15 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/sms
+      :value: '/v1/endpoint/{endpoint_id}/sms'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 
@@ -142,12 +134,10 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -159,17 +149,14 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 
@@ -181,12 +168,10 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -198,12 +183,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/operator_blacklist
+      :value: '/v1/endpoint/{endpoint_id}/operator_blacklist'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -215,12 +199,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/operator_blacklist/{operator_id}
+      :value: '/v1/endpoint/{endpoint_id}/operator_blacklist/{operator_id}'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -235,12 +218,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/operator_blacklist/{operator_id}
+      :value: '/v1/endpoint/{endpoint_id}/operator_blacklist/{operator_id}'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -255,12 +237,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/connectivity
+      :value: '/v1/endpoint/{endpoint_id}/connectivity'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
@@ -272,17 +253,15 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/endpoint/{endpoint_id}/connectivity
+      :value: '/v1/endpoint/{endpoint_id}/connectivity'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 
    .. py:attribute:: response_handlers
-      
 
       
 

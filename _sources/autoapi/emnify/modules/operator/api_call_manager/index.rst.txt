@@ -24,12 +24,11 @@ Classes
    Base manager for api calls handling
 
    .. py:attribute:: request_url_prefix
-      :annotation: = /v1/operator
+      :value: '/v1/operator'
 
       
 
    .. py:attribute:: request_method_name
-      
 
       
 

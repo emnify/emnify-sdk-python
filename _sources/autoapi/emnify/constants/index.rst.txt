@@ -117,42 +117,42 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ID
-      :annotation: = id
+      :value: 'id'
 
       
 
    .. py:attribute:: STATUS
-      :annotation: = status
+      :value: 'status'
 
       
 
    .. py:attribute:: LAST_UPDATED
-      :annotation: = last_updated
+      :value: 'last_updated'
 
       
 
    .. py:attribute:: CREATED
-      :annotation: = created
+      :value: 'created'
 
       
 
    .. py:attribute:: NAME
-      :annotation: = name
+      :value: 'name'
 
       
 
    .. py:attribute:: TAGS
-      :annotation: = tags
+      :value: 'tags'
 
       
 
    .. py:attribute:: IP_ADDRESS
-      :annotation: = ip_address
+      :value: 'ip_address'
 
       
 
    .. py:attribute:: IMEI
-      :annotation: = imei
+      :value: 'imei'
 
       
 
@@ -199,7 +199,7 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ID
-      :annotation: = id
+      :value: 'id'
 
       
 
@@ -246,27 +246,27 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: GET
-      :annotation: = get
+      :value: 'get'
 
       
 
    .. py:attribute:: POST
-      :annotation: = post
+      :value: 'post'
 
       
 
    .. py:attribute:: PUT
-      :annotation: = put
+      :value: 'put'
 
       
 
    .. py:attribute:: DELETE
-      :annotation: = delete
+      :value: 'delete'
 
       
 
    .. py:attribute:: PATCH
-      :annotation: = patch
+      :value: 'patch'
 
       
 
@@ -313,7 +313,7 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: V1_AUTHENTICATE
-      :annotation: = /v1/authenticate
+      :value: '/v1/authenticate'
 
       
 
@@ -360,22 +360,22 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ACCEPT
-      :annotation: = accept
+      :value: 'accept'
 
       
 
    .. py:attribute:: AUTHORIZATION
-      :annotation: = authorization
+      :value: 'authorization'
 
       
 
    .. py:attribute:: XEmnOriginApp
-      :annotation: = x-emn-origin-app
+      :value: 'x-emn-origin-app'
 
       
 
    .. py:attribute:: XEmnOriginAppVersion
-      :annotation: = x-emn-origin-app-version
+      :value: 'x-emn-origin-app-version'
 
       
 
@@ -422,22 +422,21 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: APPLICATION_JSON
-      :annotation: = application/json
+      :value: 'application/json'
 
       
 
    .. py:attribute:: BEARER_TOKEN
-      :annotation: = Bearer {}
+      :value: 'Bearer {}'
 
       
 
    .. py:attribute:: PYTHONSDK_VERSION
-      
 
       
 
    .. py:attribute:: PYTHONSDK
-      :annotation: = PythonSDK
+      :value: 'PythonSDK'
 
       
 
@@ -484,32 +483,29 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ENABLED_ID
-      :annotation: = 0
+      :value: 0
 
       
 
    .. py:attribute:: DISABLED_ID
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: DELETED_ID
-      :annotation: = 2
+      :value: 2
 
       
 
    .. py:attribute:: ENABLED_DICT
-      
 
       
 
    .. py:attribute:: DISABLED_DICT
-      
 
       
 
    .. py:attribute:: DELETED_DICT
-      
 
       
 
@@ -556,27 +552,27 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ISSUED_ID
-      :annotation: = 0
+      :value: 0
 
       
 
    .. py:attribute:: ACTIVATED_ID
-      :annotation: = 1
+      :value: 1
 
       
 
    .. py:attribute:: SUSPENDED_ID
-      :annotation: = 2
+      :value: 2
 
       
 
    .. py:attribute:: DELETED_ID
-      :annotation: = 3
+      :value: 3
 
       
 
    .. py:attribute:: FACTORY_TEST_ID
-      :annotation: = 4
+      :value: 4
 
       
 
@@ -623,27 +619,22 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ISSUED_DICT
-      
 
       
 
    .. py:attribute:: ACTIVATED_DICT
-      
 
       
 
    .. py:attribute:: SUSPENDED_DICT
-      
 
       
 
    .. py:attribute:: DELETED_DICT
-      
 
       
 
    .. py:attribute:: FACTORY_TEST_DICT
-      
 
       
 
@@ -690,22 +681,22 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: COUNT_PER_PAGE
-      :annotation: = X-Count-Per-Page
+      :value: 'X-Count-Per-Page'
 
       
 
    .. py:attribute:: CURRENT_PAGE
-      :annotation: = X-Current-Page
+      :value: 'X-Current-Page'
 
       
 
    .. py:attribute:: TOTAL_PAGES
-      :annotation: = X-Total-Pages
+      :value: 'X-Total-Pages'
 
       
 
    .. py:attribute:: TOTAL_COUNT
-      :annotation: = X-Total-Count
+      :value: 'X-Total-Count'
 
       
 
@@ -752,47 +743,47 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: id
-      :annotation: = ID
+      :value: 'ID'
 
       
 
    .. py:attribute:: issuer_org
-      :annotation: = ISSUER_ORG
+      :value: 'ISSUER_ORG'
 
       
 
    .. py:attribute:: reseller_org
-      :annotation: = RESELLER_ORG
+      :value: 'RESELLER_ORG'
 
       
 
    .. py:attribute:: customer_org
-      :annotation: = CUSTOMER_PRG
+      :value: 'CUSTOMER_PRG'
 
       
 
    .. py:attribute:: iccid
-      :annotation: = ICCID
+      :value: 'ICCID'
 
       
 
    .. py:attribute:: status
-      :annotation: = STATUS
+      :value: 'STATUS'
 
       
 
    .. py:attribute:: production_date
-      :annotation: = PRODUCTION_DATE
+      :value: 'PRODUCTION_DATE'
 
       
 
    .. py:attribute:: endpoint
-      :annotation: = ENDPOINT
+      :value: 'ENDPOINT'
 
       
 
    .. py:attribute:: model
-      :annotation: = MODEL
+      :value: 'MODEL'
 
       
 
@@ -839,7 +830,7 @@ Classes
    attributes -- see the documentation for details.
 
    .. py:attribute:: ENDPOINT_IN_URL
-      :annotation: = /v1/endpoint/{endpoint_id}
+      :value: '/v1/endpoint/{endpoint_id}'
 
       
 
