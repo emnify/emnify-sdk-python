@@ -1,4 +1,4 @@
-# EMnify Python SDK
+# emnify Python SDK
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=EMnify_emnify-sdk-python&metric=reliability_rating&token=cb362b064422f10be97244bb527b8bc37e1378b4)](https://sonarcloud.io/summary/new_code?id=EMnify_emnify-sdk-python)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=EMnify_emnify-sdk-python&metric=coverage&token=cb362b064422f10be97244bb527b8bc37e1378b4)](https://sonarcloud.io/summary/new_code?id=EMnify_emnify-sdk-python)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=EMnify_emnify-sdk-python&metric=sqale_rating&token=cb362b064422f10be97244bb527b8bc37e1378b4)](https://sonarcloud.io/summary/new_code?id=EMnify_emnify-sdk-python)
@@ -6,28 +6,43 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=EMnify_emnify-sdk-python&metric=bugs&token=cb362b064422f10be97244bb527b8bc37e1378b4)](https://sonarcloud.io/summary/new_code?id=EMnify_emnify-sdk-python)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=EMnify_emnify-sdk-python&metric=vulnerabilities&token=cb362b064422f10be97244bb527b8bc37e1378b4)](https://sonarcloud.io/summary/new_code?id=EMnify_emnify-sdk-python)
 
-Supply your swarm of IoT Devices with cloud connectivity by [EMnify](https://emnify.com).
+Supply your swarm of IoT devices with cloud connectivity by [emnify](https://emnify.com).
 Automate your routines with this SDK for Python.  
 
 ## Installation
 
-`Python > 3.6` is **required**.
+### Prerequisites
 
-- Install from source
+- Python ([version 3.6.0](https://www.python.org/downloads/release/python-360/) or higher)
+
+### Install from source
+
 ```shell
-git clone https://github.com/emnify-python-sdk.git emnify-sdk
-cd emnify-sdk
+git clone https://github.com/emnify/emnify-sdk-python.git
+cd emnify-sdk-python
 python setup.py install
 ```
-- or install with pip
+
+### Install with pip
+
+The emnify Python SDK is also available on [PyPI as `emnify-sdk`](https://pypi.org/project/emnify-sdk/):
+
 ```shell
 pip install emnify-sdk
 ```
 
 ## Documentation
 
-Documentation is available on the [EMnify Python SDK docs site](https://emnify.github.io/emnify-sdk-python/).
+Read more about working with the Python SDK and the underlying concepts in the [emnify product documentation](https://docs.emnify.com/sdks/python).
 
-## Getting Help and Contribute
+## Contributing
 
-Visit [Help Section](https://emnify.github.io/emnify-sdk-python/help.html).
+If you've found a bug or would like to add new features, [open an issue](https://github.com/emnify/emnify-sdk-python/issues/new) or [create a pull request](https://github.com/emnify/emnify-sdk-python/pulls) to this Github repository.
+
+See our [development guide](./DEVELOPMENT.md) for how to get started.
+
+Please note that this project is governed by [emnify's Code of Conduct](https://github.com/emnify/.github/blob/main/CODE_OF_CONDUCT.md). By participating, you agree to abide by its terms.
+
+## Get support
+
+If you need help using our services, please [file a support ticket](https://support.emnify.com/hc/en-us/requests/new).
