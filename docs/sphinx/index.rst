@@ -1,9 +1,5 @@
-Welcome to EMnify SDK Documentation for Python
+Welcome to emnify SDK Documentation for Python
 ==============================================
-
-.. image:: ../logo.svg
-    :align: center
-    :height: 200px
 
 Explore
 -------
@@ -11,6 +7,6 @@ Explore
 .. toctree::
     :maxdepth: 3
 
-    Developers Hub<https://www.emnify.com/developers/documentation>
+    Product Documentation<https://docs.emnify.com/>
     Enterprise Portal<https://portal.emnify.com>
-    Github<https://github.com/EMnify/emnify-sdk-python>
+    GitHub<https://github.com/EMnify/emnify-sdk-python>
