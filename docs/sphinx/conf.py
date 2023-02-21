@@ -5,10 +5,7 @@ copyright = "2023 emnify GmbH. All rights reserved."
 project = "emnify Python SDK"
 
 html_baseurl = '/autoapi/'
-html_theme_options = {
-    "light_logo": "logo-dark.svg",
-    "dark_logo": "logo-light.svg",
-}
+html_logo = '../logo.svg'
 html_favicon = '../favicon.ico'
 autoapi_type = 'python'
 autoapi_dirs = ['../../emnify']
