@@ -8,7 +8,7 @@ Module Contents
 ---------------
 
 .. py:data:: EMNIFY_PACKAGE_VERSION
-   :value: '0.2.10'
+   :value: '0.2.11'
 
    
 
