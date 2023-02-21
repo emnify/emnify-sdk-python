@@ -35,9 +35,18 @@ pip install emnify-sdk
 
 Read more about working with the Python SDK and the underlying concepts in the [emnify product documentation](https://docs.emnify.com/sdks/python).
 
+### API reference
+
+We use [sphinx-autoapi](https://github.com/readthedocs/sphinx-autoapi) to auto-generate the API reference documentation within this repository. 
+This documentation is hosted separately on [GitHub Pages](https://emnify.github.io/emnify-sdk-python/autoapi/index.html). 
+
+> 🗺️ _Note: We plan to eventually migrate the API reference documentation into our [product documentation platform](https://docs.emnify.com/)._
+
+See our [documentation guide](./docs/README.md) if you're interested in contributing to the API reference or running the documentation locally.
+
 ## Contributing
 
-If you've found a bug or would like to add new features, [open an issue](https://github.com/emnify/emnify-sdk-python/issues/new) or [create a pull request](https://github.com/emnify/emnify-sdk-python/pulls) to this Github repository.
+If you've found a bug or want to add new features, [open an issue](https://github.com/emnify/emnify-sdk-python/issues/new) or [create a pull request](https://github.com/emnify/emnify-sdk-python/pulls) to this GitHub repository.
 
 See our [development guide](./DEVELOPMENT.md) for how to get started.
 
