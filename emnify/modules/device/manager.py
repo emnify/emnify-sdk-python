@@ -209,9 +209,15 @@ class DeviceManager:
             enable: bool = None, disable: bool = None
     ) -> None:
         """
-        :param device: id or device model for update
-        :param enable: boolean parameter for enable a Device
-        :param disable: boolean parameter for disable a Device
+        Change the status of a device and assigned SIM to enabled or disabled.
+
+        :param device: The ID or device model to update.
+        :type device: Union[UpdateDevice, Device, RetrieveDevice, int]
+        :param enable: Whether to enable the device.
+        :type enable: bool
+        :param disable: Whether to disable the device.
+        :type disable: bool
+        :raises ValidationErrorException: If neither `enable` nor `disable` is provided, or if both are provided.
         """
         if not (enable or disable) or (enable and disable):
             raise emnify_errors.ValidationErrorException('"enable" or "disable" arguments must be provided ')
