@@ -115,24 +115,6 @@ class SimManager:
             path_params={'sim': sim_id}
         )
 
-    def issue_sim(self, sim_id: int):
-        """
-        .. deprecated:: 0.2.13
-           Use :func:`suspend_sim` instead.
-
-
-        It's impossible to put the SIM back to issued state.
-        Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
-        This method is deprecated and will be removed in a future version of the SDK.
-        """
-        import warnings
-        warnings.warn("issue_sim() is deprecated and will be removed in a future version of the SDK.", DeprecationWarning)
-        return SimUpdateApi() \
-            .call_api(
-            client=self.client, data={'status': emnify_const.SimStatusesDict.ISSUED_DICT.value},
-            path_params={'sim': sim_id}
-        )
-
     @staticmethod
     def __transform_sim_filter_params(
             filter_model: sim_models.SimFilter = None,
