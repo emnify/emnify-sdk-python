@@ -1,5 +1,12 @@
-import os
+# This example is made for local debug purposes.
+# It's designed to work out of docker developemnt environment
+# Read more in DEVELOPMENT.md
 
+import os
+import sys
+
+# Add the path to the module to the Python path, below it's set to Docker workdir
+sys.path.append('/sdk')
 # Import package
 from emnify import EMnify
 
