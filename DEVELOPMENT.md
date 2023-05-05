@@ -18,11 +18,15 @@ docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-un
 ```
 
 ### Local debug example
-In order to perform debug locally, there is an example file provided that can serve for your sandbox experience.
+To perform local debugging, we provide an example file located at `docs/examples/local_debug.py`.
+To set up your sandbox, modify the code in this file as needed.
+> ⚠️ **Please be careful about placing any sensitive information in the file!**
 
+Once your sandbox is set up, you can launch the file and view the results.
 ```shell
 docker run -t -e EMNIFY_APPLICATION_TOKEN=<your_token_here> -v $(pwd):/sdk emnify/python-sdk python docs/examples/local_debug.py
 ```
+
 ## Version Bump
 
 ```shell

@@ -1,6 +1,5 @@
-# This example is made for local debug purposes.
-# It's designed to work out of docker developemnt environment
-# Read more in DEVELOPMENT.md
+# This example is intended for local debugging purposes and is designed to work inside the Docker development environment.
+# For more information, please refer to the DEVELOPMENT.md file.
 
 import os
 import sys
