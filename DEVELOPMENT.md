@@ -13,7 +13,18 @@ Run a command:
 # [command] - command to run, e.g. pytest
 # [...args] - command arguments
 
+# Run unit tests
 docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-under=90
+```
+
+### Local debug example
+To perform local debugging, we provide an example file located at `docs/examples/local_debug.py`.
+To set up your sandbox, modify the code in this file as needed.
+> ⚠️ **Please be careful about placing any sensitive information in the file!**
+
+Once your sandbox is set up, you can launch the file and view the results.
+```shell
+docker run -t -e EMNIFY_APPLICATION_TOKEN=<your_token_here> -v $(pwd):/sdk emnify/python-sdk python docs/examples/local_debug.py
 ```
 
 ## Version Bump
