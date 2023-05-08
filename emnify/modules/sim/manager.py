@@ -6,23 +6,41 @@ from emnify import constants as emnify_const
 
 
 class SimManager:
+    """
+    Provides methods for interacting with SIM cards using the EMnify API.
+
+    Args:
+        client: An instance of the EMnify class used for making API requests.
+    """
     def __init__(self, client):
         self.client = client
 
     @property
     def get_sim_list_model(self):
+        """
+        Returns the model for the SIM list.
+        """
         return sim_models.SimList
 
     @property
     def get_sim_update_model(self):
+        """
+        Returns the model for updating SIM cards.
+        """
         return sim_models.SimUpdate
 
     @property
     def get_sim_filter_model(self):
+        """
+        Returns the model for filtering SIM cards.
+        """
         return sim_models.SimFilter
 
     @property
     def get_sim_sort_enum(self):
+        """
+        Returns sim sorting options.
+        """
         return emnify_const.SimSort
 
     def get_sim_list(
@@ -73,7 +91,9 @@ class SimManager:
 
     def activate_sim(self, sim_id: int):
         """
-        Method for activating sim - changing status to 'active'
+        Activates `suspended` or `issued` SIM.
+        If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
+        Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
         :param sim_id: int of sim to update
         """
         return SimUpdateApi() \
@@ -84,8 +104,10 @@ class SimManager:
 
     def suspend_sim(self, sim_id: int):
         """
-        Method for activating sim - changing status to 'active'
-        :param sim_id: int of sim to update
+        Puts the `active` SIM to `suspended` state.
+        If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
+        Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
+        :param sim_id: id of sim to update
         """
         return SimUpdateApi() \
             .call_api(
@@ -95,9 +117,16 @@ class SimManager:
 
     def issue_sim(self, sim_id: int):
         """
-        Method for activating sim - changing status to 'active'
-        :param sim_id: int of sim to update
+        .. deprecated:: 0.2.13
+           Use :func:`suspend_sim` instead.
+
+
+        It's impossible to put the SIM back to issued state.
+        Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
+        This method is deprecated and will be removed in a future version of the SDK.
         """
+        import warnings
+        warnings.warn("issue_sim() is deprecated and will be removed in a future version of the SDK.", DeprecationWarning)
         return SimUpdateApi() \
             .call_api(
             client=self.client, data={'status': emnify_const.SimStatusesDict.ISSUED_DICT.value},
