@@ -451,13 +451,17 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.device.DeviceManager.change_status">
 <span class="sig-name descname"><span class="pre">change_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="models/index.html#emnify.modules.device.models.UpdateDevice" title="emnify.modules.device.models.UpdateDevice"><span class="pre">emnify.modules.device.models.UpdateDevice</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><span class="pre">emnify.modules.device.models.Device</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="models/index.html#emnify.modules.device.models.RetrieveDevice" title="emnify.modules.device.models.RetrieveDevice"><span class="pre">emnify.modules.device.models.RetrieveDevice</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#emnify.modules.device.DeviceManager.change_status" title="Permalink to this definition">#</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Change the status of a device and assigned SIM to enabled or disabled.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>device</strong> – id or device model for update</p></li>
-<li><p><strong>enable</strong> – boolean parameter for enable a Device</p></li>
-<li><p><strong>disable</strong> – boolean parameter for disable a Device</p></li>
+<li><p><strong>device</strong> (<em>Union</em><em>[</em><a class="reference internal" href="api_call_manager/index.html#emnify.modules.device.api_call_manager.UpdateDevice" title="emnify.modules.device.api_call_manager.UpdateDevice"><em>UpdateDevice</em></a><em>, </em><a class="reference internal" href="models/index.html#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><em>Device</em></a><em>, </em><a class="reference internal" href="api_call_manager/index.html#emnify.modules.device.api_call_manager.RetrieveDevice" title="emnify.modules.device.api_call_manager.RetrieveDevice"><em>RetrieveDevice</em></a><em>, </em><em>int</em><em>]</em>) – The ID or device model to update.</p></li>
+<li><p><strong>enable</strong> (<em>bool</em>) – Whether to enable the device.</p></li>
+<li><p><strong>disable</strong> (<em>bool</em>) – Whether to disable the device.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../errors/index.html#emnify.errors.ValidationErrorException" title="emnify.errors.ValidationErrorException"><strong>ValidationErrorException</strong></a> – If neither <cite>enable</cite> nor <cite>disable</cite> is provided, or if both are provided.</p>
 </dd>
 </dl>
 </dd></dl>
