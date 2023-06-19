@@ -41,6 +41,7 @@ Classes
 
 .. py:class:: EMnify(app_token=None)
 
+
    Bases: :py:obj:`object`
 
    base SDK class

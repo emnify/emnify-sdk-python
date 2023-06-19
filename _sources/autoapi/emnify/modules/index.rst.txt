@@ -31,6 +31,7 @@ Classes
 
 .. py:class:: DeviceManager(client)
 
+
    Manager that allows to get/retrieve/create/update/send_sms to device
 
    .. py:property:: device_model

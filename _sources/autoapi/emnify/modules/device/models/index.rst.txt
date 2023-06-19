@@ -34,6 +34,7 @@ Classes
 
 .. py:class:: SimDevice
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -48,6 +49,7 @@ Classes
 
 
 .. py:class:: Device
+
 
    Bases: :py:obj:`emnify.modules.api.models.Endpoint`
 
@@ -66,6 +68,7 @@ Classes
 
 .. py:class:: CreateDevice
 
+
    Bases: :py:obj:`Device`
 
    Custom class for validation of Device on creation
@@ -76,6 +79,7 @@ Classes
 
 
 .. py:class:: SmsCreateModel
+
 
    Bases: :py:obj:`emnify.modules.api.models.SubmitMTSMSrequest`
 
@@ -109,12 +113,14 @@ Classes
 
 .. py:class:: ListSms
 
+
    Bases: :py:obj:`emnify.modules.api.models.RetrieveEventsresponse5`
 
    Renamed generated model
 
 
 .. py:class:: TariffProfile
+
 
    Bases: :py:obj:`emnify.modules.api.models.TariffProfile1`
 
@@ -123,6 +129,7 @@ Classes
 
 .. py:class:: ServiceProfile
 
+
    Bases: :py:obj:`emnify.modules.api.models.ServiceProfile1`
 
    Renamed generated model
@@ -130,12 +137,14 @@ Classes
 
 .. py:class:: DeviceStatus
 
+
    Bases: :py:obj:`emnify.modules.api.models.Status`
 
    Renamed generated model
 
 
 .. py:class:: DeviceIdRequired
+
 
    Bases: :py:obj:`Device`
 
@@ -148,6 +157,7 @@ Classes
 
 
 .. py:class:: FilterDeviceModel
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -196,6 +206,7 @@ Classes
 
 .. py:class:: ListQFilterDeviceListModel
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -206,11 +217,13 @@ Classes
 
 .. py:class:: GetDeviceFilterSet
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    Model for device list query params
 
    .. py:class:: Config
+
 
       .. py:attribute:: use_enum_values
          :value: True
@@ -231,12 +244,14 @@ Classes
 
 .. py:class:: DeviceEvent
 
+
    Bases: :py:obj:`emnify.modules.api.models.Event`
 
    class inherited from generated Event
 
 
 .. py:class:: RetrieveDevice
+
 
    Bases: :py:obj:`Device`
 
@@ -254,6 +269,7 @@ Classes
 
 
 .. py:class:: UpdateDevice
+
 
    Bases: :py:obj:`emnify.modules.api.models.UpdateEndpointrequest`
 
@@ -311,6 +327,7 @@ Classes
 
 
 .. py:class:: DeviceConnectivityStatus
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 

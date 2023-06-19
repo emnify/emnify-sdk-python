@@ -31,6 +31,7 @@ Classes
 
 .. py:class:: ExtendedEnum(*args, **kwds)
 
+
    Bases: :py:obj:`enum.Enum`
 
    Create a collection of name/value pairs.
@@ -76,6 +77,7 @@ Classes
 
 
 .. py:class:: DeviceSort(*args, **kwds)
+
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -159,6 +161,7 @@ Classes
 
 .. py:class:: IdValues(*args, **kwds)
 
+
    Bases: :py:obj:`ExtendedEnum`
 
    Create a collection of name/value pairs.
@@ -205,6 +208,7 @@ Classes
 
 
 .. py:class:: RequestsType(*args, **kwds)
+
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -273,6 +277,7 @@ Classes
 
 .. py:class:: AuthenticateRequestsUrl(*args, **kwds)
 
+
    Bases: :py:obj:`ExtendedEnum`
 
    Create a collection of name/value pairs.
@@ -319,6 +324,7 @@ Classes
 
 
 .. py:class:: RequestDefaultHeadersKeys(*args, **kwds)
+
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -382,6 +388,7 @@ Classes
 
 .. py:class:: RequestDefaultHeadersValues(*args, **kwds)
 
+
    Bases: :py:obj:`ExtendedEnum`
 
    Create a collection of name/value pairs.
@@ -442,6 +449,7 @@ Classes
 
 
 .. py:class:: DeviceStatuses(*args, **kwds)
+
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -512,6 +520,7 @@ Classes
 
 .. py:class:: SimStatusesID(*args, **kwds)
 
+
    Bases: :py:obj:`ExtendedEnum`
 
    Create a collection of name/value pairs.
@@ -579,6 +588,7 @@ Classes
 
 .. py:class:: SimStatusesDict(*args, **kwds)
 
+
    Bases: :py:obj:`ExtendedEnum`
 
    Create a collection of name/value pairs.
@@ -641,6 +651,7 @@ Classes
 
 .. py:class:: ResponseHeaders(*args, **kwds)
 
+
    Bases: :py:obj:`ExtendedEnum`
 
    Create a collection of name/value pairs.
@@ -702,6 +713,7 @@ Classes
 
 
 .. py:class:: SimSort(*args, **kwds)
+
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -789,6 +801,7 @@ Classes
 
 
 .. py:class:: RequestUrls(*args, **kwds)
+
 
    Bases: :py:obj:`ExtendedEnum`
 

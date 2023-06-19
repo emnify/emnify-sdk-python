@@ -301,6 +301,7 @@ Classes
 
 .. py:class:: Authentication
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: application_token
@@ -326,6 +327,7 @@ Classes
 
 .. py:class:: AuthenticationResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: auth_token
@@ -340,6 +342,7 @@ Classes
 
 
 .. py:class:: Auth404Response
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -361,6 +364,7 @@ Classes
 
 .. py:class:: Field40xResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: error_code
@@ -381,6 +385,7 @@ Classes
 
 .. py:class:: ChangeQuota422Response
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: message
@@ -390,6 +395,7 @@ Classes
 
 
 .. py:class:: Status
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -406,6 +412,7 @@ Classes
 
 .. py:class:: Type
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -420,6 +427,7 @@ Classes
 
 
 .. py:class:: CreateMFAResponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -456,6 +464,7 @@ Classes
 
 .. py:class:: Status1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -471,6 +480,7 @@ Classes
 
 .. py:class:: ActivateMFAKeyRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
@@ -480,6 +490,7 @@ Classes
 
 
 .. py:class:: Country
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -521,6 +532,7 @@ Classes
 
 .. py:class:: Error
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -536,6 +548,7 @@ Classes
 
 .. py:class:: SimpleError
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: message
@@ -545,6 +558,7 @@ Classes
 
 
 .. py:class:: APICallback
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -576,6 +590,7 @@ Classes
 
 .. py:class:: CallbackSecret
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: organisation_id
@@ -596,6 +611,7 @@ Classes
 
 .. py:class:: ApiType
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -611,6 +627,7 @@ Classes
 
 .. py:class:: DataStreamType
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -625,6 +642,7 @@ Classes
 
 
 .. py:class:: DataStream
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -681,6 +699,7 @@ Classes
 
 .. py:class:: DataStreamType1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -695,6 +714,7 @@ Classes
 
 
 .. py:class:: ApiType1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -735,6 +755,7 @@ Classes
 
 
 .. py:class:: ApiCallback
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -791,6 +812,7 @@ Classes
 
 .. py:class:: CreateDataStream
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: stream_historic_data
@@ -836,6 +858,7 @@ Classes
 
 .. py:class:: TrafficType
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -856,6 +879,7 @@ Classes
 
 .. py:class:: Currency
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -875,6 +899,7 @@ Classes
 
 
 .. py:class:: Data
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -941,6 +966,7 @@ Classes
 
 .. py:class:: TrafficType1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -961,6 +987,7 @@ Classes
 
 .. py:class:: Currency1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -980,6 +1007,7 @@ Classes
 
 
 .. py:class:: Sms
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1046,6 +1074,7 @@ Classes
 
 .. py:class:: LastMonth
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: data
@@ -1060,6 +1089,7 @@ Classes
 
 
 .. py:class:: SIMStatsResponseObject
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1081,6 +1111,7 @@ Classes
 
 .. py:class:: TrafficType2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -1101,6 +1132,7 @@ Classes
 
 .. py:class:: Currency2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -1120,6 +1152,7 @@ Classes
 
 
 .. py:class:: Sms1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1186,6 +1219,7 @@ Classes
 
 .. py:class:: StatsResponseObject
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: date
@@ -1205,6 +1239,7 @@ Classes
 
 
 .. py:class:: TrafficType3
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1226,6 +1261,7 @@ Classes
 
 .. py:class:: Currency3
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -1245,6 +1281,7 @@ Classes
 
 
 .. py:class:: Data1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1311,6 +1348,7 @@ Classes
 
 .. py:class:: TrafficType4
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -1331,6 +1369,7 @@ Classes
 
 .. py:class:: Currency4
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -1350,6 +1389,7 @@ Classes
 
 
 .. py:class:: Sms2
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1416,6 +1456,7 @@ Classes
 
 .. py:class:: SIMStatsDataObject
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: data
@@ -1430,6 +1471,7 @@ Classes
 
 
 .. py:class:: TrafficType5
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1451,6 +1493,7 @@ Classes
 
 .. py:class:: Currency5
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: code
@@ -1470,6 +1513,7 @@ Classes
 
 
 .. py:class:: TrafficStatsObject
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1536,6 +1580,7 @@ Classes
 
 .. py:class:: TrafficTypeObject
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -1555,6 +1600,7 @@ Classes
 
 
 .. py:class:: CurrencyObject
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1576,6 +1622,7 @@ Classes
 
 .. py:class:: TrafficType6
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -1595,6 +1642,7 @@ Classes
 
 
 .. py:class:: Data2
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1631,6 +1679,7 @@ Classes
 
 .. py:class:: TrafficType7
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -1650,6 +1699,7 @@ Classes
 
 
 .. py:class:: Sms3
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1686,6 +1736,7 @@ Classes
 
 .. py:class:: StatsObjectItem
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: date
@@ -1706,6 +1757,7 @@ Classes
 
 .. py:class:: StatsObject
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -1715,6 +1767,7 @@ Classes
 
 
 .. py:class:: TrafficType8
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1735,6 +1788,7 @@ Classes
 
 
 .. py:class:: VolumeObject
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1770,6 +1824,7 @@ Classes
 
 
 .. py:class:: Country1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1811,6 +1866,7 @@ Classes
 
 .. py:class:: SmppBind
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: system_id
@@ -1830,6 +1886,7 @@ Classes
 
 
 .. py:class:: Country2
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1871,6 +1928,7 @@ Classes
 
 .. py:class:: Operator
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country_id
@@ -1911,6 +1969,7 @@ Classes
 
 .. py:class:: MsisdnPool
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: resource_provider_id
@@ -1930,6 +1989,7 @@ Classes
 
 
 .. py:class:: GtConfig
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -1956,6 +2016,7 @@ Classes
 
 .. py:class:: SccpCalledPartyPrefix
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: prefix
@@ -1975,6 +2036,7 @@ Classes
 
 
 .. py:class:: SmsRoutingData
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -2021,6 +2083,7 @@ Classes
 
 .. py:class:: RatType
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -2035,6 +2098,7 @@ Classes
 
 
 .. py:class:: ListofSMSresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -2156,6 +2220,7 @@ Classes
 
 .. py:class:: SubmitMTSMSrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: source_address
@@ -2170,6 +2235,7 @@ Classes
 
 
 .. py:class:: GetdetailsofSMSresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -2291,6 +2357,7 @@ Classes
 
 .. py:class:: RetrieveConnectivityInformationresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: ussd_info
@@ -2316,6 +2383,7 @@ Classes
 
 .. py:class:: OperatorPatchRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -2326,6 +2394,7 @@ Classes
 
 .. py:class:: OperatorDataPostRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -2335,6 +2404,7 @@ Classes
 
 
 .. py:class:: RetrieveOperatorBlacklistresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -2366,6 +2436,7 @@ Classes
 
 .. py:class:: RetrievePrepaidBalanceresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: amount
@@ -2391,6 +2462,7 @@ Classes
 
 .. py:class:: UpdatePrepaidBalanceresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: amount
@@ -2410,6 +2482,7 @@ Classes
 
 
 .. py:class:: Description(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2468,6 +2541,7 @@ Classes
 
 .. py:class:: Id(*args, **kwds)
 
+
    Bases: :py:obj:`enum.Enum`
 
    Create a collection of name/value pairs.
@@ -2525,6 +2599,7 @@ Classes
 
 .. py:class:: Status2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -2539,6 +2614,7 @@ Classes
 
 
 .. py:class:: Id1(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2592,6 +2668,7 @@ Classes
 
 .. py:class:: Description1(*args, **kwds)
 
+
    Bases: :py:obj:`enum.Enum`
 
    Create a collection of name/value pairs.
@@ -2644,6 +2721,7 @@ Classes
 
 .. py:class:: ActionOnExhaustion
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -2663,6 +2741,7 @@ Classes
 
 
 .. py:class:: EndpointQuota
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -2719,6 +2798,7 @@ Classes
 
 .. py:class:: ThrottleCutoffVolume
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -2733,6 +2813,7 @@ Classes
 
 
 .. py:class:: Id2(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2786,6 +2867,7 @@ Classes
 
 .. py:class:: Description2(*args, **kwds)
 
+
    Bases: :py:obj:`enum.Enum`
 
    Create a collection of name/value pairs.
@@ -2838,6 +2920,7 @@ Classes
 
 .. py:class:: ActionOnExhaustion1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -2857,6 +2940,7 @@ Classes
 
 
 .. py:class:: Description3(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2915,6 +2999,7 @@ Classes
 
 .. py:class:: Id3(*args, **kwds)
 
+
    Bases: :py:obj:`enum.Enum`
 
    Create a collection of name/value pairs.
@@ -2972,6 +3057,7 @@ Classes
 
 .. py:class:: QuotaStatus
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -2986,6 +3072,7 @@ Classes
 
 
 .. py:class:: SMSQuota
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3036,6 +3123,7 @@ Classes
 
 
 .. py:class:: RetrieveEventsresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3097,6 +3185,7 @@ Classes
 
 .. py:class:: StartingaUSSDDialogrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: ussd_begin
@@ -3107,6 +3196,7 @@ Classes
 
 .. py:class:: StartingaUSSDDialogresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: session_id
@@ -3116,6 +3206,7 @@ Classes
 
 
 .. py:class:: RetrieveOrganisationListresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3182,6 +3273,7 @@ Classes
 
 .. py:class:: CreateanOrganisationrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -3241,6 +3333,7 @@ Classes
 
 
 .. py:class:: RetrieveaSingleOrganisationresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3307,6 +3400,7 @@ Classes
 
 .. py:class:: UpdateOrganisationrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -3362,6 +3456,7 @@ Classes
 
 .. py:class:: RetrieveOrganisationStatusesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -3376,6 +3471,7 @@ Classes
 
 
 .. py:class:: RetrieveAvailableOrganisationTypesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3392,6 +3488,7 @@ Classes
 
 .. py:class:: RetrieveAvailableOrganisationRelationTypesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -3407,6 +3504,7 @@ Classes
 
 .. py:class:: RetrieveAvailableOrganisationVerificationTypesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -3421,6 +3519,7 @@ Classes
 
 
 .. py:class:: RetrieveContactsforanOrganisationresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3502,6 +3601,7 @@ Classes
 
 .. py:class:: CreateaContactforanOrganisationrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
@@ -3571,6 +3671,7 @@ Classes
 
 
 .. py:class:: RetrieveaSingleContactresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3652,6 +3753,7 @@ Classes
 
 .. py:class:: UpdateaSingleContactresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
@@ -3711,6 +3813,7 @@ Classes
 
 
 .. py:class:: Retrievelistofassignedtariffsforanorganisationresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3807,6 +3910,7 @@ Classes
 
 .. py:class:: RetrieveBillingPeriodsresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -3822,6 +3926,7 @@ Classes
 
 .. py:class:: RetrieveBillingDataByPeriodResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -3831,6 +3936,7 @@ Classes
 
 
 .. py:class:: RetrieveSIMlistresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -3897,6 +4003,7 @@ Classes
 
 .. py:class:: SIMResource
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -3962,6 +4069,7 @@ Classes
 
 .. py:class:: UpdateSIMrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: issuer_org
@@ -3987,6 +4095,7 @@ Classes
 
 .. py:class:: ListofAllAvailableSIMStatusesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -4001,6 +4110,7 @@ Classes
 
 
 .. py:class:: ListofIMSIsresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4042,6 +4152,7 @@ Classes
 
 .. py:class:: RetrieveIMSIByIDresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -4082,6 +4193,7 @@ Classes
 
 .. py:class:: UpdateIMSIrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
@@ -4091,6 +4203,7 @@ Classes
 
 
 .. py:class:: ListofallavailableIMSIstatusesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4106,6 +4219,7 @@ Classes
 
 
 .. py:class:: ListofTariffsresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4212,6 +4326,7 @@ Classes
 
 .. py:class:: CreateTariffrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -4287,6 +4402,7 @@ Classes
 
 .. py:class:: TariffCategory
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -4306,6 +4422,7 @@ Classes
 
 
 .. py:class:: RetrieveTariffresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4422,6 +4539,7 @@ Classes
 
 .. py:class:: PatchTariffrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -4502,6 +4620,7 @@ Classes
 
 .. py:class:: ListofavailableTariffstatusesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -4516,6 +4635,7 @@ Classes
 
 
 .. py:class:: ListofRatezonesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4557,6 +4677,7 @@ Classes
 
 .. py:class:: AddRatezonetoTariffrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -4576,6 +4697,7 @@ Classes
 
 
 .. py:class:: PatchRatezonerequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4602,6 +4724,7 @@ Classes
 
 .. py:class:: Listofavailableratezonestatusesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -4616,6 +4739,7 @@ Classes
 
 
 .. py:class:: AddRatetoaRatezonerequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4652,6 +4776,7 @@ Classes
 
 .. py:class:: UpdateRateofaRatezonerequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: valid_from
@@ -4666,6 +4791,7 @@ Classes
 
 
 .. py:class:: ListofTariffProfilesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4697,6 +4823,7 @@ Classes
 
 .. py:class:: CreateTariffProfilerequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -4716,6 +4843,7 @@ Classes
 
 
 .. py:class:: RetrieveTariffProfileresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4752,6 +4880,7 @@ Classes
 
 .. py:class:: PatchTariffProfilerequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -4772,6 +4901,7 @@ Classes
 
 .. py:class:: RetrieveCoverageresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country
@@ -4786,6 +4916,7 @@ Classes
 
 
 .. py:class:: Retrievesingleselectionsresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4826,6 +4957,7 @@ Classes
 
 
 .. py:class:: RetrieveServiceProfileListresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4876,6 +5008,7 @@ Classes
 
 
 .. py:class:: CreateaServiceProfilerequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -4971,6 +5104,7 @@ Classes
 
 
 .. py:class:: RetrieveaSingleServiceProfileresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5077,6 +5211,7 @@ Classes
 
 .. py:class:: UpdateServiceProfilerequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -5172,6 +5307,7 @@ Classes
 
 .. py:class:: RetrieveAvailableServicesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5207,6 +5343,7 @@ Classes
 
 .. py:class:: RetrieveavailableTrafficLimitsresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5232,6 +5369,7 @@ Classes
 
 .. py:class:: CreateTrafficLimitrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: service
@@ -5251,6 +5389,7 @@ Classes
 
 
 .. py:class:: Period
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5272,6 +5411,7 @@ Classes
 
 .. py:class:: ServiceTrafficLimitsResponseItem
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5292,6 +5432,7 @@ Classes
 
 .. py:class:: ServiceTrafficLimitsResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -5301,6 +5442,7 @@ Classes
 
 
 .. py:class:: RetrieveDNSlistresponseItem
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5327,6 +5469,7 @@ Classes
 
 .. py:class:: RetrieveDNSlistresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -5336,6 +5479,7 @@ Classes
 
 
 .. py:class:: CreateaDNSentryrequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5357,6 +5501,7 @@ Classes
 
 .. py:class:: Status3
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5372,6 +5517,7 @@ Classes
 
 .. py:class:: Organisation
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5386,6 +5532,7 @@ Classes
 
 
 .. py:class:: User
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5422,6 +5569,7 @@ Classes
 
 .. py:class:: CreateUserrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: username
@@ -5446,6 +5594,7 @@ Classes
 
 
 .. py:class:: RetrievetheUserresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5492,6 +5641,7 @@ Classes
 
 .. py:class:: UpdateUserrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: username
@@ -5511,6 +5661,7 @@ Classes
 
 
 .. py:class:: RetrieveUserByUsernameresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5547,6 +5698,7 @@ Classes
 
 .. py:class:: RetrieveAvailableUserStatusesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5561,6 +5713,7 @@ Classes
 
 
 .. py:class:: EventType
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5577,6 +5730,7 @@ Classes
 
 .. py:class:: EventSource
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5591,6 +5745,7 @@ Classes
 
 
 .. py:class:: EventSeverity
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5607,6 +5762,7 @@ Classes
 
 .. py:class:: Organisation1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5621,6 +5777,7 @@ Classes
 
 
 .. py:class:: User1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5641,6 +5798,7 @@ Classes
 
 
 .. py:class:: Event
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5692,6 +5850,7 @@ Classes
 
 .. py:class:: RetrieveEventsresponse4
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5742,6 +5901,7 @@ Classes
 
 .. py:class:: AccountActivationrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: activationKey
@@ -5757,6 +5917,7 @@ Classes
 
 .. py:class:: ReSendActivationMailrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: username
@@ -5771,6 +5932,7 @@ Classes
 
 
 .. py:class:: Id4(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -5824,6 +5986,7 @@ Classes
 
 .. py:class:: Status4
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5834,6 +5997,7 @@ Classes
 
 .. py:class:: CoverageUpdateVPLMNStatusPatch
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
@@ -5843,6 +6007,7 @@ Classes
 
 
 .. py:class:: ChangePasswordrequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5858,6 +6023,7 @@ Classes
 
 
 .. py:class:: ChangePassword422response
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5883,6 +6049,7 @@ Classes
 
 
 .. py:class:: RetrieveownIPAddressSpacesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -5914,6 +6081,7 @@ Classes
 
 .. py:class:: RetrieveAvailableAddressSpacesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -5934,6 +6102,7 @@ Classes
 
 .. py:class:: Field204Response
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -5943,6 +6112,7 @@ Classes
 
 
 .. py:class:: RetrieveEventsresponse5
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6014,6 +6184,7 @@ Classes
 
 .. py:class:: RetrieveEventTypesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6028,6 +6199,7 @@ Classes
 
 
 .. py:class:: RetrieveAvailableCountriesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6059,6 +6231,7 @@ Classes
 
 .. py:class:: RetrieveAvailableCurrenciesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6078,6 +6251,7 @@ Classes
 
 
 .. py:class:: RetrieveAvailableDataBlocksizesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6099,6 +6273,7 @@ Classes
 
 .. py:class:: RetrieveAvailableDataThrottlesresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6118,6 +6293,7 @@ Classes
 
 
 .. py:class:: RetrieveAvailableOperatorsresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6149,6 +6325,7 @@ Classes
 
 .. py:class:: RetrieveAvailableBreakoutRegionsresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6169,6 +6346,7 @@ Classes
 
 .. py:class:: TariffPlanStatusesGetResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -6179,6 +6357,7 @@ Classes
 
 .. py:class:: TariffPlanConfigGetResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -6188,6 +6367,7 @@ Classes
 
 
 .. py:class:: RetrieveAvailableESMEInterfaceTypesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6204,10 +6384,12 @@ Classes
 
 .. py:class:: PDPContextDefinitionsGetResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
 
 .. py:class:: Organisation2
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6284,6 +6466,7 @@ Classes
 
 .. py:class:: PDPContextDefinitionsCreateUpdate
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: apn
@@ -6329,6 +6512,7 @@ Classes
 
 .. py:class:: PDPContextDefinitionsCreateResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6339,6 +6523,7 @@ Classes
 
 .. py:class:: RatType1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6348,6 +6533,7 @@ Classes
 
 
 .. py:class:: QoSDefinitionCreateRequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6369,6 +6555,7 @@ Classes
 
 .. py:class:: RatType2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6383,6 +6570,7 @@ Classes
 
 
 .. py:class:: QoSDefinitionGetResponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6404,6 +6592,7 @@ Classes
 
 .. py:class:: QoSDefinitionPatchRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: max_bandwidth_dl
@@ -6419,6 +6608,7 @@ Classes
 
 .. py:class:: NetworkCoverage
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6428,6 +6618,7 @@ Classes
 
 
 .. py:class:: TrafficType9
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6439,6 +6630,7 @@ Classes
 
 .. py:class:: Currency6
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6448,6 +6640,7 @@ Classes
 
 
 .. py:class:: IOTCreate
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6499,6 +6692,7 @@ Classes
 
 .. py:class:: HasId
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6508,6 +6702,7 @@ Classes
 
 
 .. py:class:: LocalDate
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6519,6 +6714,7 @@ Classes
 
 .. py:class:: LocalDateTime
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -6528,6 +6724,7 @@ Classes
 
 
 .. py:class:: Currency7
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6548,6 +6745,7 @@ Classes
 
 
 .. py:class:: GtConfig1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6574,6 +6772,7 @@ Classes
 
 .. py:class:: MsisdnPool1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: resource_provider_id
@@ -6593,6 +6792,7 @@ Classes
 
 
 .. py:class:: Country3
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6634,6 +6834,7 @@ Classes
 
 .. py:class:: Operator1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country_id
@@ -6673,6 +6874,7 @@ Classes
 
 
 .. py:class:: Organisation3
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6749,6 +6951,7 @@ Classes
 
 .. py:class:: PaymentOption
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6759,6 +6962,7 @@ Classes
 
 .. py:class:: Type1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6768,6 +6972,7 @@ Classes
 
 
 .. py:class:: OrgPrepaidBalance
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6794,6 +6999,7 @@ Classes
 
 .. py:class:: SmppBind1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: system_id
@@ -6814,6 +7020,7 @@ Classes
 
 .. py:class:: SmsRoutingListItem
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -6833,6 +7040,7 @@ Classes
 
 
 .. py:class:: SmsRoutingList1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6909,6 +7117,7 @@ Classes
 
 .. py:class:: SmsRoutingList
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -6918,6 +7127,7 @@ Classes
 
 
 .. py:class:: Organisation4
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -6994,6 +7204,7 @@ Classes
 
 .. py:class:: SmsRoutingEntry
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7014,6 +7225,7 @@ Classes
 
 .. py:class:: SccpCalledPartyPrefix1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: prefix
@@ -7033,6 +7245,7 @@ Classes
 
 
 .. py:class:: Country4
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7074,6 +7287,7 @@ Classes
 
 .. py:class:: SmppBind2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: system_id
@@ -7093,6 +7307,7 @@ Classes
 
 
 .. py:class:: Country5
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7134,6 +7349,7 @@ Classes
 
 .. py:class:: Operator2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: country_id
@@ -7174,6 +7390,7 @@ Classes
 
 .. py:class:: MsisdnPool2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: resource_provider_id
@@ -7193,6 +7410,7 @@ Classes
 
 
 .. py:class:: GtConfig2
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7219,6 +7437,7 @@ Classes
 
 .. py:class:: SccpCalledPartyPrefix2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: prefix
@@ -7238,6 +7457,7 @@ Classes
 
 
 .. py:class:: SmsRoutingDataCreateUpdateRequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7284,6 +7504,7 @@ Classes
 
 .. py:class:: GetEntryPoints
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: method
@@ -7304,6 +7525,7 @@ Classes
 
 .. py:class:: OperatorPostRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: name
@@ -7323,6 +7545,7 @@ Classes
 
 
 .. py:class:: CreateMFAKeyresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7359,6 +7582,7 @@ Classes
 
 .. py:class:: ActivateMFAKeyrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
@@ -7373,6 +7597,7 @@ Classes
 
 
 .. py:class:: MFAKeyStatusLookupresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7389,6 +7614,7 @@ Classes
 
 .. py:class:: MFAKeyTypeLookupresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7403,6 +7629,7 @@ Classes
 
 
 .. py:class:: Listoftrusteddevicesresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7428,6 +7655,7 @@ Classes
 
 
 .. py:class:: ListofApplicationTokensresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7469,6 +7697,7 @@ Classes
 
 .. py:class:: CreateApplicationTokenrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: description
@@ -7489,6 +7718,7 @@ Classes
 
 .. py:class:: CreateApplicationTokenresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: application_token
@@ -7498,6 +7728,7 @@ Classes
 
 
 .. py:class:: ApplicationToken
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7514,6 +7745,7 @@ Classes
 
 .. py:class:: EndpointStatus
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7528,6 +7760,7 @@ Classes
 
 
 .. py:class:: ServiceProfile
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7544,6 +7777,7 @@ Classes
 
 .. py:class:: TariffProfile
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7558,6 +7792,7 @@ Classes
 
 
 .. py:class:: Sim
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7584,6 +7819,7 @@ Classes
 
 .. py:class:: IpAddressSpace
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7593,6 +7829,7 @@ Classes
 
 
 .. py:class:: Status5
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7609,6 +7846,7 @@ Classes
 
 .. py:class:: ServiceProfile1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7623,6 +7861,7 @@ Classes
 
 
 .. py:class:: TariffProfile1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7639,6 +7878,7 @@ Classes
 
 .. py:class:: IpAddressSpace1
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7648,6 +7888,7 @@ Classes
 
 
 .. py:class:: Sim1
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7673,6 +7914,7 @@ Classes
 
 
 .. py:class:: Endpoint
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7743,6 +7985,7 @@ Classes
 
 
 .. py:class:: RetrieveSingleEndpointresponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7819,6 +8062,7 @@ Classes
 
 .. py:class:: UpdateEndpointrequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: tags
@@ -7869,6 +8113,7 @@ Classes
 
 .. py:class:: RetrieveEndpointConnectivityStatusresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: status
@@ -7893,6 +8138,7 @@ Classes
 
 
 .. py:class:: GetEndpointLocationByIdResponse
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -7929,6 +8175,7 @@ Classes
 
 .. py:class:: RetrieveEndpointStatisticsresponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: last_month
@@ -7949,6 +8196,7 @@ Classes
 
 .. py:class:: Status6
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7964,6 +8212,7 @@ Classes
 
 .. py:class:: Type2
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -7978,6 +8227,7 @@ Classes
 
 
 .. py:class:: CloudConnectAttachment
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8044,6 +8294,7 @@ Classes
 
 .. py:class:: Status7
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -8059,6 +8310,7 @@ Classes
 
 .. py:class:: Type3
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -8073,6 +8325,7 @@ Classes
 
 
 .. py:class:: GetCloudConnectAttachmentsResponseItem
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8139,6 +8392,7 @@ Classes
 
 .. py:class:: GetCloudConnectAttachmentsResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -8148,6 +8402,7 @@ Classes
 
 
 .. py:class:: CloudConnectBreakoutType
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8164,6 +8419,7 @@ Classes
 
 .. py:class:: GetCloudConnectBreakoutTypesResponseItem
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -8179,6 +8435,7 @@ Classes
 
 .. py:class:: GetCloudConnectBreakoutTypesResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -8188,6 +8445,7 @@ Classes
 
 
 .. py:class:: Status8
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8203,6 +8461,7 @@ Classes
 
 
 .. py:class:: Metrics
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8223,6 +8482,7 @@ Classes
 
 
 .. py:class:: TunnelInformation
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8253,6 +8513,7 @@ Classes
 
 
 .. py:class:: GetCloudConnectAttachmentByIdResponseItem
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8324,6 +8585,7 @@ Classes
 
 .. py:class:: GetCloudConnectAttachmentByIdResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -8333,6 +8595,7 @@ Classes
 
 
 .. py:class:: Type4(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -8381,6 +8644,7 @@ Classes
 
 .. py:class:: CreateCloudConnectTGWRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
@@ -8415,6 +8679,7 @@ Classes
 
 
 .. py:class:: Type5(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -8468,6 +8733,7 @@ Classes
 
 .. py:class:: CreateCloudConnectVPNRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: type
@@ -8518,6 +8784,7 @@ Classes
 
 .. py:class:: Currency8
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -8527,6 +8794,7 @@ Classes
 
 
 .. py:class:: CloudConnectCharge
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8553,6 +8821,7 @@ Classes
 
 .. py:class:: Currency9
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -8562,6 +8831,7 @@ Classes
 
 
 .. py:class:: ListCloudConnectPricesResponseItem
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8588,6 +8858,7 @@ Classes
 
 .. py:class:: ListCloudConnectPricesResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -8597,6 +8868,7 @@ Classes
 
 
 .. py:class:: BreakoutTypeId(*args, **kwds)
+
 
    Bases: :py:obj:`enum.Enum`
 
@@ -8670,6 +8942,7 @@ Classes
 
 .. py:class:: Currency10
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: id
@@ -8679,6 +8952,7 @@ Classes
 
 
 .. py:class:: CloudConnectCustomPriceRequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8700,6 +8974,7 @@ Classes
 
 .. py:class:: Region
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: Id
@@ -8719,6 +8994,7 @@ Classes
 
 
 .. py:class:: GetCloudConnectTransitGatewaysResponseItem
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8755,6 +9031,7 @@ Classes
 
 .. py:class:: GetCloudConnectTransitGatewaysResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -8764,6 +9041,7 @@ Classes
 
 
 .. py:class:: CreateCloudConnectTransitGatewaysRequest
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8795,6 +9073,7 @@ Classes
 
 .. py:class:: UpdateCloudConnectTransitGatewayByIdRequest
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: active
@@ -8804,6 +9083,7 @@ Classes
 
 
 .. py:class:: GetCloudConnectBreakoutTypeWhitelistResponseItem
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8825,6 +9105,7 @@ Classes
 
 .. py:class:: GetCloudConnectBreakoutTypeWhitelistResponse
 
+
    Bases: :py:obj:`pydantic.BaseModel`
 
    .. py:attribute:: __root__
@@ -8834,6 +9115,7 @@ Classes
 
 
 .. py:class:: Formfactor
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 
@@ -8849,6 +9131,7 @@ Classes
 
 
 .. py:class:: SimModel
+
 
    Bases: :py:obj:`pydantic.BaseModel`
 

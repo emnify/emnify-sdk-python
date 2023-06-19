@@ -19,6 +19,7 @@ Classes
 
 .. py:class:: OperatorManager(client)
 
+
    Manager that allows to get a list of operators
 
    .. py:method:: get_operators()

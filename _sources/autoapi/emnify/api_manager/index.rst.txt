@@ -33,6 +33,7 @@ Attributes
 
 .. py:class:: BaseApiManager
 
+
    Base manager for api calls handling
 
    .. py:attribute:: response_handlers
@@ -102,6 +103,7 @@ Attributes
 
 
 .. py:class:: Authenticate
+
 
    Bases: :py:obj:`BaseApiManager`
 

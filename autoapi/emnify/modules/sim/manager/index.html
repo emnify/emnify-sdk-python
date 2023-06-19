@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" />
+<link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" /><link rel="next" title="emnify.modules.sim.models" href="../models/index.html" /><link rel="prev" title="emnify.modules.sim.api_call_manager" href="../api_call_manager/index.html" />
         <link rel="canonical" href="/autoapi/autoapi/emnify/modules/sim/manager/index.html" />
 
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.15"/>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2023.03.27 -->
         <title>emnify.modules.sim.manager - emnify Python SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -154,7 +154,7 @@
   <span class="sidebar-brand-text">emnify Python SDK</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -218,7 +218,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -336,17 +337,6 @@ Learn more about SIM Lifecycle: <a class="reference external" href="https://docs
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.issue_sim">
-<span class="sig-name descname"><span class="pre">issue_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.issue_sim" title="Permalink to this definition">#</a></dt>
-<dd><div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 0.2.13: </span>Use <a class="reference internal" href="#emnify.modules.sim.manager.SimManager.suspend_sim" title="emnify.modules.sim.manager.SimManager.suspend_sim"><code class="xref py py-func docutils literal notranslate"><span class="pre">suspend_sim()</span></code></a> instead.</p>
-</div>
-<p>It’s impossible to put the SIM back to issued state.
-Learn more about SIM Lifecycle: <a class="reference external" href="https://docs.emnify.com/services/sim-lifecycle-management">https://docs.emnify.com/services/sim-lifecycle-management</a>
-This method is deprecated and will be removed in a future version of the SDK.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.__transform_sim_filter_params">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__transform_sim_filter_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../models/index.html#emnify.modules.sim.models.SimFilter" title="emnify.modules.sim.models.SimFilter"><span class="pre">emnify.modules.sim.models.SimFilter</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_enum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../constants/index.html#emnify.constants.SimSort" title="emnify.constants.SimSort"><span class="pre">emnify.constants.SimSort</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">without_device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.__transform_sim_filter_params" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -362,8 +352,26 @@ This method is deprecated and will be removed in a future version of the SDK.</p
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="../models/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.sim.models</span></code></div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../api_call_manager/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.sim.api_call_manager</span></code></div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -376,9 +384,7 @@ This method is deprecated and will be removed in a future version of the SDK.</p
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -410,23 +416,7 @@ This method is deprecated and will be removed in a future version of the SDK.</p
 <li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.update_sim"><code class="docutils literal notranslate"><span class="pre">SimManager.update_sim()</span></code></a></li>
 <li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.activate_sim"><code class="docutils literal notranslate"><span class="pre">SimManager.activate_sim()</span></code></a></li>
 <li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.suspend_sim"><code class="docutils literal notranslate"><span class="pre">SimManager.suspend_sim()</span></code></a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.issue_sim"><code class="docutils literal notranslate"><span class="pre">SimManager.issue_sim()</span></code></a></li>
 <li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.__transform_sim_filter_params"><code class="docutils literal notranslate"><span class="pre">SimManager.__transform_sim_filter_params()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager">SimManager</a><ul>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.get_sim_list_model">get_sim_list_model</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.get_sim_update_model">get_sim_update_model</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.get_sim_filter_model">get_sim_filter_model</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.get_sim_sort_enum">get_sim_sort_enum</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.get_sim_list">get_sim_list</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.retrieve_sim">retrieve_sim</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.register_sim">register_sim</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.update_sim">update_sim</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.activate_sim">activate_sim</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.suspend_sim">suspend_sim</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.issue_sim">issue_sim</a></li>
-<li><a class="reference internal" href="#emnify.modules.sim.manager.SimManager.__transform_sim_filter_params">__transform_sim_filter_params</a></li>
 </ul>
 </li>
 </ul>

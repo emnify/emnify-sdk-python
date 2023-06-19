@@ -19,6 +19,7 @@ Classes
 
 .. py:class:: SimManager(client)
 
+
    Provides methods for interacting with SIM cards using the EMnify API.
 
    Args:
@@ -82,17 +83,6 @@ Classes
       If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
       Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
       :param sim_id: id of sim to update
-
-
-   .. py:method:: issue_sim(sim_id: int)
-
-      .. deprecated:: 0.2.13
-         Use :func:`suspend_sim` instead.
-
-
-      It's impossible to put the SIM back to issued state.
-      Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
-      This method is deprecated and will be removed in a future version of the SDK.
 
 
    .. py:method:: __transform_sim_filter_params(filter_model: emnify.modules.sim.models.SimFilter = None, sort_enum: emnify.constants.SimSort = None, without_device: bool = None) -> dict
