@@ -15,9 +15,14 @@ def vcr_cassette_dir(request):
     return os.path.join('tests/fixtures', 'cassettes')
 
 
+vcr_shared_parameters = {
+    'filter_headers': ['authorization'],
+    'filter_post_data_parameters': ['application_token', 'username', 'password'],
+}
+
 class EMnifyTest(TestCase):
     def setUp(self) -> None:
-        self.token = 'token'
+        self.token = os.environ.get('EMNIFY_SDK_APPLICATION_TOKEN', 'test_token')
 
     @vcr.use_cassette('tests/fixtures/cassettes/get_all_devices.yaml')
     def test_get_devices_list(self):
@@ -66,12 +71,10 @@ class EMnifyTest(TestCase):
         sms = emnify.devices.sms_create_model(payload='sample_test_payload')
         emnify.devices.send_sms(device=devices[0], sms=sms)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/get_all_device_sms.yaml')
+    @vcr.use_cassette('tests/fixtures/cassettes/get_all_device_sms.yaml', **vcr_shared_parameters)
     def test_get_device_sms_list(self):
         emnify = emnify_client(app_token=self.token)
-        devices = [i for i in emnify.devices.get_devices_list()]
-        self.assertGreater(len(devices), 0)
-        sms_instances = [i for i in emnify.devices.get_device_sms_list(device=devices[3])]
+        sms_instances = [i for i in emnify.devices.get_device_sms_list(device=11379224)]
         self.assertGreater(len(sms_instances), 0)
         self.assertIsInstance(sms_instances[0], emnify.devices.list_sms_model)
 

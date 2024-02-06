@@ -64,7 +64,7 @@ class DeviceManager:
 
     def get_device_sms_list(self, *, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         device_id = self.validate_device(device)
-        sms_response = device_call_managers.GetEventsByDevice().call_api(
+        sms_response = device_call_managers.GetAllSmsFromDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
         for sms in sms_response:
@@ -199,8 +199,8 @@ class DeviceManager:
         events_response = device_call_managers.GetEventsByDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
-        for event in events_response:
-            yield device_models.DeviceEvent(**event)
+
+        return (device_models.DeviceEvent(**i) for i in events_response)
 
     def change_status(
             self, device: typing.Union[
