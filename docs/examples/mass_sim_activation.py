@@ -25,7 +25,7 @@ tariff_profile = emnify_client.devices.tariff_profile_model(id=int(tariff_profil
 try:
     # Next, add the SIM card batch to your account.
     # This method also supports single SIM registration via BIC1
-    # so you can use your free Evaluation SIM cards.
+    # so you can use your free Trial SIMs.
     issued_sims = emnify_client.sim.register_sim(bic=sim_batch_BIC2)
     # All added SIMs are now registered with "Issued" status.
 except EMnifyBaseException as e:
