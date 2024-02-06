@@ -15,8 +15,26 @@ TOKEN = os.environ.get('EMNIFY_APPLICATION_TOKEN')
 # Initiate SDK instance using application token
 emnify = EMnify(TOKEN)
 
+def get_iterator_length(iterator):
+    return len(list(iterator))
+
 # Execute a command against desired API
 devices = emnify.devices.get_devices_list()
 
-# Showing all the devices
-print([device for device in devices])
+
+## print first 100 devices
+for i, device in enumerate(devices):
+    if i >= 100:
+        break
+    print(device)
+
+# Count remaining devices
+print(get_iterator_length(devices))
+
+
+# Get list of sims
+sims = emnify.sim.get_sim_list()
+
+# Count sims
+print(get_iterator_length(sims))
+

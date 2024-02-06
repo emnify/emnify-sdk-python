@@ -147,7 +147,7 @@ class DeviceManager:
             query_params = self.__transform_all_devices_filter_params(filter_model, sort_enum)
         devices_response = device_call_managers.GetAllDevicesApiCall()\
             .call_api(client=self.client, query_params=query_params, *args, **kwargs)
-        return [device_models.Device(**i) for i in devices_response]
+        return (device_models.Device(**i) for i in devices_response)
 
     def delete_device(self, device_id: int) -> True:
         """
