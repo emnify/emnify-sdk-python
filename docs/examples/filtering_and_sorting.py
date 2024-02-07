@@ -39,7 +39,7 @@ sim_filter = emnify_client.sim.get_sim_filter_model(
 # The following example searches for SIMs without a device:
 sims_without_assigned_device = emnify_client.sim.get_sim_list(without_device=True)
 
-# === Example: Sort a list of SIM cards ===
+# === Example: Sort all devices ===
 
 # Like filtering, sorting reduces processing time by ordering objects in the server.
 # Sorting also enables you to group objects by specifying a particular attribute.
