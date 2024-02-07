@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 
 NAME = os.getenv('PYPI_PACKAGE_NAME') or "emnify-sdk"
-VERSION = "0.3.3"
+VERSION = "0.3.4"
 # To install the library, run the following
 #
 # python setup.py install
