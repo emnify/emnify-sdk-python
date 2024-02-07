@@ -48,8 +48,9 @@ class SimManager:
             without_device: bool = None,
             filter_model: sim_models.SimFilter = None,
             sort_enum: emnify_const.SimSort = None
-    ):
+    ) -> typing.Generator[sim_models.SimList, None, None]:
         """
+        Retrieve iterable list of SIM`s.
         :param without_device: Allows to add a filter for request to find all SIM`s without device
         :param filter_model: Model for request`s filtering
         :param sort_enum: Model for request`s sorting
@@ -59,8 +60,8 @@ class SimManager:
         )
 
         sim_response = SimListApi().call_api(client=self.client, query_params=query_params)
-        for sim in sim_response:
-            yield self.get_sim_list_model(**sim)
+
+        return (self.get_sim_list_model(**i) for i in sim_response)
 
     def retrieve_sim(self, sim_id: int):
         """

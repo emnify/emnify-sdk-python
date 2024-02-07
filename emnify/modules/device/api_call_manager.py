@@ -16,6 +16,11 @@ class GetAllDevicesApiCall(BaseApiManager):
 class GetEventsByDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/event'
     request_method_name = RequestsType.GET.value
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.response_handlers = self.response_handlers.copy() | {
+            200: 'return_paginator'
+        }
 
 
 class CreateDevice(BaseApiManager):
