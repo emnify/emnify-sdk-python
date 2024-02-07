@@ -81,7 +81,7 @@ class BaseApiManager:
 
         return self.call_api(client, data, path_params=path_params, *args, **kwargs)
 
-    def call_api(self, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None, handler=None):
+    def call_api(self, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None):
         url = self.request_url_prefix
         if path_params:
             url = self.build_method_url(path_params)

@@ -219,13 +219,13 @@ class EMnifyTest(TestCase):
     def test_reset_connectivity(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 12132821
-        self.assertEqual(emnify.devices.reset_connectivity_data(device_id=device_id), True)
+        self.assertTrue(emnify.devices.reset_connectivity_data(device_id=device_id))
 
     @vcr.use_cassette('tests/fixtures/cassettes/test_reset_connectivity_network.yaml', **vcr_shared_parameters)
     def test_reset_connectivity_network(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 12132821
-        self.assertEqual(emnify.devices.reset_connectivity_network(device_id=device_id), True)
+        self.assertTrue(emnify.devices.reset_connectivity_network(device_id=device_id))
 
     @vcr.use_cassette('tests/fixtures/cassettes/test_get_device_connectivity.yaml', **vcr_shared_parameters)
     def test_get_device_connectivity_data(self):
