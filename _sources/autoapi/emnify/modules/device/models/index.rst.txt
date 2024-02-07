@@ -114,7 +114,7 @@ Classes
 .. py:class:: ListSms
 
 
-   Bases: :py:obj:`emnify.modules.api.models.RetrieveEventsresponse5`
+   Bases: :py:obj:`emnify.modules.api.models.ListofSMSresponse`
 
    Renamed generated model
 

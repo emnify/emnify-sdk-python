@@ -20,7 +20,7 @@ Classes
 
 
 
-.. py:class:: SimListApi
+.. py:class:: SimListApi(*args, **kwargs)
 
 
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`

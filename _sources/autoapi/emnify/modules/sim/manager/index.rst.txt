@@ -45,8 +45,9 @@ Classes
       Returns sim sorting options.
 
 
-   .. py:method:: get_sim_list(without_device: bool = None, filter_model: emnify.modules.sim.models.SimFilter = None, sort_enum: emnify.constants.SimSort = None)
+   .. py:method:: get_sim_list(without_device: bool = None, filter_model: emnify.modules.sim.models.SimFilter = None, sort_enum: emnify.constants.SimSort = None) -> Generator[emnify.modules.sim.models.SimList, None, None]
 
+      Retrieve iterable list of SIM`s.
       :param without_device: Allows to add a filter for request to find all SIM`s without device
       :param filter_model: Model for request`s filtering
       :param sort_enum: Model for request`s sorting

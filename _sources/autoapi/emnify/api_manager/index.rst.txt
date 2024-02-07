@@ -24,10 +24,15 @@ Attributes
 .. autoapisummary::
 
    emnify.api_manager.MAIN_URL
+   emnify.api_manager.MAX_PAGES_IN_PAGINATOR
 
 
 .. py:data:: MAIN_URL
-   :value: 'https://cdn.emnify.net/api'
+
+   
+
+.. py:data:: MAX_PAGES_IN_PAGINATOR
+   :value: 1000
 
    
 
