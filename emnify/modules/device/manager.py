@@ -64,7 +64,7 @@ class DeviceManager:
 
     def get_device_sms_list(self, *, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         device_id = self.validate_device(device)
-        sms_response = device_call_managers.GetEventsByDevice().call_api(
+        sms_response = device_call_managers.GetAllSmsFromDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
         for sms in sms_response:
@@ -147,7 +147,7 @@ class DeviceManager:
             query_params = self.__transform_all_devices_filter_params(filter_model, sort_enum)
         devices_response = device_call_managers.GetAllDevicesApiCall()\
             .call_api(client=self.client, query_params=query_params, *args, **kwargs)
-        return [device_models.Device(**i) for i in devices_response]
+        return (device_models.Device(**i) for i in devices_response)
 
     def delete_device(self, device_id: int) -> True:
         """
@@ -199,8 +199,8 @@ class DeviceManager:
         events_response = device_call_managers.GetEventsByDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
         )
-        for event in events_response:
-            yield device_models.DeviceEvent(**event)
+
+        return (device_models.DeviceEvent(**i) for i in events_response)
 
     def change_status(
             self, device: typing.Union[

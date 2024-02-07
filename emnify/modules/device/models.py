@@ -48,7 +48,7 @@ class SmsCreateModel(generated_models.SubmitMTSMSrequest):
     dcs: Optional[int] = None
 
 
-class ListSms(generated_models.RetrieveEventsresponse5):
+class ListSms(generated_models.ListofSMSresponse):
     """
     Renamed generated model
     """

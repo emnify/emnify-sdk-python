@@ -8,6 +8,12 @@ class SimListApi(BaseApiManager):
     request_url_prefix = '/v1/sim'
     request_method_name = RequestsType.GET.value
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.response_handlers = self.response_handlers.copy() | {
+            200: 'return_paginator'
+        }
+
 
 class SimActivateApi(BaseApiManager):
     request_url_prefix = '/v1/sim_batch/bic/{bic}'
