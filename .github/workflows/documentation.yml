@@ -17,7 +17,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Prepare doc-gen
         run: docker build . -f docs/Dockerfile.dev -t emnify/python-sdk-docs

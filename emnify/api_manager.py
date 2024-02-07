@@ -1,3 +1,4 @@
+import os
 import typing
 import requests
 
@@ -5,8 +6,9 @@ from emnify import errors as emnify_errors
 from emnify.modules.api.models import AuthenticationResponse
 from emnify import constants as emnify_constants
 
-MAIN_URL = 'https://cdn.emnify.net/api'
+MAIN_URL = os.environ.get('EMINFY_SDK_API_ENDPOINT_URL', 'https://cdn.emnify.net/api')
 
+MAX_PAGES_IN_PAGINATOR = 1000 # with regular page size 1000...2000 gives max 2_000_000 records
 
 class BaseApiManager:
     """
@@ -46,8 +48,9 @@ class BaseApiManager:
     def return_paginator(
             self, response: requests.Response, client, data, files, query_params, path_params
     ) -> typing.Generator:
+        query_params = query_params or {}
         page = query_params.get('page', 1) if query_params else 1
-
+        total_pages = int(response.headers.get(emnify_constants.ResponseHeaders.TOTAL_PAGES.value))
         try:
             response_data = response.json()
         except requests.exceptions.JSONDecodeError:
@@ -56,9 +59,13 @@ class BaseApiManager:
         for item in response_data:
             yield item
 
-        if int(response.headers.get(emnify_constants.ResponseHeaders.TOTAL_PAGES.value)) > page:
+        if page < total_pages and page < MAX_PAGES_IN_PAGINATOR:
             query_params['page'] = page + 1
-            self.call_api(client, data=data, files=files, query_params=query_params, path_params=path_params)
+
+            next_page_response = self.call_api(client, data, files, query_params=query_params, path_params=path_params)
+
+            for item in next_page_response:
+                yield item
 
     def build_method_url(self, url_params):
         return self.request_url_prefix.format(**url_params)
@@ -83,6 +90,7 @@ class BaseApiManager:
             raise emnify_errors.UnknownStatusCodeException(
                 "Unknown status code {status_code}".format(status_code=response.status_code)
             )
+
         return getattr(self, self.response_handlers[response.status_code])\
             (response, client, data=data, files=files, query_params=query_params, path_params=path_params)
 
