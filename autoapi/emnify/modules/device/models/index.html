@@ -6,12 +6,12 @@
 <link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" /><link rel="next" title="emnify.modules.operator" href="../../operator/index.html" /><link rel="prev" title="emnify.modules.device.manager" href="../manager/index.html" />
         <link rel="canonical" href="/autoapi/autoapi/emnify/modules/device/models/index.html" />
 
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/><!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
         <title>emnify.modules.device.models - emnify Python SDK</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=eafc0fe6" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo-extensions.css?v=302659d7" />
     
     
 
@@ -70,7 +70,7 @@
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -85,22 +85,63 @@
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
   </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
     </svg>
   </symbol>
 </svg>
@@ -113,6 +154,8 @@
 <label class="overlay toc-overlay" for="__toc">
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
 
 
@@ -131,7 +174,8 @@
       <div class="theme-toggle-container theme-toggle-header">
         <button class="theme-toggle">
           <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
@@ -164,37 +208,37 @@
 <li class="toctree-l1"><a class="reference external" href="https://portal.emnify.com">Enterprise Portal</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/EMnify/emnify-sdk-python">GitHub</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../../../../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of emnify</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current has-children"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of emnify.modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l4 has-children"><a class="reference internal" href="../../api/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.api</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of emnify.modules.api</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../api/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.api.models</span></code></a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../../../index.html">emnify</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of emnify</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="../../index.html">emnify.modules</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of emnify.modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../api/index.html">emnify.modules.api</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of emnify.modules.api</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../api/models/index.html">emnify.modules.api.models</a></li>
 </ul>
 </li>
-<li class="toctree-l4 current has-children"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of emnify.modules.device</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="../api_call_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.api_call_manager</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.manager</span></code></a></li>
-<li class="toctree-l5 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.models</span></code></a></li>
+<li class="toctree-l4 current has-children"><a class="reference internal" href="../index.html">emnify.modules.device</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of emnify.modules.device</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../api_call_manager/index.html">emnify.modules.device.api_call_manager</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../manager/index.html">emnify.modules.device.manager</a></li>
+<li class="toctree-l5 current current-page"><a class="current reference internal" href="#">emnify.modules.device.models</a></li>
 </ul>
 </li>
-<li class="toctree-l4 has-children"><a class="reference internal" href="../../operator/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.operator</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of emnify.modules.operator</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../operator/api_call_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.operator.api_call_manager</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../operator/manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.operator.manager</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../operator/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.operator.models</span></code></a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../operator/index.html">emnify.modules.operator</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of emnify.modules.operator</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../operator/api_call_manager/index.html">emnify.modules.operator.api_call_manager</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../operator/manager/index.html">emnify.modules.operator.manager</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../operator/models/index.html">emnify.modules.operator.models</a></li>
 </ul>
 </li>
-<li class="toctree-l4 has-children"><a class="reference internal" href="../../sim/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.sim</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of emnify.modules.sim</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../sim/api_call_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.sim.api_call_manager</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../sim/manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.sim.manager</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../sim/models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.sim.models</span></code></a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../sim/index.html">emnify.modules.sim</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of emnify.modules.sim</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../sim/api_call_manager/index.html">emnify.modules.sim.api_call_manager</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../sim/manager/index.html">emnify.modules.sim.manager</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../sim/models/index.html">emnify.modules.sim.models</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../api_manager/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.api_manager</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../constants/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.constants</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../emnify/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.emnify</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../errors/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.errors</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../version/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api_manager/index.html">emnify.api_manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../constants/index.html">emnify.constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../emnify/index.html">emnify.emnify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../errors/index.html">emnify.errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../version/index.html">emnify.version</a></li>
 </ul>
 </li>
 </ul>
@@ -218,11 +262,17 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          
+          <div class="view-this-page">
+  <a class="muted-link" href="../../../../../_sources/autoapi/emnify/modules/device/models/index.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
 <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
@@ -232,13 +282,11 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <article role="main">
+        <article role="main" id="furo-main-content">
           <section id="module-emnify.modules.device.models">
-<span id="emnify-modules-device-models"></span><h1><a class="reference internal" href="#module-emnify.modules.device.models" title="emnify.modules.device.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.models</span></code></a><a class="headerlink" href="#module-emnify.modules.device.models" title="Link to this heading">#</a></h1>
-<section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<span id="emnify-modules-device-models"></span><h1>emnify.modules.device.models<a class="headerlink" href="#module-emnify.modules.device.models" title="Link to this heading">¶</a></h1>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h3>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
@@ -293,312 +341,314 @@
 </tbody>
 </table>
 </div>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SimDevice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">SimDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.SimDevice" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">SimDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.SimDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SimDevice.id">
-<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#emnify.modules.device.models.SimDevice.id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#emnify.modules.device.models.SimDevice.id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SimDevice.status">
-<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SimDevice.status" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SimDevice.status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.Device">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">Device</span></span><a class="headerlink" href="#emnify.modules.device.models.Device" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">Device</span></span><a class="headerlink" href="#emnify.modules.device.models.Device" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Endpoint" title="emnify.modules.api.models.Endpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.Endpoint</span></code></a></p>
 <p>Renamed generated model</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.Device.status">
-<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a></em><a class="headerlink" href="#emnify.modules.device.models.Device.status" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a></em><a class="headerlink" href="#emnify.modules.device.models.Device.status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.Device.sim">
-<span class="sig-name descname"><span class="pre">sim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#emnify.modules.device.models.SimDevice" title="emnify.modules.device.models.SimDevice"><span class="pre">SimDevice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.Device.sim" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#emnify.modules.device.models.SimDevice" title="emnify.modules.device.models.SimDevice"><span class="pre">SimDevice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.Device.sim" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.CreateDevice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">CreateDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.CreateDevice" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">CreateDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.CreateDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p>
 <p>Custom class for validation of Device on creation</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.device.models.CreateDevice.validate_status">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.device.models.CreateDevice.validate_status" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.device.models.CreateDevice.validate_status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SmsCreateModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">SmsCreateModel</span></span><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">SmsCreateModel</span></span><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.SubmitMTSMSrequest" title="emnify.modules.api.models.SubmitMTSMSrequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.SubmitMTSMSrequest</span></code></a></p>
 <p>Inherited generated model of SubmitMTSMSrequest for extra fields</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SmsCreateModel.source_address">
-<span class="sig-name descname"><span class="pre">source_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.source_address" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">source_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.source_address" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SmsCreateModel.source_address_type">
-<span class="sig-name descname"><span class="pre">source_address_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.source_address_type" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">source_address_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.source_address_type" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SmsCreateModel.expiry_date">
-<span class="sig-name descname"><span class="pre">expiry_date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.expiry_date" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">expiry_date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.expiry_date" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SmsCreateModel.udh">
-<span class="sig-name descname"><span class="pre">udh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.udh" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">udh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.udh" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.SmsCreateModel.dcs">
-<span class="sig-name descname"><span class="pre">dcs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.dcs" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">dcs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.SmsCreateModel.dcs" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.ListSms">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">ListSms</span></span><a class="headerlink" href="#emnify.modules.device.models.ListSms" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">ListSms</span></span><a class="headerlink" href="#emnify.modules.device.models.ListSms" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.ListofSMSresponse" title="emnify.modules.api.models.ListofSMSresponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.ListofSMSresponse</span></code></a></p>
 <p>Renamed generated model</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.TariffProfile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">TariffProfile</span></span><a class="headerlink" href="#emnify.modules.device.models.TariffProfile" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">TariffProfile</span></span><a class="headerlink" href="#emnify.modules.device.models.TariffProfile" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.TariffProfile1" title="emnify.modules.api.models.TariffProfile1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.TariffProfile1</span></code></a></p>
 <p>Renamed generated model</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.ServiceProfile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">ServiceProfile</span></span><a class="headerlink" href="#emnify.modules.device.models.ServiceProfile" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">ServiceProfile</span></span><a class="headerlink" href="#emnify.modules.device.models.ServiceProfile" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.ServiceProfile1" title="emnify.modules.api.models.ServiceProfile1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.ServiceProfile1</span></code></a></p>
 <p>Renamed generated model</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceStatus</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceStatus" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceStatus</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceStatus" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.Status</span></code></a></p>
 <p>Renamed generated model</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceIdRequired">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceIdRequired</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceIdRequired" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceIdRequired</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceIdRequired" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p>
 <p>Changed renamed model of Device for id validation</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceIdRequired.id">
-<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceIdRequired.id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceIdRequired.id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">FilterDeviceModel</span></span><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">FilterDeviceModel</span></span><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
 <p>Model for validation of filter query params</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.status">
-<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.status" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.last_updated">
-<span class="sig-name descname"><span class="pre">last_updated</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime.datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.last_updated" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">last_updated</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime.datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.last_updated" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.created">
-<span class="sig-name descname"><span class="pre">created</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime.datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.created" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">created</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime.datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.created" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.name" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.name" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.tags">
-<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.tags" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.tags" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.ip_address">
-<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.ip_address" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.ip_address" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.imei">
-<span class="sig-name descname"><span class="pre">imei</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.imei" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">imei</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.imei" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.FilterDeviceModel.sim_status">
-<span class="sig-name descname"><span class="pre">sim_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.sim_status" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sim_status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.FilterDeviceModel.sim_status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.ListQFilterDeviceListModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">ListQFilterDeviceListModel</span></span><a class="headerlink" href="#emnify.modules.device.models.ListQFilterDeviceListModel" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">ListQFilterDeviceListModel</span></span><a class="headerlink" href="#emnify.modules.device.models.ListQFilterDeviceListModel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.ListQFilterDeviceListModel.__root__">
-<span class="sig-name descname"><span class="pre">__root__</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">FilterDeviceModel</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.ListQFilterDeviceListModel.__root__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__root__</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#emnify.modules.device.models.FilterDeviceModel" title="emnify.modules.device.models.FilterDeviceModel"><span class="pre">FilterDeviceModel</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.ListQFilterDeviceListModel.__root__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">GetDeviceFilterSet</span></span><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">GetDeviceFilterSet</span></span><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
 <p>Model for device list query params</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.Config" title="Link to this definition">#</a></dt>
-<dd><dl class="py attribute">
-<dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values">
-<span class="sig-name descname"><span class="pre">use_enum_values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet.sort">
-<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../constants/index.html#emnify.constants.DeviceSort" title="emnify.constants.DeviceSort"><span class="pre">emnify.constants.DeviceSort</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.sort" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sort</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../../constants/index.html#emnify.constants.DeviceSort" title="emnify.constants.DeviceSort"><span class="pre">emnify.constants.DeviceSort</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.sort" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet.q">
-<span class="sig-name descname"><span class="pre">q</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#emnify.modules.device.models.ListQFilterDeviceListModel" title="emnify.modules.device.models.ListQFilterDeviceListModel"><span class="pre">ListQFilterDeviceListModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.q" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">q</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#emnify.modules.device.models.ListQFilterDeviceListModel" title="emnify.modules.device.models.ListQFilterDeviceListModel"><span class="pre">ListQFilterDeviceListModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.q" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.Config" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values">
+<span class="sig-name descname"><span class="pre">use_enum_values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceEvent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceEvent</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceEvent" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceEvent</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceEvent" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Event" title="emnify.modules.api.models.Event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.Event</span></code></a></p>
 <p>class inherited from generated Event</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.RetrieveDevice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">RetrieveDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.RetrieveDevice" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">RetrieveDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.RetrieveDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#emnify.modules.device.models.Device" title="emnify.modules.device.models.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p>
 <p>class inherited from generated model for retrieve device response</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.RetrieveDevice.runtime_data">
-<span class="sig-name descname"><span class="pre">runtime_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.RetrieveDevice.runtime_data" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">runtime_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.RetrieveDevice.runtime_data" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.RetrieveDevice.sim">
-<span class="sig-name descname"><span class="pre">sim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../sim/models/index.html#emnify.modules.sim.models.SimList" title="emnify.modules.sim.models.SimList"><span class="pre">emnify.modules.sim.models.SimList</span></a></em><a class="headerlink" href="#emnify.modules.device.models.RetrieveDevice.sim" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../sim/models/index.html#emnify.modules.sim.models.SimList" title="emnify.modules.sim.models.SimList"><span class="pre">emnify.modules.sim.models.SimList</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.RetrieveDevice.sim" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">UpdateDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">UpdateDevice</span></span><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.UpdateEndpointrequest" title="emnify.modules.api.models.UpdateEndpointrequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emnify.modules.api.models.UpdateEndpointrequest</span></code></a></p>
 <p>Model for update Device request with field-type validation</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.name" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.name" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.tags">
-<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.tags" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.tags" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.status">
-<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.status" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.service_profile">
-<span class="sig-name descname"><span class="pre">service_profile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.service_profile" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">service_profile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.service_profile" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.tariff_profile">
-<span class="sig-name descname"><span class="pre">tariff_profile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.tariff_profile" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">tariff_profile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.tariff_profile" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.ip_address">
-<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.ip_address" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.ip_address" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.ip_address_space">
-<span class="sig-name descname"><span class="pre">ip_address_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.ip_address_space" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ip_address_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.ip_address_space" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.sim">
-<span class="sig-name descname"><span class="pre">sim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.sim" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">sim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.sim" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.imei">
-<span class="sig-name descname"><span class="pre">imei</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.imei" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">imei</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.imei" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.UpdateDevice.imei_lock">
-<span class="sig-name descname"><span class="pre">imei_lock</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.imei_lock" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">imei_lock</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.UpdateDevice.imei_lock" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceConnectivityStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceConnectivityStatus</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">emnify.modules.device.models.</span></span><span class="sig-name descname"><span class="pre">DeviceConnectivityStatus</span></span><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseModel</span></code></p>
 <p>Device connectivity status can be ‘ATTACHED’/’ONLINE’/’OFFLINE’/’BLOCKED’</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceConnectivityStatus.status">
-<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a></em><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus.status" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../../api/models/index.html#emnify.modules.api.models.Status" title="emnify.modules.api.models.Status"><span class="pre">emnify.modules.api.models.Status</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus.status" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceConnectivityStatus.location">
-<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus.location" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus.location" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="emnify.modules.device.models.DeviceConnectivityStatus.services">
-<span class="sig-name descname"><span class="pre">services</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus.services" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">services</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#emnify.modules.device.models.DeviceConnectivityStatus.services" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</section>
 </section>
 </section>
 
@@ -612,7 +662,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.operator</span></code></div>
+                <div class="title">emnify.modules.operator</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -623,7 +673,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.manager</span></code></div>
+                <div class="title">emnify.modules.device.manager</div>
                 
               </div>
             </a>
@@ -657,9 +707,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">emnify.modules.device.models</span></code></a><ul>
+<li><a class="reference internal" href="#">emnify.modules.device.models</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
-<li><a class="reference internal" href="#classes">Classes</a><ul>
 <li><a class="reference internal" href="#emnify.modules.device.models.SimDevice"><code class="docutils literal notranslate"><span class="pre">SimDevice</span></code></a><ul>
 <li><a class="reference internal" href="#emnify.modules.device.models.SimDevice.id"><code class="docutils literal notranslate"><span class="pre">SimDevice.id</span></code></a></li>
 <li><a class="reference internal" href="#emnify.modules.device.models.SimDevice.status"><code class="docutils literal notranslate"><span class="pre">SimDevice.status</span></code></a></li>
@@ -706,12 +756,12 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet</span></code></a><ul>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.sort"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.sort</span></code></a></li>
+<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.q"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.q</span></code></a></li>
 <li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.Config</span></code></a><ul>
 <li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.Config.use_enum_values"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.Config.use_enum_values</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.sort"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.sort</span></code></a></li>
-<li><a class="reference internal" href="#emnify.modules.device.models.GetDeviceFilterSet.q"><code class="docutils literal notranslate"><span class="pre">GetDeviceFilterSet.q</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#emnify.modules.device.models.DeviceEvent"><code class="docutils literal notranslate"><span class="pre">DeviceEvent</span></code></a></li>
@@ -744,8 +794,6 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 
           </div>
         </div>
@@ -755,8 +803,8 @@
     </aside>
   </div>
 </div><script src="../../../../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../../../../_static/scripts/furo.js?v=5fa4622c"></script>
     </body>
 </html>

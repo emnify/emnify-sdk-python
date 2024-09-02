@@ -1,15 +1,15 @@
-:py:mod:`emnify.modules.api`
-============================
+emnify.modules.api
+==================
 
 .. py:module:: emnify.modules.api
 
 
 Submodules
 ----------
+
 .. toctree::
-   :titlesonly:
    :maxdepth: 1
 
-   models/index.rst
+   /autoapi/emnify/modules/api/models/index
 
 

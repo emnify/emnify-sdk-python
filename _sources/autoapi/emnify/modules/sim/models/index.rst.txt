@@ -1,14 +1,11 @@
-:py:mod:`emnify.modules.sim.models`
-===================================
+emnify.modules.sim.models
+=========================
 
 .. py:module:: emnify.modules.sim.models
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -20,169 +17,186 @@ Classes
    emnify.modules.sim.models.SimFilter
 
 
-
+Module Contents
+---------------
 
 .. py:class:: SimDevice
 
-
    Bases: :py:obj:`pydantic.BaseModel`
+
 
    Sim list response Device  model
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+      :value: None
+
+
 
    .. py:attribute:: name
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: ip_address
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: created
-      :type: datetime.datetime
+      :type:  datetime.datetime
+      :value: None
 
-      
+
 
    .. py:attribute:: last_updated
-      :type: datetime.datetime
+      :type:  datetime.datetime
+      :value: None
 
-      
 
 
 .. py:class:: IdModel
 
-
    Bases: :py:obj:`pydantic.BaseModel`
+
 
    BaseModel for objects with single id field
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
 
 
 .. py:class:: SimStatus
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+
 
    .. py:attribute:: description
-      :type: str
+      :type:  str
+      :value: None
 
-      
 
 
 .. py:class:: SimList
 
-
    Bases: :py:obj:`emnify.modules.api.models.RetrieveSIMlistresponse`
+
 
    Inherited generated model for sim list
 
-   .. py:attribute:: status
-      :type: SimStatus
 
-      
+   .. py:attribute:: status
+      :type:  SimStatus
+      :value: None
+
+
 
    .. py:attribute:: device
-      :type: Optional[SimDevice]
-
-      
+      :type:  Optional[SimDevice]
 
 
 .. py:class:: SimUpdate
 
-
    Bases: :py:obj:`pydantic.BaseModel`
+
 
    Model for sim partial update
 
-   .. py:attribute:: status
-      :type: SimStatus
 
-      
+   .. py:attribute:: status
+      :type:  SimStatus
+      :value: None
+
+
 
    .. py:attribute:: issuer_organisation
-      :type: IdModel
+      :type:  IdModel
+      :value: None
 
-      
+
 
    .. py:attribute:: reseller_organisation
-      :type: IdModel
+      :type:  IdModel
+      :value: None
 
-      
+
 
    .. py:attribute:: customer_organisation
-      :type: IdModel
+      :type:  IdModel
+      :value: None
 
-      
 
 
 .. py:class:: SimFilter
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+      :value: None
+
+
 
    .. py:attribute:: issuer_org
-      :type: int
+      :type:  int
+      :value: None
 
-      
+
 
    .. py:attribute:: reseller_org
-      :type: int
+      :type:  int
+      :value: None
 
-      
+
 
    .. py:attribute:: customer_org
-      :type: int
+      :type:  int
+      :value: None
 
-      
+
 
    .. py:attribute:: iccid
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: status
-      :type: SimFilter.id
+      :type:  SimFilter.id
+      :value: None
 
-      
+
 
    .. py:attribute:: production_date
-      :type: pydantic.types.date
+      :type:  pydantic.types.date
+      :value: None
 
-      
+
 
    .. py:attribute:: imsi
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: msisdn
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: model
-      :type: int
+      :type:  int
+      :value: None
 
-      
 
 

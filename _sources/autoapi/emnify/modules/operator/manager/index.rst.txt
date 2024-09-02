@@ -1,28 +1,28 @@
-:py:mod:`emnify.modules.operator.manager`
-=========================================
+emnify.modules.operator.manager
+===============================
 
 .. py:module:: emnify.modules.operator.manager
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
    emnify.modules.operator.manager.OperatorManager
 
 
-
+Module Contents
+---------------
 
 .. py:class:: OperatorManager(client)
 
-
    Manager that allows to get a list of operators
 
-   .. py:method:: get_operators()
 
+   .. py:attribute:: client
+
+
+   .. py:method:: get_operators()
 
 

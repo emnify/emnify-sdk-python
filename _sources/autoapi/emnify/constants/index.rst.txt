@@ -1,14 +1,11 @@
-:py:mod:`emnify.constants`
-==========================
+emnify.constants
+================
 
 .. py:module:: emnify.constants
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -27,12 +24,13 @@ Classes
    emnify.constants.RequestUrls
 
 
-
+Module Contents
+---------------
 
 .. py:class:: ExtendedEnum(*args, **kwds)
 
-
    Bases: :py:obj:`enum.Enum`
+
 
    Create a collection of name/value pairs.
 
@@ -70,6 +68,7 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:method:: list()
       :classmethod:
@@ -78,8 +77,8 @@ Classes
 
 .. py:class:: DeviceSort(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -118,51 +117,51 @@ Classes
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
 
+
    .. py:attribute:: ID
       :value: 'id'
 
-      
+
 
    .. py:attribute:: STATUS
       :value: 'status'
 
-      
+
 
    .. py:attribute:: LAST_UPDATED
       :value: 'last_updated'
 
-      
+
 
    .. py:attribute:: CREATED
       :value: 'created'
 
-      
+
 
    .. py:attribute:: NAME
       :value: 'name'
 
-      
+
 
    .. py:attribute:: TAGS
       :value: 'tags'
 
-      
+
 
    .. py:attribute:: IP_ADDRESS
       :value: 'ip_address'
 
-      
+
 
    .. py:attribute:: IMEI
       :value: 'imei'
 
-      
 
 
 .. py:class:: IdValues(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -200,17 +199,17 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: ID
       :value: 'id'
 
-      
 
 
 .. py:class:: RequestsType(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -248,37 +247,37 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: GET
       :value: 'get'
 
-      
+
 
    .. py:attribute:: POST
       :value: 'post'
 
-      
+
 
    .. py:attribute:: PUT
       :value: 'put'
 
-      
+
 
    .. py:attribute:: DELETE
       :value: 'delete'
 
-      
+
 
    .. py:attribute:: PATCH
       :value: 'patch'
 
-      
 
 
 .. py:class:: AuthenticateRequestsUrl(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -316,17 +315,17 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: V1_AUTHENTICATE
       :value: '/v1/authenticate'
 
-      
 
 
 .. py:class:: RequestDefaultHeadersKeys(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -364,32 +363,32 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: ACCEPT
       :value: 'accept'
 
-      
+
 
    .. py:attribute:: AUTHORIZATION
       :value: 'authorization'
 
-      
+
 
    .. py:attribute:: XEmnOriginApp
       :value: 'x-emn-origin-app'
 
-      
+
 
    .. py:attribute:: XEmnOriginAppVersion
       :value: 'x-emn-origin-app-version'
 
-      
 
 
 .. py:class:: RequestDefaultHeadersValues(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -427,31 +426,30 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: APPLICATION_JSON
       :value: 'application/json'
 
-      
+
 
    .. py:attribute:: BEARER_TOKEN
       :value: 'Bearer {}'
 
-      
+
 
    .. py:attribute:: PYTHONSDK_VERSION
 
-      
 
    .. py:attribute:: PYTHONSDK
       :value: 'PythonSDK'
 
-      
 
 
 .. py:class:: DeviceStatuses(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -489,39 +487,36 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: ENABLED_ID
       :value: 0
 
-      
+
 
    .. py:attribute:: DISABLED_ID
       :value: 1
 
-      
+
 
    .. py:attribute:: DELETED_ID
       :value: 2
 
-      
+
 
    .. py:attribute:: ENABLED_DICT
 
-      
 
    .. py:attribute:: DISABLED_DICT
 
-      
 
    .. py:attribute:: DELETED_DICT
-
-      
 
 
 .. py:class:: SimStatusesID(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -559,37 +554,37 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: ISSUED_ID
       :value: 0
 
-      
+
 
    .. py:attribute:: ACTIVATED_ID
       :value: 1
 
-      
+
 
    .. py:attribute:: SUSPENDED_ID
       :value: 2
 
-      
+
 
    .. py:attribute:: DELETED_ID
       :value: 3
 
-      
+
 
    .. py:attribute:: FACTORY_TEST_ID
       :value: 4
 
-      
 
 
 .. py:class:: SimStatusesDict(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -628,31 +623,26 @@ Classes
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
 
+
    .. py:attribute:: ISSUED_DICT
 
-      
 
    .. py:attribute:: ACTIVATED_DICT
 
-      
 
    .. py:attribute:: SUSPENDED_DICT
 
-      
 
    .. py:attribute:: DELETED_DICT
 
-      
 
    .. py:attribute:: FACTORY_TEST_DICT
-
-      
 
 
 .. py:class:: ResponseHeaders(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -690,32 +680,32 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: COUNT_PER_PAGE
       :value: 'X-Count-Per-Page'
 
-      
+
 
    .. py:attribute:: CURRENT_PAGE
       :value: 'X-Current-Page'
 
-      
+
 
    .. py:attribute:: TOTAL_PAGES
       :value: 'X-Total-Pages'
 
-      
+
 
    .. py:attribute:: TOTAL_COUNT
       :value: 'X-Total-Count'
 
-      
 
 
 .. py:class:: SimSort(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -753,57 +743,57 @@ Classes
 
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
+
 
    .. py:attribute:: id
       :value: 'ID'
 
-      
+
 
    .. py:attribute:: issuer_org
       :value: 'ISSUER_ORG'
 
-      
+
 
    .. py:attribute:: reseller_org
       :value: 'RESELLER_ORG'
 
-      
+
 
    .. py:attribute:: customer_org
       :value: 'CUSTOMER_PRG'
 
-      
+
 
    .. py:attribute:: iccid
       :value: 'ICCID'
 
-      
+
 
    .. py:attribute:: status
       :value: 'STATUS'
 
-      
+
 
    .. py:attribute:: production_date
       :value: 'PRODUCTION_DATE'
 
-      
+
 
    .. py:attribute:: endpoint
       :value: 'ENDPOINT'
 
-      
+
 
    .. py:attribute:: model
       :value: 'MODEL'
 
-      
 
 
 .. py:class:: RequestUrls(*args, **kwds)
 
-
    Bases: :py:obj:`ExtendedEnum`
+
 
    Create a collection of name/value pairs.
 
@@ -842,9 +832,9 @@ Classes
    Methods can be added to enumerations, and members can have their own
    attributes -- see the documentation for details.
 
+
    .. py:attribute:: ENDPOINT_IN_URL
       :value: '/v1/endpoint/{endpoint_id}'
 
-      
 
 

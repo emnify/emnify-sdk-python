@@ -1,26 +1,27 @@
-:py:mod:`emnify.modules.device.manager`
-=======================================
+emnify.modules.device.manager
+=============================
 
 .. py:module:: emnify.modules.device.manager
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
    emnify.modules.device.manager.DeviceManager
 
 
-
+Module Contents
+---------------
 
 .. py:class:: DeviceManager(client)
 
-
    Manager that allows to get/retrieve/create/update/send_sms to device
+
+
+   .. py:attribute:: client
+
 
    .. py:property:: device_model
 
@@ -59,6 +60,7 @@ Classes
       :type: Type[emnify.modules.device.models.FilterDeviceModel]
 
 
+
    .. py:method:: get_device_sms_list(*, device: Union[emnify.modules.device.models.Device, int]) -> emnify.modules.device.models.ListSms
 
 
@@ -70,12 +72,14 @@ Classes
       :return: True if sms was sent
 
 
+
    .. py:method:: update_device(*, device_id: int, device: emnify.modules.device.models.UpdateDevice) -> emnify.modules.device.models.Device
 
       Method updates device
       :param device_id: id of device
       :param device: device update model
       :return: True if device was updated
+
 
 
    .. py:method:: reset_connectivity_network(device_id: int) -> True
@@ -85,6 +89,7 @@ Classes
       :return: True if reset of network was successful
 
 
+
    .. py:method:: reset_connectivity_data(device_id: int) -> True
 
       Method resets device connectivity data
@@ -92,11 +97,13 @@ Classes
       :return: True if reset of data was successful
 
 
+
    .. py:method:: get_device_connectivity_status(device_id: int) -> emnify.modules.device.models.DeviceConnectivityStatus
 
       Method returns device connectivity status
       :param device_id: id of device
       :return: DeviceConnectivityStatus model
+
 
 
    .. py:method:: get_devices_list(*args, filter_model: emnify.modules.device.models.FilterDeviceModel = None, sort_enum: emnify.modules.device.models.DeviceSortModel = None, **kwargs) -> Generator[emnify.modules.device.models.RetrieveDevice, None, None]
@@ -107,10 +114,12 @@ Classes
       :return: list of devices
 
 
+
    .. py:method:: delete_device(device_id: int) -> True
 
       :param device_id: id of device
       :return: True if device was deleted
+
 
 
    .. py:method:: add_device_blacklist_operator(device_id: int, operator_id: int) -> True
@@ -120,11 +129,13 @@ Classes
       :return: True if operator was added to blacklist
 
 
+
    .. py:method:: delete_device_blacklist_operator(device_id: int, operator_id: int)
 
       :param device_id: id of device
       :param operator_id: id of operator
       :return: True if operator was deleted from blacklist
+
 
 
    .. py:method:: get_device_operator_blacklist(device_id: int)
@@ -133,10 +144,12 @@ Classes
       :return: list of operators
 
 
+
    .. py:method:: get_device_events_list(device: Union[emnify.modules.device.models.Device, int])
 
       :param device: Device pydantic-model or int
       :return: Generator with Device objects
+
 
 
    .. py:method:: change_status(device: Union[emnify.modules.device.models.UpdateDevice, emnify.modules.device.models.Device, emnify.modules.device.models.RetrieveDevice, int], enable: bool = None, disable: bool = None) -> None
@@ -152,6 +165,7 @@ Classes
       :raises ValidationErrorException: If neither `enable` nor `disable` is provided, or if both are provided.
 
 
+
    .. py:method:: disable_device(device_id: int)
 
       Method for changing a device status to 'disabled'
@@ -159,14 +173,17 @@ Classes
       :return: True if device was disabled
 
 
+
    .. py:method:: release_sim(device_id: int)
 
       This method allows to release the assigned SIM from device by device_id
 
 
+
    .. py:method:: assign_sim(device_id: int, sim_id: int, enable: bool = False) -> None
 
       this method allow to assign a SIM to the device
+
 
 
    .. py:method:: create_device(device: emnify.modules.device.models.Device) -> bool
@@ -176,6 +193,7 @@ Classes
       :return: True if device was created
 
 
+
    .. py:method:: retrieve_device(device_id: int) -> emnify.modules.device.models.RetrieveDevice
 
 
@@ -183,16 +201,20 @@ Classes
       :staticmethod:
 
 
+
    .. py:method:: __check_device_status(device, status: dict)
       :staticmethod:
+
 
       Hidden method for checking device for status update
       devices to activate must have activated sim
 
 
+
    .. py:method:: __change_device_status(action: str, device)
 
       Hidden method for changing status of the device
+
 
 
    .. py:method:: __transform_all_devices_filter_params(filter_model: emnify.modules.device.models.FilterDeviceModel = None, sort_enum: emnify.modules.device.models.DeviceSortModel = None) -> dict

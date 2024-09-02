@@ -1,14 +1,11 @@
-:py:mod:`emnify.modules.device.models`
-======================================
+emnify.modules.device.models
+============================
 
 .. py:module:: emnify.modules.device.models
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -30,48 +27,49 @@ Classes
    emnify.modules.device.models.DeviceConnectivityStatus
 
 
-
+Module Contents
+---------------
 
 .. py:class:: SimDevice
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+
 
    .. py:attribute:: status
-      :type: Optional[emnify.modules.api.models.Status]
+      :type:  Optional[emnify.modules.api.models.Status]
+      :value: None
 
-      
 
 
 .. py:class:: Device
 
-
    Bases: :py:obj:`emnify.modules.api.models.Endpoint`
+
 
    Renamed generated model
 
-   .. py:attribute:: status
-      :type: emnify.modules.api.models.Status
 
-      
+   .. py:attribute:: status
+      :type:  emnify.modules.api.models.Status
+
 
    .. py:attribute:: sim
-      :type: Optional[SimDevice]
+      :type:  Optional[SimDevice]
+      :value: None
 
-      
 
 
 .. py:class:: CreateDevice
 
-
    Bases: :py:obj:`Device`
 
+
    Custom class for validation of Device on creation
+
 
    .. py:method:: validate_status(field_value, values, field, config)
       :classmethod:
@@ -80,272 +78,298 @@ Classes
 
 .. py:class:: SmsCreateModel
 
-
    Bases: :py:obj:`emnify.modules.api.models.SubmitMTSMSrequest`
+
 
    Inherited generated model of SubmitMTSMSrequest for extra fields
 
-   .. py:attribute:: source_address
-      :type: Optional[str]
 
-      
+   .. py:attribute:: source_address
+      :type:  Optional[str]
+      :value: None
+
+
 
    .. py:attribute:: source_address_type
-      :type: Optional[Dict[str, Any]]
+      :type:  Optional[Dict[str, Any]]
+      :value: None
 
-      
+
 
    .. py:attribute:: expiry_date
-      :type: Optional[str]
+      :type:  Optional[str]
+      :value: None
 
-      
+
 
    .. py:attribute:: udh
-      :type: Optional[str]
+      :type:  Optional[str]
+      :value: None
 
-      
+
 
    .. py:attribute:: dcs
-      :type: Optional[int]
+      :type:  Optional[int]
+      :value: None
 
-      
 
 
 .. py:class:: ListSms
 
-
    Bases: :py:obj:`emnify.modules.api.models.ListofSMSresponse`
+
 
    Renamed generated model
 
 
 .. py:class:: TariffProfile
 
-
    Bases: :py:obj:`emnify.modules.api.models.TariffProfile1`
+
 
    Renamed generated model
 
 
 .. py:class:: ServiceProfile
 
-
    Bases: :py:obj:`emnify.modules.api.models.ServiceProfile1`
+
 
    Renamed generated model
 
 
 .. py:class:: DeviceStatus
 
-
    Bases: :py:obj:`emnify.modules.api.models.Status`
+
 
    Renamed generated model
 
 
 .. py:class:: DeviceIdRequired
 
-
    Bases: :py:obj:`Device`
+
 
    Changed renamed model of Device for id validation
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
 
 
 .. py:class:: FilterDeviceModel
 
-
    Bases: :py:obj:`pydantic.BaseModel`
+
 
    Model for validation of filter query params
 
-   .. py:attribute:: status
-      :type: Optional[int]
 
-      
+   .. py:attribute:: status
+      :type:  Optional[int]
+      :value: None
+
+
 
    .. py:attribute:: last_updated
-      :type: Optional[datetime.datetime]
+      :type:  Optional[datetime.datetime]
+      :value: None
 
-      
+
 
    .. py:attribute:: created
-      :type: Optional[datetime.datetime]
+      :type:  Optional[datetime.datetime]
+      :value: None
 
-      
+
 
    .. py:attribute:: name
-      :type: Optional[str]
+      :type:  Optional[str]
+      :value: None
 
-      
+
 
    .. py:attribute:: tags
-      :type: Optional[str]
+      :type:  Optional[str]
+      :value: None
 
-      
+
 
    .. py:attribute:: ip_address
-      :type: Optional[str]
+      :type:  Optional[str]
+      :value: None
 
-      
+
 
    .. py:attribute:: imei
-      :type: Optional[int]
+      :type:  Optional[int]
+      :value: None
 
-      
+
 
    .. py:attribute:: sim_status
-      :type: Optional[int]
+      :type:  Optional[int]
+      :value: None
 
-      
 
 
 .. py:class:: ListQFilterDeviceListModel
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: __root__
-      :type: List[FilterDeviceModel]
 
-      
+   .. py:attribute:: __root__
+      :type:  List[FilterDeviceModel]
 
 
 .. py:class:: GetDeviceFilterSet
 
-
    Bases: :py:obj:`pydantic.BaseModel`
+
 
    Model for device list query params
 
-   .. py:class:: Config
 
+   .. py:attribute:: sort
+      :type:  Optional[emnify.constants.DeviceSort]
+      :value: None
+
+
+
+   .. py:attribute:: q
+      :type:  Optional[ListQFilterDeviceListModel]
+      :value: None
+
+
+
+   .. py:class:: Config
 
       .. py:attribute:: use_enum_values
          :value: True
 
-         
 
-
-   .. py:attribute:: sort
-      :type: Optional[emnify.constants.DeviceSort]
-
-      
-
-   .. py:attribute:: q
-      :type: Optional[ListQFilterDeviceListModel]
-
-      
 
 
 .. py:class:: DeviceEvent
 
-
    Bases: :py:obj:`emnify.modules.api.models.Event`
+
 
    class inherited from generated Event
 
 
 .. py:class:: RetrieveDevice
 
-
    Bases: :py:obj:`Device`
+
 
    class inherited from generated model for retrieve device response
 
-   .. py:attribute:: runtime_data
-      :type: Optional[Dict[str, Any]]
 
-      
+   .. py:attribute:: runtime_data
+      :type:  Optional[Dict[str, Any]]
+      :value: None
+
+
 
    .. py:attribute:: sim
-      :type: emnify.modules.sim.models.SimList
+      :type:  emnify.modules.sim.models.SimList
+      :value: None
 
-      
 
 
 .. py:class:: UpdateDevice
 
-
    Bases: :py:obj:`emnify.modules.api.models.UpdateEndpointrequest`
+
 
    Model for update Device request with field-type validation
 
-   .. py:attribute:: name
-      :type: str
 
-      
+   .. py:attribute:: name
+      :type:  str
+      :value: None
+
+
 
    .. py:attribute:: tags
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: status
-      :type: emnify.modules.api.models.Status
+      :type:  emnify.modules.api.models.Status
+      :value: None
 
-      
+
 
    .. py:attribute:: service_profile
-      :type: Dict[str, Any]
+      :type:  Dict[str, Any]
+      :value: None
 
-      
+
 
    .. py:attribute:: tariff_profile
-      :type: Dict[str, Any]
+      :type:  Dict[str, Any]
+      :value: None
 
-      
+
 
    .. py:attribute:: ip_address
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: ip_address_space
-      :type: Dict[str, Any]
+      :type:  Dict[str, Any]
+      :value: None
 
-      
+
 
    .. py:attribute:: sim
-      :type: Dict[str, Any]
+      :type:  Dict[str, Any]
+      :value: None
 
-      
+
 
    .. py:attribute:: imei
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: imei_lock
-      :type: bool
+      :type:  bool
+      :value: None
 
-      
 
 
 .. py:class:: DeviceConnectivityStatus
 
-
    Bases: :py:obj:`pydantic.BaseModel`
+
 
    Device connectivity status can be 'ATTACHED'/'ONLINE'/'OFFLINE'/'BLOCKED'
 
-   .. py:attribute:: status
-      :type: emnify.modules.api.models.Status
 
-      
+   .. py:attribute:: status
+      :type:  emnify.modules.api.models.Status
+      :value: None
+
+
 
    .. py:attribute:: location
-      :type: Dict[str, Any]
+      :type:  Dict[str, Any]
+      :value: None
 
-      
+
 
    .. py:attribute:: services
-      :type: Any
+      :type:  Any
+      :value: None
 
-      
 
 

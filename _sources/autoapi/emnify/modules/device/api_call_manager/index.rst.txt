@@ -1,14 +1,11 @@
-:py:mod:`emnify.modules.device.api_call_manager`
-================================================
+emnify.modules.device.api_call_manager
+======================================
 
 .. py:module:: emnify.modules.device.api_call_manager
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -27,65 +24,65 @@ Classes
    emnify.modules.device.api_call_manager.GetDeviceConnectivity
 
 
-
+Module Contents
+---------------
 
 .. py:class:: GetAllDevicesApiCall
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:attribute:: response_handlers
-
-      
 
 
 .. py:class:: GetEventsByDevice(*args, **kwargs)
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/event'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
+
+   .. py:attribute:: response_handlers
 
 
 .. py:class:: CreateDevice
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:attribute:: response_handlers
 
-      
 
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
@@ -93,192 +90,175 @@ Classes
    .. py:method:: return_success(response: requests.Response, client, data: dict = None, *args, **kwargs) -> True
 
 
-
 .. py:class:: GetAllSmsFromDevice
-
 
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/sms'
 
-      
+
 
    .. py:attribute:: request_method_name
-
-      
 
 
 .. py:class:: SendSmsToDevice
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/sms'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:attribute:: response_handlers
-
-      
 
 
 .. py:class:: RetrieveDevice
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
 
    Base manager for api calls handling
 
+
    .. py:attribute:: request_url_prefix
 
-      
 
    .. py:attribute:: request_method_name
-
-      
 
 
 .. py:class:: UpdateDevice
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
 
    Base manager for api calls handling
 
+
    .. py:attribute:: request_url_prefix
 
-      
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:attribute:: response_handlers
-
-      
 
 
 .. py:class:: DeleteDevice
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
+
 
    Base manager for api calls handling
 
+
    .. py:attribute:: request_url_prefix
 
-      
 
    .. py:attribute:: request_method_name
-
-      
 
 
 .. py:class:: GetOperatorBlacklist
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/operator_blacklist'
 
-      
+
 
    .. py:attribute:: request_method_name
-
-      
 
 
 .. py:class:: AddOperatorBlacklist
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/operator_blacklist/{operator_id}'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
-
 
 
 .. py:class:: DeleteOperatorBlacklist
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/operator_blacklist/{operator_id}'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
-
 
 
 .. py:class:: ResetConnectivityPatch
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/connectivity'
 
-      
+
 
    .. py:attribute:: request_method_name
-
-      
 
 
 .. py:class:: GetDeviceConnectivity
 
-
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
+
    Base manager for api calls handling
+
 
    .. py:attribute:: request_url_prefix
       :value: '/v1/endpoint/{endpoint_id}/connectivity'
 
-      
+
 
    .. py:attribute:: request_method_name
 
-      
 
    .. py:attribute:: response_handlers
 
-      
 
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
-
 
 

@@ -1,14 +1,11 @@
-:py:mod:`emnify.modules.operator.models`
-========================================
+emnify.modules.operator.models
+==============================
 
 .. py:module:: emnify.modules.operator.models
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -17,68 +14,65 @@ Classes
    emnify.modules.operator.models.Operator
 
 
-
+Module Contents
+---------------
 
 .. py:class:: TapCode
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+
 
    .. py:attribute:: tapcode
-      :type: str
-
-      
+      :type:  str
 
 
 .. py:class:: Mnc
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+
 
    .. py:attribute:: mnc
-      :type: str
-
-      
+      :type:  str
 
 
 .. py:class:: Operator
 
-
    Bases: :py:obj:`pydantic.BaseModel`
 
-   .. py:attribute:: id
-      :type: int
 
-      
+   .. py:attribute:: id
+      :type:  int
+
 
    .. py:attribute:: name
-      :type: str
+      :type:  str
+      :value: None
 
-      
+
 
    .. py:attribute:: country
-      :type: emnify.modules.api.models.Country
+      :type:  emnify.modules.api.models.Country
+      :value: None
 
-      
+
 
    .. py:attribute:: tapcode
-      :type: List[TapCode]
+      :type:  List[TapCode]
+      :value: None
 
-      
+
 
    .. py:attribute:: mnc
-      :type: List[Mnc]
+      :type:  List[Mnc]
+      :value: None
 
-      
 
 

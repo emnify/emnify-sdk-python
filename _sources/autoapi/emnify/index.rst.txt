@@ -1,50 +1,68 @@
-:py:mod:`emnify`
-================
+emnify
+======
 
 .. py:module:: emnify
 
 
 Subpackages
 -----------
-.. toctree::
-   :titlesonly:
-   :maxdepth: 3
 
-   modules/index.rst
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/emnify/modules/index
 
 
 Submodules
 ----------
+
 .. toctree::
-   :titlesonly:
    :maxdepth: 1
 
-   api_manager/index.rst
-   constants/index.rst
-   emnify/index.rst
-   errors/index.rst
-   version/index.rst
+   /autoapi/emnify/api_manager/index
+   /autoapi/emnify/constants/index
+   /autoapi/emnify/emnify/index
+   /autoapi/emnify/errors/index
+   /autoapi/emnify/version/index
 
-
-Package Contents
-----------------
 
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
    emnify.EMnify
 
 
-
+Package Contents
+----------------
 
 .. py:class:: EMnify(app_token=None)
 
-
    Bases: :py:obj:`object`
+
 
    base SDK class
    token: Emnify api token
+
+
+   .. py:attribute:: app_token
+
+
+   .. py:attribute:: devices
+      :type:  emnify.modules.device.manager.DeviceManager
+
+
+   .. py:attribute:: sim
+      :type:  emnify.modules.sim.manager.SimManager
+
+
+   .. py:attribute:: operator
+      :type:  emnify.modules.operator.manager.OperatorManager
+
+
+   .. py:attribute:: token
+      :value: None
+
 
 

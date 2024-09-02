@@ -1,17 +1,17 @@
-:py:mod:`emnify.modules.operator`
-=================================
+emnify.modules.operator
+=======================
 
 .. py:module:: emnify.modules.operator
 
 
 Submodules
 ----------
+
 .. toctree::
-   :titlesonly:
    :maxdepth: 1
 
-   api_call_manager/index.rst
-   manager/index.rst
-   models/index.rst
+   /autoapi/emnify/modules/operator/api_call_manager/index
+   /autoapi/emnify/modules/operator/manager/index
+   /autoapi/emnify/modules/operator/models/index
 
 
