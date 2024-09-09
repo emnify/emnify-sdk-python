@@ -24,7 +24,7 @@ To set up your sandbox, modify the code in this file as needed.
 
 Once your sandbox is set up, you can launch the file and view the results.
 ```shell
-docker run -t -e EMNIFY_SDK_APPLICATION_TOKEN=<your_token_here> -e EMINFY_SDK_API_ENDPOINT_URL=<your_debug_API_endpoint> -v $(pwd):/sdk emnify/python-sdk python docs/examples/local_debug.py
+docker run -t -e EMNIFY_SDK_APPLICATION_TOKEN=<your_token_here> -e EMNIFY_SDK_API_ENDPOINT_URL=<your_debug_API_endpoint> -v $(pwd):/sdk emnify/python-sdk python docs/examples/local_debug.py
 ```
 
 ## Version Bump
