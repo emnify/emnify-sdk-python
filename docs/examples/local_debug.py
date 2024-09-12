@@ -19,37 +19,29 @@ def get_iterator_length(iterator):
     return len(list(iterator))
 
 # Execute a command against desired API
-# devices = emnify.devices.get_devices_list()
+devices = emnify.devices.get_devices_list()
 #
 #
 ## print first 100 devices
-# for i, device in enumerate(devices):
-#     if i >= 100:
-#         break
-#     print(device)
-#     print(i)
+for i, device in enumerate(devices):
+    if i >= 100:
+        break
+    print(device)
 
 # Count remaining devices
-#count = (sum (1 for _ in devices))
-#print(count)
+print(get_iterator_length(devices))
 
-sim_model = emnify.sim.get_sim_filter_model()
+
 # Get list of sims
 sims = emnify.sim.get_sim_list()
 
-for i, sim in enumerate(sims):
-    if i >= 2050:
-        break
-    print(sim)
-    print(i)
-print(type(sims))
 # Count sims
-#print(get_iterator_length(sims))
+print(get_iterator_length(sims))
 
-# sms_list = emnify.devices.get_device_sms_list(device=8486178)
-# print(list(sms_list))
-# print(sms_list)
+sms_list = emnify.devices.get_device_sms_list(device=11379224)
+print(list(sms_list))
+print(sms_list)
 
 # Get list of events
-# events = emnify.devices.get_device_events_list(device=8486178)
-# print(list(events))
+events = emnify.devices.get_device_events_list(device=11379224)
+print(list(events))
