@@ -10,6 +10,9 @@ from emnify import errors as emnify_errors
 class DeviceManager:
     """
     Manager that allows to get/retrieve/create/update/send_sms to device
+
+    Args:
+        client: An instance of the EMnify class used for making API requests.
     """
     def __init__(self, client):
         self.client = client
@@ -65,6 +68,7 @@ class DeviceManager:
     def get_device_sms_list(self, *, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
         """
         Method returns list of sms from device
+
         :param device: device model or id of device
         :return: list of devices
         """
@@ -82,6 +86,7 @@ class DeviceManager:
     ) -> bool:
         """
         Method sends sms to device
+
         :param device: device model or id of device
         :param sms: SmsCreateModel
         :return: True if sms was sent
@@ -96,6 +101,7 @@ class DeviceManager:
     def update_device(self, *, device_id: int, device: device_models.UpdateDevice) -> device_models.Device:
         """
         Method updates device
+
         :param device_id: id of device
         :param device: device update model
         :return: True if device was updated
@@ -107,6 +113,7 @@ class DeviceManager:
     def reset_connectivity_network(self, device_id: int) -> True:
         """
         Method resets device connectivity network
+
         :param device_id: id of device
         :return: True if reset of network was successful
         """
@@ -117,6 +124,7 @@ class DeviceManager:
     def reset_connectivity_data(self, device_id: int) -> True:
         """
         Method resets device connectivity data
+
         :param device_id: id of device
         :return: True if reset of data was successful
         """
@@ -127,6 +135,7 @@ class DeviceManager:
     def get_device_connectivity_status(self, device_id: int) -> device_models.DeviceConnectivityStatus:
         """
         Method returns device connectivity status
+
         :param device_id: id of device
         :return: DeviceConnectivityStatus model
         """
@@ -143,6 +152,7 @@ class DeviceManager:
     ) -> typing.Generator[device_models.Device, None, None]:
         """
         Method returns list of devices
+
         :param filter_model: device filter model
         :param sort_enum: device sort enum
         :return: list of devices
@@ -156,6 +166,8 @@ class DeviceManager:
 
     def delete_device(self, device_id: int) -> True:
         """
+        Method deletes device
+
         :param device_id: id of device
         :return: True if device was deleted
         """
@@ -166,6 +178,8 @@ class DeviceManager:
 
     def add_device_blacklist_operator(self, device_id: int, operator_id: int) -> True:
         """
+        Method adds operator to blacklist
+
         :param device_id: id of device
         :param operator_id: id of operator
         :return: True if operator was added to blacklist
@@ -176,6 +190,8 @@ class DeviceManager:
 
     def delete_device_blacklist_operator(self, device_id: int, operator_id: int):
         """
+        Method deletes operator from blacklist
+
         :param device_id: id of device
         :param operator_id: id of operator
         :return: True if operator was deleted from blacklist
@@ -186,6 +202,8 @@ class DeviceManager:
 
     def get_device_operator_blacklist(self, device_id: int):
         """
+        Method returns list of operators in blacklist
+
         :param device_id: id of device
         :return: list of operators
         """
@@ -197,6 +215,8 @@ class DeviceManager:
 
     def get_device_events_list(self, device: typing.Union[device_models.Device, int]):
         """
+        Method returns list of events for device
+
         :param device: Device pydantic-model or int
         :return: Generator with Device objects
         """
@@ -214,14 +234,11 @@ class DeviceManager:
             enable: bool = None, disable: bool = None
     ) -> bool:
         """
-        Change the status of a device and assigned SIM to enabled or disabled.
+        Method changes the status of a device and assigned SIM to enabled or disabled.
 
         :param device: The ID or device model to update.
-        :type device: Union[UpdateDevice, Device, RetrieveDevice, int]
         :param enable: Whether to enable the device.
-        :type enable: bool
         :param disable: Whether to disable the device.
-        :type disable: bool
         :raises ValidationErrorException: If neither `enable` nor `disable` is provided, or if both are provided.
         """
         if not (enable or disable) or (enable and disable):
@@ -236,7 +253,8 @@ class DeviceManager:
 
     def disable_device(self, device_id: int):
         """
-        Method for changing a device status to 'disabled'
+        Method changes a device status to 'disabled'
+
         :param device_id: id of device
         :return: True if device was disabled
         """
@@ -245,7 +263,8 @@ class DeviceManager:
 
     def release_sim(self, device_id: int):
         """
-        This method allows to release the assigned SIM from device by device_id
+        Method allows to release the assigned SIM from device by device_id
+
         :param device_id: id of device
         :return: True if sim was released
         """
@@ -260,7 +279,8 @@ class DeviceManager:
 
     def assign_sim(self, device_id: int, sim_id: int, enable: bool = False) -> None:
         """
-        This method allows to assign a SIM to the device
+        Method allows to assign a SIM to the device
+
         :param device_id: id of device
         :param sim_id: id of SIM
         :param enable: boolean value/activate to enable or disable the device
@@ -280,7 +300,8 @@ class DeviceManager:
 
     def create_device(self, device: device_models.Device) -> bool:
         """
-        Method for creating a device
+        Method creates a device
+
         :param device: device model
         :return: True if device was created
         """
@@ -290,7 +311,8 @@ class DeviceManager:
 
     def retrieve_device(self, device_id: int) -> device_models.RetrieveDevice:
         """
-        Method for retrieving endpoint details for a given ID.
+        Method retrieves endpoint details for a given ID.
+
         :param device_id: id of the device.
         :return: Endpoint details associated with the given ID.
         """
@@ -303,9 +325,6 @@ class DeviceManager:
 
     @staticmethod
     def validate_device(device: device_models.Device) -> int:
-        """"
-        Hidden method for validating device
-        """
         if isinstance(device, device_models.Device) or isinstance(device, device_models.RetrieveDevice):
             return device.id
         elif isinstance(device, int):
@@ -315,18 +334,11 @@ class DeviceManager:
 
     @staticmethod
     def __check_device_status(device, status: dict):
-        """
-        Hidden method for checking device for status update
-        devices to activate must have activated sim
-        """
         if status == emnify_constants.SimStatusesDict.ACTIVATED_DICT:
             if not device.sim:
                 raise emnify_errors.ValidationErrorException('Devices for activation must have sim`s')
 
     def __change_device_status(self, action: str, device):
-        """
-        Hidden method for changing status of the device
-        """
         status_dict = {
             'enable': {
                 'sim_status': emnify_constants.SimStatusesDict.ACTIVATED_DICT.value,
@@ -353,12 +365,6 @@ class DeviceManager:
             filter_model: device_models.FilterDeviceModel = None,
             sort_enum: device_models.DeviceSortModel = None
     ) -> dict:
-        """
-        Hidden method for transforming filter and sort params for devices
-        :param filter_model: Device filter model
-        :param sort_enum: Device sort enum
-        :return: Dict with filter and sort params
-        """
         query_filter = {}
         if filter_model:
             filter_dict = filter_model.dict(exclude_none=True)
