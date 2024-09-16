@@ -63,6 +63,11 @@ class DeviceManager:
         return device_models.FilterDeviceModel
 
     def get_device_sms_list(self, *, device: typing.Union[device_models.Device, int]) -> device_models.ListSms:
+        """
+        Method returns list of sms from device
+        :param device: device model or id of device
+        :return: list of devices
+        """
         device_id = self.validate_device(device)
         sms_response = device_call_managers.GetAllSmsFromDevice().call_api(
             client=self.client, path_params={'endpoint_id': device_id}
@@ -135,7 +140,7 @@ class DeviceManager:
             filter_model: device_models.FilterDeviceModel = None,
             sort_enum: device_models.DeviceSortModel = None,
             **kwargs
-    ) -> typing.Generator[device_models.RetrieveDevice, None, None]:
+    ) -> typing.Generator[device_models.Device, None, None]:
         """
         Method returns list of devices
         :param filter_model: device filter model
@@ -207,7 +212,7 @@ class DeviceManager:
                 device_models.UpdateDevice, device_models.Device, device_models.RetrieveDevice, int
             ],
             enable: bool = None, disable: bool = None
-    ) -> None:
+    ) -> bool:
         """
         Change the status of a device and assigned SIM to enabled or disabled.
 
@@ -241,6 +246,8 @@ class DeviceManager:
     def release_sim(self, device_id: int):
         """
         This method allows to release the assigned SIM from device by device_id
+        :param device_id: id of device
+        :return: True if sim was released
         """
         device = self.retrieve_device(device_id=device_id)
         if not device.sim:
@@ -253,7 +260,10 @@ class DeviceManager:
 
     def assign_sim(self, device_id: int, sim_id: int, enable: bool = False) -> None:
         """
-        this method allow to assign a SIM to the device
+        This method allows to assign a SIM to the device
+        :param device_id: id of device
+        :param sim_id: id of SIM
+        :param enable: boolean value/activate to enable or disable the device
         """
         device = self.retrieve_device(device_id=device_id)
         sim = self.client.sim.retrieve_sim(sim_id=sim_id)
@@ -279,6 +289,11 @@ class DeviceManager:
         return device_call_managers.CreateDevice().call_api(client=self.client, data=device.dict(exclude_none=True))
 
     def retrieve_device(self, device_id: int) -> device_models.RetrieveDevice:
+        """
+        Method for retrieving endpoint details for a given ID.
+        :param device_id: id of the device.
+        :return: Endpoint details associated with the given ID.
+        """
         if not isinstance(device_id, int) or device_id <= 0:
             raise UnexpectedArgumentException('Device id must be positive integer')
         response = device_call_managers.RetrieveDevice().call_api(
@@ -288,6 +303,9 @@ class DeviceManager:
 
     @staticmethod
     def validate_device(device: device_models.Device) -> int:
+        """"
+        Hidden method for validating device
+        """
         if isinstance(device, device_models.Device) or isinstance(device, device_models.RetrieveDevice):
             return device.id
         elif isinstance(device, int):
@@ -335,6 +353,12 @@ class DeviceManager:
             filter_model: device_models.FilterDeviceModel = None,
             sort_enum: device_models.DeviceSortModel = None
     ) -> dict:
+        """
+        Hidden method for transforming filter and sort params for devices
+        :param filter_model: Device filter model
+        :param sort_enum: Device sort enum
+        :return: Dict with filter and sort params
+        """
         query_filter = {}
         if filter_model:
             filter_dict = filter_model.dict(exclude_none=True)

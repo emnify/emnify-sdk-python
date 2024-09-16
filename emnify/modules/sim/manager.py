@@ -123,6 +123,13 @@ class SimManager:
             without_device: bool = None
 
     ) -> dict:
+        """
+        Hidden method for transforming filter and sort params for SIMs
+        :param filter_model: SIM filter model
+        :param sort_enum: SIM sort enum
+        :param without_device: boolean for filtering SIMs without device
+        :return: Dict with filter and sort params
+        """
         query_filter = {}
         if filter_model:
             filter_dict = filter_model.dict(exclude_none=True)
