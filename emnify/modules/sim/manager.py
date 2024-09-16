@@ -39,7 +39,7 @@ class SimManager:
             sort_enum: emnify_const.SimSort = None
     ) -> typing.Generator[sim_models.SimList, None, None]:
         """
-        Method retrieves iterable list of SIM`s.
+        Retrieves an iterable list of SIM`s.
 
         :param without_device: Allows to add a filter for request to find all SIM`s without device
         :param filter_model: Model for request`s filtering
@@ -55,7 +55,7 @@ class SimManager:
 
     def retrieve_sim(self, sim_id: int):
         """
-        Method retrieves details of single sim by id
+        Retrieves details of single SIM by ID.
 
         :param sim_id: id of sim to retrieve
         """
@@ -63,9 +63,9 @@ class SimManager:
 
     def register_sim(self, bic: str) -> typing.Union[typing.List[sim_models.SimList], sim_models.SimList]:
         """
-        Method registers sim/batch sims
+        Registers SIM/batch SIMs.
 
-        :param bic: BIC number of sim/batch sims for registration
+        :param bic: BIC number of SIM/batch SIMs for registration.
         """
         data = emnify_const.SimStatusesDict.ACTIVATED_DICT.value
         sim_response = SimActivateApi().call_api(client=self.client, data=data, path_params={'bic': bic})
@@ -77,7 +77,7 @@ class SimManager:
 
     def update_sim(self, sim_id: int, sim: sim_models.SimUpdate) -> bool:
         """
-        Method updates sim`s
+        Updates SIM.
 
         :param sim_id: int of sim to update
         :param sim: filled sim update model
@@ -87,7 +87,7 @@ class SimManager:
 
     def activate_sim(self, sim_id: int):
         """
-        Method activates `suspended` or `issued` SIM.
+        Activates `suspended` or `issued` SIM.
         If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
         Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
 
@@ -101,7 +101,7 @@ class SimManager:
 
     def suspend_sim(self, sim_id: int):
         """
-        Method puts the `active` SIM to `suspended` state.
+        Puts the `active` SIM to `suspended` state.
         If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
         Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
 
