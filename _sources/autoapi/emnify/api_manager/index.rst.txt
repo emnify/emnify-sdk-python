@@ -57,7 +57,7 @@ Module Contents
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
-   .. py:method:: return_paginator(response: requests.Response, client, data, files, query_params, path_params) -> Generator
+   .. py:method:: return_paginator(response: requests.Response, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None) -> Generator
 
 
    .. py:method:: build_method_url(url_params)

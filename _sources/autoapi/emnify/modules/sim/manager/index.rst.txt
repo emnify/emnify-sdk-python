@@ -27,28 +27,21 @@ Module Contents
 
 
    .. py:property:: get_sim_list_model
-      Returns the model for the SIM list.
-
 
 
    .. py:property:: get_sim_update_model
-      Returns the model for updating SIM cards.
-
 
 
    .. py:property:: get_sim_filter_model
-      Returns the model for filtering SIM cards.
-
 
 
    .. py:property:: get_sim_sort_enum
-      Returns sim sorting options.
-
 
 
    .. py:method:: get_sim_list(without_device: bool = None, filter_model: emnify.modules.sim.models.SimFilter = None, sort_enum: emnify.constants.SimSort = None) -> Generator[emnify.modules.sim.models.SimList, None, None]
 
-      Retrieve iterable list of SIM`s.
+      Retrieves an iterable list of SIM`s.
+
       :param without_device: Allows to add a filter for request to find all SIM`s without device
       :param filter_model: Model for request`s filtering
       :param sort_enum: Model for request`s sorting
@@ -57,19 +50,24 @@ Module Contents
 
    .. py:method:: retrieve_sim(sim_id: int)
 
-      Method for retrieving details of single sim by id
+      Retrieves details of single SIM by ID.
+
+      :param sim_id: id of sim to retrieve
 
 
 
    .. py:method:: register_sim(bic: str) -> Union[List[emnify.modules.sim.models.SimList], emnify.modules.sim.models.SimList]
 
-      :param bic: BIC number of sim/batch sims for registration
+      Registers SIM/batch SIMs.
+
+      :param bic: BIC number of SIM/batch SIMs for registration.
 
 
 
    .. py:method:: update_sim(sim_id: int, sim: emnify.modules.sim.models.SimUpdate) -> bool
 
-      Method for updating sim`s
+      Updates SIM.
+
       :param sim_id: int of sim to update
       :param sim: filled sim update model
 
@@ -80,6 +78,7 @@ Module Contents
       Activates `suspended` or `issued` SIM.
       If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
       Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
+
       :param sim_id: int of sim to update
 
 
@@ -89,6 +88,7 @@ Module Contents
       Puts the `active` SIM to `suspended` state.
       If you want to control both the device and SIM as a whole, it's recommended to use the :class:`DeviceManager.change_status` method if the SIM is assigned to a device.
       Learn more about SIM Lifecycle: https://docs.emnify.com/services/sim-lifecycle-management
+
       :param sim_id: id of sim to update
 
 

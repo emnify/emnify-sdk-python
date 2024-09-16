@@ -315,52 +315,56 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.get_sim_list_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_sim_list_model</span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.get_sim_list_model" title="Link to this definition">¶</a></dt>
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Returns</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">SIM</span> <span class="pre">list.</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.get_sim_update_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_sim_update_model</span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.get_sim_update_model" title="Link to this definition">¶</a></dt>
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Returns</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">for</span> <span class="pre">updating</span> <span class="pre">SIM</span> <span class="pre">cards.</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.get_sim_filter_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_sim_filter_model</span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.get_sim_filter_model" title="Link to this definition">¶</a></dt>
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Returns</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">for</span> <span class="pre">filtering</span> <span class="pre">SIM</span> <span class="pre">cards.</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.get_sim_sort_enum">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_sim_sort_enum</span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.get_sim_sort_enum" title="Link to this definition">¶</a></dt>
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Returns</span> <span class="pre">sim</span> <span class="pre">sorting</span> <span class="pre">options.</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.get_sim_list">
 <span class="sig-name descname"><span class="pre">get_sim_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">without_device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../models/index.html#emnify.modules.sim.models.SimFilter" title="emnify.modules.sim.models.SimFilter"><span class="pre">emnify.modules.sim.models.SimFilter</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_enum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../constants/index.html#emnify.constants.SimSort" title="emnify.constants.SimSort"><span class="pre">emnify.constants.SimSort</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Generator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../models/index.html#emnify.modules.sim.models.SimList" title="emnify.modules.sim.models.SimList"><span class="pre">emnify.modules.sim.models.SimList</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.get_sim_list" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve iterable list of SIM`s.
-:param without_device: Allows to add a filter for request to find all SIM`s without device
-:param filter_model: Model for request`s filtering
-:param sort_enum: Model for request`s sorting</p>
+<dd><p>Retrieves an iterable list of SIM`s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>without_device</strong> – Allows to add a filter for request to find all SIM`s without device</p></li>
+<li><p><strong>filter_model</strong> – Model for request`s filtering</p></li>
+<li><p><strong>sort_enum</strong> – Model for request`s sorting</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.retrieve_sim">
 <span class="sig-name descname"><span class="pre">retrieve_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.retrieve_sim" title="Link to this definition">¶</a></dt>
-<dd><p>Method for retrieving details of single sim by id</p>
+<dd><p>Retrieves details of single SIM by ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sim_id</strong> – id of sim to retrieve</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.register_sim">
 <span class="sig-name descname"><span class="pre">register_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../models/index.html#emnify.modules.sim.models.SimList" title="emnify.modules.sim.models.SimList"><span class="pre">emnify.modules.sim.models.SimList</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../models/index.html#emnify.modules.sim.models.SimList" title="emnify.modules.sim.models.SimList"><span class="pre">emnify.modules.sim.models.SimList</span></a></span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.register_sim" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Registers SIM/batch SIMs.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>bic</strong> – BIC number of sim/batch sims for registration</p>
+<dd class="field-odd"><p><strong>bic</strong> – BIC number of SIM/batch SIMs for registration.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -368,9 +372,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="emnify.modules.sim.manager.SimManager.update_sim">
 <span class="sig-name descname"><span class="pre">update_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../models/index.html#emnify.modules.sim.models.SimUpdate" title="emnify.modules.sim.models.SimUpdate"><span class="pre">emnify.modules.sim.models.SimUpdate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.update_sim" title="Link to this definition">¶</a></dt>
-<dd><p>Method for updating sim`s
-:param sim_id: int of sim to update
-:param sim: filled sim update model</p>
+<dd><p>Updates SIM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sim_id</strong> – int of sim to update</p></li>
+<li><p><strong>sim</strong> – filled sim update model</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -378,8 +388,12 @@
 <span class="sig-name descname"><span class="pre">activate_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.activate_sim" title="Link to this definition">¶</a></dt>
 <dd><p>Activates <cite>suspended</cite> or <cite>issued</cite> SIM.
 If you want to control both the device and SIM as a whole, it’s recommended to use the <code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceManager.change_status</span></code> method if the SIM is assigned to a device.
-Learn more about SIM Lifecycle: <a class="reference external" href="https://docs.emnify.com/services/sim-lifecycle-management">https://docs.emnify.com/services/sim-lifecycle-management</a>
-:param sim_id: int of sim to update</p>
+Learn more about SIM Lifecycle: <a class="reference external" href="https://docs.emnify.com/services/sim-lifecycle-management">https://docs.emnify.com/services/sim-lifecycle-management</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sim_id</strong> – int of sim to update</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -387,8 +401,12 @@ Learn more about SIM Lifecycle: <a class="reference external" href="https://docs
 <span class="sig-name descname"><span class="pre">suspend_sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sim_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#emnify.modules.sim.manager.SimManager.suspend_sim" title="Link to this definition">¶</a></dt>
 <dd><p>Puts the <cite>active</cite> SIM to <cite>suspended</cite> state.
 If you want to control both the device and SIM as a whole, it’s recommended to use the <code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceManager.change_status</span></code> method if the SIM is assigned to a device.
-Learn more about SIM Lifecycle: <a class="reference external" href="https://docs.emnify.com/services/sim-lifecycle-management">https://docs.emnify.com/services/sim-lifecycle-management</a>
-:param sim_id: id of sim to update</p>
+Learn more about SIM Lifecycle: <a class="reference external" href="https://docs.emnify.com/services/sim-lifecycle-management">https://docs.emnify.com/services/sim-lifecycle-management</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sim_id</strong> – id of sim to update</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
