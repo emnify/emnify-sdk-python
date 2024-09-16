@@ -6,7 +6,7 @@ from emnify import errors as emnify_errors
 from emnify.modules.api.models import AuthenticationResponse
 from emnify import constants as emnify_constants
 
-MAIN_URL = os.environ.get('EMINFY_SDK_API_ENDPOINT_URL', 'https://cdn.emnify.net/api')
+MAIN_URL = os.environ.get('EMNIFY_SDK_API_ENDPOINT_URL', 'https://cdn.emnify.net/api')
 
 MAX_PAGES_IN_PAGINATOR = 1000 # with regular page size 1000...2000 gives max 2_000_000 records
 
@@ -46,7 +46,7 @@ class BaseApiManager:
         raise emnify_errors.ValidationErrorException(f'{response.json()}')
 
     def return_paginator(
-            self, response: requests.Response, client, data, files, query_params, path_params
+            self, response: requests.Response, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None
     ) -> typing.Generator:
         query_params = query_params or {}
         page = query_params.get('page', 1) if query_params else 1
