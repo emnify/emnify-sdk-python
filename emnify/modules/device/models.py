@@ -129,7 +129,7 @@ class UpdateDevice(generated_models.UpdateEndpointrequest):
     name: str = None
     tags: str = None
     status: generated_models.Status = None
-    service_profile: Dict[str, Any] = None
+    service_profile: generated_models.ServiceProfile1 = None
     tariff_profile: Dict[str, Any] = None
     ip_address: str = None
     ip_address_space: Dict[str, Any] = None
