@@ -84,9 +84,6 @@ Module Contents
    .. py:attribute:: response_handlers
 
 
-   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
-
-
    .. py:method:: return_success(response: requests.Response, client, data: dict = None, *args, **kwargs) -> True
 
 

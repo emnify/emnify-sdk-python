@@ -24,7 +24,7 @@ Module Contents
    Bases: :py:obj:`Exception`
 
 
-   Cumstom base error class
+   Custom base error class
 
 
 .. py:exception:: UnauthorisedException

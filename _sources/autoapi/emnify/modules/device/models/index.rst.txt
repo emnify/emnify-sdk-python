@@ -306,7 +306,7 @@ Module Contents
 
 
    .. py:attribute:: service_profile
-      :type:  Dict[str, Any]
+      :type:  emnify.modules.api.models.ServiceProfile1
       :value: None
 
 
