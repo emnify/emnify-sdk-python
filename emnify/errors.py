@@ -10,7 +10,7 @@ __all__ = [
 
 
 class EMnifyBaseException(Exception):
-    """Cumstom base error class"""
+    """Custom base error class"""
 
 
 class UnauthorisedException(EMnifyBaseException):
