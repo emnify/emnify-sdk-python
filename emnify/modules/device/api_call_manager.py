@@ -16,6 +16,7 @@ class GetAllDevicesApiCall(BaseApiManager):
 class GetEventsByDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/event'
     request_method_name = RequestsType.GET.value
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.response_handlers = self.response_handlers.copy() | {
@@ -65,7 +66,11 @@ class UpdateDevice(BaseApiManager):
     response_handlers = {
         204: 'return_success',
         401: 'unauthorised',
+        422: 'process_exception'
     }
+
+    def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
+        raise ValidationErrorException(f"{response.json()}")
 
 
 class DeleteDevice(BaseApiManager):
