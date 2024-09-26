@@ -34,9 +34,6 @@ class CreateDevice(BaseApiManager):
         422: 'process_exception'
     }
 
-    def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
-        raise ValidationErrorException(f'{response.json()}')
-
     def return_success(self, response: requests.Response, client, data: dict = None, *args, **kwargs) -> True:
         return int(response.headers.get('Location').split('/')[-1])
 
@@ -68,9 +65,6 @@ class UpdateDevice(BaseApiManager):
         401: 'unauthorised',
         422: 'process_exception'
     }
-
-    def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
-        raise ValidationErrorException(f"{response.json()}")
 
 
 class DeleteDevice(BaseApiManager):
