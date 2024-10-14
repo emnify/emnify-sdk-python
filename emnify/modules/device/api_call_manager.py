@@ -62,6 +62,7 @@ class UpdateDevice(BaseApiManager):
     request_method_name = RequestsType.PATCH.value
     response_handlers = {
         204: 'return_success',
+        400: 'process_exception',
         401: 'unauthorised',
         404: 'process_exception',
         422: 'process_exception'
