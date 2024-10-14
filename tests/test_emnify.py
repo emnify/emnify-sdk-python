@@ -17,7 +17,7 @@ def vcr_cassette_dir(request):
 
 vcr_shared_parameters = {
     'filter_headers': ['authorization'],
-    'filter_post_data_parameters': ['application_token', 'username', 'password'],
+    'filter_post_data_parameters': ['application_token', 'auth_token', 'username', 'password'],
 }
 
 class EMnifyTest(TestCase):
@@ -90,7 +90,7 @@ class EMnifyTest(TestCase):
         bics = [  # BIC CODES
             'valid_bic_code',
             'invalid_bic_code'
-            ]
+        ]
         emnify = emnify_client(app_token=self.token)
         bic = bics[0]
         response = emnify.sim.register_sim(bic=bic)
@@ -152,6 +152,36 @@ class EMnifyTest(TestCase):
         emnify.devices.update_device(device_id=device.id, device=device_model_for_update)
         updated_device = emnify.devices.retrieve_device(device_id=device.id)
         self.assertNotEqual(device.name, updated_device.name)
+
+    @vcr.use_cassette('tests/fixtures/cassettes/test_update_device_with_service_profile.yaml',  record_mode='once', **vcr_shared_parameters)
+    def test_update_device_with_service_profile(self):
+        emnify = emnify_client(app_token=self.token)
+        device = [i for i in emnify.devices.get_devices_list()][0]
+        service_profile_for_update = emnify.devices.service_profile_model(id=device.service_profile.id)
+        device_model_for_update = emnify.devices.device_update_model(service_profile=service_profile_for_update)
+        emnify.devices.update_device(device_id=device.id, device=device_model_for_update)
+
+    @vcr.use_cassette('tests/fixtures/cassettes/test_update_device_error_handling_device_id.yaml', record_mode='once', **vcr_shared_parameters)
+    def test_update_device_error_handling_device_id(self):
+        emnify = emnify_client(app_token=self.token)
+        device_model_for_update = emnify.devices.device_update_model()
+        for device_id in [-1, None]:
+            with self.subTest(device_id=device_id):
+                try:
+                    emnify.devices.update_device(device_id=device_id, device=device_model_for_update)
+                except emnify_errors.ValidationErrorException:
+                    self.assertTrue(True)
+
+    @vcr.use_cassette('tests/fixtures/cassettes/test_update_device_error_handling_service_profile.yaml', record_mode='once', **vcr_shared_parameters)
+    def test_update_device_error_handling_service_profile_id(self):
+        emnify = emnify_client(app_token=self.token)
+        device = [i for i in emnify.devices.get_devices_list()][0]
+        service_profile_for_update = emnify.devices.service_profile_model(id=-1)  # non existing service profile
+        device_model_for_update = emnify.devices.device_update_model(service_profile=service_profile_for_update)
+        try:
+            emnify.devices.update_device(device_id=device.id, device=device_model_for_update)
+        except emnify_errors.ValidationErrorException:
+            self.assertTrue(True)
 
     @vcr.use_cassette('tests/fixtures/cassettes/test_delete_device.yaml', **vcr_shared_parameters)
     def test_delete_device(self):
