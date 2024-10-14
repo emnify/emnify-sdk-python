@@ -20,6 +20,7 @@ class BaseApiManager:
         201: 'return_success',
         401: 'unauthorised',
         204: 'return_success',
+        404: 'process_exception',
         409: 'process_exception',
         422: 'process_exception'
     }

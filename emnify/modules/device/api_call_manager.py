@@ -63,6 +63,7 @@ class UpdateDevice(BaseApiManager):
     response_handlers = {
         204: 'return_success',
         401: 'unauthorised',
+        404: 'process_exception',
         422: 'process_exception'
     }
 
