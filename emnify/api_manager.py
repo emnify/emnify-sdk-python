@@ -8,7 +8,8 @@ from emnify import constants as emnify_constants
 
 MAIN_URL = os.environ.get('EMNIFY_SDK_API_ENDPOINT_URL', 'https://cdn.emnify.net/api')
 
-MAX_PAGES_IN_PAGINATOR = 1000 # with regular page size 1000...2000 gives max 2_000_000 records
+MAX_PAGES_IN_PAGINATOR = 1000  # with regular page size 1000...2000 gives max 2_000_000 records
+
 
 class BaseApiManager:
     """
@@ -18,8 +19,10 @@ class BaseApiManager:
     response_handlers = {
         200: 'return_unwrapped',
         201: 'return_success',
-        401: 'unauthorised',
         204: 'return_success',
+        400: 'process_exception',
+        401: 'unauthorised',
+        404: 'process_exception',
         409: 'process_exception',
         422: 'process_exception'
     }
@@ -47,7 +50,8 @@ class BaseApiManager:
         raise emnify_errors.ValidationErrorException(f'{response.json()}')
 
     def return_paginator(
-            self, response: requests.Response, client, data: dict = None, files=None, path_params: dict = None, query_params: dict = None
+            self, response: requests.Response, client, data: dict = None, files=None, path_params: dict = None,
+            query_params: dict = None
     ) -> typing.Generator:
         query_params = query_params or {}
         page = query_params.get('page', 1) if query_params else 1
@@ -92,7 +96,7 @@ class BaseApiManager:
                 "Unknown status code {status_code}".format(status_code=response.status_code)
             )
 
-        return getattr(self, self.response_handlers[response.status_code])\
+        return getattr(self, self.response_handlers[response.status_code]) \
             (response, client, data=data, files=files, query_params=query_params, path_params=path_params)
 
     def make_get_request(self, main_url: str, method_name: str, headers: dict, params: str = None):
@@ -101,10 +105,12 @@ class BaseApiManager:
     def make_post_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
         return requests.post(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
-    def make_patch_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
+    def make_patch_request(self, main_url: str, method_name: str, headers: dict, params: dict = None,
+                           data: dict = None):
         return requests.patch(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
-    def make_delete_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
+    def make_delete_request(self, main_url: str, method_name: str, headers: dict, params: dict = None,
+                            data: dict = None):
         return requests.delete(self.resource_path(main_url, method_name), headers=headers, json=data, params=params)
 
     def make_put_request(self, main_url: str, method_name: str, headers: dict, params: dict = None, data: dict = None):
@@ -158,11 +164,11 @@ class Authenticate(BaseApiManager):
     request_url_prefix = emnify_constants.AuthenticateRequestsUrl.V1_AUTHENTICATE.value
     request_method_name = emnify_constants.RequestsType.POST.value
 
-    response_handlers = {
-        200: 'return_unwrapped',
-        401: 'unauthorised',
-        404: 'unexpected_error'
-    }
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.response_handlers = self.response_handlers.copy() | {
+            404: 'unexpected_error'
+        }
 
     def unauthorised(
             self, response: requests.Response, client, data: dict = None, files=None, path_params: list = None, **kwargs
