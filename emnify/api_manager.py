@@ -18,9 +18,9 @@ class BaseApiManager:
     response_handlers = {
         200: 'return_unwrapped',
         201: 'return_success',
-        401: 'unauthorised',
         204: 'return_success',
         400: 'process_exception',
+        401: 'unauthorised',
         404: 'process_exception',
         409: 'process_exception',
         422: 'process_exception'

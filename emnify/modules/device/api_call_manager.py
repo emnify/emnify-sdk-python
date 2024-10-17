@@ -7,10 +7,12 @@ from emnify.errors import ValidationErrorException
 class GetAllDevicesApiCall(BaseApiManager):
     request_url_prefix = '/v1/endpoint'
     request_method_name = RequestsType.GET.value
-    response_handlers = {
-        200: 'return_paginator',
-        401: 'unauthorised',
-    }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.response_handlers = self.response_handlers.copy() | {
+            200: 'return_paginator'
+        }
 
 
 class GetEventsByDevice(BaseApiManager):
@@ -27,12 +29,6 @@ class GetEventsByDevice(BaseApiManager):
 class CreateDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint'
     request_method_name = RequestsType.POST.value
-    response_handlers = {
-        200: 'return_unwrapped',
-        201: 'return_success',
-        401: 'unauthorised',
-        422: 'process_exception'
-    }
 
     def return_success(self, response: requests.Response, client, data: dict = None, *args, **kwargs) -> True:
         return int(response.headers.get('Location').split('/')[-1])
@@ -46,10 +42,6 @@ class GetAllSmsFromDevice(BaseApiManager):
 class SendSmsToDevice(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/sms'
     request_method_name = RequestsType.POST.value
-    response_handlers = {
-        201: 'return_success',
-        401: 'unauthorised',
-    }
 
 
 class RetrieveDevice(BaseApiManager):
@@ -60,13 +52,6 @@ class RetrieveDevice(BaseApiManager):
 class UpdateDevice(BaseApiManager):
     request_url_prefix = RequestUrls.ENDPOINT_IN_URL.value
     request_method_name = RequestsType.PATCH.value
-    response_handlers = {
-        204: 'return_success',
-        400: 'process_exception',
-        401: 'unauthorised',
-        404: 'process_exception',
-        422: 'process_exception'
-    }
 
 
 class DeleteDevice(BaseApiManager):
@@ -107,12 +92,6 @@ class ResetConnectivityPatch(BaseApiManager):
 class GetDeviceConnectivity(BaseApiManager):
     request_url_prefix = '/v1/endpoint/{endpoint_id}/connectivity'
     request_method_name = RequestsType.GET.value
-
-    response_handlers = {
-        200: 'return_unwrapped',
-        401: 'unauthorised',
-        422: 'process_exception',
-    }
 
     def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):
         raise ValidationErrorException(
