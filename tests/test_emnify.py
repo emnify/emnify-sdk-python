@@ -21,7 +21,6 @@ def scrub_response_string():
         try:
             decoded_response = json.loads(response['body']['string'])
             if 'auth_token' in decoded_response:
-                print(decoded_response, response)
                 anonymized_response = decoded_response | {"auth_token": "test"}
                 response['body']['string'] = json.dumps(anonymized_response).encode('UTF-8')
         except Exception as err:
