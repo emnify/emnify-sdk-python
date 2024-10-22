@@ -43,19 +43,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 17 Oct 2024 08:55:17 GMT
+      - Tue, 22 Oct 2024 08:51:24 GMT
       Server:
       - CloudFront
       Strict-Transport-Security:
       - max-age=31536000
       Via:
-      - 1.1 9564791ed47030dad53c797ee814c66e.cloudfront.net (CloudFront)
+      - 1.1 bc5539655ffc88be2596a0239ddfae52.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 9mIe7dQu1-LIsTnqZV3kvQqnXVvl5bri53qQGQlNwBfc0P9ffnTSAw==
+      - l4hpF4BSk53dwKVfRv95wyO8Z3SrzAGQX1L1M-6J41Xf3XTzKEyNCQ==
       X-Amz-Cf-Pop:
       - MUC50-P3
       X-Amzn-Trace-Id:
-      - Root=1-6710d0f5-7af4ceb2740aea780bd2e5bc
+      - Root=1-6717678c-468439167a3af4622e874650
       X-Cache:
       - Error from cloudfront
       X-Content-Type-Options:
@@ -63,11 +63,11 @@ interactions:
       X-Frame-Options:
       - DENY
       x-amz-apigw-id:
-      - fyWWYHk_DoEELow=
+      - AC0d8F9sDoEEbgQ=
       x-amzn-ErrorType:
       - AccessDeniedException
       x-amzn-RequestId:
-      - 06e96efa-083a-4c50-a482-03874a16cecd
+      - b4376d03-d6d8-410e-8ee2-a03a817a125a
     status:
       code: 401
       message: Unauthorized
@@ -94,7 +94,7 @@ interactions:
     uri: https://cdn.emnify.net/api/v1/authenticate
   response:
     body:
-      string: '{"auth_token":"test"}'
+      string: '{"auth_token": "test"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
@@ -115,19 +115,19 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 17 Oct 2024 08:55:17 GMT
+      - Tue, 22 Oct 2024 08:51:24 GMT
       Server:
       - CloudFront
       Strict-Transport-Security:
       - max-age=31536000
       Via:
-      - 1.1 595547cdc2fce94aba8498c84797701a.cloudfront.net (CloudFront)
+      - 1.1 3721bbb571fa1179150d81f8194461ae.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - hIAL-fCZILdacmHIMUy7g-D548lmz8LqphTE6x0ou8DK6JFeLNDAEQ==
+      - jfQVFogQGR-TuBdPPF1OXBkNnHt_z96oNnryQyTb-LtSK37cDXKWDg==
       X-Amz-Cf-Pop:
       - MUC50-P3
       X-Amzn-Trace-Id:
-      - Root=1-6710d0f5-33a6da25168db05d2b134839
+      - Root=1-6717678c-26a7336f235be2297130df5e
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -135,13 +135,13 @@ interactions:
       X-Frame-Options:
       - DENY
       etag:
-      - W/"178-oTsLUlmFJpW7XUSXkbpJqk0RBE4"
+      - W/"178-lo9vjDDysnA8awfXLYmvruWPTTs"
       x-amz-apigw-id:
-      - fyWWaEaMDoEETtQ=
+      - AC0d-HdWjoEEkkQ=
       x-amzn-Remapped-content-length:
       - '376'
       x-amzn-RequestId:
-      - 775ae03f-b0b2-47fd-8655-ca1722056a96
+      - 1bb41622-abbb-4d13-b726-c32226d9532c
       x-powered-by:
       - Express
     status:
@@ -195,7 +195,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 17 Oct 2024 08:55:17 GMT
+      - Tue, 22 Oct 2024 08:51:24 GMT
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -203,13 +203,13 @@ interactions:
       Vary:
       - Accept-Encoding
       Via:
-      - 1.1 19392de11dadb918bd6f24e199ea180e.cloudfront.net (CloudFront)
+      - 1.1 d11d7fba872e54649066e59f703ad3e6.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - fMQw8L9_nrPEnH-rQw51zhkm4_vOs7PrG4l6g-HkS3t6gWjPjigizg==
+      - fN9SV2OWOj29foEVMmn7ieyx8xfd15dvGGlyTorrqiaSrgpWyur07g==
       X-Amz-Cf-Pop:
       - MUC50-P3
       X-Amzn-Trace-Id:
-      - Root=1-6710d0f5-35d2a65a612feaac0b657600
+      - Root=1-6717678c-32e53a4f46dbe58d2cac6645
       X-Cache:
       - Error from cloudfront
       X-Content-Type-Options:
@@ -217,13 +217,13 @@ interactions:
       X-Frame-Options:
       - DENY
       x-amz-apigw-id:
-      - fyWWdE0sjoEEgrA=
+      - AC0eBExNDoEEqIw=
       x-amzn-Remapped-Content-Length:
       - '109'
       x-amzn-Remapped-Date:
-      - Thu, 17 Oct 2024 08:55:17 GMT
+      - Tue, 22 Oct 2024 08:51:24 GMT
       x-amzn-RequestId:
-      - 26f199fc-2bf8-4cc6-8f0e-e111863e4a0a
+      - b58cddc2-2586-4ee6-b183-43c1f2b21240
     status:
       code: 404
       message: Not Found
@@ -248,87 +248,6 @@ interactions:
       - 0.3.10
     method: PATCH
     uri: https://cdn.emnify.net/api/v1/endpoint/None
-  response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAC2KMQuDUAwG/0r4ZofX9Y0tOJUOnYUSfEFETGwSp9L/XoUuB3fcB+Ju/hqtCeql
-        lNL9S9oiioort6e8d4lEh1UieDpO3FjVkjb2kJO8SorT3IiD7qZTpd4O121PivT5LAMepjIA3x8m
-        qId5eAAAAA==
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - '*'
-      Access-Control-Expose-Headers:
-      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
-      Access-Control-Max-Age:
-      - '86400'
-      Cache-Control:
-      - max-age=0
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '121'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 17 Oct 2024 08:55:18 GMT
-      Server:
-      - CloudFront
-      Strict-Transport-Security:
-      - max-age=31536000
-      Vary:
-      - Accept-Encoding
-      Via:
-      - 1.1 94313a5530517e71f4769858ce013d58.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - X82Z2ZuuXI2fj5EHZME9_nUuMME7L9ZvCd2QHB5v1UJaihazkP0QtQ==
-      X-Amz-Cf-Pop:
-      - MUC50-P3
-      X-Amzn-Trace-Id:
-      - Root=1-6710d0f6-325cfefe678ae3497eac6e00
-      X-Cache:
-      - Error from cloudfront
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      x-amz-apigw-id:
-      - fyWWfEpWjoEEHpw=
-      x-amzn-Remapped-Content-Length:
-      - '121'
-      x-amzn-Remapped-Date:
-      - Thu, 17 Oct 2024 08:55:18 GMT
-      x-amzn-RequestId:
-      - 1d013475-fdd1-4963-87db-22d48325f0ff
-    status:
-      code: 400
-      message: Bad Request
-- request:
-    body: '{}'
-    headers:
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '2'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.32.3
-      accept:
-      - application/json
-      x-emn-origin-app:
-      - PythonSDK
-      x-emn-origin-app-version:
-      - 0.3.10
-    method: PATCH
-    uri: https://cdn.emnify.net/api/v1/endpoint/-1
   response:
     body:
       string: '{"message":"token contains an invalid number of segments"}'
@@ -352,19 +271,19 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 17 Oct 2024 08:57:53 GMT
+      - Tue, 22 Oct 2024 08:51:24 GMT
       Server:
       - CloudFront
       Strict-Transport-Security:
       - max-age=31536000
       Via:
-      - 1.1 3346ad1679ff01fe81e117084323b814.cloudfront.net (CloudFront)
+      - 1.1 a29f8f45a0707c5c9e054636ff51dce8.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - Xeg9PhpzA6SKLBtyQiiozznqpUb0PnXuROxFZhTboRcenGHUIxv4ZQ==
+      - qRfTq9nXgTSImVx9F7DOxmymzlBw5wnFKfSKALlb9kBVKSnR5cT8BA==
       X-Amz-Cf-Pop:
       - MUC50-P3
       X-Amzn-Trace-Id:
-      - Root=1-6710d191-3773394244e8806f699b168c
+      - Root=1-6717678c-50441a3e5ed6f8ff56efd90d
       X-Cache:
       - Error from cloudfront
       X-Content-Type-Options:
@@ -372,11 +291,11 @@ interactions:
       X-Frame-Options:
       - DENY
       x-amz-apigw-id:
-      - fyWu1GfqDoEEGGw=
+      - AC0eFEaQDoEEhDw=
       x-amzn-ErrorType:
       - AccessDeniedException
       x-amzn-RequestId:
-      - 241e8d5f-43b3-4761-b594-f6cfc9a8f407
+      - 0092ff39-ebd3-4437-9cd7-f4eaa72e7811
     status:
       code: 401
       message: Unauthorized
@@ -403,7 +322,7 @@ interactions:
     uri: https://cdn.emnify.net/api/v1/authenticate
   response:
     body:
-      string: '{"auth_token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlc2Mub3JnIjoxNTk2MSwiZXNjLm9yZ05hbWUiOiJSb3Roc2NoZUdtYkgiLCJhcGlfa2V5IjoiIiwiZXNjLmFwcCI6MTMxODgsImVzYy5tYWluT3JnIjoxNTk2MSwiaWF0IjoxNzI5MTU1NDc0LCJleHAiOjE3MjkxNjk4NzQsImF1ZCI6Ii9hcGkvdjEvYXV0aGVudGljYXRpb24iLCJpc3MiOiJlc2EtYXBpIn0.AMzeGvb44JYNtGIBJN3H2rIX8OVgOqTto5BX5eO1tXhev9KTJOgIvaq-TDylLSGdvsg1JqDTNNJKCnMj3JGmlg"}'
+      string: '{"auth_token": "test"}'
     headers:
       Access-Control-Allow-Headers:
       - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
@@ -424,19 +343,19 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 17 Oct 2024 08:57:54 GMT
+      - Tue, 22 Oct 2024 08:51:25 GMT
       Server:
       - CloudFront
       Strict-Transport-Security:
       - max-age=31536000
       Via:
-      - 1.1 ca623c10f2a669c8a9af30362937ebac.cloudfront.net (CloudFront)
+      - 1.1 fe6d656eba9969a63bb94889f81e9bf8.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - uW_FE2ZwXMS9GQpZ7Wrs_JHzGlwGE9yVtkiUtjxjDJ6_HckT3zWs4A==
+      - XgcmYB8uqX3xUbhfEe5obWvstk5U5Drx9wF3_dQff3JW6ch8sh828A==
       X-Amz-Cf-Pop:
       - MUC50-P3
       X-Amzn-Trace-Id:
-      - Root=1-6710d192-297e5c9e4c0ff8180a10f0e7
+      - Root=1-6717678d-2e7d8fde5190d8827d2dc6f1
       X-Cache:
       - Miss from cloudfront
       X-Content-Type-Options:
@@ -444,98 +363,18 @@ interactions:
       X-Frame-Options:
       - DENY
       etag:
-      - W/"178-EMS44UpXnCbLGEzwbVKFwO+rv04"
+      - W/"178-oGWrxzarbnilnl+pwVahfAhsdCI"
       x-amz-apigw-id:
-      - fyWu3F5HDoEEvVw=
+      - AC0eHEmrDoEEEfQ=
       x-amzn-Remapped-content-length:
       - '376'
       x-amzn-RequestId:
-      - 978a1b66-5f8f-47b7-984e-37876f9dc4ca
+      - 04f3a9ad-c755-423b-be50-63142d9b3b74
       x-powered-by:
       - Express
     status:
       code: 200
       message: OK
-- request:
-    body: '{}'
-    headers:
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '2'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.32.3
-      accept:
-      - application/json
-      x-emn-origin-app:
-      - PythonSDK
-      x-emn-origin-app-version:
-      - 0.3.10
-    method: PATCH
-    uri: https://cdn.emnify.net/api/v1/endpoint/-1
-  response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAAC3KsQ5AMBAA0F+53GIp0cTU3WD1AyK9Q4M7qWIQ/85gfXk3cowaO6/E6GxVWvNL
-        0pkFHTZy9kuglgeOLJ7R4Mr73o/fx1po0yAJrpAmaAiy3GYgmmDQQ6jA5wU0ehNbYQAAAA==
-    headers:
-      Access-Control-Allow-Headers:
-      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - '*'
-      Access-Control-Expose-Headers:
-      - Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Count-Per-Page,X-Current-Page,X-Sort,X-Total-Count,X-Total-Pages,Location,X-Count,X-Per-Page,X-Pages,X-Page
-      Access-Control-Max-Age:
-      - '86400'
-      Cache-Control:
-      - max-age=0
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '109'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Thu, 17 Oct 2024 08:57:54 GMT
-      Server:
-      - CloudFront
-      Strict-Transport-Security:
-      - max-age=31536000
-      Vary:
-      - Accept-Encoding
-      Via:
-      - 1.1 549ff9961325ec88cf02baa6f818172a.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - 2Wm06NbieQQZMPhk7ejD_U_TEsRpuLxmKMH8sf14IG4W6KqGCYOsOw==
-      X-Amz-Cf-Pop:
-      - MUC50-P3
-      X-Amzn-Trace-Id:
-      - Root=1-6710d192-6ba40a685bbd313d281b5735
-      X-Cache:
-      - Error from cloudfront
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      x-amz-apigw-id:
-      - fyWu5EpYDoEEnAA=
-      x-amzn-Remapped-Content-Length:
-      - '109'
-      x-amzn-Remapped-Date:
-      - Thu, 17 Oct 2024 08:57:54 GMT
-      x-amzn-RequestId:
-      - 9e76095e-0eb1-45d9-b88f-1e84a7f94ea3
-    status:
-      code: 404
-      message: Not Found
 - request:
     body: '{}'
     headers:
@@ -585,7 +424,7 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 17 Oct 2024 08:57:54 GMT
+      - Tue, 22 Oct 2024 08:51:25 GMT
       Server:
       - CloudFront
       Strict-Transport-Security:
@@ -593,13 +432,13 @@ interactions:
       Vary:
       - Accept-Encoding
       Via:
-      - 1.1 cb7ecd2473bf95a71af8d1ff8d1034fa.cloudfront.net (CloudFront)
+      - 1.1 fd4a06b35c482e680f7f3fd9baaa0090.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 3uAZHrdVd0gua_Im4DFp8tS4j6yRH4MpJxZGWyRU3ccIm8kETdXvLQ==
+      - HtO_grQyGBgkenm9NrnJIDLOB2-LDbJbq3sS_vDdjMGkwT9HCWUKpw==
       X-Amz-Cf-Pop:
       - MUC50-P3
       X-Amzn-Trace-Id:
-      - Root=1-6710d192-65e88fda52cc6261375353e1
+      - Root=1-6717678d-3ac00b3d0e09fd4b14114539
       X-Cache:
       - Error from cloudfront
       X-Content-Type-Options:
@@ -607,13 +446,13 @@ interactions:
       X-Frame-Options:
       - DENY
       x-amz-apigw-id:
-      - fyWu7HJHDoEENIA=
+      - AC0eKGDfDoEEpyw=
       x-amzn-Remapped-Content-Length:
       - '121'
       x-amzn-Remapped-Date:
-      - Thu, 17 Oct 2024 08:57:54 GMT
+      - Tue, 22 Oct 2024 08:51:25 GMT
       x-amzn-RequestId:
-      - 5c791934-a3ca-4097-af91-41989c7ff08d
+      - e378bf7a-c679-467a-b671-8715eff734bb
     status:
       code: 400
       message: Bad Request
