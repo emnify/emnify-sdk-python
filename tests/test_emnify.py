@@ -3,6 +3,7 @@ import random
 import string
 import vcr
 import os
+import json
 
 from unittest import TestCase
 from emnify.emnify import EMnify as emnify_client
@@ -15,23 +16,38 @@ def vcr_cassette_dir(request):
     return os.path.join('tests/fixtures', 'cassettes')
 
 
-vcr_shared_parameters = {
-    'filter_headers': ['authorization'],
-    'filter_post_data_parameters': ['application_token', 'username', 'password'],
-}
+def scrub_response_string():
+    def before_record_response(response):
+        try:
+            decoded_response = json.loads(response['body']['string'])
+            if 'auth_token' in decoded_response:
+                anonymized_response = decoded_response | {"auth_token": "test"}
+                response['body']['string'] = json.dumps(anonymized_response).encode('UTF-8')
+        except Exception as err:
+            print(f"Can't modify response {err=}, {type(err)=}")
+        return response
+
+    return before_record_response
+
+vcr_instance = vcr.VCR(
+    before_record_response=scrub_response_string(),
+    filter_headers=['authorization'],
+    filter_post_data_parameters=['application_token', 'username', 'password'],
+)
 
 class EMnifyTest(TestCase):
+
     def setUp(self) -> None:
         self.token = os.environ.get('EMNIFY_SDK_APPLICATION_TOKEN', 'test_token')
 
-    @vcr.use_cassette('tests/fixtures/cassettes/get_all_devices.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/get_all_devices.yaml')
     def test_get_devices_list(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_devices_list()]
         self.assertGreater(len(devices), 0)
         self.assertIsInstance(devices[0], emnify.devices.device_model)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/device_events.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/device_events.yaml')
     def test_get_device_events_list(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_devices_list()]
@@ -39,7 +55,7 @@ class EMnifyTest(TestCase):
         self.assertGreater(len(device_events), 0)
         self.assertIsInstance(device_events[0], emnify.devices.event_model)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/create_device.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/create_device.yaml')
     def test_create_device(self):
         emnify = emnify_client(app_token=self.token)
         for _ in range(0, 2):
@@ -64,40 +80,40 @@ class EMnifyTest(TestCase):
         self.assertNotEqual(prev_devices_count, current_devices_count)
         self.assertGreater(current_devices_count, prev_devices_count)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/send_sms_to_device.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/send_sms_to_device.yaml')
     def test_send_sms(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_devices_list()]
         sms = emnify.devices.sms_create_model(payload='sample_test_payload')
         emnify.devices.send_sms(device=devices[0], sms=sms)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/get_all_device_sms.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/get_all_device_sms.yaml')
     def test_get_device_sms_list(self):
         emnify = emnify_client(app_token=self.token)
         sms_instances = [i for i in emnify.devices.get_device_sms_list(device=11379224)]
         self.assertGreater(len(sms_instances), 0)
         self.assertIsInstance(sms_instances[0], emnify.devices.list_sms_model)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/get_sim_list.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/get_sim_list.yaml')
     def test_get_sim_list(self):
         emnify = emnify_client(app_token=self.token)
         sims = [i for i in emnify.sim.get_sim_list()]
         if sims:
             self.assertIsInstance(sims[0], emnify.sim.get_sim_list_model)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_200.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_200.yaml')
     def test_activate_sim_by_one_size_batch_bic_200(self):
         bics = [  # BIC CODES
             'valid_bic_code',
             'invalid_bic_code'
-            ]
+        ]
         emnify = emnify_client(app_token=self.token)
         bic = bics[0]
         response = emnify.sim.register_sim(bic=bic)
         self.assertIsInstance(response, list)
         self.assertIsInstance(response[0], emnify.sim.get_sim_list_model)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_422.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/activate_sim_by_bic_422.yaml')
     def test_activate_sim_by_one_size_batch_bic_422(self):
         bics = [  # BIC CODES
             'valid_bic_code',
@@ -110,7 +126,7 @@ class EMnifyTest(TestCase):
         except emnify_errors.ValidationErrorException as e:
             self.assertEqual(str(e), 'Invalid bic number')
 
-    @vcr.use_cassette('tests/fixtures/cassettes/create_device_with_sim.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/create_device_with_sim.yaml')
     def test_create_device_with_sim(self):
         emnify = emnify_client(app_token=self.token)
         sims = [i for i in emnify.sim.get_sim_list()]
@@ -134,7 +150,7 @@ class EMnifyTest(TestCase):
         response = emnify.devices.create_device(device=device)
         self.assertEqual(response, 11380016)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_activate_disactivate_device.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_activate_disactivate_device.yaml')
     def test_activate_disactivate_device(self):
         emnify = emnify_client(app_token=self.token)
         devices = [i for i in emnify.devices.get_devices_list()]
@@ -143,7 +159,7 @@ class EMnifyTest(TestCase):
         ][0]
         emnify.devices.change_status(active_device_with_sim.id, disable=True)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_update_device.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_update_device.yaml')
     def test_update_device(self):
         emnify = emnify_client(app_token=self.token)
         device = [i for i in emnify.devices.get_devices_list()][0]
@@ -153,7 +169,34 @@ class EMnifyTest(TestCase):
         updated_device = emnify.devices.retrieve_device(device_id=device.id)
         self.assertNotEqual(device.name, updated_device.name)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_delete_device.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_update_device_with_service_profile.yaml')
+    def test_update_device_with_service_profile(self):
+        emnify = emnify_client(app_token=self.token)
+        device = [i for i in emnify.devices.get_devices_list()][0]
+        service_profile_for_update = emnify.devices.service_profile_model(id=device.service_profile.id)
+        device_model_for_update = emnify.devices.device_update_model(service_profile=service_profile_for_update)
+        self.assertTrue(emnify.devices.update_device(device_id=device.id, device=device_model_for_update))
+
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_update_device_error_handling_device_id.yaml')
+    def test_update_device_error_handling_device_id(self):
+        for device_id in [-1, None]:
+            with self.subTest(device_id=device_id):
+                emnify = emnify_client(app_token=self.token)
+                device_model_for_update = emnify.devices.device_update_model()
+                with pytest.raises(emnify_errors.ValidationErrorException):
+                    emnify.devices.update_device(device_id=device_id, device=device_model_for_update)
+
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_update_device_error_handling_service_profile.yaml')
+    def test_update_device_error_handling_service_profile_id(self):
+        emnify = emnify_client(app_token=self.token)
+        device = [i for i in emnify.devices.get_devices_list()][0]
+        non_existing_service_profile_id = -1
+        service_profile_for_update = emnify.devices.service_profile_model(id=non_existing_service_profile_id)
+        device_model_for_update = emnify.devices.device_update_model(service_profile=service_profile_for_update)
+        with pytest.raises(emnify_errors.ValidationErrorException):
+            emnify.devices.update_device(device_id=device.id, device=device_model_for_update)
+
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_delete_device.yaml')
     def test_delete_device(self):
         emnify = emnify_client(app_token=self.token)
         all_devices = [i for i in emnify.devices.get_devices_list()]
@@ -169,7 +212,7 @@ class EMnifyTest(TestCase):
         self.assertEqual(changed_sim.status.description, 'Suspended')
         self.assertGreater(len_before_delete, len_after_delete)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_list_device_blacklist.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_list_device_blacklist.yaml')
     def test_list_device_blacklist(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 11380018
@@ -177,7 +220,7 @@ class EMnifyTest(TestCase):
         self.assertGreater(len(operators), 0)
         self.assertEqual(operators[0].country.name, 'Albania')
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_delete_blacklist_operator.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_delete_blacklist_operator.yaml')
     def test_delete_blacklist_operator(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 11380018
@@ -187,7 +230,7 @@ class EMnifyTest(TestCase):
 
         self.assertGreater(len(previous_operators_list), len(updated_operators_list))
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_add_blacklist_operator.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_add_blacklist_operator.yaml')
     def test_add_blacklist_operator(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 11380018
@@ -197,7 +240,7 @@ class EMnifyTest(TestCase):
         updated_operators_list = [i for i in emnify.devices.get_device_operator_blacklist(device_id=device_id)]
         self.assertGreater(len(updated_operators_list), len(previous_operators_list))
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_add_blacklist_operator_error.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_add_blacklist_operator_error.yaml')
     def test_add_blacklist_operator_error(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 11380018
@@ -209,25 +252,25 @@ class EMnifyTest(TestCase):
         else:
             self.assertTrue(False)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_operator_list.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_operator_list.yaml')
     def test_operator_list(self):
         emnify = emnify_client(app_token=self.token)
         operators = [i for i in emnify.operator.get_operators()]
         self.assertGreater(len(operators), 0)
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_reset_connectivity.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_reset_connectivity.yaml')
     def test_reset_connectivity(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 12132821
         self.assertTrue(emnify.devices.reset_connectivity_data(device_id=device_id))
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_reset_connectivity_network.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_reset_connectivity_network.yaml')
     def test_reset_connectivity_network(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 12132821
         self.assertTrue(emnify.devices.reset_connectivity_network(device_id=device_id))
 
-    @vcr.use_cassette('tests/fixtures/cassettes/test_get_device_connectivity.yaml', **vcr_shared_parameters)
+    @vcr_instance.use_cassette('tests/fixtures/cassettes/test_get_device_connectivity.yaml')
     def test_get_device_connectivity_data(self):
         emnify = emnify_client(app_token=self.token)
         device_id = 12132821
