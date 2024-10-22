@@ -27,7 +27,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: GetAllDevicesApiCall
+.. py:class:: GetAllDevicesApiCall(*args, **kwargs)
 
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
 
@@ -81,9 +81,6 @@ Module Contents
    .. py:attribute:: request_method_name
 
 
-   .. py:attribute:: response_handlers
-
-
    .. py:method:: return_success(response: requests.Response, client, data: dict = None, *args, **kwargs) -> True
 
 
@@ -119,9 +116,6 @@ Module Contents
    .. py:attribute:: request_method_name
 
 
-   .. py:attribute:: response_handlers
-
-
 .. py:class:: RetrieveDevice
 
    Bases: :py:obj:`emnify.api_manager.BaseApiManager`
@@ -148,9 +142,6 @@ Module Contents
 
 
    .. py:attribute:: request_method_name
-
-
-   .. py:attribute:: response_handlers
 
 
 .. py:class:: DeleteDevice
@@ -251,9 +242,6 @@ Module Contents
 
 
    .. py:attribute:: request_method_name
-
-
-   .. py:attribute:: response_handlers
 
 
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)

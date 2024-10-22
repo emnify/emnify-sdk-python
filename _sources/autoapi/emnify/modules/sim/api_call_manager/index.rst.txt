@@ -53,9 +53,6 @@ Module Contents
    .. py:attribute:: request_method_name
 
 
-   .. py:attribute:: response_handlers
-
-
    .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
@@ -73,12 +70,6 @@ Module Contents
 
 
    .. py:attribute:: request_method_name
-
-
-   .. py:attribute:: response_handlers
-
-
-   .. py:method:: process_exception(response: requests.Response, client, data: dict = None, *args, **kwargs)
 
 
 .. py:class:: SimRetrieveApi

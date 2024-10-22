@@ -105,7 +105,7 @@ Module Contents
 
 
 
-.. py:class:: Authenticate
+.. py:class:: Authenticate(*args, **kwargs)
 
    Bases: :py:obj:`BaseApiManager`
 
