@@ -1,13 +1,13 @@
 FROM python:latest
 
+RUN pip install pipenv
+
 WORKDIR /sdk
 
-COPY req.txt req.txt
-COPY req.dev.txt req.dev.txt
+COPY Pipfile Pipfile.lock ./
 
-RUN pip install -r req.txt
-RUN pip install -r req.dev.txt
+RUN pipenv install --deploy --ignore-pipfile --dev
 
 COPY . .
 
-CMD echo "Enter Command(Read DEVELOPMENT.md)"
+CMD ["echo", "\"Enter Command(Read DEVELOPMENT.md)\""]
