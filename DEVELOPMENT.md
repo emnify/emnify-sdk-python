@@ -14,7 +14,7 @@ Run a command:
 # [...args] - command arguments
 
 # Run unit tests
-docker run -t -v $(pwd):/sdk emnify/python-sdk pytest -cov=emnify -cov-fail-under=90
+docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-under=90
 ```
 
 ### Local debug example

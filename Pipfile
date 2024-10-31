@@ -8,9 +8,8 @@ requests = ">=2.27.0,<2.30.0"
 pydantic = ">=1.9.0,<2.0"
 
 [dev-packages]
-pytest = "*"
 vcrpy = "*"
 build = "*"
 twine = "*"
 bump2version = "*"
-
+pytest-cov = "*"
