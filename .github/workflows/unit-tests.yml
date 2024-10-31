@@ -26,7 +26,9 @@ jobs:
           pipenv install --deploy --ignore-pipfile --dev
 
       - name: Run tests
-        run: pipenv run pytest --cov=. --cov-report=xml
+        run: |
+          pipenv shell
+          python -m pytest --cov=. --cov-report=xml
 
       - name: Export SonarCloud Result
         # Skip dependabot runs because they don't have access to secrets
