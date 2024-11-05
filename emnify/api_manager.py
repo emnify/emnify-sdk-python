@@ -44,6 +44,9 @@ class BaseApiManager:
 
             emnify_constants.RequestDefaultHeadersKeys.XEmnOriginAppVersion.value:
                 emnify_constants.RequestDefaultHeadersValues.PYTHONSDK_VERSION.value,
+
+            emnify_constants.RequestDefaultHeadersKeys.USER_AGENT.value:
+                emnify_constants.RequestDefaultHeadersValues.PLATFORM.value
         }
 
     def process_exception(self, response: requests.Response, client, data: dict = None, *args, **kwargs):

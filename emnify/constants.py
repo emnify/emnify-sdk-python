@@ -1,3 +1,4 @@
+import platform
 from enum import Enum
 from emnify.version import EMNIFY_PACKAGE_VERSION
 
@@ -39,6 +40,7 @@ class RequestDefaultHeadersKeys(ExtendedEnum):
     AUTHORIZATION = 'authorization'
     XEmnOriginApp = 'x-emn-origin-app'
     XEmnOriginAppVersion = 'x-emn-origin-app-version'
+    USER_AGENT = 'User-Agent'
 
 
 class RequestDefaultHeadersValues(ExtendedEnum):
@@ -46,6 +48,7 @@ class RequestDefaultHeadersValues(ExtendedEnum):
     BEARER_TOKEN = 'Bearer {}'
     PYTHONSDK_VERSION = EMNIFY_PACKAGE_VERSION
     PYTHONSDK = 'PythonSDK'
+    PLATFORM = 'PythonSDK ' + '('+ platform.platform() + ')'
 
 
 class DeviceStatuses(ExtendedEnum):
