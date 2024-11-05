@@ -23,11 +23,12 @@ cd emnify-sdk-python
 python -m build --sdist --wheel
 ```
 
-Or install with pipenv:
+For local development install with pipenv:
 ```shell
 git clone https://github.com/emnify/emnify-sdk-python.git
 cd emnify-sdk-python
-python -m pip install pipenv
+brew install pipenv # for macOS
+python -m pip install pipenv # for other OS
 pipenv sync
 ```
 
