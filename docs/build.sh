@@ -1,1 +1,1 @@
-sphinx-build -b html docs/sphinx docs/build_sphinx
+pipenv run sphinx-build -b html docs/sphinx docs/build_sphinx
