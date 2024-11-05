@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 requests = ">=2.27.0,<2.30.0"
-pydantic = ">=1.9.0,<2.0"
+pydantic = ">=1.9.0,<3.0"
 
 [dev-packages]
 vcrpy = "*"
