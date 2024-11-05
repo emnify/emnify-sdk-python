@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cda30250714093ec8517eca4193340ef53b30d5f08b1beba57e2a7f11b027da5"
+            "sha256": "ce6cc03f456cb0132a916cc2fe4258ff59c2d679aaa20a6c537c75ff8d52caf5"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -430,14 +430,6 @@
             "markers": "python_version >= '3.9'",
             "version": "==0.21.2"
         },
-        "exceptiongroup": {
-            "hashes": [
-                "sha256:3111b9d131c238bec2f8f516e123e14ba243563fb135d3fe885990585aa7795b",
-                "sha256:47c2edf7c6738fafb49fd34290706d1a1a2f4d1c6df275526b62cbb4aa5393cc"
-            ],
-            "index": "pypi",
-            "version": "==1.2.2"
-        },
         "idna": {
             "hashes": [
                 "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9",
@@ -786,7 +778,7 @@
                 "sha256:70b98107bd648308a7952b06e6ca9a50bc660be218d53c257cc1fc94fda10181",
                 "sha256:a6853c7375b2663155079443d2e45de913a911a11d669df02a50814944db57b2"
             ],
-            "markers": "python_version >= '3.8'",
+            "index": "pypi",
             "version": "==8.3.3"
         },
         "pytest-cov": {
@@ -890,19 +882,11 @@
         },
         "rich": {
             "hashes": [
-                "sha256:9836f5096eb2172c9e77df411c1b009bace4193d6a481d534fea75ebba758283",
-                "sha256:bc1e01b899537598cf02579d2b9f4a415104d3fc439313a7a2c165d76557a08e"
+                "sha256:439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098",
+                "sha256:6049d5e6ec054bf2779ab3358186963bac2ea89175919d699e378b99738c2a90"
             ],
             "markers": "python_full_version >= '3.8.0'",
-            "version": "==13.9.3"
-        },
-        "tomli": {
-            "hashes": [
-                "sha256:2ebe24485c53d303f690b0ec092806a085f07af5a5aa1464f3931eec36caaa38",
-                "sha256:d46d457a85337051c36524bc5349dd91b1877838e2979ac5ced3e710ed8a60ed"
-            ],
-            "index": "pypi",
-            "version": "==2.0.2"
+            "version": "==13.9.4"
         },
         "twine": {
             "hashes": [
