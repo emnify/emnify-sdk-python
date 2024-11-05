@@ -15,12 +15,20 @@ Automate your routines with this SDK for Python.
 
 - Python ([version 3.6.0](https://www.python.org/downloads/release/python-360/) or higher)
 
-### Install from source
+### Install from source (requires build)
 
 ```shell
 git clone https://github.com/emnify/emnify-sdk-python.git
 cd emnify-sdk-python
-python setup.py install
+python -m build --sdist --wheel
+```
+
+Or install with pipenv:
+```shell
+git clone https://github.com/emnify/emnify-sdk-python.git
+cd emnify-sdk-python
+python -m pip install pipenv
+pipenv sync
 ```
 
 ### Install with pip
