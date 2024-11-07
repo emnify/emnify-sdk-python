@@ -48,7 +48,7 @@ class RequestDefaultHeadersValues(ExtendedEnum):
     BEARER_TOKEN = 'Bearer {}'
     PYTHONSDK_VERSION = EMNIFY_PACKAGE_VERSION
     PYTHONSDK = 'PythonSDK'
-    PLATFORM = 'PythonSDK ' + '('+ platform.platform() + ')'
+    USER_AGENT = PYTHONSDK + '/' + PYTHONSDK_VERSION + ' ('+ platform.system() + ', ' + platform.release() + ')'
 
 
 class DeviceStatuses(ExtendedEnum):
