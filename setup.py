@@ -11,7 +11,7 @@ VERSION = "0.3.12"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ['requests', 'pydantic>=1.9.0,<2.0.0']
+REQUIRES = ['requests>=2.27.0,<2.30.0', 'pydantic>=1.9.0,<2.0.0']
 if __name__ == '__main__':
     with open('README.md', "r", encoding="utf-8") as fh:
         long_description = fh.read()

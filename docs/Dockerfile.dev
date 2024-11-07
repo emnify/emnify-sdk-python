@@ -2,10 +2,12 @@ FROM python:alpine
 
 WORKDIR /docs
 
-COPY docs/req.txt req.txt
+RUN pip install pipenv
 
-RUN pip install -r req.txt
+COPY docs/Pipfile docs/Pipfile.lock ./
+
+RUN pipenv install --deploy --ignore-pipfile
 
 COPY . .
 
-CMD sh ./docs/build.sh
+CMD ["sh", "./docs/build.sh"]
