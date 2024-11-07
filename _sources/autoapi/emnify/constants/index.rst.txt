@@ -385,6 +385,11 @@ Module Contents
 
 
 
+   .. py:attribute:: USER_AGENT
+      :value: 'User-Agent'
+
+
+
 .. py:class:: RequestDefaultHeadersValues(*args, **kwds)
 
    Bases: :py:obj:`ExtendedEnum`
@@ -442,8 +447,26 @@ Module Contents
 
 
    .. py:attribute:: PYTHONSDK
-      :value: 'PythonSDK'
+      :value: 'emnifyPythonSDK'
 
+
+
+   .. py:attribute:: name_and_version
+
+
+   .. py:attribute:: requests_user_agent
+
+
+   .. py:attribute:: python_version
+
+
+   .. py:attribute:: platform_info
+
+
+   .. py:attribute:: details
+
+
+   .. py:attribute:: USER_AGENT
 
 
 .. py:class:: DeviceStatuses(*args, **kwds)

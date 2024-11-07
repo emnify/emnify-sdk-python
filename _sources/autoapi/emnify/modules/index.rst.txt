@@ -4,8 +4,8 @@ emnify.modules
 .. py:module:: emnify.modules
 
 
-Subpackages
------------
+Submodules
+----------
 
 .. toctree::
    :maxdepth: 1

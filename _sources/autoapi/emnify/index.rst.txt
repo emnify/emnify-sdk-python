@@ -4,15 +4,6 @@ emnify
 .. py:module:: emnify
 
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 1
-
-   /autoapi/emnify/modules/index
-
-
 Submodules
 ----------
 
@@ -23,6 +14,7 @@ Submodules
    /autoapi/emnify/constants/index
    /autoapi/emnify/emnify/index
    /autoapi/emnify/errors/index
+   /autoapi/emnify/modules/index
    /autoapi/emnify/version/index
 
 
