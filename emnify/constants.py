@@ -47,7 +47,7 @@ class RequestDefaultHeadersValues(ExtendedEnum):
     APPLICATION_JSON = 'application/json'
     BEARER_TOKEN = 'Bearer {}'
     PYTHONSDK_VERSION = EMNIFY_PACKAGE_VERSION
-    PYTHONSDK = 'PythonSDK'
+    PYTHONSDK = 'emnify PythonSDK'
     USER_AGENT = PYTHONSDK + '/' + PYTHONSDK_VERSION + ' ('+ platform.system() + ', ' + platform.release() + ')'
 
 
