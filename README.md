@@ -13,7 +13,7 @@ Automate your routines with this SDK for Python.
 
 ### Prerequisites
 
-- Python ([version 3.6.0](https://www.python.org/downloads/release/python-360/) or higher)
+- Python ([version 3.9.0](https://www.python.org/downloads/release/python-390/) or higher)
 
 ### Install from source (requires build)
 
