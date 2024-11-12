@@ -16,6 +16,10 @@ Run a command:
 # Run unit tests
 docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-under=90
 ```
+For end-to-end testing, make use of the other Dockerfile provided (it uses our package from [PyPI](https://pypi.org/project/emnify-sdk/)):
+```shell
+docker build . -f Dockerfile.e2e -t emnify/python-sdk-e2e
+```
 
 ### Local debug example
 To perform local debugging, we provide an example file located at `docs/examples/local_debug.py`.
@@ -25,6 +29,10 @@ To set up your sandbox, modify the code in this file as needed.
 Once your sandbox is set up, you can launch the file and view the results.
 ```shell
 docker run -t -e EMNIFY_SDK_APPLICATION_TOKEN=<your_token_here> -e EMNIFY_SDK_API_ENDPOINT_URL=<your_debug_API_endpoint> -v $(pwd):/sdk emnify/python-sdk python docs/examples/local_debug.py
+```
+End-to-end:
+```shell
+docker run -t -e EMNIFY_SDK_APPLICATION_TOKEN=<your_token_here> -e EMNIFY_SDK_API_ENDPOINT_URL=<your_debug_API_endpoint> -v $(pwd):/sdk emnify/python-sdk-e2e python docs/examples/local_debug.py
 ```
 
 ## Version Bump
