@@ -3,13 +3,13 @@ from setuptools import setup, find_packages
 import os
 
 NAME = os.getenv('PYPI_PACKAGE_NAME') or "emnify-sdk"
-VERSION = "0.3.11"
+VERSION = "0.4.1"
 # To install the library, run the following
 #
-# python setup.py install
+# python -m build --sdist --wheel
 #
-# prerequisite: setuptools
-# http://pypi.python.org/pypi/setuptools
+# prerequisite: build
+# https://pypi.org/project/build/
 
 REQUIRES = ['requests>=2.27.0,<2.30.0', 'pydantic>=1.9.0,<2.0.0']
 if __name__ == '__main__':
@@ -28,7 +28,7 @@ if __name__ == '__main__':
             "Bug Tracker": "https://github.com/EMnify/emnify-sdk-python",
         },
         install_requires=REQUIRES,
-        python_requires=">=3.6",
+        python_requires=">=3.9",
         packages=find_packages(exclude=['tests']),
         include_package_data=True,
         long_description=long_description,
