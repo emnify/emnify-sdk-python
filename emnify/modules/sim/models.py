@@ -1,7 +1,7 @@
 import typing
 import datetime
 from pydantic import BaseModel, Field, types
-from emnify.modules.api.models import RetrieveSIMlistresponse, Endpoint, Sim1, Status
+from emnify.modules.api.models import RetrieveSIMlistresponse
 
 
 class SimDevice(BaseModel):
