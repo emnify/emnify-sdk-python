@@ -6,20 +6,22 @@ from emnify.errors import EMnifyBaseException
 
 # To operate the emnify SDK, you need to generate an application token.
 # Step-by-step guide: https://www.emnify.com/developer-blog/how-to-use-an-application-token-for-api-authentication
-token = input('token: ')
+token = input("token: ")
 # Authorize the client to perform operations:
 emnify_client = EMnify(token)
 
 # Before going online, you need a device and a SIM card.
 # This example assumes you have a batch of SIM cards for your devices.
-sim_batch_BIC2 = input('BIC2: ')
+sim_batch_BIC2 = input("BIC2: ")
 
 # emnify allows you to control your service and coverage policies.
-# You can find those IDs on the Portal: https://portal.emnify.com/device-policies 
-service_profile_id = input('Service Profile ID: ')
-tariff_profile_id = input('Tariff Profile ID: ')
+# You can find those IDs on the Portal: https://portal.emnify.com/device-policies
+service_profile_id = input("Service Profile ID: ")
+tariff_profile_id = input("Tariff Profile ID: ")
 # Then, you need service and coverage profiles to create devices later:
-service_profile = emnify_client.devices.service_profile_model(id=int(service_profile_id))
+service_profile = emnify_client.devices.service_profile_model(
+    id=int(service_profile_id)
+)
 tariff_profile = emnify_client.devices.tariff_profile_model(id=int(tariff_profile_id))
 
 try:
@@ -30,7 +32,7 @@ try:
     # All added SIMs are now registered with "Issued" status.
 except EMnifyBaseException as e:
     # If an error appears during SIM registration,
-    # use EMnifyBaseException for general exceptions 
+    # use EMnifyBaseException for general exceptions
     # or inherited classes for specific ones.
     raise AssertionError(f"error during sim batch BIC2 activation{e}")
 
@@ -52,7 +54,7 @@ for sim in issued_sims:
         status=device_status,
         service_profile=service_profile,
         sim=sim,
-        name=device_name
+        name=device_name,
     )
     # See the API Reference to learn other device parameters:
     # https://emnify.github.io/emnify-sdk-python/autoapi/index.html
@@ -82,8 +84,7 @@ for sim in issued_sims:
     SENDER = "city_scooters_admin"
 
     activation_sms = emnify_client.devices.sms_create_model(
-        payload=ACTIVATION_CODE,
-        source_adress=SENDER
+        payload=ACTIVATION_CODE, source_adress=SENDER
     )
 
     # Finally, send the configuration SMS to your device:

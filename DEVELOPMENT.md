@@ -46,3 +46,22 @@ bump2version minor
 PR names must follow [angular convention](https://github.com/angular/angular/blob/main/CONTRIBUTING.md).
 
 Squash changes while merging to `development` and do regular merge to `main`.
+
+## Linting
+
+We use `ruff` for lint and format checks. To run the lint check, execute the following command:
+```shell
+pipenv run ruff check
+```
+To fix the issues, run:
+```shell
+pipenv run ruff check --fix
+```
+To run formatting checks only, execute:
+```shell
+pipenv run ruff format --check
+```
+To fix the formatting issues, run:
+```shell
+pipenv run ruff format
+```

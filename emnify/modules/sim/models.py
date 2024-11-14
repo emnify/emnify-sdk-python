@@ -8,6 +8,7 @@ class SimDevice(BaseModel):
     """
     Sim list response Device  model
     """
+
     id: int = None
     name: str = None
     ip_address: str = None
@@ -19,6 +20,7 @@ class IdModel(BaseModel):
     """
     BaseModel for objects with single id field
     """
+
     id: int
 
 
@@ -31,14 +33,16 @@ class SimList(RetrieveSIMlistresponse):
     """
     Inherited generated model for sim list
     """
+
     status: SimStatus = None
-    device: typing.Optional[SimDevice] = Field(alias='endpoint')
+    device: typing.Optional[SimDevice] = Field(alias="endpoint")
 
 
 class SimUpdate(BaseModel):
     """
     Model for sim partial update
     """
+
     status: SimStatus = None
     issuer_organisation: IdModel = None
     reseller_organisation: IdModel = None

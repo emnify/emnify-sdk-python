@@ -4,7 +4,7 @@ import os
 from emnify import EMnify
 
 # Get the token from environment variable
-TOKEN = os.environ.get('EMNIFY_APPLICATION_TOKEN')
+TOKEN = os.environ.get("EMNIFY_APPLICATION_TOKEN")
 
 # Initiate SDK instance using application token
 emnify = EMnify(TOKEN)

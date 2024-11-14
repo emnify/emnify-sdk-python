@@ -1,10 +1,9 @@
-
 from emnify import EMnify
 from emnify import constants as emnify_constants
 
 # To operate the emnify SDK, you need to generate an application token.
 # Step-by-step guide: https://www.emnify.com/developer-blog/how-to-use-an-application-token-for-api-authentication
-emnify_client = EMnify(app_token='YOUR_TOKEN')
+emnify_client = EMnify(app_token="YOUR_TOKEN")
 
 # Some methods that return multiple objects allow sorting and filtering.
 # API reference: https://emnify.github.io/emnify-sdk-python/autoapi/index.html
@@ -32,7 +31,7 @@ sims = emnify_client.sim.get_sim_list(filter_model=sim_filter)
 sim_filter = emnify_client.sim.get_sim_filter_model(
     customer_org=1,
     status=emnify_constants.SimStatusesID.ACTIVATED_ID.value,
-    production_date='2019-01-25'
+    production_date="2019-01-25",
 )
 
 # The list SIM cards request also has a separate filter, passed as an argument.
@@ -49,9 +48,7 @@ sims_without_assigned_device = emnify_client.sim.get_sim_list(without_device=Tru
 sort_parameter = emnify_client.devices.get_device_sort_enum.LAST_UPDATED.value
 
 # After choosing a filtering parameter, pass it as an argument to sort_enum:
-sorted_devices = emnify_client.devices.get_devices_list(
-    sort_enum=sort_parameter
-)
+sorted_devices = emnify_client.devices.get_devices_list(sort_enum=sort_parameter)
 
 # Now, you have a list of devices with the most recently updated at the top.
 for latest_device in sorted_devices:

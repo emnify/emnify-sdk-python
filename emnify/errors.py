@@ -1,13 +1,13 @@
 # Custom Exceptions
 
 __all__ = [
-    'EMnifyBaseException',
-    'UnauthorisedException',
-    'JsonDecodeException',
-    'UnexpectedArgumentException',
-    'ValidationErrorException',
-    'UnknownStatusCodeException',
-    'MinimalPythonVersionException'
+    "EMnifyBaseException",
+    "UnauthorisedException",
+    "JsonDecodeException",
+    "UnexpectedArgumentException",
+    "ValidationErrorException",
+    "UnknownStatusCodeException",
+    "MinimalPythonVersionException",
 ]
 
 
@@ -33,6 +33,7 @@ class ValidationErrorException(EMnifyBaseException):
 
 class UnknownStatusCodeException(EMnifyBaseException):
     """Custom error for unknown response errors"""
+
 
 class MinimalPythonVersionException(EMnifyBaseException):
     """Custom error for minimal python version required"""
