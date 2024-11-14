@@ -6,9 +6,12 @@ class OperatorManager:
     """
     Manager that allows to get a list of operators
     """
+
     def __init__(self, client):
         self.client = client
 
     def get_operators(self):
-        for operator in operator_api_manager.GetOperatorList().call_api(client=self.client):
+        for operator in operator_api_manager.GetOperatorList().call_api(
+            client=self.client
+        ):
             yield operator_models.Operator(**operator)

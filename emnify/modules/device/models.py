@@ -16,6 +16,7 @@ class Device(generated_models.Endpoint):
     """
     Renamed generated model
     """
+
     status: generated_models.Status
     sim: Optional[SimDevice] = None
 
@@ -28,7 +29,11 @@ class CreateDevice(Device):
     @validator("status")
     @classmethod
     def validate_status(cls, field_value, values, field, config):
-        if values.get("sim") and getattr(values["sim"], "status") and values["sim"].status.id == 1:
+        if (
+            values.get("sim")
+            and getattr(values["sim"], "status")
+            and values["sim"].status.id == 1
+        ):
             return field_value
         if field_value.id == 0:
             # If user will try activate device without sim card
@@ -41,6 +46,7 @@ class SmsCreateModel(generated_models.SubmitMTSMSrequest):
     """
     Inherited generated model of SubmitMTSMSrequest for extra fields
     """
+
     source_address: Optional[str] = None
     source_address_type: Optional[Dict[str, Any]] = None
     expiry_date: Optional[str] = None
@@ -76,6 +82,7 @@ class DeviceIdRequired(Device):
     """
     Changed renamed model of Device for id validation
     """
+
     id: int
 
 
@@ -83,6 +90,7 @@ class FilterDeviceModel(BaseModel):
     """
     Model for validation of filter query params
     """
+
     status: Optional[int] = None
     last_updated: Optional[datetime.datetime] = None
     created: Optional[datetime.datetime] = None
@@ -101,6 +109,7 @@ class GetDeviceFilterSet(BaseModel):
     """
     Model for device list query params
     """
+
     sort: Optional[DeviceSortModel] = None
     q: Optional[ListQFilterDeviceListModel] = None
 
@@ -118,6 +127,7 @@ class RetrieveDevice(Device):
     """
     class inherited from generated model for retrieve device response
     """
+
     runtime_data: Optional[Dict[str, Any]] = None
     sim: SimList = None
 
@@ -126,6 +136,7 @@ class UpdateDevice(generated_models.UpdateEndpointrequest):
     """
     Model for update Device request with field-type validation
     """
+
     name: str = None
     tags: str = None
     status: generated_models.Status = None
@@ -142,6 +153,7 @@ class DeviceConnectivityStatus(BaseModel):
     """
     Device connectivity status can be 'ATTACHED'/'ONLINE'/'OFFLINE'/'BLOCKED'
     """
+
     status: generated_models.Status = None
     location: Dict[str, Any] = None
     services: Any = None
