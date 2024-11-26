@@ -14,6 +14,8 @@ Exceptions
    emnify.errors.JsonDecodeException
    emnify.errors.UnexpectedArgumentException
    emnify.errors.ValidationErrorException
+   emnify.errors.UnknownStatusCodeException
+   emnify.errors.MinimalPythonVersionException
 
 
 Module Contents
@@ -57,5 +59,21 @@ Module Contents
 
 
    Custom error for validation errors
+
+
+.. py:exception:: UnknownStatusCodeException
+
+   Bases: :py:obj:`EMnifyBaseException`
+
+
+   Custom error for unknown response errors
+
+
+.. py:exception:: MinimalPythonVersionException
+
+   Bases: :py:obj:`EMnifyBaseException`
+
+
+   Custom error for minimal python version required
 
 
