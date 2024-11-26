@@ -16,7 +16,7 @@ updates:
           - "*"
     ignore:
       - dependency-name: "pydantic"
-        version: ">= 2"
+        versions: [ ">=2" ]
   - package-ecosystem: "github-actions"
     directory: "/"
     commit-message:
