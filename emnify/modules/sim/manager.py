@@ -1,7 +1,12 @@
 import typing
 
 from emnify.modules.sim import models as sim_models
-from emnify.modules.sim.api_call_manager import SimListApi, SimActivateApi, SimUpdateApi, SimRetrieveApi
+from emnify.modules.sim.api_call_manager import (
+    SimListApi,
+    SimActivateApi,
+    SimUpdateApi,
+    SimRetrieveApi,
+)
 from emnify import constants as emnify_const
 
 
@@ -33,10 +38,10 @@ class SimManager:
         return emnify_const.SimSort
 
     def get_sim_list(
-            self,
-            without_device: bool = None,
-            filter_model: sim_models.SimFilter = None,
-            sort_enum: emnify_const.SimSort = None
+        self,
+        without_device: bool = None,
+        filter_model: sim_models.SimFilter = None,
+        sort_enum: emnify_const.SimSort = None,
     ) -> typing.Generator[sim_models.SimList, None, None]:
         """
         Retrieves an iterable list of SIM`s.
@@ -46,10 +51,14 @@ class SimManager:
         :param sort_enum: Model for request`s sorting
         """
         query_params = self.__transform_sim_filter_params(
-            without_device=without_device, filter_model=filter_model, sort_enum=sort_enum
+            without_device=without_device,
+            filter_model=filter_model,
+            sort_enum=sort_enum,
         )
 
-        sim_response = SimListApi().call_api(client=self.client, query_params=query_params)
+        sim_response = SimListApi().call_api(
+            client=self.client, query_params=query_params
+        )
 
         return (self.get_sim_list_model(**i) for i in sim_response)
 
@@ -59,19 +68,25 @@ class SimManager:
 
         :param sim_id: id of sim to retrieve
         """
-        return sim_models.SimList(**SimRetrieveApi().call_api(client=self.client, path_params={'sim': sim_id}))
+        return sim_models.SimList(
+            **SimRetrieveApi().call_api(client=self.client, path_params={"sim": sim_id})
+        )
 
-    def register_sim(self, bic: str) -> typing.Union[typing.List[sim_models.SimList], sim_models.SimList]:
+    def register_sim(
+        self, bic: str
+    ) -> typing.Union[typing.List[sim_models.SimList], sim_models.SimList]:
         """
         Registers SIM/batch SIMs.
 
         :param bic: BIC number of SIM/batch SIMs for registration.
         """
         data = emnify_const.SimStatusesDict.ACTIVATED_DICT.value
-        sim_response = SimActivateApi().call_api(client=self.client, data=data, path_params={'bic': bic})
+        sim_response = SimActivateApi().call_api(
+            client=self.client, data=data, path_params={"bic": bic}
+        )
         if isinstance(sim_response, dict):
-            if sim_response.get('sim'):
-                return [self.get_sim_list_model(**data) for data in sim_response['sim']]
+            if sim_response.get("sim"):
+                return [self.get_sim_list_model(**data) for data in sim_response["sim"]]
             return self.get_sim_list_model(**sim_response)
         return [self.get_sim_list_model(**sim) for sim in sim_response]
 
@@ -82,8 +97,11 @@ class SimManager:
         :param sim_id: int of sim to update
         :param sim: filled sim update model
         """
-        return SimUpdateApi() \
-            .call_api(client=self.client, data=sim.dict(exclude_none=True), path_params={'sim': sim_id})
+        return SimUpdateApi().call_api(
+            client=self.client,
+            data=sim.dict(exclude_none=True),
+            path_params={"sim": sim_id},
+        )
 
     def activate_sim(self, sim_id: int):
         """
@@ -93,10 +111,10 @@ class SimManager:
 
         :param sim_id: int of sim to update
         """
-        return SimUpdateApi() \
-            .call_api(
-            client=self.client, data={'status': emnify_const.SimStatusesDict.ACTIVATED_DICT.value},
-            path_params={'sim': sim_id}
+        return SimUpdateApi().call_api(
+            client=self.client,
+            data={"status": emnify_const.SimStatusesDict.ACTIVATED_DICT.value},
+            path_params={"sim": sim_id},
         )
 
     def suspend_sim(self, sim_id: int):
@@ -107,28 +125,29 @@ class SimManager:
 
         :param sim_id: id of sim to update
         """
-        return SimUpdateApi() \
-            .call_api(
-            client=self.client, data={'status': emnify_const.SimStatusesDict.SUSPENDED_DICT.value},
-            path_params={'sim': sim_id}
+        return SimUpdateApi().call_api(
+            client=self.client,
+            data={"status": emnify_const.SimStatusesDict.SUSPENDED_DICT.value},
+            path_params={"sim": sim_id},
         )
 
     @staticmethod
     def __transform_sim_filter_params(
-            filter_model: sim_models.SimFilter = None,
-            sort_enum: emnify_const.SimSort = None,
-            without_device: bool = None
-
+        filter_model: sim_models.SimFilter = None,
+        sort_enum: emnify_const.SimSort = None,
+        without_device: bool = None,
     ) -> dict:
         query_filter = {}
         if filter_model:
             filter_dict = filter_model.dict(exclude_none=True)
-            query_filter['q'] = ','.join([f'{key}:{filter_dict[key]}' for key in filter_dict])
+            query_filter["q"] = ",".join(
+                [f"{key}:{filter_dict[key]}" for key in filter_dict]
+            )
         if sort_enum:
-            query_filter['sort'] = sort_enum
+            query_filter["sort"] = sort_enum
         if without_device is not None and without_device:
-            if query_filter.get('q'):
-                query_filter['q'] = query_filter['q'] + 'endpoint:null'
+            if query_filter.get("q"):
+                query_filter["q"] = query_filter["q"] + "endpoint:null"
             else:
-                query_filter['q'] = 'endpoint:null'
+                query_filter["q"] = "endpoint:null"
         return query_filter

@@ -1,0 +1,9 @@
+FROM python:latest
+
+RUN pip install emnify-sdk
+
+WORKDIR /sdk
+
+COPY . .
+
+CMD ["echo", "\"Enter Command(Read DEVELOPMENT.md)\""]

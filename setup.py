@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 import os
 
-NAME = os.getenv('PYPI_PACKAGE_NAME') or "emnify-sdk"
+NAME = os.getenv("PYPI_PACKAGE_NAME") or "emnify-sdk"
 VERSION = "0.4.2"
 # To install the library, run the following
 #
@@ -11,9 +11,13 @@ VERSION = "0.4.2"
 # prerequisite: build
 # https://pypi.org/project/build/
 
-REQUIRES = ['requests>=2.27.0,<2.30.0', 'pydantic>=1.9.0,<2.0.0']
-if __name__ == '__main__':
-    with open('README.md', "r", encoding="utf-8") as fh:
+REQUIRES = [
+    "requests>=2.27.0,<2.33.0",
+    "urllib3>=1.21.1,<1.27",
+    "pydantic>=1.9.0,<2.0.0",
+]
+if __name__ == "__main__":
+    with open("README.md", "r", encoding="utf-8") as fh:
         long_description = fh.read()
 
     setup(
@@ -29,8 +33,8 @@ if __name__ == '__main__':
         },
         install_requires=REQUIRES,
         python_requires=">=3.9",
-        packages=find_packages(exclude=['tests']),
+        packages=find_packages(exclude=["tests"]),
         include_package_data=True,
         long_description=long_description,
-        long_description_content_type='text/markdown'
+        long_description_content_type="text/markdown",
     )
