@@ -14,7 +14,7 @@ Run a command:
 # [...args] - command arguments
 
 # Run unit tests
-docker run -t -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-under=90
+docker run -ti -v $(pwd):/sdk emnify/python-sdk pytest --cov=emnify --cov-fail-under=90
 ```
 For end-to-end testing, make use of the other Dockerfile provided (it uses our package from [PyPI](https://pypi.org/project/emnify-sdk/)):
 ```shell

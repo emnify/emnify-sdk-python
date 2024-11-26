@@ -4,9 +4,9 @@ RUN pip install pipenv
 
 WORKDIR /sdk
 
-COPY Pipfile Pipfile.lock ./
+COPY Pipfile ./
 
-RUN pipenv install --deploy --ignore-pipfile --dev
+RUN pipenv install --deploy --dev
 
 COPY . .
 
