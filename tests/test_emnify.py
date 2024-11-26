@@ -19,7 +19,7 @@ def vcr_cassette_dir(request):
 def scrub_response_string():
     def before_record_response(response):
         try:
-            decoded_response = json.loads(response["body"]["string"]).decode('utf-8')
+            decoded_response = json.loads(response["body"]["string"]).decode("utf-8")
             if "auth_token" in decoded_response:
                 anonymized_response = decoded_response | {"auth_token": "test"}
                 response["body"]["string"] = json.dumps(anonymized_response).encode(
