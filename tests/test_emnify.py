@@ -158,7 +158,7 @@ class EMnifyTest(TestCase):
             id=devices[0].service_profile.id
         )
         sim_status = emnify.devices.status_model(id=1, description="Activated")
-        sim = emnify.sim.get_sim_list_model(id=sims[0].id, status=sim_status)
+        sim = emnify.devices.get_sim_device_model(id=sims[0].id, status=sim_status)
         device = emnify.devices.device_create_model(
             name=name,
             tariff_profile=tariff_profile,

@@ -8,7 +8,8 @@ from datetime import date, datetime
 from enum import Enum
 from typing import Any, Dict, List, Optional, Union
 
-from pydantic import BaseModel, Field, SecretStr, conint, constr
+from pydantic import ConfigDict, RootModel, StringConstraints, BaseModel, Field, SecretStr
+from typing_extensions import Annotated
 
 
 class Authentication(BaseModel):
@@ -394,10 +395,9 @@ class StatsObjectItem(BaseModel):
     sms: Optional[Sms3] = None
 
 
-class StatsObject(BaseModel):
-    __root__: List[StatsObjectItem] = Field(
-        ..., title="Response schema for Endpoint and Organisation Statistics"
-    )
+class StatsObject(RootModel[List[StatsObjectItem]]):
+    """Response schema for Endpoint and Organisation Statistics"""
+    pass
 
 
 class TrafficType8(BaseModel):
@@ -487,36 +487,36 @@ class RatType(BaseModel):
 
 
 class ListofSMSresponse(BaseModel):
-    submit_date: Optional[str] = Field(None, example="10/5/2019 1:56:59 PM")
-    delivery_date: Optional[str] = Field(None, example="10/5/2019 1:56:59 PM")
-    expiry_date: Optional[str] = Field(None, example="10/6/2019 1:56:59 PM")
-    final_date: Optional[str] = Field(None, example="10/5/2019 1:57:03 PM")
+    submit_date: Optional[str] = Field(None, examples=["10/5/2019 1:56:59 PM"])
+    delivery_date: Optional[str] = Field(None, examples=["10/5/2019 1:56:59 PM"])
+    expiry_date: Optional[str] = Field(None, examples=["10/6/2019 1:56:59 PM"])
+    final_date: Optional[str] = Field(None, examples=["10/5/2019 1:57:03 PM"])
     retry_date: Optional[str] = None
-    last_delivery_attempt: Optional[str] = Field(None, example="10/5/2019 1:57:00 PM")
-    retry_count: Optional[str] = Field(None, example=0)
+    last_delivery_attempt: Optional[str] = Field(None, examples=["10/5/2019 1:57:00 PM"])
+    retry_count: Optional[str] = Field(None, examples=[0])
     gsm_map_error: Optional[str] = None
-    dcs: Optional[int] = Field(None, example=0)
-    pid: Optional[int] = Field(None, example=0)
-    source_address: Optional[str] = Field(None, example=1234567890)
+    dcs: Optional[int] = Field(None, examples=[0])
+    pid: Optional[int] = Field(None, examples=[0])
+    source_address: Optional[str] = Field(None, examples=[1234567890])
     endpoint: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 166, "name": "Your Endpoint"}
+        None, examples=[{"id": 166, "name": "Your Endpoint"}]
     )
-    sim_id: Optional[str] = Field(None, example=625)
-    iccid: Optional[str] = Field(None, example=8988303000000001000)
-    msisdn: Optional[str] = Field(None, example="883XXXXXXXXXXXX")
-    imsi: Optional[str] = Field(None, example="901XXXXXXXXXXXX")
-    msc: Optional[str] = Field(None, example=491600190000)
+    sim_id: Optional[str] = Field(None, examples=[625])
+    iccid: Optional[str] = Field(None, examples=[8988303000000001000])
+    msisdn: Optional[str] = Field(None, examples=["883XXXXXXXXXXXX"])
+    imsi: Optional[str] = Field(None, examples=["901XXXXXXXXXXXX"])
+    msc: Optional[str] = Field(None, examples=[491600190000])
     udh: Optional[str] = None
-    payload: Optional[str] = Field(None, example="test")
-    id: Optional[int] = Field(None, example=590)
+    payload: Optional[str] = Field(None, examples=["test"])
+    id: Optional[int] = Field(None, examples=[590])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "DELIVERED", "id": 4}
+        None, examples=[{"description": "DELIVERED", "id": 4}]
     )
     sms_type: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "MT", "id": 1}
+        None, examples=[{"description": "MT", "id": 1}]
     )
     source_address_type: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "National", "id": 161}
+        None, examples=[{"description": "National", "id": 161}]
     )
 
 
@@ -558,34 +558,35 @@ class RetrieveConnectivityInformationresponse(BaseModel):
     reply_timestamp: Optional[str] = None
 
 
-class OperatorPatchRequest(BaseModel):
-    __root__: Any = Field(
-        ...,
-        example={"name": "Zulu, New Operator Name"},
+class OperatorPatchRequest(RootModel[Any]):
+    model_config = ConfigDict(
         title="Example request body to update Operator details",
+        json_schema_extra={
+            "examples": [{"name": "Zulu, New Operator Name"}]
+        },
     )
 
 
-class OperatorDataPostRequest(BaseModel):
-    __root__: Any = Field(
-        ...,
-        example={"mnc": "99"},
+class OperatorDataPostRequest(RootModel[Any]):
+    model_config = ConfigDict(
         title="Example request body to update Operator Related Data",
+        json_schema_extra={
+            "examples": [{"mnc": "99"}]
+        },
     )
-
 
 class RetrieveOperatorBlacklistresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    name: Optional[str] = Field(None, example="Telekom")
+    id: Optional[int] = Field(None, examples=[1])
+    name: Optional[str] = Field(None, examples=["Telekom"])
     country: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 74,
             "name": "Germany",
             "country_code": 49,
             "mcc": 262,
             "iso_code": "de",
-        },
+        }],
     )
     tapcode: Optional[List[Dict[str, Any]]] = Field(None, description="")
     mnc: Optional[List[Dict[str, Any]]] = Field(None, description="")
@@ -640,14 +641,14 @@ class ActionOnExhaustion(BaseModel):
 class EndpointQuota(BaseModel):
     last_volume_added: Optional[float] = None
     last_status_change_date: Optional[
-        constr(regex=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")
+        Annotated[str, StringConstraints(pattern=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")]
     ] = None
     auto_refill: Optional[int] = None
     threshold_volume: Optional[float] = None
     threshold_percentage: Optional[float] = None
     status: Status2 = Field(..., title="QuotaStatus")
     volume: float
-    expiry_date: constr(regex=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")
+    expiry_date: Annotated[str, StringConstraints(pattern=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$")]
     action_on_exhaustion: ActionOnExhaustion = Field(..., title="ActionOnExhaustion")
     peak_throughput: Optional[int] = None
 
@@ -703,47 +704,47 @@ class SMSQuota(BaseModel):
 
 
 class RetrieveEventsresponse(BaseModel):
-    timestamp: Optional[str] = Field(None, example="2020-03-01T12:07:09.000Z")
-    alert: Optional[bool] = Field(None, example=True)
-    description: Optional[str] = Field(None, example="PDP Context deleted.")
-    id: Optional[int] = Field(None, example=69535)
+    timestamp: Optional[str] = Field(None, examples=["2020-03-01T12:07:09.000Z"])
+    alert: Optional[bool] = Field(None, examples=[True])
+    description: Optional[str] = Field(None, examples=["PDP Context deleted."])
+    id: Optional[int] = Field(None, examples=[69535])
     event_type: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "Delete PDP Context", "id": 4}
+        None, examples=[{"description": "Delete PDP Context", "id": 4}]
     )
     event_source: Optional[Dict[str, Any]] = Field(
-        None, example={"name": "Network", "id": 0}
+        None, examples=[{"name": "Network", "id": 0}]
     )
     event_severity: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "INFO", "id": 0}
+        None, examples=[{"description": "INFO", "id": 0}]
     )
     organisation: Optional[Dict[str, Any]] = Field(
-        None, example={"name": "Organisation_Name", "id": 2}
+        None, examples=[{"name": "Organisation_Name", "id": 2}]
     )
     endpoint: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "name": "Monitoring201",
             "tags": "Monitoring",
             "ip_address": "0.0.0.0",
             "imei": None,
             "id": 1,
-        },
+        }],
     )
     sim: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "iccid": 10000000000,
             "production_date": "2019-12-17T13:26:13.000Z",
             "id": 1,
-        },
+        }],
     )
     imsi: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "imsi": 100000000000000,
             "import_date": "2019-12-17T13:26:08.000Z",
             "id": 110,
-        },
+        }],
     )
 
 
@@ -756,33 +757,33 @@ class StartingaUSSDDialogresponse(BaseModel):
 
 
 class RetrieveOrganisationListresponse(BaseModel):
-    id: int = Field(..., example=12)
-    name: str = Field(..., example="Tele17")
+    id: int = Field(..., examples=[12])
+    name: str = Field(..., examples=["Tele17"])
     class_: Dict[str, Any] = Field(
-        ..., alias="class", example={"id": 0, "description": "Commercial"}
+        ..., alias="class", examples=[{"id": 0, "description": "Commercial"}]
     )
-    type: Dict[str, Any] = Field(..., example={"id": 1, "description": "Provider"})
+    type: Dict[str, Any] = Field(..., examples=[{"id": 1, "description": "Provider"}])
     country: Dict[str, Any] = Field(
         ...,
-        example={
+        examples=[{
             "id": 74,
             "name": "Germany",
             "mcc": 262,
             "country_code": 49,
             "isocode": "de",
-        },
+        }],
     )
-    status: Dict[str, Any] = Field(..., example={"id": 0, "description": "Enabled"})
+    status: Dict[str, Any] = Field(..., examples=[{"id": 0, "description": "Enabled"}])
     relation: Dict[str, Any] = Field(
-        ..., example={"id": 17, "type": {"id": 2, "description": "Roaming Partner"}}
+        ..., examples=[{"id": 17, "type": {"id": 2, "description": "Roaming Partner"}}]
     )
-    monthly_cost_limit: int = Field(..., example=1000)
-    currency: Dict[str, Any] = Field(..., example={"id": 1, "code": "EUR"})
-    created: str = Field(..., example="2/3/2019 12:00:00 AM")
+    monthly_cost_limit: int = Field(..., examples=[1000])
+    currency: Dict[str, Any] = Field(..., examples=[{"id": 1, "code": "EUR"}])
+    created: str = Field(..., examples=["2/3/2019 12:00:00 AM"])
     verification_type: Dict[str, Any] = Field(
-        ..., example={"id": 1, "description": "Business registration number"}
+        ..., examples=[{"id": 1, "description": "Business registration number"}]
     )
-    verification: str = Field(..., example=123456789)
+    verification: str = Field(..., examples=[123456789])
 
 
 class CreateanOrganisationrequest(BaseModel):
@@ -828,45 +829,45 @@ class UpdateOrganisationrequest(BaseModel):
 
 
 class RetrieveOrganisationStatusesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Enabled")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Enabled"])
 
 
 class RetrieveAvailableOrganisationTypesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    description: Optional[str] = Field(None, example="Mobile Network Operator")
+    id: Optional[int] = Field(None, examples=[1])
+    description: Optional[str] = Field(None, examples=["Mobile Network Operator"])
 
 
 class RetrieveAvailableOrganisationRelationTypesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Customer of")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Customer of"])
 
 
 class RetrieveAvailableOrganisationVerificationTypesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    description: Optional[str] = Field(None, example="Business registration number")
+    id: Optional[int] = Field(None, examples=[1])
+    description: Optional[str] = Field(None, examples=["Business registration number"])
 
 
 class RetrieveContactsforanOrganisationresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
+    id: Optional[int] = Field(None, examples=[1])
     organisation: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 124, "name": "Tele17 Austria"}
+        None, examples=[{"id": 124, "name": "Tele17 Austria"}]
     )
     type: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "description": "Commercial"}
+        None, examples=[{"id": 1, "description": "Commercial"}]
     )
-    name: Optional[str] = Field(None, example="Marc Muller")
-    title: Optional[str] = Field(None, example="Ing")
-    department: Optional[str] = Field(None, example="Sales")
-    street: Optional[str] = Field(None, example="1st street")
-    zipcode: Optional[str] = Field(None, example=10224)
-    city: Optional[str] = Field(None, example="Berlin")
+    name: Optional[str] = Field(None, examples=["Marc Muller"])
+    title: Optional[str] = Field(None, examples=["Ing"])
+    department: Optional[str] = Field(None, examples=["Sales"])
+    street: Optional[str] = Field(None, examples=["1st street"])
+    zipcode: Optional[str] = Field(None, examples=[10224])
+    city: Optional[str] = Field(None, examples=["Berlin"])
     country: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "name": "Germany"}
+        None, examples=[{"id": 1, "name": "Germany"}]
     )
-    email: Optional[str] = Field(None, example="user@domain.com")
-    phone: Optional[str] = Field(None, example="+497 554 776 653")
-    mobile: Optional[str] = Field(None, example="+497 554 776 653")
+    email: Optional[str] = Field(None, examples=["user@domain.com"])
+    phone: Optional[str] = Field(None, examples=["+497 554 776 653"])
+    mobile: Optional[str] = Field(None, examples=["+497 554 776 653"])
     state: Optional[str] = None
     secondary_address: Optional[str] = None
 
@@ -920,43 +921,44 @@ class UpdateaSingleContactresponse(BaseModel):
 
 
 class Retrievelistofassignedtariffsforanorganisationresponse(BaseModel):
-    id: Optional[int] = Field(None, example=3)
-    name: Optional[str] = Field(None, example="Tariff for M2M Europe")
-    description: Optional[str] = Field(None, example="M2M Europe: Data+SMS")
-    created: Optional[str] = Field(None, example="2019-01-10T09:36:58.000Z")
-    default_sms_mt_rate: Optional[float] = Field(None, example=0.5)
-    default_sms_mo_rate: Optional[float] = Field(None, example=0.4)
-    sim_issued_rate: Optional[float] = Field(None, example=0.1)
-    sim_activated_rate: Optional[float] = Field(None, example=0.2)
-    sim_suspended_rate: Optional[float] = Field(None, example=0.3)
-    sim_activation_rate: Optional[float] = Field(None, example=0.6)
-    sim_reactivation_rate: Optional[float] = Field(None, example=0.8)
-    sim_suspension_rate: Optional[float] = Field(None, example=0.7)
-    sim_termination_rate: Optional[float] = Field(None, example=0.5)
+    id: Optional[int] = Field(None, examples=[3])
+    name: Optional[str] = Field(None, examples=["Tariff for M2M Europe"])
+    description: Optional[str] = Field(None, examples=["M2M Europe: Data+SMS"])
+    created: Optional[str] = Field(None, examples=["2019-01-10T09:36:58.000Z"])
+    default_sms_mt_rate: Optional[float] = Field(None, examples=[0.5])
+    default_sms_mo_rate: Optional[float] = Field(None, examples=[0.4])
+    sim_issued_rate: Optional[float] = Field(None, examples=[0.1])
+    sim_activated_rate: Optional[float] = Field(None, examples=[0.2])
+    sim_suspended_rate: Optional[float] = Field(None, examples=[0.3])
+    sim_activation_rate: Optional[float] = Field(None, examples=[0.6])
+    sim_reactivation_rate: Optional[float] = Field(None, examples=[0.8])
+    sim_suspension_rate: Optional[float] = Field(None, examples=[0.7])
+    sim_termination_rate: Optional[float] = Field(None, examples=[0.5])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "Active", "id": 1}
+        None, examples=[{"description": "Active", "id": 1}]
     )
     currency: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "code": "EUR", "symbol": "�"}
+        None, examples=[{"id": 1, "code": "EUR", "symbol": "�"}]
     )
     data_blocksize: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 10, "octets": 1, "description": "exact"}
+        None, examples=[{"id": 10, "octets": 1, "description": "exact"}]
     )
     data_throttle: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 9, "octets": 256000, "description": "256 kbit/s"}
+        None, examples=[{"id": 9, "octets": 256000, "description": "256 kbit/s"}]
     )
     pdp_context_definition: Optional[List[Dict[str, Any]]] = Field(None, description="")
 
 
 class RetrieveBillingPeriodsresponse(BaseModel):
-    id: Optional[int] = Field(None, example=201810)
-    description: Optional[str] = Field(None, example="October 2018")
+    id: Optional[int] = Field(None, examples=[201810])
+    description: Optional[str] = Field(None, examples=["October 2018"])
 
 
-class RetrieveBillingDataByPeriodResponse(BaseModel):
-    __root__: Any = Field(
-        ...,
-        example={
+class RetrieveBillingDataByPeriodResponse(RootModel[Any]):
+    model_config = ConfigDict(
+        title="Example request body to update Operator details",
+        json_schema_extra={
+            "examples":[{
             "mrc": {
                 "data_packages": {
                     "data": [
@@ -1196,37 +1198,38 @@ class RetrieveBillingDataByPeriodResponse(BaseModel):
             "sub_total": {"cost": 624.806336, "currency": {"code": "EUR"}},
             "total": {"cost": 743.51953984, "currency": {"code": "EUR"}},
             "period": "October 1 - October 31, 2017",
-        },
-    )
+        }],
+    },
+)
 
 
 class RetrieveSIMlistresponse(BaseModel):
-    id: Optional[int] = Field(None, example=788)
-    iccid: Optional[str] = Field(None, example=736826736473829800000)
-    production_date: Optional[str] = Field(None, example="8/1/2019 8:47:00 AM")
-    activation_date: Optional[str] = Field(None, example="8/21/2019 6:17:00 PM")
+    id: Optional[int] = Field(None, examples=[788])
+    iccid: Optional[str] = Field(None, examples=[736826736473829800000])
+    production_date: Optional[str] = Field(None, examples=["8/1/2019 8:47:00 AM"])
+    activation_date: Optional[str] = Field(None, examples=["8/21/2019 6:17:00 PM"])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "description": "Active"}
+        None, examples=[{"id": 1, "description": "Active"}]
     )
     customer_org: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 13,
             "name": "Enterprise",
             "country": {"id": 205, "name": "United Kingdom"},
-        },
+        }],
     )
     issuer_org: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 11,
             "name": "MNO",
             "country": {"id": 205, "name": "United Kingdom"},
-        },
+        }],
     )
     endpoint: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 1,
             "name": "arduino01",
             "imei": None,
@@ -1238,57 +1241,57 @@ class RetrieveSIMlistresponse(BaseModel):
             "tariff_profile_id": 1,
             "tags": None,
             "ip_address": "10.1.1.9",
-        },
+        }],
     )
-    imsi: Optional[str] = Field(None, example=123451234567890)
-    msisdn: Optional[str] = Field(None, example=88563748761)
+    imsi: Optional[str] = Field(None, examples=[123451234567890])
+    msisdn: Optional[str] = Field(None, examples=[88563748761])
     model: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 1,
             "description": "Java smartcard",
             "memory_size": 64,
             "formfactor": {"id": 1, "name": "2FF", "image": "2ff.jpg"},
             "manufacturer": {"id": 1, "name": "Motorola"},
-        },
+        }],
     )
     reseller_org: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 22,
             "name": "Reseller",
             "country": {"id": 205, "name": "United Kingdom"},
-        },
+        }],
     )
 
 
 class SIMResource(BaseModel):
-    id: Optional[int] = Field(None, example=788)
-    iccid: Optional[str] = Field(None, example=736826736473829800000)
-    production_date: Optional[str] = Field(None, example="8/1/2019 8:47:00 AM")
-    activation_date: Optional[str] = Field(None, example="8/21/2019 6:17:00 PM")
+    id: Optional[int] = Field(None, examples=[788])
+    iccid: Optional[str] = Field(None, examples=[736826736473829800000])
+    production_date: Optional[str] = Field(None, examples=["8/1/2019 8:47:00 AM"])
+    activation_date: Optional[str] = Field(None, examples=["8/21/2019 6:17:00 PM"])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "description": "Active"}
+        None, examples=[{"id": 1, "description": "Active"}]
     )
     customer_org: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 13,
             "name": "Enterprise",
             "country": {"id": 205, "name": "United Kingdom"},
-        },
+        }],
     )
     issuer_org: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 11,
             "name": "MNO",
             "country": {"id": 205, "name": "United Kingdom"},
-        },
+        }],
     )
     endpoint: Optional[Dict[str, Any]] = None
-    imsi: Optional[str] = Field(None, example=123451234567890)
-    msisdn: Optional[str] = Field(None, example=88563748761)
+    imsi: Optional[str] = Field(None, examples=[123451234567890])
+    msisdn: Optional[str] = Field(None, examples=[88563748761])
     model: Optional[Dict[str, Any]] = None
     reseller_org: Optional[Dict[str, Any]] = None
 
@@ -1301,20 +1304,20 @@ class UpdateSIMrequest(BaseModel):
 
 
 class ListofAllAvailableSIMStatusesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Issued")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Issued"])
 
 
 class ListofIMSIsresponse(BaseModel):
-    id: Optional[int] = Field(None, example=17)
-    imsi: Optional[str] = Field(None, example=112201234567008)
-    import_date: Optional[str] = Field(None, example="3/25/2019 1:12:39 PM")
+    id: Optional[int] = Field(None, examples=[17])
+    imsi: Optional[str] = Field(None, examples=[112201234567008])
+    import_date: Optional[str] = Field(None, examples=["3/25/2019 1:12:39 PM"])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 0, "description": "Enabled"}
+        None, examples=[{"id": 0, "description": "Enabled"}]
     )
     imsi_pool: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 7,
             "description": "MNO 1 Pool",
             "network_coverage_id": 2,
@@ -1324,14 +1327,14 @@ class ListofIMSIsresponse(BaseModel):
                 "organisation_id": 4,
                 "organisation_name": "MNO 1",
             },
-        },
+        }],
     )
     type: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 0, "description": "Root IMSI"}
+        None, examples=[{"id": 0, "description": "Root IMSI"}]
     )
     sim: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 20,
             "iccid": 6660000000000000000,
             "production_date": None,
@@ -1353,7 +1356,7 @@ class ListofIMSIsresponse(BaseModel):
                 "status_id": 0,
                 "ext_reference": None,
             },
-        },
+        }],
     )
 
 
@@ -1372,37 +1375,37 @@ class UpdateIMSIrequest(BaseModel):
 
 
 class ListofallavailableIMSIstatusesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Enabled")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Enabled"])
 
 
 class ListofTariffsresponse(BaseModel):
-    id: Optional[int] = Field(None, example=3)
-    name: Optional[str] = Field(None, example="Tariff for M2M Europe")
-    description: Optional[str] = Field(None, example="M2M Europe: Data+SMS")
-    created: Optional[str] = Field(None, example="2019-01-10T09:36:58.000Z")
-    default_sms_mt_rate: Optional[float] = Field(None, example=0.5)
-    default_sms_mo_rate: Optional[float] = Field(None, example=0.4)
-    sim_issued_rate: Optional[float] = Field(None, example=0.1)
-    sim_activated_rate: Optional[float] = Field(None, example=0.2)
-    sim_suspended_rate: Optional[float] = Field(None, example=0.3)
-    sim_activation_rate: Optional[float] = Field(None, example=0.6)
-    sim_reactivation_rate: Optional[float] = Field(None, example=0.8)
-    sim_suspension_rate: Optional[float] = Field(None, example=0.7)
-    sim_termination_rate: Optional[float] = Field(None, example=0.5)
-    used_count: Optional[int] = Field(None, example=2)
-    assigned_count: Optional[int] = Field(None, example=1)
+    id: Optional[int] = Field(None, examples=[3])
+    name: Optional[str] = Field(None, examples=["Tariff for M2M Europe"])
+    description: Optional[str] = Field(None, examples=["M2M Europe: Data+SMS"])
+    created: Optional[str] = Field(None, examples=["2019-01-10T09:36:58.000Z"])
+    default_sms_mt_rate: Optional[float] = Field(None, examples=[0.5])
+    default_sms_mo_rate: Optional[float] = Field(None, examples=[0.4])
+    sim_issued_rate: Optional[float] = Field(None, examples=[0.1])
+    sim_activated_rate: Optional[float] = Field(None, examples=[0.2])
+    sim_suspended_rate: Optional[float] = Field(None, examples=[0.3])
+    sim_activation_rate: Optional[float] = Field(None, examples=[0.6])
+    sim_reactivation_rate: Optional[float] = Field(None, examples=[0.8])
+    sim_suspension_rate: Optional[float] = Field(None, examples=[0.7])
+    sim_termination_rate: Optional[float] = Field(None, examples=[0.5])
+    used_count: Optional[int] = Field(None, examples=[2])
+    assigned_count: Optional[int] = Field(None, examples=[1])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"description": "Active", "id": 1}
+        None, examples=[{"description": "Active", "id": 1}]
     )
     currency: Optional[Dict[str, Any]] = Field(
-        None, example={"code": "EUR", "symbol": "�", "id": 1}
+        None, examples=[{"code": "EUR", "symbol": "�", "id": 1}]
     )
     data_blocksize: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 10, "octets": 1, "description": "exact"}
+        None, examples=[{"id": 10, "octets": 1, "description": "exact"}]
     )
     data_throttle: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 9, "octets": 256000, "description": "256 kbit/s"}
+        None, examples=[{"id": 9, "octets": 256000, "description": "256 kbit/s"}]
     )
     pdp_context_definition: Optional[List[Dict[str, Any]]] = Field(None, description="")
 
@@ -1474,17 +1477,17 @@ class PatchTariffrequest(BaseModel):
 
 
 class ListofavailableTariffstatusesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Staging")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Staging"])
 
 
 class ListofRatezonesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=4)
-    name: Optional[str] = Field(None, example="Zone 1")
+    id: Optional[int] = Field(None, examples=[4])
+    name: Optional[str] = Field(None, examples=["Zone 1"])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 0, "description": "Staging"}
+        None, examples=[{"id": 0, "description": "Staging"}]
     )
-    valid_from: Optional[str] = Field(None, example="2020-01-01T00:00:00.000Z")
+    valid_from: Optional[str] = Field(None, examples=["2020-01-01T00:00:00.000Z"])
     valid_until: Optional[str] = None
     coverage: Optional[List[Dict[str, Any]]] = Field(None, description="")
     rate: Optional[List[Dict[str, Any]]] = Field(None, description="")
@@ -1504,8 +1507,8 @@ class PatchRatezonerequest(BaseModel):
 
 
 class Listofavailableratezonestatusesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Staging")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Staging"])
 
 
 class AddRatetoaRatezonerequest(BaseModel):
@@ -1523,15 +1526,15 @@ class UpdateRateofaRatezonerequest(BaseModel):
 
 
 class ListofTariffProfilesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    name: Optional[str] = Field(None, example="Tariff Profile 1")
+    id: Optional[int] = Field(None, examples=[1])
+    name: Optional[str] = Field(None, examples=["Tariff Profile 1"])
     description: Optional[str] = Field(
-        None, example="This Tariff Profile is for testing."
+        None, examples=["This Tariff Profile is for testing."]
     )
-    used_count: Optional[int] = Field(None, example=56)
+    used_count: Optional[int] = Field(None, examples=[56])
     tariff: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 1,
             "name": "Tariff 1",
             "description": "Tariff only for testing.",
@@ -1551,7 +1554,7 @@ class ListofTariffProfilesresponse(BaseModel):
             "pdp_context_definition": [
                 {"id": 12, "apn": "internet.test.com", "default": True}
             ],
-        },
+        }],
     )
 
 
@@ -1578,9 +1581,9 @@ class PatchTariffProfilerequest(BaseModel):
 
 class RetrieveCoverageresponse(BaseModel):
     country: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "name": "Germany"}
+        None, examples=[{"id": 1, "name": "Germany"}]
     )
-    redundancy_count: Optional[int] = Field(None, example=2)
+    redundancy_count: Optional[int] = Field(None, examples=[2])
 
 
 class Retrievesingleselectionsresponse(BaseModel):
@@ -1594,15 +1597,15 @@ class Retrievesingleselectionsresponse(BaseModel):
 
 
 class RetrieveServiceProfileListresponse(BaseModel):
-    id: Optional[int] = Field(None, example=232)
-    name: Optional[str] = Field(None, example="Smart meter")
-    description: Optional[str] = Field(None, example="Data + SMS - 1G limit")
-    used_count: Optional[str] = Field(None, example=2)
-    allowed_3g: Optional[bool] = Field(None, example=True)
-    allowed_4g: Optional[bool] = Field(None, example=False)
-    allowed_nb_iot: Optional[bool] = Field(None, example=False)
-    apply_sms_quota: Optional[bool] = Field(None, example=False)
-    apply_data_quota: Optional[bool] = Field(None, example=False)
+    id: Optional[int] = Field(None, examples=[232])
+    name: Optional[str] = Field(None, examples=["Smart meter"])
+    description: Optional[str] = Field(None, examples=["Data + SMS - 1G limit"])
+    used_count: Optional[str] = Field(None, examples=[2])
+    allowed_3g: Optional[bool] = Field(None, examples=[True])
+    allowed_4g: Optional[bool] = Field(None, examples=[False])
+    allowed_nb_iot: Optional[bool] = Field(None, examples=[False])
+    apply_sms_quota: Optional[bool] = Field(None, examples=[False])
+    apply_data_quota: Optional[bool] = Field(None, examples=[False])
 
 
 class CreateaServiceProfilerequest(BaseModel):
@@ -1671,24 +1674,24 @@ class UpdateServiceProfilerequest(BaseModel):
 
 
 class RetrieveAvailableServicesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=232)
-    description: Optional[str] = Field(None, example="Data")
-    teleservice_code: Optional[int] = Field(None, example=767)
-    used_with_vlr: Optional[bool] = Field(None, example=True)
-    used_with_sgsn: Optional[bool] = Field(None, example=True)
+    id: Optional[int] = Field(None, examples=[232])
+    description: Optional[str] = Field(None, examples=["Data"])
+    teleservice_code: Optional[int] = Field(None, examples=[767])
+    used_with_vlr: Optional[bool] = Field(None, examples=[True])
+    used_with_sgsn: Optional[bool] = Field(None, examples=[True])
     traffic_type: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 1, "description": "Data", "unit": "MB"}
+        None, examples=[{"id": 1, "description": "Data", "unit": "MB"}]
     )
 
 
 class RetrieveavailableTrafficLimitsresponse(BaseModel):
-    id: Optional[int] = Field(None, example=111)
+    id: Optional[int] = Field(None, examples=[111])
     service: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 123, "description": "data"}
+        None, examples=[{"id": 123, "description": "data"}]
     )
-    volume: Optional[int] = Field(None, example=64)
+    volume: Optional[int] = Field(None, examples=[64])
     period: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 33, "time_units": 5, "unit": "Days"}
+        None, examples=[{"id": 33, "time_units": 5, "unit": "Days"}]
     )
 
 
@@ -1701,7 +1704,7 @@ class CreateTrafficLimitrequest(BaseModel):
 class Period(BaseModel):
     id: Optional[int] = None
     time_units: Optional[int] = None
-    unit: Optional[str] = Field(None, example="Days")
+    unit: Optional[str] = Field(None, examples=["Days"])
 
 
 class ServiceTrafficLimitsResponseItem(BaseModel):
@@ -1710,22 +1713,24 @@ class ServiceTrafficLimitsResponseItem(BaseModel):
     period: Optional[Period] = None
 
 
-class ServiceTrafficLimitsResponse(BaseModel):
-    __root__: List[ServiceTrafficLimitsResponseItem] = Field(
-        ...,
-        example=[
-            {
-                "id": 111,
-                "volume": 64,
-                "period": {"id": 33, "time_units": 5, "unit": "Days"},
-            },
-            {
-                "id": 234,
-                "volume": 128,
-                "period": {"id": 35, "time_units": 1, "unit": "Months"},
-            },
-        ],
+class ServiceTrafficLimitsResponse(RootModel[List[ServiceTrafficLimitsResponseItem]]):
+    model_config = ConfigDict(
         title="Service Traffic Limit",
+        json_schema_extra={
+            "examples": [
+                [
+                    {
+                        "id": 111,
+                        "volume": 64,
+                        "period": {"id": 33, "time_units": 5, "unit": "Days"},
+                },
+                {
+                    "id": 234,
+                    "volume": 128,
+                    "period": {"id": 35, "time_units": 1, "unit": "Months"},
+                },
+            ]],
+        }
     )
 
 
@@ -1736,9 +1741,9 @@ class RetrieveDNSlistresponseItem(BaseModel):
     ip_address_version: Optional[int] = None
 
 
-class RetrieveDNSlistresponse(BaseModel):
-    __root__: List[RetrieveDNSlistresponseItem] = Field(
-        ..., title="RetrieveDNSlistresponse"
+class RetrieveDNSlistresponse(RootModel[List[RetrieveDNSlistresponseItem]]):
+    model_config = ConfigDict(
+        title="RetrieveDNSlistresponse",
     )
 
 
@@ -1749,20 +1754,20 @@ class CreateaDNSentryrequest(BaseModel):
 
 
 class Status3(BaseModel):
-    id: Optional[float] = Field(None, example=2)
-    description: Optional[str] = Field(None, example="Suspended")
+    id: Optional[float] = Field(None, examples=[2])
+    description: Optional[str] = Field(None, examples=["Suspended"])
 
 
 class Organisation(BaseModel):
-    id: Optional[float] = Field(None, example=42)
-    name: Optional[str] = Field(None, example="Example Org")
+    id: Optional[float] = Field(None, examples=[42])
+    name: Optional[str] = Field(None, examples=["Example Org"])
 
 
 class User(BaseModel):
-    id: Optional[int] = Field(None, example=42)
-    username: Optional[str] = Field(None, example="user@example.com")
-    name: Optional[str] = Field(None, example="Douglas Adams")
-    created: Optional[str] = Field(None, example="10/12/2019 8:00:00 AM")
+    id: Optional[int] = Field(None, examples=[42])
+    username: Optional[str] = Field(None, examples=["user@example.com"])
+    name: Optional[str] = Field(None, examples=["Douglas Adams"])
+    created: Optional[str] = Field(None, examples=["10/12/2019 8:00:00 AM"])
     status: Optional[Status3] = None
     organisation: Optional[Organisation] = None
 
@@ -1801,44 +1806,44 @@ class RetrieveUserByUsernameresponse(BaseModel):
 
 
 class RetrieveAvailableUserStatusesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Activation Pending")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Activation Pending"])
 
 
 class EventType(BaseModel):
-    id: Optional[float] = Field(None, example=10)
-    description: Optional[str] = Field(None, example="User authentication failed")
+    id: Optional[float] = Field(None, examples=[10])
+    description: Optional[str] = Field(None, examples=["User authentication failed"])
 
 
 class EventSource(BaseModel):
-    id: Optional[float] = Field(None, example=2)
-    description: Optional[str] = Field(None, example="API")
+    id: Optional[float] = Field(None, examples=[2])
+    description: Optional[str] = Field(None, examples=["API"])
 
 
 class EventSeverity(BaseModel):
-    id: Optional[float] = Field(None, example=1)
-    description: Optional[str] = Field(None, example="Warning")
+    id: Optional[float] = Field(None, examples=[1])
+    description: Optional[str] = Field(None, examples=["Warning"])
 
 
 class Organisation1(BaseModel):
-    id: Optional[float] = Field(None, example=42)
-    name: Optional[str] = Field(None, example="Example Org")
+    id: Optional[float] = Field(None, examples=[42])
+    name: Optional[str] = Field(None, examples=["Example Org"])
 
 
 class User1(BaseModel):
-    id: Optional[float] = Field(None, example=10)
-    username: Optional[str] = Field(None, example="admin@example.com")
-    name: Optional[str] = Field(None, example="Ford Prefect")
+    id: Optional[float] = Field(None, examples=[10])
+    username: Optional[str] = Field(None, examples=["admin@example.com"])
+    name: Optional[str] = Field(None, examples=["Ford Prefect"])
 
 
 class Event(BaseModel):
-    id: Optional[int] = Field(None, example=11)
+    id: Optional[int] = Field(None, examples=[11])
     alert: Optional[bool] = None
     description: Optional[str] = Field(
         None,
-        example="Failed authentication request from 'admin@example.com', Reason: invalid password from IP 1.2.3.4",
+        examples=["Failed authentication request from 'admin@example.com', Reason: invalid password from IP 1.2.3.4"],
     )
-    timestamp: Optional[str] = Field(None, example="5/8/2017 10:56:25 AM")
+    timestamp: Optional[str] = Field(None, examples=["5/8/2017 10:56:25 AM"])
     event_type: Optional[EventType] = None
     event_source: Optional[EventSource] = None
     event_severity: Optional[EventSeverity] = None
@@ -1847,30 +1852,30 @@ class Event(BaseModel):
 
 
 class RetrieveEventsresponse4(BaseModel):
-    id: int = Field(..., example=11)
-    alert: bool = Field(..., example=False)
+    id: int = Field(..., examples=[11])
+    alert: bool = Field(..., examples=[False])
     description: str = Field(
         ...,
-        example=" Failed authentication request from 'ford.prefect@hitchhikerguide.net', Reason: invalid passwort from IP 1.2.3.4",
+        examples=[" Failed authentication request from 'ford.prefect@hitchhikerguide.net', Reason: invalid passwort from IP 1.2.3.4"],
     )
-    timestamp: str = Field(..., example="5/8/2017 10:56:25 AM")
+    timestamp: str = Field(..., examples=["5/8/2017 10:56:25 AM"])
     event_type: Dict[str, Any] = Field(
-        ..., example={"id": 6, "description": "User authentication failed"}
+        ..., examples=[{"id": 6, "description": "User authentication failed"}]
     )
-    event_source: Dict[str, Any] = Field(..., example={"id": 2, "description": "API"})
+    event_source: Dict[str, Any] = Field(..., examples=[{"id": 2, "description": "API"}])
     event_severity: Dict[str, Any] = Field(
-        ..., example={"id": 1, "description": "Warn"}
+        ..., examples=[{"id": 1, "description": "Warn"}]
     )
     organisation: Dict[str, Any] = Field(
-        ..., example={"id": 123, "name": "Seeley & Co."}
+        ..., examples=[{"id": 123, "name": "Seeley & Co."}]
     )
     user: Dict[str, Any] = Field(
         ...,
-        example={
+        examples=[{
             "id": 42,
             "username": "ford.prefect@hitchhikerguide.net",
             "name": "Ford Prefect",
-        },
+        }],
     )
 
 
@@ -1910,76 +1915,74 @@ class ChangePassword422response(BaseModel):
 
 
 class RetrieveownIPAddressSpacesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    ip_address_space: Optional[str] = Field(None, example="10.199.128.0/18")
-    ip_address_version: Optional[int] = Field(None, example=4)
-    used_count: Optional[int] = Field(None, example=2)
-    available_count: Optional[int] = Field(None, example=16380)
+    id: Optional[int] = Field(None, examples=[1])
+    ip_address_space: Optional[str] = Field(None, examples=["10.199.128.0/18"])
+    ip_address_version: Optional[int] = Field(None, examples=[4])
+    used_count: Optional[int] = Field(None, examples=[2])
+    available_count: Optional[int] = Field(None, examples=[16380])
 
 
 class RetrieveAvailableAddressSpacesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    ip_address_space: Optional[str] = Field(None, example="10.199.128.0/18")
-    ip_address_version: Optional[int] = Field(None, example=4)
+    id: Optional[int] = Field(None, examples=[1])
+    ip_address_space: Optional[str] = Field(None, examples=["10.199.128.0/18"])
+    ip_address_version: Optional[int] = Field(None, examples=[4])
 
 
-class Field204Response(BaseModel):
-    __root__: Any = Field(
-        ...,
-        description="The server has successfully fulfilled the request and that there is no additional content to send in the response payload body.",
+class Field204Response(RootModel[Any]):
+    model_config = ConfigDict(
         title="204 Response",
     )
 
 
 class RetrieveEventsresponse5(BaseModel):
-    id: int = Field(..., example=14)
-    alert: bool = Field(..., example=False)
+    id: int = Field(..., examples=[14])
+    alert: bool = Field(..., examples=[False])
     description: str = Field(
         ...,
-        example="MFA key with Id '1' of Type 'Time-Based One-Time Password' deleted for user 'root@localhost'",
+        examples=["MFA key with Id '1' of Type 'Time-Based One-Time Password' deleted for user 'root@localhost'"],
     )
-    timestamp: str = Field(..., example="5/5/2017 12:00:30 PM")
+    timestamp: str = Field(..., examples=["5/5/2017 12:00:30 PM"])
     event_type: Dict[str, Any] = Field(
-        ..., example={"id": 14, "description": "Multi-factor Authentication"}
+        ..., examples=[{"id": 14, "description": "Multi-factor Authentication"}]
     )
-    event_source: Dict[str, Any] = Field(..., example={"id": 2, "description": "API"})
+    event_source: Dict[str, Any] = Field(..., examples=[{"id": 2, "description": "API"}])
     event_severity: Dict[str, Any] = Field(
-        ..., example={"id": 0, "description": "Info"}
+        ..., examples=[{"id": 0, "description": "Info"}]
     )
-    organisation: Dict[str, Any] = Field(..., example={"id": 4, "name": "MNO 1"})
+    organisation: Dict[str, Any] = Field(..., examples=[{"id": 4, "name": "MNO 1"}])
     user: Optional[Dict[str, Any]] = Field(
         None,
-        example={"id": 2, "username": "eabbot@flatland.org", "name": "Edwin Abbot"},
+        examples=[{"id": 2, "username": "eabbot@flatland.org", "name": "Edwin Abbot"}],
     )
     endpoint: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "name": "Monitoring201",
             "tags": "Monitoring",
             "ip_address": "10.199.6.39",
             "imei": None,
             "id": 69,
-        },
+        }],
     )
     sim: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "iccid": 8988317000000000000,
             "production_date": "2019-12-17T13:26:13.000Z",
             "id": 110,
-        },
+        }],
     )
     imsi: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "imsi": 901430000000114,
             "import_date": "2019-12-17T13:26:08.000Z",
             "id": 110,
-        },
+        }],
     )
     detail: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 2,
             "name": "Telekom",
             "country": {
@@ -1991,192 +1994,197 @@ class RetrieveEventsresponse5(BaseModel):
             },
             "tapcode": [{"id": 1, "tapcode": "DEUD1"}],
             "mnc": [{"id": 2, "mnc": 1}],
-        },
+        }],
     )
 
 
 class RetrieveEventTypesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Generic")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Generic"])
 
 
 class RetrieveAvailableCountriesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    name: Optional[str] = Field(None, example="Germany")
-    country_code: Optional[str] = Field(None, example=49)
-    mcc: Optional[str] = Field(None, example=262)
-    iso_code: Optional[str] = Field(None, example="de")
+    id: Optional[int] = Field(None, examples=[1])
+    name: Optional[str] = Field(None, examples=["Germany"])
+    country_code: Optional[str] = Field(None, examples=[49])
+    mcc: Optional[str] = Field(None, examples=[262])
+    iso_code: Optional[str] = Field(None, examples=["de"])
 
 
 class RetrieveAvailableCurrenciesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    code: Optional[str] = Field(None, example="EUR")
-    symbol: Optional[str] = Field(None, example="�")
+    id: Optional[int] = Field(None, examples=[1])
+    code: Optional[str] = Field(None, examples=["EUR"])
+    symbol: Optional[str] = Field(None, examples=["�"])
 
 
 class RetrieveAvailableDataBlocksizesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    octets: Optional[str] = Field(None, example=1)
-    description: Optional[str] = Field(None, example="exact")
+    id: Optional[int] = Field(None, examples=[1])
+    octets: Optional[str] = Field(None, examples=[1])
+    description: Optional[str] = Field(None, examples=["exact"])
 
 
 class RetrieveAvailableDataThrottlesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    octets: Optional[str] = Field(None, example=128000)
-    description: Optional[str] = Field(None, example="128 kbit/s")
+    id: Optional[int] = Field(None, examples=[1])
+    octets: Optional[str] = Field(None, examples=[128000])
+    description: Optional[str] = Field(None, examples=["128 kbit/s"])
 
 
 class RetrieveAvailableOperatorsresponse(BaseModel):
-    id: Optional[int] = Field(None, example=2)
-    name: Optional[str] = Field(None, example="Telekom")
+    id: Optional[int] = Field(None, examples=[2])
+    name: Optional[str] = Field(None, examples=["Telekom"])
     country: Optional[Dict[str, Any]] = Field(
         None,
-        example={
+        examples=[{
             "id": 74,
             "name": "Germany",
             "country_code": 49,
             "mcc": 262,
             "iso_code": "de",
-        },
+        }],
     )
     tapcode: Optional[List[Dict[str, Any]]] = Field(None, description="")
     mnc: Optional[List[Dict[str, Any]]] = Field(None, description="")
 
 
 class RetrieveAvailableBreakoutRegionsresponse(BaseModel):
-    id: Optional[int] = Field(None, example=2)
-    name: Optional[str] = Field(None, example="eu-west")
-    ip_address: Optional[str] = Field(None, example="1.2.3.4")
+    id: Optional[int] = Field(None, examples=[2])
+    name: Optional[str] = Field(None, examples=["eu-west"])
+    ip_address: Optional[str] = Field(None, examples=["1.2.3.4"])
 
 
-class TariffPlanStatusesGetResponse(BaseModel):
-    __root__: Any = Field(
-        ...,
-        example=[
-            {
-                "id": 0,
-                "name": "Staging",
-                "description": "under construction and therefore not ready to be used; any changes of the configuration are allowed",
-            },
-            {
-                "id": 1,
-                "name": "Active",
-                "description": "deployed and may be in use; changes to the configuration are limited",
-            },
-            {
-                "id": 2,
-                "name": "Deprecated",
-                "description": "not assignable anymore but remains valid for current assignments and therefore may be still in use; changes to the configuration are limited",
-            },
-            {
-                "id": 3,
-                "name": "Deleted",
-                "description": "not visible to maintainers and users, but is displayed in history view, no changes to the configuration are allowed",
-            },
-        ],
+class TariffPlanStatusesGetResponse(RootModel[Any]):
+    model_config = ConfigDict(
+        title="Tariff Plan Statuses Get Response",
+        json_schema_extra={
+            "examples": [
+                [
+                    {
+                            "id": 0,
+                            "name": "Staging",
+                    "description": "under construction and therefore not ready to be used; any changes of the configuration are allowed",
+                },
+                {
+                    "id": 1,
+                    "name": "Active",
+                    "description": "deployed and may be in use; changes to the configuration are limited",
+                },
+                {
+                    "id": 2,
+                    "name": "Deprecated",
+                    "description": "not assignable anymore but remains valid for current assignments and therefore may be still in use; changes to the configuration are limited",
+                },
+                {
+                    "id": 3,
+                    "name": "Deleted",
+                    "description": "not visible to maintainers and users, but is displayed in history view, no changes to the configuration are allowed",
+                },
+            ]],
+        }
     )
 
 
-class TariffPlanConfigGetResponse(BaseModel):
-    __root__: Any = Field(
-        ...,
-        example=[
-            {
-                "id": 24,
-                "name": "Data Flat",
-                "description": "Unlimited Data Usage, ...",
-                "status": {"id": 1, "name": "Active"},
-                "public_for_child_organisations": False,
-                "owner_organisation": {"id": 1, "name": "Own Organisation"},
-                "min_runtime": {
-                    "id": 18,
-                    "number_of_units": 18,
-                    "unit": {"id": 1, "name": "month"},
-                },
-                "deprecation_date": "2018-05-20T00:00:00.000Z",
-                "payment": [
-                    {
-                        "id": 2,
-                        "interval": {"id": 1, "name": "month"},
-                        "amount": 29.99,
-                        "currency": {"id": 1, "symbol": "�"},
-                    },
-                    {
-                        "id": 5,
-                        "interval": {"id": 2, "name": "contract term"},
-                        "amount": 450,
-                        "currency": {"id": 1, "symbol": "�"},
-                    },
-                ],
-                "elements": [
-                    {
-                        "id": 3,
-                        "name": "max. active SIMs per month",
-                        "status": {
-                            "id": 1,
-                            "name": "Active",
-                            "description": "deployed and may be in use; changes to the configuration are limited",
-                        },
-                        "optional": False,
-                    },
-                    {
-                        "id": 13,
-                        "name": "additional SIM package",
-                        "status": {
-                            "id": 1,
-                            "name": "Active",
-                            "description": "deployed and may be in use; changes to the configuration are limited",
-                        },
-                        "optional": True,
-                    },
-                ],
-            },
-            {
-                "id": 28,
-                "name": "Data Flat & SMS Flat",
-                "description": "Unlimited Data Usage and SMS Flat ...",
-                "status": {"id": 1, "name": "Active"},
-                "public_for_child_organisations": True,
-                "owner_organisation": {"id": 2, "name": "Child Organisation"},
-                "min_runtime": {
+class TariffPlanConfigGetResponse(RootModel[Any]):
+    model_config = ConfigDict(
+        title="Tariff Plan Config Get Response",
+        json_schema_extra={
+            "examples": [[
+                {
                     "id": 24,
-                    "number_of_units": 24,
-                    "unit": {"id": 1, "name": "month"},
-                },
-                "payment": [
-                    {
-                        "id": 2,
-                        "interval": {"id": 1, "name": "month"},
-                        "amount": 39.99,
-                        "currency": {"id": 1, "symbol": "�"},
+                    "name": "Data Flat",
+                    "description": "Unlimited Data Usage, ...",
+                    "status": {"id": 1, "name": "Active"},
+                    "public_for_child_organisations": False,
+                    "owner_organisation": {"id": 1, "name": "Own Organisation"},
+                    "min_runtime": {
+                        "id": 18,
+                        "number_of_units": 18,
+                        "unit": {"id": 1, "name": "month"},
                     },
-                    {
-                        "id": 5,
-                        "interval": {"id": 2, "name": "contract term"},
-                        "amount": 800,
-                        "currency": {"id": 1, "symbol": "�"},
-                    },
-                ],
-                "elements": [
-                    {
-                        "id": 8,
-                        "name": "100 additional active sims",
-                        "status": {
-                            "id": 1,
-                            "name": "Active",
-                            "description": "deployed and may be in use; changes to the configuration are limited",
+                    "deprecation_date": "2018-05-20T00:00:00.000Z",
+                    "payment": [
+                        {
+                            "id": 2,
+                            "interval": {"id": 1, "name": "month"},
+                            "amount": 29.99,
+                            "currency": {"id": 1, "symbol": "�"},
                         },
-                        "optional": True,
-                    }
-                ],
-            },
-        ],
+                        {
+                            "id": 5,
+                            "interval": {"id": 2, "name": "contract term"},
+                            "amount": 450,
+                            "currency": {"id": 1, "symbol": "�"},
+                        },
+                    ],
+                    "elements": [
+                        {
+                            "id": 3,
+                            "name": "max. active SIMs per month",
+                            "status": {
+                                "id": 1,
+                                "name": "Active",
+                                "description": "deployed and may be in use; changes to the configuration are limited",
+                            },
+                            "optional": False,
+                        },
+                        {
+                            "id": 13,
+                            "name": "additional SIM package",
+                            "status": {
+                                "id": 1,
+                                "name": "Active",
+                                "description": "deployed and may be in use; changes to the configuration are limited",
+                            },
+                            "optional": True,
+                        },
+                    ],
+                },
+                {
+                    "id": 28,
+                    "name": "Data Flat & SMS Flat",
+                    "description": "Unlimited Data Usage and SMS Flat ...",
+                    "status": {"id": 1, "name": "Active"},
+                    "public_for_child_organisations": True,
+                    "owner_organisation": {"id": 2, "name": "Child Organisation"},
+                    "min_runtime": {
+                        "id": 24,
+                        "number_of_units": 24,
+                        "unit": {"id": 1, "name": "month"},
+                    },
+                    "payment": [
+                        {
+                            "id": 2,
+                            "interval": {"id": 1, "name": "month"},
+                            "amount": 39.99,
+                            "currency": {"id": 1, "symbol": "�"},
+                        },
+                        {
+                            "id": 5,
+                            "interval": {"id": 2, "name": "contract term"},
+                            "amount": 800,
+                            "currency": {"id": 1, "symbol": "�"},
+                        },
+                    ],
+                    "elements": [
+                        {
+                            "id": 8,
+                            "name": "100 additional active sims",
+                            "status": {
+                                "id": 1,
+                                "name": "Active",
+                                "description": "deployed and may be in use; changes to the configuration are limited",
+                            },
+                            "optional": True,
+                        }
+                    ],
+                },
+            ]],
+        }
     )
 
 
 class RetrieveAvailableESMEInterfaceTypesresponse(BaseModel):
-    id: int = Field(..., example=1)
-    description: str = Field(..., example="SMPP")
+    id: int = Field(..., examples=[1])
+    description: str = Field(..., examples=["SMPP"])
 
 
 class PDPContextDefinitionsGetResponse(BaseModel):
@@ -2220,9 +2228,9 @@ class RatType1(BaseModel):
 
 
 class QoSDefinitionCreateRequest(BaseModel):
-    rat_type: Optional[RatType1] = Field(None, example={"id": 23211}, title="HasId")
-    max_bandwidth_dl: Optional[conint(ge=0, le=4294967295)] = None
-    max_bandwidth_ul: Optional[conint(ge=0, le=4294967295)] = None
+    rat_type: Optional[RatType1] = Field(None, examples=[{"id": 23211}], title="HasId")
+    max_bandwidth_dl: Optional[Annotated[int, Field(ge=0, le=4294967295)]] = None
+    max_bandwidth_ul: Optional[Annotated[int, Field(ge=0, le=4294967295)]] = None
 
 
 class RatType2(BaseModel):
@@ -2237,8 +2245,8 @@ class QoSDefinitionGetResponse(BaseModel):
 
 
 class QoSDefinitionPatchRequest(BaseModel):
-    max_bandwidth_dl: Optional[conint(ge=0, le=4294967295)] = None
-    max_bandwidth_ul: Optional[conint(ge=0, le=4294967295)] = None
+    max_bandwidth_dl: Optional[Annotated[int, Field(ge=0, le=4294967295)]] = None
+    max_bandwidth_ul: Optional[Annotated[int, Field(ge=0, le=4294967295)]] = None
 
 
 class NetworkCoverage(BaseModel):
@@ -2257,12 +2265,12 @@ class IOTCreate(BaseModel):
     mnc: Optional[int] = None
     mcc: Optional[int] = None
     network_coverage: Optional[NetworkCoverage] = Field(
-        None, example={"id": 23211}, title="HasId"
+        None, examples=[{"id": 23211}], title="HasId"
     )
     traffic_type: Optional[TrafficType9] = Field(
-        None, example={"id": 23211}, title="HasId"
+        None, examples=[{"id": 23211}], title="HasId"
     )
-    currency: Optional[Currency6] = Field(None, example={"id": 23211}, title="HasId")
+    currency: Optional[Currency6] = Field(None, examples=[{"id": 23211}], title="HasId")
     rate: Optional[float] = None
     volume: Optional[int] = None
     blocksize: Optional[int] = None
@@ -2273,23 +2281,37 @@ class HasId(BaseModel):
     id: Optional[int] = None
 
 
-class LocalDate(BaseModel):
-    __root__: constr(regex=r"^\d{4}-\d{2}-\d{2}$") = Field(
-        ...,
-        description="Local date in format YYYY-MM-DD without a time",
-        example="2049-01-01T00:00:00.000Z",
+class LocalDate(RootModel[
+    Annotated[
+        str,
+        StringConstraints(pattern=r"^\d{4}-\d{2}-\d{2}$"),
+        Field(
+            description="Local date in format YYYY-MM-DD without a time",
+            examples=["2049-01-01T00:00:00.000Z"],
+        ),
+    ]
+]):
+    model_config = ConfigDict(
         title="Local Date without Time",
     )
 
 
-class LocalDateTime(BaseModel):
-    __root__: constr(regex=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\{2}$") = Field(
-        ...,
-        description="Local date in format YYYY-MM-DD HH:mm:ss with a time.\nUsually interpreted in UTC Timezone, but generally unbound.\n",
-        example="2049-01-01T12:11:33.000Z",
+class LocalDateTime(RootModel[
+    Annotated[
+        str,
+        StringConstraints(pattern=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$"),
+        Field(
+            description=(
+                "Local date in format YYYY-MM-DD HH:mm:ss with a time.\n"
+                "Usually interpreted in UTC Timezone, but generally unbound.\n"
+            ),
+            examples=["2049-01-01 12:11:33"],
+        ),
+    ]
+]):
+    model_config = ConfigDict(
         title="Local Date with Time",
     )
-
 
 class Currency7(BaseModel):
     code: Optional[str] = None
@@ -2390,7 +2412,7 @@ class SmsRoutingList1(BaseModel):
     default_sms_routing_id: Optional[str] = None
     id: Optional[int] = Field(
         None,
-        example={
+        examples=[{
             "description": "Test Routing Entry",
             "id": 39,
             "organisation": {
@@ -2409,13 +2431,12 @@ class SmsRoutingList1(BaseModel):
                 "default_sms_routing_id": None,
                 "id": 2,
             },
-        },
+        }],
     )
 
 
-class SmsRoutingList(BaseModel):
-    __root__: Union[List[SmsRoutingListItem], SmsRoutingList1]
-
+class SmsRoutingList(RootModel[Union[List[SmsRoutingListItem], SmsRoutingList1]]):
+    pass
 
 class Organisation4(BaseModel):
     name: Optional[str] = None
@@ -2513,9 +2534,9 @@ class SmsRoutingDataCreateUpdateRequest(BaseModel):
 
 
 class GetEntryPoints(BaseModel):
-    method: str = Field(..., example="GET")
-    uri: str = Field(..., example="/api/v1/endpoint/:id")
-    description: str = Field(..., example="Retrieve single Endpoint details by id")
+    method: str = Field(..., examples=["GET"])
+    uri: str = Field(..., examples=["/api/v1/endpoint/:id"])
+    description: str = Field(..., examples=["Retrieve single Endpoint details by id"])
 
 
 class OperatorPostRequest(BaseModel):
@@ -2539,33 +2560,33 @@ class ActivateMFAKeyrequest(BaseModel):
 
 
 class MFAKeyStatusLookupresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Activation Pending")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Activation Pending"])
 
 
 class MFAKeyTypeLookupresponse(BaseModel):
-    id: Optional[int] = Field(None, example=0)
-    description: Optional[str] = Field(None, example="Time-Based One-Time Password")
+    id: Optional[int] = Field(None, examples=[0])
+    description: Optional[str] = Field(None, examples=["Time-Based One-Time Password"])
 
 
 class Listoftrusteddevicesresponse(BaseModel):
-    id: Optional[int] = Field(None, example=16)
-    operating_system: Optional[str] = Field(None, example="Ubuntu 16.04.2 LTS (Xenial)")
-    browser: Optional[str] = Field(None, example="Mozilla Firefox")
-    activation_date: Optional[str] = Field(None, example="2020-02-20T10:00:00.000Z")
+    id: Optional[int] = Field(None, examples=[16])
+    operating_system: Optional[str] = Field(None, examples=["Ubuntu 16.04.2 LTS (Xenial)"])
+    browser: Optional[str] = Field(None, examples=["Mozilla Firefox"])
+    activation_date: Optional[str] = Field(None, examples=["2020-02-20T10:00:00.000Z"])
 
 
 class ListofApplicationTokensresponse(BaseModel):
-    id: Optional[int] = Field(None, example=1)
-    description: Optional[str] = Field(None, example="App Test Token")
-    created: Optional[str] = Field(None, example="2020-02-20T10:00:00.000Z")
+    id: Optional[int] = Field(None, examples=[1])
+    description: Optional[str] = Field(None, examples=["App Test Token"])
+    created: Optional[str] = Field(None, examples=["2020-02-20T10:00:00.000Z"])
     status: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 0, "description": "Activated"}
+        None, examples=[{"id": 0, "description": "Activated"}]
     )
-    expiry_date: Optional[str] = Field(None, example="2020-02-20T10:00:00.000Z")
-    ip: Optional[str] = Field(None, example="10.88.0.139/32")
+    expiry_date: Optional[str] = Field(None, examples=["2020-02-20T10:00:00.000Z"])
+    ip: Optional[str] = Field(None, examples=["10.88.0.139/32"])
     creator: Optional[Dict[str, Any]] = Field(
-        None, example={"id": 6, "name": "Master User", "username": "org-owner@org.com"}
+        None, examples=[{"id": 6, "name": "Master User", "username": "org-owner@org.com"}]
     )
 
 
@@ -2771,9 +2792,9 @@ class GetCloudConnectAttachmentsResponseItem(BaseModel):
     )
 
 
-class GetCloudConnectAttachmentsResponse(BaseModel):
-    __root__: List[GetCloudConnectAttachmentsResponseItem] = Field(
-        ..., title="GetCloudConnectAttachmentsResponse"
+class GetCloudConnectAttachmentsResponse(RootModel[List[GetCloudConnectAttachmentsResponseItem]]):
+    model_config = ConfigDict(
+        title="GetCloudConnectAttachmentsResponse"
     )
 
 
@@ -2787,9 +2808,9 @@ class GetCloudConnectBreakoutTypesResponseItem(BaseModel):
     description: Optional[str] = None
 
 
-class GetCloudConnectBreakoutTypesResponse(BaseModel):
-    __root__: List[GetCloudConnectBreakoutTypesResponseItem] = Field(
-        ..., title="GetCloudConnectBreakoutTypesResponse"
+class GetCloudConnectBreakoutTypesResponse(RootModel[List[GetCloudConnectBreakoutTypesResponseItem]]):
+    model_config = ConfigDict(
+        title="GetCloudConnectBreakoutTypesResponse"
     )
 
 
@@ -2835,9 +2856,9 @@ class GetCloudConnectAttachmentByIdResponseItem(BaseModel):
     tunnel_information: Optional[TunnelInformation] = None
 
 
-class GetCloudConnectAttachmentByIdResponse(BaseModel):
-    __root__: List[GetCloudConnectAttachmentByIdResponseItem] = Field(
-        ..., title="GetCloudConnectAttachmentByIdResponse"
+class GetCloudConnectAttachmentByIdResponse(RootModel[List[GetCloudConnectAttachmentByIdResponseItem]]):
+    model_config = ConfigDict(
+        title="GetCloudConnectAttachmentByIdResponse"
     )
 
 
@@ -2853,7 +2874,7 @@ class CreateCloudConnectTGWRequest(BaseModel):
     region: str = Field(
         ..., description="the region that this attachment should be established to"
     )
-    aws_account_id: constr(regex=r"^\d{12}$") = Field(
+    aws_account_id: Annotated[str, StringConstraints(pattern=r"^\d{12}$")] = Field(
         ..., description="12-digit identifier of the own AWS Account"
     )
 
@@ -2908,9 +2929,9 @@ class ListCloudConnectPricesResponseItem(BaseModel):
     currency: Optional[Currency9] = None
 
 
-class ListCloudConnectPricesResponse(BaseModel):
-    __root__: List[ListCloudConnectPricesResponseItem] = Field(
-        ..., title="ListCloudConnectCustomResponse"
+class ListCloudConnectPricesResponse(RootModel[List[ListCloudConnectPricesResponseItem]]):
+    model_config = ConfigDict(
+        title="ListCloudConnectPricesResponse"
     )
 
 
@@ -2948,9 +2969,9 @@ class GetCloudConnectTransitGatewaysResponseItem(BaseModel):
     region: Optional[Region] = None
 
 
-class GetCloudConnectTransitGatewaysResponse(BaseModel):
-    __root__: List[GetCloudConnectTransitGatewaysResponseItem] = Field(
-        ..., title="GetCloudConnectTransitGatewaysResponse"
+class GetCloudConnectTransitGatewaysResponse(RootModel[List[GetCloudConnectTransitGatewaysResponseItem]]):
+    model_config = ConfigDict(
+        title="GetCloudConnectTransitGatewaysResponse"
     )
 
 
@@ -2972,9 +2993,9 @@ class GetCloudConnectBreakoutTypeWhitelistResponseItem(BaseModel):
     organisation_name: Optional[str] = None
 
 
-class GetCloudConnectBreakoutTypeWhitelistResponse(BaseModel):
-    __root__: List[GetCloudConnectBreakoutTypeWhitelistResponseItem] = Field(
-        ..., title="GetCloudConnectBreakoutTypeWhitelistResponse"
+class GetCloudConnectBreakoutTypeWhitelistResponse(RootModel[List[GetCloudConnectBreakoutTypeWhitelistResponseItem]]):
+    model_config = ConfigDict(
+        title="GetCloudConnectBreakoutTypeWhitelistResponse"
     )
 
 

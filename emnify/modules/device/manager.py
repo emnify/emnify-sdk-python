@@ -23,6 +23,10 @@ class DeviceManager:
         return device_models.Device
 
     @property
+    def get_sim_device_model(self):
+        return device_models.SimDevice
+
+    @property
     def list_sms_model(self):
         return device_models.ListSms
 
@@ -103,7 +107,7 @@ class DeviceManager:
         return device_call_managers.SendSmsToDevice().call_api(
             client=self.client,
             path_params={"endpoint_id": device_id},
-            data=sms.dict(exclude_none=True),
+            data=sms.model_dump(exclude_none=True),
         )
 
     def update_device(
@@ -118,7 +122,7 @@ class DeviceManager:
         """
         return device_call_managers.UpdateDevice().call_api(
             client=self.client,
-            data=device.dict(exclude_none=True),
+            data=device.model_dump(exclude_none=True),
             path_params={"endpoint_id": device_id},
         )
 
@@ -355,7 +359,7 @@ class DeviceManager:
                 "Argument must contain filled Device model"
             )
         return device_call_managers.CreateDevice().call_api(
-            client=self.client, data=device.dict(exclude_none=True)
+            client=self.client, data=device.model_dump(exclude_none=True)
         )
 
     def retrieve_device(self, device_id: int) -> device_models.RetrieveDevice:
@@ -426,7 +430,7 @@ class DeviceManager:
     ) -> dict:
         query_filter = {}
         if filter_model:
-            filter_dict = filter_model.dict(exclude_none=True)
+            filter_dict = filter_model.model_dump(exclude_none=True)
             query_filter["q"] = ",".join(
                 [f"{key}:{filter_dict[key]}" for key in filter_dict]
             )

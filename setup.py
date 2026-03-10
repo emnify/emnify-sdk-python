@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 
 NAME = os.getenv("PYPI_PACKAGE_NAME") or "emnify-sdk"
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 # To install the library, run the following
 #
 # python -m build --sdist --wheel
@@ -14,7 +14,7 @@ VERSION = "0.5.0"
 REQUIRES = [
     "requests>=2.27.0,<2.33.0",
     "urllib3>=1.21.1,<1.27",
-    "pydantic>=1.9.0,<2.0.0",
+    "pydantic>=1.9.0,<3.0.0",
 ]
 if __name__ == "__main__":
     with open("README.md", "r", encoding="utf-8") as fh:

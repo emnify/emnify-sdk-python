@@ -34,6 +34,10 @@ class SimManager:
         return sim_models.SimFilter
 
     @property
+    def get_sim_status_model(self):
+        return sim_models.SimStatus
+
+    @property
     def get_sim_sort_enum(self):
         return emnify_const.SimSort
 
@@ -99,7 +103,7 @@ class SimManager:
         """
         return SimUpdateApi().call_api(
             client=self.client,
-            data=sim.dict(exclude_none=True),
+            data=sim.model_dump(exclude_none=True),
             path_params={"sim": sim_id},
         )
 
@@ -139,7 +143,7 @@ class SimManager:
     ) -> dict:
         query_filter = {}
         if filter_model:
-            filter_dict = filter_model.dict(exclude_none=True)
+            filter_dict = filter_model.model_dump(exclude_none=True)
             query_filter["q"] = ",".join(
                 [f"{key}:{filter_dict[key]}" for key in filter_dict]
             )

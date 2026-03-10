@@ -1,5 +1,5 @@
 import datetime
-from pydantic import BaseModel, validator
+from pydantic import ConfigDict, RootModel, BaseModel, field_validator, ValidationInfo
 from typing import Optional, List, Dict, Any
 from emnify.modules.sim.models import SimList
 from emnify.modules.api import models as generated_models
@@ -26,13 +26,13 @@ class CreateDevice(Device):
     Custom class for validation of Device on creation
     """
 
-    @validator("status")
+    @field_validator("status")
     @classmethod
-    def validate_status(cls, field_value, values, field, config):
+    def validate_status(cls, field_value, info: ValidationInfo):
         if (
-            values.get("sim")
-            and getattr(values["sim"], "status")
-            and values["sim"].status.id == 1
+            info.data.get("sim")
+            and getattr(info.data["sim"], "status", None)
+            and info.data["sim"].status.id == 1
         ):
             return field_value
         if field_value.id == 0:
@@ -101,8 +101,11 @@ class FilterDeviceModel(BaseModel):
     sim_status: Optional[int] = None
 
 
-class ListQFilterDeviceListModel(BaseModel):
-    __root__: List[FilterDeviceModel]
+class ListQFilterDeviceListModel(RootModel[List[FilterDeviceModel]]):
+    """
+    Root model for list of FilterDeviceModel
+    """
+    pass
 
 
 class GetDeviceFilterSet(BaseModel):
@@ -112,9 +115,7 @@ class GetDeviceFilterSet(BaseModel):
 
     sort: Optional[DeviceSortModel] = None
     q: Optional[ListQFilterDeviceListModel] = None
-
-    class Config:
-        use_enum_values = True
+    model_config = ConfigDict(use_enum_values=True)
 
 
 class DeviceEvent(generated_models.Event):

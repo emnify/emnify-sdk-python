@@ -35,7 +35,7 @@ class SimList(RetrieveSIMlistresponse):
     """
 
     status: SimStatus = None
-    device: typing.Optional[SimDevice] = Field(alias="endpoint")
+    device: typing.Optional[SimDevice] = Field(None, alias="endpoint")
 
 
 class SimUpdate(BaseModel):
