@@ -170,6 +170,32 @@ class EMnifyTest(TestCase):
         response = emnify.devices.create_device(device=device)
         self.assertEqual(response, 11380016)
 
+    def test_create_device_sim_activate_is_serialized(self):
+        """`sim.activate` must reach the request body so callers can assign a
+        SIM without activating it."""
+        emnify = emnify_client(app_token=self.token)
+
+        def build_sim_payload(sim):
+            device = emnify.devices.device_create_model(
+                name="test-device",
+                status=emnify.devices.status_model(id=1, description="Disabled"),
+                service_profile=emnify.devices.service_profile_model(id=1),
+                tariff_profile=emnify.devices.tariff_profile_model(id=2),
+                sim=sim,
+            )
+            return device.dict(exclude_none=True)["sim"]
+
+        self.assertEqual(
+            build_sim_payload({"id": 250, "activate": False}),
+            {"id": 250, "activate": False},
+        )
+        self.assertEqual(
+            build_sim_payload({"id": 250, "activate": True}),
+            {"id": 250, "activate": True},
+        )
+        # omitted -> not sent, so the API default applies
+        self.assertEqual(build_sim_payload({"id": 250}), {"id": 250})
+
     @vcr_instance.use_cassette(
         "tests/fixtures/cassettes/test_activate_disactivate_device.yaml"
     )
