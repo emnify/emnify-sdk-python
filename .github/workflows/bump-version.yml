@@ -9,12 +9,12 @@ jobs:
     env:
       RELEASE_REPOSITORY: pypi
       RELEASE_PACKAGE_NAME: emnify-sdk
-      RELEASE_PYPI_TOKEN: ${{secrets.PYPI_RELEASE_TOKEN}}
     name: Bump and Release
+    permissions:
+      contents: write
     # Prevent circular workflow run. Keyed on the commit message rather than the
-    # pusher: the version bump below is pushed with a GitHub App token, so the
-    # actor is the app (not a fixed user name), and app pushes DO re-trigger
-    # workflows.
+    # pusher, which is no longer a fixed user name. (Belt and braces: pushes made
+    # with GITHUB_TOKEN do not trigger workflows.)
     if: "!contains(github.event.head_commit.message, '[Automated] Version Bump')"
     runs-on: ubuntu-latest
 
@@ -24,19 +24,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      # Installation token for the emnify GitHub App - replaces the personal
-      # access token that used to sit in EMNIFY_GITHUB_ACTIONS_TOKEN (it expired,
-      # which failed checkout with "could not read Username for github.com").
-      - name: Retrieve application token
-        id: get_token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ secrets.EMNIFY_GITHUB_ACTIONS_APP_ID }}
-          private-key: ${{ secrets.EMNIFY_GITHUB_ACTIONS_APP_PEM }}
-
       - uses: actions/checkout@v4
-        with:
-          token: ${{ steps.get_token.outputs.token }}
 
       - name: Bump version and push tag
         id: tag_version
@@ -67,11 +55,13 @@ jobs:
           commit_message: '[Automated] Version Bump from ${{ env.current_version }} to ${{ env.new_version }}'
 
       - name: Release and Publish Package
+        env:
+          RELEASE_PYPI_TOKEN: ${{ secrets.PYPI_RELEASE_TOKEN }}
         run: |
           cat <<EOT >> .env
           TWINE_REPOSITORY=${{env.RELEASE_REPOSITORY}}
           TWINE_USERNAME=__token__
-          TWINE_PASSWORD=${{env.RELEASE_PYPI_TOKEN}}
+          TWINE_PASSWORD=${RELEASE_PYPI_TOKEN}
           PYPI_PACKAGE_NAME=${{env.RELEASE_PACKAGE_NAME}}
           EOT
 
