@@ -2673,7 +2673,7 @@ Module Contents
 
 
 
-.. py:class:: Description(*args, **kwds)
+.. py:class:: Description
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2731,7 +2731,7 @@ Module Contents
 
 
 
-.. py:class:: Id(*args, **kwds)
+.. py:class:: Id
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2804,7 +2804,7 @@ Module Contents
       :type:  Id
 
 
-.. py:class:: Id1(*args, **kwds)
+.. py:class:: Id1
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2857,7 +2857,7 @@ Module Contents
 
 
 
-.. py:class:: Description1(*args, **kwds)
+.. py:class:: Description1
 
    Bases: :py:obj:`enum.Enum`
 
@@ -3003,7 +3003,7 @@ Module Contents
 
 
 
-.. py:class:: Id2(*args, **kwds)
+.. py:class:: Id2
 
    Bases: :py:obj:`enum.Enum`
 
@@ -3056,7 +3056,7 @@ Module Contents
 
 
 
-.. py:class:: Description2(*args, **kwds)
+.. py:class:: Description2
 
    Bases: :py:obj:`enum.Enum`
 
@@ -3130,7 +3130,7 @@ Module Contents
 
 
 
-.. py:class:: Description3(*args, **kwds)
+.. py:class:: Description3
 
    Bases: :py:obj:`enum.Enum`
 
@@ -3188,7 +3188,7 @@ Module Contents
 
 
 
-.. py:class:: Id3(*args, **kwds)
+.. py:class:: Id3
 
    Bases: :py:obj:`enum.Enum`
 
@@ -5968,7 +5968,7 @@ Module Contents
       :type:  str
 
 
-.. py:class:: Id4(*args, **kwds)
+.. py:class:: Id4
 
    Bases: :py:obj:`enum.Enum`
 
@@ -8673,7 +8673,7 @@ Module Contents
       :type:  List[GetCloudConnectAttachmentByIdResponseItem]
 
 
-.. py:class:: Type4(*args, **kwds)
+.. py:class:: Type4
 
    Bases: :py:obj:`enum.Enum`
 
@@ -8752,7 +8752,7 @@ Module Contents
       :type:  constr(regex='^\\d{12}$')
 
 
-.. py:class:: Type5(*args, **kwds)
+.. py:class:: Type5
 
    Bases: :py:obj:`enum.Enum`
 
@@ -8939,7 +8939,7 @@ Module Contents
       :type:  List[ListCloudConnectPricesResponseItem]
 
 
-.. py:class:: BreakoutTypeId(*args, **kwds)
+.. py:class:: BreakoutTypeId
 
    Bases: :py:obj:`enum.Enum`
 

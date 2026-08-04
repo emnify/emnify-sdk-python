@@ -45,6 +45,12 @@ Module Contents
 
 
 
+   .. py:attribute:: activate
+      :type:  Optional[bool]
+      :value: None
+
+
+
 .. py:class:: Device
 
    Bases: :py:obj:`emnify.modules.api.models.Endpoint`

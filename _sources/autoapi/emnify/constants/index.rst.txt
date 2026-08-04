@@ -27,7 +27,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: ExtendedEnum(*args, **kwds)
+.. py:class:: ExtendedEnum
 
    Bases: :py:obj:`enum.Enum`
 
@@ -75,7 +75,7 @@ Module Contents
 
 
 
-.. py:class:: DeviceSort(*args, **kwds)
+.. py:class:: DeviceSort
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -158,7 +158,7 @@ Module Contents
 
 
 
-.. py:class:: IdValues(*args, **kwds)
+.. py:class:: IdValues
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -206,7 +206,7 @@ Module Contents
 
 
 
-.. py:class:: RequestsType(*args, **kwds)
+.. py:class:: RequestsType
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -274,7 +274,7 @@ Module Contents
 
 
 
-.. py:class:: AuthenticateRequestsUrl(*args, **kwds)
+.. py:class:: AuthenticateRequestsUrl
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -322,7 +322,7 @@ Module Contents
 
 
 
-.. py:class:: RequestDefaultHeadersKeys(*args, **kwds)
+.. py:class:: RequestDefaultHeadersKeys
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -390,7 +390,7 @@ Module Contents
 
 
 
-.. py:class:: RequestDefaultHeadersValues(*args, **kwds)
+.. py:class:: RequestDefaultHeadersValues
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -469,7 +469,7 @@ Module Contents
    .. py:attribute:: USER_AGENT
 
 
-.. py:class:: DeviceStatuses(*args, **kwds)
+.. py:class:: DeviceStatuses
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -536,7 +536,7 @@ Module Contents
    .. py:attribute:: DELETED_DICT
 
 
-.. py:class:: SimStatusesID(*args, **kwds)
+.. py:class:: SimStatusesID
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -604,7 +604,7 @@ Module Contents
 
 
 
-.. py:class:: SimStatusesDict(*args, **kwds)
+.. py:class:: SimStatusesDict
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -662,7 +662,7 @@ Module Contents
    .. py:attribute:: FACTORY_TEST_DICT
 
 
-.. py:class:: ResponseHeaders(*args, **kwds)
+.. py:class:: ResponseHeaders
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -725,7 +725,7 @@ Module Contents
 
 
 
-.. py:class:: SimSort(*args, **kwds)
+.. py:class:: SimSort
 
    Bases: :py:obj:`ExtendedEnum`
 
@@ -813,7 +813,7 @@ Module Contents
 
 
 
-.. py:class:: RequestUrls(*args, **kwds)
+.. py:class:: RequestUrls
 
    Bases: :py:obj:`ExtendedEnum`
 
