@@ -132,8 +132,10 @@ old_devices_list = [device for device in emnify.devices.get_devices_list()]
 
 device_to_delete = list(
     filter(
-        lambda device: device.sim
-        and device.status.id == emnify_constants.DeviceStatuses.ENABLED_ID,
+        lambda device: (
+            device.sim
+            and device.status.id == emnify_constants.DeviceStatuses.ENABLED_ID
+        ),
         old_devices_list,
     )
 )[0]
