@@ -10,6 +10,7 @@ from emnify.constants import DeviceSort as DeviceSortModel
 class SimDevice(BaseModel):
     id: int
     status: Optional[generated_models.Status] = None
+    activate: Optional[bool] = None
 
 
 class Device(generated_models.Endpoint):

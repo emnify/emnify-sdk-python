@@ -5,18 +5,20 @@ import os
 import sys
 
 # Add the path to the module to the Python path, below it's set to Docker workdir
-sys.path.append('/sdk')
+sys.path.append("/sdk")
 # Import package
 from emnify import EMnify
 
 # Get the token from environment variable
-TOKEN = os.environ.get('EMNIFY_SDK_APPLICATION_TOKEN')
+TOKEN = os.environ.get("EMNIFY_SDK_APPLICATION_TOKEN")
 
 # Initiate SDK instance using application token
 emnify = EMnify(TOKEN)
 
+
 def get_iterator_length(iterator):
     return len(list(iterator))
+
 
 # Execute a command against desired API
 devices = emnify.devices.get_devices_list()
